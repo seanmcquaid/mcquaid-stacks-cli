@@ -19,6 +19,7 @@ My personal collection of scaffolding templates.
 13. shadcn-ui
 14. Tailwind
 15. Vercel for deployments
+16. MSW
 
 ### Currently evaluating
 
