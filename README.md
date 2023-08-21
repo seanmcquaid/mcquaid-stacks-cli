@@ -2,7 +2,7 @@
 
 My personal collection of scaffolding templates.
 
-## Common libraries
+## Common libraries/approaches
 
 1. Ky
 2. React Hook Form
@@ -18,6 +18,7 @@ My personal collection of scaffolding templates.
 12. Husky
 13. shadcn-ui
 14. Tailwind
+15. Vercel for deployments
 
 ### Currently evaluating
 
