@@ -1,0 +1,53 @@
+{
+  "name": "awesome-example-package",
+  "version": "0.0.3",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "sideEffects": false,
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "bundlesize": "bundlesize",
+    "changeset": "changeset",
+    "check-types": "npm pack && attw --pack",
+    "coverage": "vitest run --coverage",
+    "lint": "eslint src --max-warnings=0",
+    "prepare": "is-ci || husky install",
+    "release": "pnpm build && changeset publish",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@arethetypeswrong/cli": "^0.7.0",
+    "@changesets/cli": "^2.26.1",
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6",
+    "@typescript-eslint/eslint-plugin": "^5.61.0",
+    "@typescript-eslint/parser": "^5.61.0",
+    "@typescript-eslint/typescript-estree": "^6.0.0",
+    "bundlesize": "^0.18.1",
+    "eslint": "8.47.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "5.0.0",
+    "eslint-plugin-react": "^7.31.9",
+    "happy-dom": "^10.0.3",
+    "husky": "^8.0.1",
+    "is-ci": "^3.0.1",
+    "lint-staged": "^14.0.0",
+    "prettier": "^3.0.0",
+    "tsup": "^7.1.0",
+    "typescript": "^5.0.0",
+    "vite": "^4.0.0",
+    "vitest": "^0.34.1"
+  }
+}
