@@ -16,6 +16,7 @@ My personal collection of scaffolding templates.
 10. Prettier
 11. ESLint
 12. Husky
+13. shadcn-ui
 
 Will add Cookiecutter to help facilitate starting new projects. 
 
