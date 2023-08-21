@@ -31,7 +31,21 @@ My personal collection of scaffolding templates.
 
 ### Deployment setup
 
-I am currently using Vercel for my personal projects but I recognize not every team can use it due to company constraints. If there is enough demand here, I will spend time getting Dockerfiles together where appropriate for the SSR projects.
+I am currently using Vercel for my personal projects but I recognize that not every team can use it due to company constraints. In general here's what I recommend : 
+
+#### SSR
+
+- CDN for Static assets (Cloudfront, Fastly, etc) for static directory
+- Server for SSR (Kubernetes, ECS, etc)
+- Web Application Firewall (Cloudflare, AWS WAF, etc)
+- DNS Resolution + Alising (Route53, Cloudflare, etc)
+
+#### CSR/Static
+
+- CDN for Static assets (Cloudfront, Fastly, etc) for static directory
+- Host static files on S3 or similar
+- Web Application Firewall (Cloudflare, AWS WAF, etc)
+- DNS Resolution + Alising (Route53, Cloudflare, etc)
 
 Will add Cookiecutter to help facilitate starting new projects along with a CLI to help manage the templates.
 
