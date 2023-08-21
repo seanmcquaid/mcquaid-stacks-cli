@@ -19,6 +19,10 @@ My personal collection of scaffolding templates.
 13. shadcn-ui
 14. Tailwind
 
-Will add Cookiecutter to help facilitate starting new projects. 
+### Currently evaluating
+
+1. Playwright vs Cypress
+
+Will add Cookiecutter to help facilitate starting new projects along with a CLI to help manage the templates.
 
 https://github.com/cookiecutter/cookiecutter
