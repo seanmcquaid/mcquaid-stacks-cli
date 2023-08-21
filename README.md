@@ -40,12 +40,16 @@ I am currently using Vercel for my personal projects but I recognize that not ev
 - Web Application Firewall (Cloudflare, AWS WAF, etc)
 - DNS Resolution + Alising (Route53, Cloudflare, etc)
 
+Domain -> CDN -> WAF -> Server
+
 #### CSR/Static
 
 - CDN for Static assets (Cloudfront, Fastly, etc) for static directory
 - Host static files on S3 or similar
 - Web Application Firewall (Cloudflare, AWS WAF, etc)
 - DNS Resolution + Alising (Route53, Cloudflare, etc)
+
+Domain -> CDN -> WAF -> S3
 
 Will add Cookiecutter to help facilitate starting new projects along with a CLI to help manage the templates.
 
