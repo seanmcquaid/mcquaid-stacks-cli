@@ -17,6 +17,7 @@ My personal collection of scaffolding templates.
 11. ESLint
 12. Husky
 13. shadcn-ui
+14. Tailwind
 
 Will add Cookiecutter to help facilitate starting new projects. 
 
