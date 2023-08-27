@@ -1,7 +1,7 @@
 import { FC, useMemo, useTransition } from 'react';
 import { useAsyncValue } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
-import Post from '../types/responses/Post';
+import Post from '../types/Post';
 import getPostsQuery from '../queries/getPostsQuery';
 import { useNavigate } from '../router';
 

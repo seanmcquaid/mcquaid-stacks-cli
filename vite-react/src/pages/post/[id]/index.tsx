@@ -4,7 +4,7 @@ import PageError from '../../../components/PageError';
 import getPostQuery from '../../../queries/getPostQuery';
 import queryClient from '../../../services/queryClient';
 import PostInfo from '../_components/PostInfo';
-import Post from '../../../types/responses/Post';
+import Post from '../../../types/Post';
 
 export const Loader: LoaderFunction = ({ params }) => {
   const { id } = params;

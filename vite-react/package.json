@@ -5,17 +5,17 @@
   "scripts": {
     "build": "tsc && vite build",
     "bundlesize": "bundlesize",
-    "coverage": "NODE_OPTIONS='--no-experimental-fetch' vitest run --coverage",
+    "coverage": "vitest run --coverage",
     "dev": "vite --host",
-    "postinstall": "husky install",
+    "prepare": "husky install",
     "lint": "eslint e2e src",
     "lint:nowarn": "eslint e2e src --max-warnings=0",
     "playwright:codegen": "playwright codegen",
     "playwright:debug": "playwright test --debug",
     "playwright:run": "playwright test",
     "preview": "vite preview",
-    "test": "NODE_OPTIONS='--no-experimental-fetch' vitest run",
-    "test:watch": "NODE_OPTIONS='--no-experimental-fetch' vitest"
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "dependencies": {
     "@generouted/react-router": "^1.15.4",

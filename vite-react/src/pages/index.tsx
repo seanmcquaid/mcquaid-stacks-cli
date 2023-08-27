@@ -18,7 +18,7 @@ import getPostQuery from '../queries/getPostQuery';
 import PageError from '../components/PageError';
 import getPostsQuery from '../queries/getPostsQuery';
 import PostsList from '../components/PostsList';
-import Post from '../types/responses/Post';
+import Post from '../types/Post';
 
 interface PostsLoaderData {
   posts: Promise<Post[]>;

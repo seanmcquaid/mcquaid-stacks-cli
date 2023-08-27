@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import Post, { postSchema } from '../types/responses/Post';
+import Post, { postSchema } from '../types/Post';
 import createApiClient from './createApiClient';
 
 const baseUrl = 'https://jsonplaceholder.typicode.com';
