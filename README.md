@@ -19,10 +19,7 @@ My personal collection of scaffolding templates.
 13. shadcn-ui
 14. Tailwind
 15. MSW
-
-### Currently evaluating
-
-1. Playwright vs Cypress (Leaning towards Cypress due to Developer experience wins)
+16. Cypress
 
 ### Things to consider adding on your own for React projects
 
