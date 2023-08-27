@@ -1,9 +1,8 @@
 import { FC, useMemo, useTransition } from 'react';
 import { useAsyncValue } from 'react-router-dom';
-import { useQuery } from '@tanstack/react-query';
-import Post from '../types/Post';
-import getPostsQuery from '../queries/getPostsQuery';
-import { useNavigate } from '../router';
+import Post from '../../types/Post';
+import useGetPostsQuery from '../../services/queries/useGetPostsQuery';
+import { useNavigate } from '../../router';
 
 export const filterPostsByText = (text: string, posts: Post[]): Post[] =>
   posts.filter(post => post.title.match(text));
@@ -18,10 +17,7 @@ interface PostsLoaderData {
 
 const PostsList: FC<PostsListProps> = ({ filterText }) => {
   const initialPosts = useAsyncValue() as Awaited<PostsLoaderData['posts']>;
-  const { data: posts } = useQuery({
-    ...getPostsQuery(),
-    initialData: initialPosts,
-  });
+  const { data: posts } = useGetPostsQuery(initialPosts);
   const [, startTransition] = useTransition();
   const navigate = useNavigate();
   const filteredPosts: Post[] = useMemo(

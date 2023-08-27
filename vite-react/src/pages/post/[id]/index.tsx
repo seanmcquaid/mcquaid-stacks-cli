@@ -1,6 +1,6 @@
 import { FC, Suspense } from 'react';
 import { Await, LoaderFunction, defer, useLoaderData } from 'react-router-dom';
-import PageError from '../../../components/PageError';
+import PageError from '../../../components/app/PageError';
 import getPostQuery from '../../../queries/getPostQuery';
 import queryClient from '../../../services/queryClient';
 import Post from '../../../types/Post';

@@ -1,8 +1,8 @@
 import { FC } from 'react';
 import { Outlet } from 'react-router-dom';
 import { ErrorBoundary } from 'react-error-boundary';
-import Navbar from '../components/Navbar';
-import PageError from '../components/PageError';
+import Navbar from '../components/app/Navbar';
+import PageError from '../components/app/PageError';
 
 const App: FC = () => {
   return (

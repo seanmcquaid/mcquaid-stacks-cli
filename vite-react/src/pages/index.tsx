@@ -14,11 +14,12 @@ import { z } from 'zod';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import queryClient from '../services/queryClient';
-import getPostQuery from '../queries/getPostQuery';
-import PageError from '../components/PageError';
-import getPostsQuery from '../queries/getPostsQuery';
-import PostsList from '../components/PostsList';
+import { getPostQuery } from '../services/queries/useGetPostQuery';
+import PageError from '../components/app/PageError';
+import { getPostsQuery } from '../services/queries/useGetPostsQuery';
 import Post from '../types/Post';
+import QueryKey from '../services/QueryKey';
+import PostsList from './_components/PostsList';
 
 interface PostsLoaderData {
   posts: Promise<Post[]>;
@@ -46,7 +47,7 @@ export const Action: ActionFunction = async ({ request }) => {
 
     // Make request to backend directly here instead of using React Query's mutation directly
     await queryClient.invalidateQueries({
-      queryKey: ['getPost', validatedForm.data.postId],
+      queryKey: [QueryKey.GET_POST, validatedForm.data.postId],
     });
     await queryClient.fetchQuery(getPostQuery(validatedForm.data.postId));
     return redirect(`/post/${validatedForm.data.postId}`);
