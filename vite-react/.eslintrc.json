@@ -39,6 +39,7 @@
     "react/jsx-key": "warn",
     "react/react-in-jsx-scope": "off",
     "@typescript-eslint/no-namespace": "off",
-    "react/no-unescaped-entities": "off"
+    "react/no-unescaped-entities": "off",
+    "playwright/missing-playwright-await": "off"
   }
 }
