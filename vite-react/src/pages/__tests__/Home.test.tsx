@@ -1,11 +1,11 @@
 import { Route } from 'react-router-dom';
 import userEvent from '@testing-library/user-event';
-import HomePage, { Action, Loader } from '../../../pages/index';
+import HomePage, { Action, Loader } from '../index';
 import {
   render,
   waitFor,
   screen,
-} from '../../../testUtils/reactTestingLibraryUtils';
+} from '../../testUtils/reactTestingLibraryUtils';
 
 describe('Posts', () => {
   beforeEach(() => {

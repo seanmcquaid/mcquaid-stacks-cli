@@ -1,5 +1,5 @@
 import { ActionFunctionArgs } from 'react-router-dom';
-import { Action as postsAction } from '../../../pages/index';
+import { Action as postsAction } from '../index';
 
 describe('postsAction', () => {
   it('should return null if no postId is provided', async () => {
