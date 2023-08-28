@@ -1,4 +1,7 @@
-import { render, screen } from '../../../testUtils/reactTestingLibraryUtils';
+import {
+  render,
+  screen,
+} from '../../../utils/testing/reactTestingLibraryUtils';
 import LoadingOverlay from '../LoadingOverlay';
 
 describe('LoadingOverlay', () => {

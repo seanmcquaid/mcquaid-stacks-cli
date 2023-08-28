@@ -5,7 +5,7 @@ import {
   render,
   waitFor,
   screen,
-} from '../../testUtils/reactTestingLibraryUtils';
+} from '../../utils/testing/reactTestingLibraryUtils';
 
 describe('Posts', () => {
   beforeEach(() => {

@@ -4,7 +4,7 @@ import {
   render,
   waitFor,
   screen,
-} from '../../../testUtils/reactTestingLibraryUtils';
+} from '../../../utils/testing/reactTestingLibraryUtils';
 import PostsList, { filterPostsByText } from '../PostsList';
 
 describe('PostsList', () => {
