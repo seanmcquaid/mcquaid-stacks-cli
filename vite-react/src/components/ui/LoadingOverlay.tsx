@@ -1,10 +1,6 @@
-import { FC } from 'react';
+import ClipLoader from 'react-spinners/ClipLoader';
 
-interface LoadingOverlayProps {
-  isLoading: boolean;
-}
-
-const LoadingOverlay: FC<LoadingOverlayProps> = ({ isLoading }) => (
+const LoadingOverlay = ({ isLoading }: { isLoading: boolean }) => (
   <div
     className={
       isLoading
@@ -13,7 +9,7 @@ const LoadingOverlay: FC<LoadingOverlayProps> = ({ isLoading }) => (
     }
     data-testid="loading-overlay"
   >
-    Loading...
+    <ClipLoader loading={isLoading} size={150} />
   </div>
 );
 
