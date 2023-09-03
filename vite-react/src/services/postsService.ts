@@ -13,6 +13,7 @@ const postsService = {
       .json<Post[]>(),
   getPost: (id: string) =>
     client.get(`posts/${id}`, { validationSchema: postSchema }).json<Post>(),
+  deletePost: (id: string) => client.delete(`posts/${id}`),
 } as const;
 
 export default postsService;

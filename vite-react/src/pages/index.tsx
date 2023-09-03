@@ -44,7 +44,6 @@ export const Action: ActionFunction = async ({ request }) => {
     if (!validatedForm.success) {
       return null;
     }
-
     // Make request to backend directly here instead of using React Query's mutation directly
     await queryClient.invalidateQueries({
       queryKey: [QueryKey.GET_POST, validatedForm.data.postId],
