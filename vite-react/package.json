@@ -38,8 +38,6 @@
     "zod": "^3.22.1"
   },
   "devDependencies": {
-    "@axe-core/playwright": "^4.7.3",
-    "@playwright/test": "^1.37.0",
     "@testing-library/jest-dom": "^6.0.0",
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",
@@ -58,7 +56,6 @@
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-import": "^2.28.0",
     "eslint-plugin-jsx-a11y": "^6.7.1",
-    "eslint-plugin-playwright": "^0.15.3",
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-react": "^7.33.1",
     "eslint-plugin-react-hooks": "^4.6.0",
@@ -68,11 +65,8 @@
     "lighthouse": "^11.0.0",
     "lint-staged": "^14.0.0",
     "msw": "^1.2.3",
-    "playwright-lighthouse": "^3.1.0",
-    "playwright-msw": "^2.2.1",
     "postcss": "^8.4.28",
     "prettier": "^3.0.2",
-    "rollup-plugin-visualizer": "^5.9.2",
     "tailwindcss": "^3.3.3",
     "typescript": "^5.1.6",
     "vite": "^4.4.9",
