@@ -6,6 +6,16 @@ const createApiClient = (baseUrl: string) => {
     retry: {
       limit: 2,
       statusCodes: [401, 403, 500, 504],
+      methods: [
+        'get',
+        'put',
+        'head',
+        'delete',
+        'options',
+        'trace',
+        'post',
+        'patch',
+      ],
     },
     hooks: {
       afterResponse: [
