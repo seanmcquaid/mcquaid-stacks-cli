@@ -1,7 +1,6 @@
 import { FC } from 'react';
 import { Outlet } from 'react-router-dom';
 import { ErrorBoundary } from 'react-error-boundary';
-import Navbar from '../components/app/Navbar';
 import PageError from '../components/app/PageError';
 
 const App: FC = () => {
@@ -9,7 +8,6 @@ const App: FC = () => {
     <ErrorBoundary
       fallback={<PageError errorText="Sorry, something happened" />}
     >
-      <Navbar />
       <Outlet />
     </ErrorBoundary>
   );

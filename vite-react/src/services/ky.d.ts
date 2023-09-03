@@ -1,4 +1,4 @@
-import { ZodFirstPartySchemaTypes } from 'zod';
+import type { ZodFirstPartySchemaTypes } from 'zod';
 
 declare module 'ky' {
   export interface Options {
@@ -7,5 +7,9 @@ declare module 'ky' {
 
   export interface NormalizedOptions {
     validationSchema?: ZodFirstPartySchemaTypes;
+  }
+
+  export interface HTTPError<T = unknown> {
+    responseData?: T;
   }
 }
