@@ -5,16 +5,13 @@
   "scripts": {
     "build": "tsc && vite build",
     "bundlesize": "bundlesize",
-    "coverage": "vitest run --coverage",
     "dev": "vite --host",
-    "prepare": "husky install",
     "lint": "eslint e2e src",
     "lint:nowarn": "eslint e2e src --max-warnings=0",
-    "playwright:codegen": "playwright codegen",
-    "playwright:debug": "playwright test --debug",
-    "playwright:run": "playwright test",
+    "prepare": "husky install",
     "preview": "vite preview",
     "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
     "test:watch": "vitest"
   },
   "dependencies": {
@@ -62,7 +59,6 @@
     "eslint-plugin-vitest": "^0.2.8",
     "husky": "^8.0.3",
     "jsdom": "^22.1.0",
-    "lighthouse": "^11.0.0",
     "lint-staged": "^14.0.0",
     "msw": "^1.2.3",
     "postcss": "^8.4.28",
