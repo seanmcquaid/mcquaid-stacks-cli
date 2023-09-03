@@ -30,7 +30,7 @@ const createApiClient = (baseUrl: string) => {
             );
           }
 
-          return response;
+          return new Response(JSON.stringify(validatedData.data));
         },
       ],
       beforeError: [
