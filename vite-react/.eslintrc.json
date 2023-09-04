@@ -33,7 +33,6 @@
     "import/no-anonymous-default-export": "off",
     "import/order": "warn",
     "jsx-a11y/no-redundant-roles": "off",
-    "no-duplicate-imports": "warn",
     "prefer-const": "warn",
     "prettier/prettier": "warn",
     "react/jsx-uses-react": "off",
@@ -41,6 +40,8 @@
     "react/react-in-jsx-scope": "off",
     "@typescript-eslint/no-namespace": "off",
     "react/no-unescaped-entities": "off",
-    "playwright/missing-playwright-await": "off"
+    "playwright/missing-playwright-await": "off",
+    "@typescript-eslint/consistent-type-definitions": ["error"],
+    "@typescript-eslint/consistent-type-imports": "error"
   }
 }

@@ -1,4 +1,4 @@
-import { LoaderFunctionArgs } from 'react-router-dom';
+import type { LoaderFunctionArgs } from 'react-router-dom';
 import { Loader as postDetailsLoader } from '../index';
 
 describe('postDetailsLoader', () => {

@@ -1,6 +1,7 @@
-import { FC, useMemo, useTransition } from 'react';
+import type { FC } from 'react';
+import { useMemo, useTransition } from 'react';
 import { useAsyncValue } from 'react-router-dom';
-import Post from '../../types/Post';
+import type Post from '../../types/Post';
 import useGetPostsQuery from '../../services/queries/useGetPostsQuery';
 import { useNavigate } from '../../router';
 

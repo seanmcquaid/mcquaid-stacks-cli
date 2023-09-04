@@ -1,8 +1,8 @@
-import { FC, Suspense, useEffect, useMemo } from 'react';
+import type { FC } from 'react';
+import { Suspense, useEffect, useMemo } from 'react';
+import type { ActionFunction, LoaderFunction } from 'react-router-dom';
 import {
-  ActionFunction,
   Await,
-  LoaderFunction,
   defer,
   json,
   redirect,
@@ -17,7 +17,7 @@ import queryClient from '../services/queryClient';
 import { getPostQuery } from '../services/queries/useGetPostQuery';
 import PageError from '../components/app/PageError';
 import { getPostsQuery } from '../services/queries/useGetPostsQuery';
-import Post from '../types/Post';
+import type Post from '../types/Post';
 import QueryKey from '../services/QueryKey';
 import PostsList from './_components/PostsList';
 

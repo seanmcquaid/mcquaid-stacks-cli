@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import type { FC } from 'react';
 import { useErrorBoundary } from 'react-error-boundary';
 import { useNavigate } from '../../router';
 

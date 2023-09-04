@@ -1,4 +1,4 @@
-import { ActionFunctionArgs } from 'react-router-dom';
+import type { ActionFunctionArgs } from 'react-router-dom';
 import { Action as postsAction } from '../index';
 
 describe('postsAction', () => {
