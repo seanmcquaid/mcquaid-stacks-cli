@@ -1,4 +1,4 @@
-import ClipLoader from 'react-spinners/ClipLoader';
+import LoadingSpinner from './LoadingSpinner';
 
 const LoadingOverlay = ({ isLoading }: { isLoading: boolean }) => (
   <div
@@ -9,7 +9,7 @@ const LoadingOverlay = ({ isLoading }: { isLoading: boolean }) => (
     }
     data-testid="loading-overlay"
   >
-    <ClipLoader loading={isLoading} size={150} />
+    <LoadingSpinner />
   </div>
 );
 

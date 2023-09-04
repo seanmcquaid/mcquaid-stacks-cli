@@ -4,6 +4,7 @@
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
     "plugin:jsx-a11y/recommended",
+    "plugin:i18next/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:playwright/playwright-test",
     "plugin:vitest/recommended",

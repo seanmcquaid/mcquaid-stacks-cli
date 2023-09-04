@@ -5,6 +5,7 @@ import { getPostQuery } from '../../../services/queries/useGetPostQuery';
 import queryClient from '../../../services/queryClient';
 import Post from '../../../types/Post';
 import PostInfo from './_components/PostInfo';
+import LoadingSpinner from '@/components/ui/LoadingSpinner';
 
 export const Loader: LoaderFunction = ({ params }) => {
   const { id } = params;
@@ -28,7 +29,7 @@ const PostDetailsPage: FC = () => {
 
   return (
     <div data-testid="post-details-container">
-      <Suspense fallback={'loading'}>
+      <Suspense fallback={<LoadingSpinner />}>
         <Await resolve={postInfo} errorElement={'ERROR'}>
           <PostInfo />
         </Await>
