@@ -4,8 +4,8 @@ import {
   render,
   waitFor,
   screen,
-} from '../../../utils/testing/reactTestingLibraryUtils';
-import PostsList, { filterPostsByText } from '../PostsList';
+} from '@/utils/testing/reactTestingLibraryUtils';
+import PostsList, { filterPostsByText } from '@/pages/_components/PostsList';
 
 describe('PostsList', () => {
   describe('filterPostsByText', () => {

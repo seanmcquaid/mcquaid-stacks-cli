@@ -1,12 +1,12 @@
 import { Route } from 'react-router-dom';
 import { rest } from 'msw';
-import PostDetailsPage, { Loader } from '../index';
+import server from '../../../../../mocks/server';
+import PostDetailsPage, { Loader } from '@/pages/post/[id]/index';
 import {
   render,
   waitFor,
   screen,
-} from '../../../../utils/testing/reactTestingLibraryUtils';
-import server from '../../../../../mocks/server';
+} from '@/utils/testing/reactTestingLibraryUtils';
 
 describe('PostDetails', () => {
   it('displays post info if it comes back from the API', async () => {

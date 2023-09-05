@@ -2,11 +2,11 @@ import type { FC } from 'react';
 import { Suspense } from 'react';
 import type { LoaderFunction } from 'react-router-dom';
 import { Await, defer, useLoaderData } from 'react-router-dom';
-import PageError from '../../../components/app/PageError';
-import { getPostQuery } from '../../../services/queries/useGetPostQuery';
-import queryClient from '../../../services/queryClient';
-import type Post from '../../../types/Post';
 import PostInfo from './_components/PostInfo';
+import PageError from '@/components/app/PageError';
+import { getPostQuery } from '@/services/queries/useGetPostQuery';
+import queryClient from '@/services/queryClient';
+import type Post from '@/types/Post';
 import LoadingSpinner from '@/components/ui/LoadingSpinner';
 
 export const Loader: LoaderFunction = ({ params }) => {

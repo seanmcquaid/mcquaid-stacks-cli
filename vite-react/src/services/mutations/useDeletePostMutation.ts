@@ -1,5 +1,5 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query';
-import postsService from '../postsService';
+import postsService from '@/services/postsService';
 
 export const deletePostMutation = (id: string) => ({
   mutationKey: ['deletePost', id],

@@ -10,7 +10,7 @@
     "plugin:vitest/recommended",
     "eslint-config-prettier"
   ],
-  "plugins": ["import", "eslint-plugin-prettier"],
+  "plugins": ["import", "no-relative-import-paths", "eslint-plugin-prettier"],
   "parser": "@typescript-eslint/parser",
   "env": {
     "browser": true,
@@ -42,6 +42,10 @@
     "react/no-unescaped-entities": "off",
     "playwright/missing-playwright-await": "off",
     "@typescript-eslint/consistent-type-definitions": ["error"],
-    "@typescript-eslint/consistent-type-imports": "error"
+    "@typescript-eslint/consistent-type-imports": "error",
+    "no-relative-import-paths/no-relative-import-paths": [
+      "warn",
+      { "allowSameFolder": true, "rootDir": "src", "prefix": "@" }
+    ]
   }
 }

@@ -6,6 +6,7 @@ import { QueryClientProvider } from '@tanstack/react-query';
 import env from './env';
 import queryClient from './services/queryClient';
 import './index.css';
+import './i18n';
 
 const prepare = async () => {
   if (env.MODE === 'development' && env.VITE_APP_MSW_ENABLED) {

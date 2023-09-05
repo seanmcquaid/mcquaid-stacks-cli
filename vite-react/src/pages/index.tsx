@@ -13,13 +13,13 @@ import {
 import { z } from 'zod';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import queryClient from '../services/queryClient';
-import { getPostQuery } from '../services/queries/useGetPostQuery';
-import PageError from '../components/app/PageError';
-import { getPostsQuery } from '../services/queries/useGetPostsQuery';
-import type Post from '../types/Post';
-import QueryKey from '../services/QueryKey';
 import PostsList from './_components/PostsList';
+import queryClient from '@/services/queryClient';
+import { getPostQuery } from '@/services/queries/useGetPostQuery';
+import PageError from '@/components/app/PageError';
+import { getPostsQuery } from '@/services/queries/useGetPostsQuery';
+import type Post from '@/types/Post';
+import QueryKey from '@/services/QueryKey';
 
 interface PostsLoaderData {
   posts: Promise<Post[]>;

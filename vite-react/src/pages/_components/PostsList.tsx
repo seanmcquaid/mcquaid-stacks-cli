@@ -1,9 +1,9 @@
 import type { FC } from 'react';
 import { useMemo, useTransition } from 'react';
 import { useAsyncValue } from 'react-router-dom';
-import type Post from '../../types/Post';
-import useGetPostsQuery from '../../services/queries/useGetPostsQuery';
-import { useNavigate } from '../../router';
+import type Post from '@/types/Post';
+import useGetPostsQuery from '@/services/queries/useGetPostsQuery';
+import { useNavigate } from '@/router';
 
 export const filterPostsByText = (text: string, posts: Post[]): Post[] =>
   posts.filter(post => post.title.match(text));

@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 import { useErrorBoundary } from 'react-error-boundary';
-import { useNavigate } from '../../router';
+import { useNavigate } from '@/router';
 
 interface PageErrorProps {
   errorText: string;

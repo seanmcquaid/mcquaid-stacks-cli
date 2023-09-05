@@ -1,8 +1,8 @@
 import type { FC } from 'react';
 import { useAsyncValue } from 'react-router-dom';
-import useGetPostQuery from '../../../../services/queries/useGetPostQuery';
-import { useParams } from '../../../../router';
-import type Post from '../../../../types/Post';
+import useGetPostQuery from '@/services/queries/useGetPostQuery';
+import { useParams } from '@/router';
+import type Post from '@/types/Post';
 
 const PostInfo: FC = () => {
   const { id } = useParams('/post/:id');

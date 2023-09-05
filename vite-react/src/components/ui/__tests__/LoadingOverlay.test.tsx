@@ -1,8 +1,5 @@
-import {
-  render,
-  screen,
-} from '../../../utils/testing/reactTestingLibraryUtils';
-import LoadingOverlay from '../LoadingOverlay';
+import { render, screen } from '@/utils/testing/reactTestingLibraryUtils';
+import LoadingOverlay from '@/components/ui/LoadingOverlay';
 
 describe('LoadingOverlay', () => {
   it('Is visible if isLoading', () => {
