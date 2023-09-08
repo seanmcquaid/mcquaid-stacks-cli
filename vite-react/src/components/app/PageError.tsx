@@ -1,9 +1,11 @@
 import type { FC } from 'react';
 import { useErrorBoundary } from 'react-error-boundary';
+import PageWrapper from './PageWrapper';
 import { useNavigate } from '@/router';
+import { Button } from '@/components/ui/Button';
 
 interface PageErrorProps {
-  errorText: string;
+  errorText?: string;
   shouldAllowRefresh?: boolean;
 }
 
@@ -20,15 +22,15 @@ const PageError: FC<PageErrorProps> = ({ errorText, shouldAllowRefresh }) => {
   };
 
   return (
-    <div>
+    <PageWrapper>
       <h1>ERROR</h1>
-      <p>{errorText}</p>
+      {!!errorText && <p>{errorText}</p>}
       {shouldAllowRefresh ? (
-        <button onClick={handleRefresh}>Refresh</button>
+        <Button onClick={handleRefresh}>Refresh</Button>
       ) : (
-        <button onClick={handleGoBack}>Go Back</button>
+        <Button onClick={handleGoBack}>Go Back</Button>
       )}
-    </div>
+    </PageWrapper>
   );
 };
 

@@ -1,133 +1,20 @@
-import type { FC } from 'react';
-import { Suspense, useEffect, useMemo } from 'react';
-import type { ActionFunction, LoaderFunction } from 'react-router-dom';
-import {
-  Await,
-  defer,
-  json,
-  redirect,
-  useFetcher,
-  useLoaderData,
-  useSearchParams,
-} from 'react-router-dom';
-import { z } from 'zod';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import PostsList from './_components/PostsList';
-import queryClient from '@/services/queryClient';
-import { getPostQuery } from '@/services/queries/useGetPostQuery';
-import PageError from '@/components/app/PageError';
-import { getPostsQuery } from '@/services/queries/useGetPostsQuery';
-import type Post from '@/types/Post';
-import QueryKey from '@/services/QueryKey';
+import PageWrapper from '@/components/app/PageWrapper';
 
-interface PostsLoaderData {
-  posts: Promise<Post[]>;
-}
-
-const formSchema = z.object({
-  postId: z
-    .string()
-    .min(1, 'Text must contain at least 1 characters')
-    .max(3, 'Text must contain at most 3 characters'),
-});
-
-export const Action: ActionFunction = async ({ request }) => {
-  try {
-    const formData = await request.formData();
-    const postId = formData.get('postId');
-    if (!postId) {
-      return null;
-    }
-    const validatedForm = formSchema.safeParse({ postId });
-
-    if (!validatedForm.success) {
-      return null;
-    }
-    // Make request to backend directly here instead of using React Query's mutation directly
-    await queryClient.invalidateQueries({
-      queryKey: [QueryKey.GET_POST, validatedForm.data.postId],
-    });
-    await queryClient.fetchQuery(getPostQuery(validatedForm.data.postId));
-    return redirect(`/post/${validatedForm.data.postId}`);
-  } catch (err) {
-    return json({ err });
-  }
-};
-
-export const Loader: LoaderFunction = () => {
-  const query = getPostsQuery();
-  return defer({
-    posts:
-      queryClient.getQueryData(query.queryKey) ?? queryClient.fetchQuery(query),
-  });
-};
-
-export const Catch: FC = () => {
-  return <PageError errorText={'Error loading posts'} />;
-};
-
-const HomePage: FC = () => {
-  const { register, watch, reset, setValue } = useForm<
-    z.infer<typeof formSchema>
-  >({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      postId: '',
-    },
-    mode: 'all',
-  });
-  const fetcher = useFetcher();
-  const { posts } = useLoaderData() as PostsLoaderData;
-  const [searchParams, setSearchParams] = useSearchParams();
-  const postId = watch('postId');
-  const postIdSearchParam = useMemo(
-    () => searchParams.get('postId'),
-    [searchParams],
-  );
-
-  useEffect(() => {
-    setSearchParams(params => {
-      params.set('postId', postId);
-      return params;
-    });
-  }, [setSearchParams, postId]);
-
-  useEffect(() => {
-    setValue('postId', postIdSearchParam ?? '');
-  }, [postIdSearchParam, setValue]);
-
-  useEffect(() => {
-    if (fetcher.state === 'submitting') {
-      reset();
-    }
-  }, [fetcher.state, reset]);
-
+const HomePage = () => {
   return (
-    <div>
-      <h1>Posts</h1>
-      <fetcher.Form method="post">
-        <input
-          data-testid="text-input"
-          {...register('postId')}
-          disabled={fetcher.state !== 'idle'}
-        />
-        <button
-          disabled={fetcher.state !== 'idle'}
-          type="submit"
-          data-testid="search-button"
-        >
-          {fetcher.state !== 'idle' ? 'LOADING' : 'Search'}
-        </button>
-      </fetcher.Form>
-      <Suspense fallback={'loading'}>
-        <Await resolve={posts} errorElement={'ERROR'}>
-          <PostsList
-            filterText={searchParams.get('postId') ?? watch('postId')}
-          />
-        </Await>
-      </Suspense>
-    </div>
+    <PageWrapper>
+      <h1>Welcome to a scaffolded project with INSERT NAME HERE!</h1>
+      <p>
+        Below you will find a list of example routes with commonly used patterns
+        for React projects
+      </p>
+      <ul>
+        <li>Querying and Mutating Data with React Query</li>
+        <li>React Hook Form Validation with Zod</li>
+        <li>Loaders and Actions with React Router + Generouted</li>
+        <li>A Kitchen sink example with everything blended together</li>
+      </ul>
+    </PageWrapper>
   );
 };
 
