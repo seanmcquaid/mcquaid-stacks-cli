@@ -3,7 +3,12 @@
 
 import { components, hooks, utils } from '@generouted/react-router/client';
 
-export type Path = `/`;
+export type Path =
+  | `/`
+  | `/kitchen-sink`
+  | `/react-hook-form-zod`
+  | `/react-query`
+  | `/react-router-generouted`;
 
 export type Params = {};
 

@@ -1,6 +1,4 @@
-import type { FC } from 'react';
 import { useErrorBoundary } from 'react-error-boundary';
-import PageWrapper from './PageWrapper';
 import { useNavigate } from '@/router';
 import { Button } from '@/components/ui/Button';
 
@@ -9,7 +7,7 @@ interface PageErrorProps {
   shouldAllowRefresh?: boolean;
 }
 
-const PageError: FC<PageErrorProps> = ({ errorText, shouldAllowRefresh }) => {
+const PageError = ({ errorText, shouldAllowRefresh }: PageErrorProps) => {
   const navigate = useNavigate();
   const { resetBoundary } = useErrorBoundary();
 
@@ -22,7 +20,7 @@ const PageError: FC<PageErrorProps> = ({ errorText, shouldAllowRefresh }) => {
   };
 
   return (
-    <PageWrapper>
+    <div className="flex h-full w-full p-8 flex-col">
       <h1>ERROR</h1>
       {!!errorText && <p>{errorText}</p>}
       {shouldAllowRefresh ? (
@@ -30,7 +28,7 @@ const PageError: FC<PageErrorProps> = ({ errorText, shouldAllowRefresh }) => {
       ) : (
         <Button onClick={handleGoBack}>Go Back</Button>
       )}
-    </PageWrapper>
+    </div>
   );
 };
 

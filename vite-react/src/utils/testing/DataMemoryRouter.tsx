@@ -1,19 +1,18 @@
-import type { FC, ReactNode } from 'react';
+import type { PropsWithChildren } from 'react';
 import {
   createMemoryRouter,
   createRoutesFromElements,
   RouterProvider,
 } from 'react-router-dom';
 
-interface DataMemoryRouterProps {
-  children: ReactNode;
+interface DataMemoryRouterProps extends PropsWithChildren {
   initialEntries?: string[];
 }
 
-const DataMemoryRouter: FC<DataMemoryRouterProps> = ({
+const DataMemoryRouter = ({
   children,
   initialEntries,
-}) => {
+}: DataMemoryRouterProps) => {
   const router = createMemoryRouter(createRoutesFromElements(children), {
     initialEntries,
   });
