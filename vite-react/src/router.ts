@@ -8,9 +8,12 @@ export type Path =
   | `/kitchen-sink`
   | `/react-hook-form-zod`
   | `/react-query`
+  | `/react-query/:id`
   | `/react-router-generouted`;
 
-export type Params = {};
+export type Params = {
+  '/react-query/:id': { id: string };
+};
 
 export type ModalPath = never;
 

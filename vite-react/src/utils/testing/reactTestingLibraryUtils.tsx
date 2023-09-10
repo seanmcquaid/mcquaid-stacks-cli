@@ -6,6 +6,7 @@ import {
 } from '@testing-library/react';
 import type { ReactElement, PropsWithChildren } from 'react';
 import DataMemoryRouter from './DataMemoryRouter';
+import type { Path } from '@/router';
 
 const queryClient = new QueryClient();
 
@@ -17,18 +18,18 @@ const renderHook = <T,>(fn: () => T) => {
 };
 
 interface RenderOptions {
-  initialRoute?: string;
+  initialRoute?: Path;
 }
 
 const render = (
   ui: ReactElement,
-  { initialRoute }: RenderOptions = {},
+  renderOptions?: RenderOptions,
 ): RenderResult => {
   const Wrapper = ({ children }: PropsWithChildren) => (
     <QueryClientProvider client={queryClient}>
-      {initialRoute ? (
-        <DataMemoryRouter initialEntries={[initialRoute]}>
-          <>{children}</>
+      {renderOptions?.initialRoute ? (
+        <DataMemoryRouter initialEntries={[renderOptions.initialRoute]}>
+          {children}
         </DataMemoryRouter>
       ) : (
         children

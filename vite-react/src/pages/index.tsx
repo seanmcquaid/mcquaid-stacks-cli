@@ -1,19 +1,39 @@
 import PageWrapper from '@/components/app/PageWrapper';
+import { buttonVariants } from '@/components/ui/Button';
+import useAppTranslation from '@/i18n/useAppTranslation';
+import { Link } from '@/router';
 
 const HomePage = () => {
+  const { t } = useAppTranslation();
+
   return (
     <PageWrapper>
-      <h1>Welcome to a scaffolded project with INSERT NAME HERE!</h1>
-      <p>
-        Below you will find a list of example routes with commonly used patterns
-        for React projects
-      </p>
-      <ul>
-        <li>Querying and Mutating Data with React Query</li>
-        <li>React Hook Form Validation with Zod</li>
-        <li>Loaders and Actions with React Router + Generouted</li>
-        <li>A Kitchen sink example with everything blended together</li>
-      </ul>
+      <h1>{t('HomePage.title')}</h1>
+      <p>{t('HomePage.subTitle')}</p>
+      <Link
+        to="/react-query"
+        className={buttonVariants({ variant: 'outline', className: 'm-4' })}
+      >
+        {t('HomePage.reactQuery')}
+      </Link>
+      <Link
+        to="/react-hook-form-zod"
+        className={buttonVariants({ variant: 'outline', className: 'm-4' })}
+      >
+        {t('HomePage.reactHookFormZod')}
+      </Link>
+      <Link
+        to="/react-router-generouted"
+        className={buttonVariants({ variant: 'outline', className: 'm-4' })}
+      >
+        {t('HomePage.reactRouterGenerouted')}
+      </Link>
+      <Link
+        to="/kitchen-sink"
+        className={buttonVariants({ variant: 'outline', className: 'm-4' })}
+      >
+        {t('HomePage.kitchenSink')}
+      </Link>
     </PageWrapper>
   );
 };
