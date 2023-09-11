@@ -1,7 +1,6 @@
 import PageWrapper from '@/components/app/PageWrapper';
-import { buttonVariants } from '@/components/ui/Button';
+import LinkButton from '@/components/ui/LinkButton';
 import useAppTranslation from '@/i18n/useAppTranslation';
-import { Link } from '@/router';
 
 const HomePage = () => {
   const { t } = useAppTranslation();
@@ -10,30 +9,18 @@ const HomePage = () => {
     <PageWrapper>
       <h1>{t('HomePage.title')}</h1>
       <p>{t('HomePage.subTitle')}</p>
-      <Link
-        to="/react-query"
-        className={buttonVariants({ variant: 'outline', className: 'm-4' })}
-      >
+      <LinkButton to="/react-query" className="m-4">
         {t('HomePage.reactQuery')}
-      </Link>
-      <Link
-        to="/react-hook-form-zod"
-        className={buttonVariants({ variant: 'outline', className: 'm-4' })}
-      >
+      </LinkButton>
+      <LinkButton to="/react-hook-form-zod" className="m-4">
         {t('HomePage.reactHookFormZod')}
-      </Link>
-      <Link
-        to="/react-router-generouted"
-        className={buttonVariants({ variant: 'outline', className: 'm-4' })}
-      >
+      </LinkButton>
+      <LinkButton to="/react-router-generouted" className="m-4">
         {t('HomePage.reactRouterGenerouted')}
-      </Link>
-      <Link
-        to="/kitchen-sink"
-        className={buttonVariants({ variant: 'outline', className: 'm-4' })}
-      >
+      </LinkButton>
+      <LinkButton to="/kitchen-sink" className="m-4">
         {t('HomePage.kitchenSink')}
-      </Link>
+      </LinkButton>
     </PageWrapper>
   );
 };
