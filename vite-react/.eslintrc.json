@@ -30,6 +30,7 @@
     "curly": ["warn", "all"],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
+    "react/prop-types": "off",
     "import/no-anonymous-default-export": "off",
     "import/order": "warn",
     "jsx-a11y/no-redundant-roles": "off",
