@@ -6,9 +6,15 @@ import PageWrapper from '@/components/app/PageWrapper';
 
 const formSchema = z
   .object({
-    username: z.string().email(),
-    password: z.string().min(3).max(10),
-    confirmPassword: z.string().min(3).max(10),
+    username: z.string().email({
+      message: 'Please enter a valid email',
+    }),
+    password: z.string().min(3).max(10, {
+      message: 'Password must be between 3 and 10 characters',
+    }),
+    confirmPassword: z.string().min(3).max(10, {
+      message: 'Password must be between 3 and 10 characters',
+    }),
   })
   .refine(data => data.password === data.confirmPassword, {
     message: 'Passwords do not match',
