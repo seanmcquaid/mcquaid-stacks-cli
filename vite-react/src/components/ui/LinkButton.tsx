@@ -48,7 +48,9 @@ const LinkButton = <P extends Path>(props: LinkButtonProps<P>) => (
         className: props.className,
       }),
     )}
-  />
+  >
+    {props.children}
+  </Link>
 );
 
 export default LinkButton;

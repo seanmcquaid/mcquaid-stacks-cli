@@ -11,7 +11,7 @@ export const getPostsQuery = () => ({
 const useGetPostsQuery = (initialData?: Post[]) => {
   const result = useQuery({
     ...getPostsQuery(),
-    initialData: initialData ?? [],
+    initialData,
   });
 
   return result;

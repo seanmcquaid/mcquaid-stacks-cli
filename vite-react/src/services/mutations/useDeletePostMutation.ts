@@ -2,14 +2,10 @@ import { useMutation, useQueryClient } from '@tanstack/react-query';
 import postsService from '@/services/postsService';
 import QueryKey from '@/constants/QueryKey';
 
-export const deletePostMutation = (id: string) => ({
-  mutationFn: () => postsService.deletePost(id),
-});
-
-const useDeletePostMutation = (id: string) => {
+const useDeletePostMutation = () => {
   const queryClient = useQueryClient();
   const result = useMutation({
-    ...deletePostMutation(id),
+    mutationFn: async (id: string) => postsService.deletePost(id),
     onSuccess: () => {
       queryClient.invalidateQueries({
         queryKey: [QueryKey.GET_POSTS],

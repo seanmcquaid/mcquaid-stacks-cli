@@ -10,6 +10,11 @@ const enUSLocale = {
       'Below you will find a list of example routes with commonly used patterns for React projects',
     title: 'Welcome to a scaffolded project with INSERT NAME HERE!',
   },
+  ReactQueryPage: {
+    delete: 'Delete',
+    title: 'Querying and Mutating Data with React Query',
+    view: 'View',
+  },
 } as const;
 
 export default enUSLocale;

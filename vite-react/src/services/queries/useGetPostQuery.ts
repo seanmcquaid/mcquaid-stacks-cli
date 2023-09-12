@@ -8,7 +8,7 @@ export const getPostQuery = (id: string) => ({
   queryFn: async () => postsService.getPost(id),
 });
 
-const useGetPostQuery = (id: string, initialData: Post) => {
+const useGetPostQuery = (id: string, initialData?: Post) => {
   const result = useQuery({ ...getPostQuery(id), initialData });
 
   return result;
