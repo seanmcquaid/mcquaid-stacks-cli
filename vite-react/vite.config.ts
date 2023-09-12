@@ -34,7 +34,7 @@ export default defineConfig({
       include: ['src/**/*.ts', 'src/**/*.tsx'],
       exclude: [
         'src/setupTests.ts',
-        'src/testUtils',
+        'src/testing',
         'src/i18n',
         'src/main.tsx',
         'src/env.ts',
@@ -42,6 +42,7 @@ export default defineConfig({
         'src/router.ts',
         'src/pages/_app.tsx',
         'src/pages/404.tsx',
+        'src/icons',
       ],
     },
   },
