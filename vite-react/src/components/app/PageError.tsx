@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/Button';
 import useAppTranslation from '@/i18n/useAppTranslation';
 
 interface PageErrorProps {
-  titleText: string;
+  titleText?: string;
   errorText?: string;
   shouldAllowRefresh?: boolean;
 }
@@ -28,7 +28,7 @@ const PageError = ({
 
   return (
     <div className="flex h-full w-full p-8 flex-col">
-      <h1>{titleText}</h1>
+      <h1>{titleText ? titleText : t('PageError.title')}</h1>
       {!!errorText && <p>{errorText}</p>}
       {shouldAllowRefresh ? (
         <Button onClick={handleRefresh}>{t('PageError.refresh')}</Button>

@@ -27,6 +27,7 @@ const enUSLocale = {
   PageError: {
     goBack: 'Go Back',
     refresh: 'Refresh',
+    title: "We're sorry, there was a prolbem loading this page",
   },
   ReactQueryPage: {
     delete: 'Delete',

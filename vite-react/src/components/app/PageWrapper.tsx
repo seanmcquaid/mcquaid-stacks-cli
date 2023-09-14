@@ -6,6 +6,7 @@ interface PageWrapperProps extends PropsWithChildren {
   isLoading?: boolean;
   isError?: boolean;
   errorText?: string;
+  errorTitleText?: string;
 }
 
 const PageWrapper = ({
@@ -13,6 +14,7 @@ const PageWrapper = ({
   isLoading,
   isError,
   errorText,
+  errorTitleText,
 }: PageWrapperProps) => {
   if (isLoading) {
     return (
@@ -23,7 +25,7 @@ const PageWrapper = ({
   }
 
   if (isError) {
-    return <PageError errorText={errorText} />;
+    return <PageError errorText={errorText} titleText={errorTitleText} />;
   }
 
   return <div className="flex h-full w-full p-8 flex-col">{children}</div>;
