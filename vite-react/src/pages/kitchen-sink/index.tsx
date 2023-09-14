@@ -10,10 +10,19 @@ import toast from 'react-hot-toast';
 import PageWrapper from '@/components/app/PageWrapper';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
-import useGetPostsQuery from '@/services/queries/useGetPostsQuery';
+import useGetPostsQuery, {
+  getPostsQuery,
+} from '@/services/queries/useGetPostsQuery';
+import queryClient from '@/services/queryClient';
+import useAppTranslation from '@/i18n/useAppTranslation';
 
-export const Loader: LoaderFunction = () => {
-  return {};
+export const Loader: LoaderFunction = async () => {
+  const query = getPostsQuery();
+  return {
+    data:
+      queryClient.getQueryData(query.queryKey) ??
+      (await queryClient.fetchQuery(query)),
+  };
 };
 
 export const Action: ActionFunction = async ({ request }) => {
@@ -32,6 +41,7 @@ const formSchema = z.object({
 });
 
 const KitchenSinkPage = () => {
+  const { t } = useAppTranslation();
   const { data, ...rest } = useGetPostsQuery();
   const {
     register,
@@ -46,9 +56,10 @@ const KitchenSinkPage = () => {
   });
   const isFormValid = isValid && isDirty;
   const fetcher = useFetcher();
+  const isFetcherLoading = fetcher.state === 'loading';
 
-  const handleOnSubmit = handleSubmit(data => {
-    fetcher.submit(data, {
+  const handleOnSubmit = handleSubmit(formData => {
+    fetcher.submit(formData, {
       method: 'POST',
       encType: 'multipart/form-data',
       action: '/kitchen-sink?index',
@@ -64,8 +75,8 @@ const KitchenSinkPage = () => {
           errorMessage={errors?.name?.message}
           {...register('name')}
         />
-        <Button type="submit" disabled={!isFormValid}>
-          Submit
+        <Button type="submit" disabled={!isFormValid || isFetcherLoading}>
+          {t('KitchenSinkPage.submit')}
         </Button>
       </form>
       <ul className="grid grid-cols-2">

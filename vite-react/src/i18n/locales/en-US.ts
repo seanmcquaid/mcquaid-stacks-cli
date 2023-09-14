@@ -13,6 +13,9 @@ const enUSLocale = {
       'Below you will find a list of example routes with commonly used patterns for React projects',
     title: 'Welcome to a scaffolded project with INSERT NAME HERE!',
   },
+  KitchenSinkPage: {
+    submit: 'Submit',
+  },
   Modal: {
     close: 'Close',
   },
