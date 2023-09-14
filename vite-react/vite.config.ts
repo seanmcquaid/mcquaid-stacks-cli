@@ -18,9 +18,11 @@ export default defineConfig({
   },
   preview: {
     port: 3000,
+    open: true,
   },
   server: {
     port: 3000,
+    open: true,
   },
   test: {
     globals: true,
@@ -34,7 +36,7 @@ export default defineConfig({
       include: ['src/**/*.ts', 'src/**/*.tsx'],
       exclude: [
         'src/setupTests.ts',
-        'src/testing',
+        'src/utils/testing',
         'src/i18n',
         'src/main.tsx',
         'src/env.ts',
@@ -43,6 +45,7 @@ export default defineConfig({
         'src/pages/_app.tsx',
         'src/pages/404.tsx',
         'src/icons',
+        'src/styles',
       ],
     },
   },
