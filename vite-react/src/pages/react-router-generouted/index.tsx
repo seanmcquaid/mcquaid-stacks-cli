@@ -39,7 +39,8 @@ const ReactRouterGeneroutedPage = () => {
   };
 
   const handleCloseModal = () => {
-    setSearchParams({});
+    searchParams.delete('modal');
+    setSearchParams(searchParams);
   };
 
   return (
