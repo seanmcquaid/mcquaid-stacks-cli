@@ -8,6 +8,8 @@ My personal collection of scaffolding templates for the following :
 4. Next.js + Redux
 5. Remix
 
+Turbo repo to manage this?
+
 ## Common libraries/approaches
 
 1. Ky
