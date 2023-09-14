@@ -12,3 +12,4 @@
 10. ESLint + Prettier for linting
 11. SVGR for SVG Icons
 12. Playwright for integration tests
+13. React Hot Toast for displaying Toasts
