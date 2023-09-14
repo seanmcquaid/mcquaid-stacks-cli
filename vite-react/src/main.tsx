@@ -5,7 +5,7 @@ import { Routes } from '@generouted/react-router/lazy';
 import { QueryClientProvider } from '@tanstack/react-query';
 import env from './env';
 import queryClient from './services/queryClient';
-import './index.css';
+import './styles/index.css';
 import './i18n';
 import PageError from './components/app/PageError';
 import LoadingOverlay from './components/ui/LoadingOverlay';
