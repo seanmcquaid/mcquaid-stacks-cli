@@ -22,8 +22,7 @@
     "types": ["vitest/globals"],
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"],
-      "@/components/*": ["./src/components/*"]
+      "@/*": ["./src/*"]
     }
   },
   "include": ["src", "node_modules/vitest/globals.d.ts"],
