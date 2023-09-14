@@ -17,7 +17,7 @@ const ReactQueryPage = () => {
       <ul className="grid grid-cols-2">
         {data?.map(post => (
           <li key={post.id} className="flex mt-4 items-center">
-            {post.title.substring(0, 4)}
+            {post.title.substring(0, 5)}
             <Button
               onClick={() => deletePost(post.id.toString())}
               disabled={deletePostLoading}
