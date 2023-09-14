@@ -1,6 +1,12 @@
 # Scaffolding Templates
 
-My personal collection of scaffolding templates.
+My personal collection of scaffolding templates for the following :
+
+1. Vite + React
+2. Vite + React + Redux
+3. Next.js
+4. Next.js + Redux
+5. Remix
 
 ## Common libraries/approaches
 
@@ -20,6 +26,7 @@ My personal collection of scaffolding templates.
 14. Tailwind
 15. MSW
 16. Playwright
+17. React Hot Toast
 
 ### Things to consider adding on your own for React projects
 
