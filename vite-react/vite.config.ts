@@ -13,7 +13,7 @@ export default defineConfig({
   plugins: [react(), svgr(), checker({ typescript: true }), generouted()],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src/'),
+      '@': path.resolve(__dirname, './src'),
     },
   },
   preview: {
