@@ -19,6 +19,15 @@ const enUSLocale = {
   Modal: {
     close: 'Close',
   },
+  NotFoundPage: {
+    home: 'Home',
+    notFound: 'Not Found',
+    pleaseTryADifferentRoute: 'Please try a different route',
+  },
+  PageError: {
+    goBack: 'Go Back',
+    refresh: 'Refresh',
+  },
   ReactQueryPage: {
     delete: 'Delete',
     title: 'Querying and Mutating Data with React Query',

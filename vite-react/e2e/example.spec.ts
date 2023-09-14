@@ -18,7 +18,7 @@ test('get started link', async ({ page }) => {
 });
 
 test('Mocks API', async ({ page }) => {
-  await page.goto('http://127.0.0.1:3000');
+  await page.goto('http://127.0.0.1:3000/react-query');
   const post = page.getByText('examp');
   await expect(post).toBeVisible();
 });
