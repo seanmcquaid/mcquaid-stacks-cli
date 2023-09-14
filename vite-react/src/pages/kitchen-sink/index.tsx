@@ -47,16 +47,17 @@ const KitchenSinkPage = () => {
     register,
     handleSubmit,
     formState: { errors, isValid, isDirty },
+    reset,
   } = useForm({
     defaultValues: {
       name: '',
     },
     resolver: zodResolver(formSchema),
-    mode: 'all',
+    mode: 'onChange',
   });
   const isFormValid = isValid && isDirty;
   const fetcher = useFetcher();
-  const isFetcherLoading = fetcher.state === 'loading';
+  const isFetcherLoading = fetcher.state !== 'idle';
 
   const handleOnSubmit = handleSubmit(formData => {
     fetcher.submit(formData, {
@@ -64,6 +65,7 @@ const KitchenSinkPage = () => {
       encType: 'multipart/form-data',
       action: '/kitchen-sink?index',
     });
+    reset();
   });
 
   return (
