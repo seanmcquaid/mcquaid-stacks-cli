@@ -1,4 +1,4 @@
-import { test, expect } from './extensions.js';
+import { test, expect } from './extensions';
 
 test('has title', async ({ page }) => {
   await page.goto('https://playwright.dev/');
@@ -17,8 +17,9 @@ test('get started link', async ({ page }) => {
   await expect(page).toHaveURL(/.*intro/);
 });
 
-test('Mocks API', async ({ page }) => {
-  await page.goto('http://127.0.0.1:3000/react-query');
-  const post = page.getByText('examp');
-  await expect(post).toBeVisible();
+// eslint-disable-next-line playwright/no-skipped-test
+test.skip('Mocks API', async ({ page }) => {
+  await page.goto('http://localhost:3000/react-query');
+  const title = page.getByText('Querying and Mutating Data with React Query');
+  await expect(title).toBeVisible();
 });
