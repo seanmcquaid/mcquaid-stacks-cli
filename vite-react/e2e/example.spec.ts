@@ -18,8 +18,8 @@ test('get started link', async ({ page }) => {
 });
 
 // eslint-disable-next-line playwright/no-skipped-test
-test.skip('Mocks API', async ({ page }) => {
+test('Mocks API', async ({ page }) => {
   await page.goto('http://localhost:3000/react-query');
-  const title = page.getByText('Querying and Mutating Data with React Query');
-  await expect(title).toBeVisible();
+  const post = page.getByText('examp');
+  await expect(post).toBeVisible();
 });

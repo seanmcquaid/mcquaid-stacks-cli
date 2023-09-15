@@ -53,6 +53,7 @@ jobs:
         run: |
           touch .env
           echo "VITE_APP_ENVIRONMENT=dev" >> .env
+          echo "VITE_APP_MSW_ENABLED=true" >> .env 
       - name: Install Dependencies
         shell: bash
         run: pnpm install --frozen-lockfile
