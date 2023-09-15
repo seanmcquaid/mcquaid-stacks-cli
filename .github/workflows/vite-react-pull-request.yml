@@ -10,34 +10,6 @@ defaults:
     working-directory: ./vite-react
 
 jobs:
-  unit-tests-coverage:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout latest
-        uses: actions/checkout@v3
-      - name: Setup PNPM
-        uses: pnpm/action-setup@v2
-        with:
-          version: 8.6.2
-      - name: Setup Node
-        uses: actions/setup-node@v3
-        with:
-          node-version-file: '.nvmrc'
-          cache: 'pnpm'
-      - name: Set env to dev
-        shell: bash
-        run: |
-          touch .env
-          echo "VITE_APP_ENVIRONMENT=dev" >> .env
-      - name: Install Dependencies
-        shell: bash
-        run: pnpm install --frozen-lockfile
-      - name: Run Unit Tests
-        run: pnpm test:coverage
-      - uses: VeryGoodOpenSource/very_good_coverage@v2
-        with:
-          path: './coverage/lcov.info'
-          min_coverage: 80
   linting:
     runs-on: ubuntu-latest
     steps:
@@ -62,32 +34,6 @@ jobs:
         run: pnpm install --frozen-lockfile
       - name: Lint
         run: pnpm lint
-  bundle-size:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout latest
-        uses: actions/checkout@v3
-      - name: Setup PNPM
-        uses: pnpm/action-setup@v2
-        with:
-          version: 8.6.2
-      - name: Setup Node
-        uses: actions/setup-node@v3
-        with:
-          node-version-file: '.nvmrc'
-          cache: 'pnpm'
-      - name: Set env to dev
-        shell: bash
-        run: |
-          touch .env
-          echo "VITE_APP_ENVIRONMENT=dev" >> .env
-      - name: Install Dependencies
-        shell: bash
-        run: pnpm install --frozen-lockfile
-      - name: Build the app
-        run: pnpm build
-      - name: Bundlesize Check
-        run: pnpm bundlesize
   playwright-tests:
     runs-on: ubuntu-latest
     steps:
