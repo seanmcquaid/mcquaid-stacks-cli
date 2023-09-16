@@ -1,6 +1,7 @@
 import { z } from 'zod';
-import Post, { postSchema } from '../types/responses/Post';
 import createApiClient from './createApiClient';
+import type Post from '@/types/Post';
+import { postSchema } from '@/types/Post';
 
 const baseUrl = 'https://jsonplaceholder.typicode.com';
 
@@ -13,6 +14,7 @@ const postsService = {
       .json<Post[]>(),
   getPost: (id: string) =>
     client.get(`posts/${id}`, { validationSchema: postSchema }).json<Post>(),
+  deletePost: (id: string) => client.delete(`posts/${id}`),
 } as const;
 
 export default postsService;

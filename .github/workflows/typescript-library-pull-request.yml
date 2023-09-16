@@ -1,0 +1,41 @@
+name: Pull Request
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches:
+      - '**'
+
+defaults:
+  run:
+    working-directory: ./typescript-library
+
+jobs:
+  build-lint-tests-size:
+    name: Build, lint, tests and size
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8.6.2
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'pnpm'
+      - name: Install Dependencies
+        run: |
+          pnpm install --frozen-lockfile
+      - name: Lint
+        run: pnpm lint
+      - name: Test
+        run: pnpm test
+      - name: Build
+        run: pnpm build
+      - name: Bundle size check
+        run: pnpm bundlesize
+      - name: Check package types
+        run: pnpm check-types

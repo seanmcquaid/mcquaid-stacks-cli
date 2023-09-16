@@ -4,8 +4,13 @@ on:
     types: [opened, synchronize, reopened]
     branches:
       - '**'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
-  build:
+  build-lint-tests-size:
     name: Build, lint, tests and size
     runs-on: ubuntu-latest
 

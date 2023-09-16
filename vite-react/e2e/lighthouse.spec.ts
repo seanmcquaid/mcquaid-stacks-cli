@@ -14,7 +14,7 @@ test.describe('Lighthouse tests', () => {
     });
 
     const page = await browser.newPage();
-    await page.goto('http://127.0.0.1:3000');
+    await page.goto('http://localhost:3000');
 
     await playAudit({
       page: page,

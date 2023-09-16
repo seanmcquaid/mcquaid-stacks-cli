@@ -4,12 +4,13 @@
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
     "plugin:jsx-a11y/recommended",
+    "plugin:i18next/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:playwright/playwright-test",
     "plugin:vitest/recommended",
     "eslint-config-prettier"
   ],
-  "plugins": ["import", "eslint-plugin-prettier"],
+  "plugins": ["import", "no-relative-import-paths", "eslint-plugin-prettier"],
   "parser": "@typescript-eslint/parser",
   "env": {
     "browser": true,
@@ -29,10 +30,10 @@
     "curly": ["warn", "all"],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
+    "react/prop-types": "off",
     "import/no-anonymous-default-export": "off",
     "import/order": "warn",
     "jsx-a11y/no-redundant-roles": "off",
-    "no-duplicate-imports": "warn",
     "prefer-const": "warn",
     "prettier/prettier": "warn",
     "react/jsx-uses-react": "off",
@@ -40,6 +41,12 @@
     "react/react-in-jsx-scope": "off",
     "@typescript-eslint/no-namespace": "off",
     "react/no-unescaped-entities": "off",
-    "playwright/missing-playwright-await": "off"
+    "playwright/missing-playwright-await": "off",
+    "@typescript-eslint/consistent-type-definitions": ["error"],
+    "@typescript-eslint/consistent-type-imports": "error",
+    "no-relative-import-paths/no-relative-import-paths": [
+      "warn",
+      { "allowSameFolder": true, "rootDir": "src", "prefix": "@" }
+    ]
   }
 }

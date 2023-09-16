@@ -1,16 +1,15 @@
-import { FC } from 'react';
 import { Outlet } from 'react-router-dom';
 import { ErrorBoundary } from 'react-error-boundary';
-import Navbar from '../components/Navbar';
-import PageError from '../components/PageError';
+import { Toaster } from 'react-hot-toast';
+import PageError from '@/components/app/PageError';
 
-const App: FC = () => {
+const App = () => {
   return (
     <ErrorBoundary
       fallback={<PageError errorText="Sorry, something happened" />}
     >
-      <Navbar />
       <Outlet />
+      <Toaster position="bottom-center" />
     </ErrorBoundary>
   );
 };

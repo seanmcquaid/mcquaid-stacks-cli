@@ -3,10 +3,16 @@
 
 import { components, hooks, utils } from '@generouted/react-router/client';
 
-export type Path = `/` | `/post/:id`;
+export type Path =
+  | `/`
+  | `/kitchen-sink`
+  | `/react-hook-form-zod`
+  | `/react-query`
+  | `/react-query/:id`
+  | `/react-router-generouted`;
 
 export type Params = {
-  '/post/:id': { id: string };
+  '/react-query/:id': { id: string };
 };
 
 export type ModalPath = never;

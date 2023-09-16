@@ -6,40 +6,52 @@ const createApiClient = (baseUrl: string) => {
     retry: {
       limit: 2,
       statusCodes: [401, 403, 500, 504],
+      methods: [
+        'get',
+        'put',
+        'head',
+        'delete',
+        'options',
+        'trace',
+        'post',
+        'patch',
+      ],
     },
     hooks: {
-      beforeRequest: [
-        request => {
-          request.headers.set('X-Requested-With', 'ky');
-        },
-      ],
-      beforeRetry: [
-        async ({ request }) => {
-          const token = 'refreshed-token';
-          request.headers.set('Authorization', `token ${token}`);
-        },
-      ],
       afterResponse: [
-        async (request, options, response) => {
+        async (_, options, response) => {
           if (!response.ok || !options.validationSchema) {
             return response;
           }
 
-          try {
-            const data = await response.json();
+          const data = await response.json();
+
+          const validatedData = options.validationSchema.safeParse(data);
+
+          if (!validatedData.success) {
             return new Response(
-              JSON.stringify(options.validationSchema.parse(data)),
+              JSON.stringify({
+                validationErrors: validatedData.error,
+              }),
+              {
+                status: 422,
+                statusText: 'API Validation Error',
+              },
             );
-          } catch (e) {
-            console.log(request, e);
-            throw e;
           }
+
+          return new Response(JSON.stringify(validatedData.data));
         },
       ],
       beforeError: [
-        error => {
-          console.log(error);
-          return error;
+        async error => {
+          try {
+            const response = await error.response.json();
+            error.responseData = response;
+            return error;
+          } catch (e) {
+            return error;
+          }
         },
       ],
     },
