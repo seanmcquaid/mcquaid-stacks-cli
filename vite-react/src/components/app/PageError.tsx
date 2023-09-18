@@ -1,6 +1,6 @@
 import { useErrorBoundary } from 'react-error-boundary';
 import { useNavigate } from '@/router';
-import { Button } from '@/components/ui/Button';
+import { Button } from '@/components/ui/ButtonComponent';
 import useAppTranslation from '@/i18n/useAppTranslation';
 
 interface PageErrorProps {

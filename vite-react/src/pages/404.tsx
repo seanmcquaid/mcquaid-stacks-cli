@@ -1,5 +1,5 @@
 import { useNavigate } from '@/router';
-import { Button } from '@/components/ui/Button';
+import { Button } from '@/components/ui/ButtonComponent';
 import PageWrapper from '@/components/app/PageWrapper';
 import useAppTranslation from '@/i18n/useAppTranslation';
 
