@@ -1,5 +1,5 @@
 import PageWrapper from '@/components/app/PageWrapper';
-import { Button } from '@/components/ui/ButtonComponent';
+import { Button } from '@/components/ui/Button';
 import LinkButton from '@/components/ui/LinkButton';
 import useAppTranslation from '@/i18n/useAppTranslation';
 import useDeletePostMutation from '@/services/mutations/useDeletePostMutation';

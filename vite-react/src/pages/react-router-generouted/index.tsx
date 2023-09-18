@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom';
 import { z } from 'zod';
 import PageWrapper from '@/components/app/PageWrapper';
-import { Button } from '@/components/ui/ButtonComponent';
+import { Button } from '@/components/ui/Button';
 import useAppTranslation from '@/i18n/useAppTranslation';
 import Modal from '@/components/app/Modal';
 

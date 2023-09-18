@@ -8,7 +8,7 @@ import {
 import { z } from 'zod';
 import toast from 'react-hot-toast';
 import PageWrapper from '@/components/app/PageWrapper';
-import { Button } from '@/components/ui/ButtonComponent';
+import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
 import useGetPostsQuery, {
   getPostsQuery,
