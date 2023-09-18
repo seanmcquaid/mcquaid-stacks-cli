@@ -5,6 +5,7 @@ import {
   useFetcher,
   useLoaderData,
 } from 'react-router-dom';
+import { z } from 'zod';
 import PageWrapper from '@/components/app/PageWrapper';
 import { Button } from '@/components/ui/Button';
 import useAppTranslation from '@/i18n/useAppTranslation';
@@ -29,7 +30,10 @@ const ReactRouterGeneroutedPage = () => {
   const { t } = useAppTranslation();
   const [searchParams, setSearchParams] = useSearchParams();
   const fetcher = useFetcher();
-  const isModalOpen = searchParams.get('modal') === 'open';
+  const isModalOpen = z.coerce
+    .boolean()
+    .catch(false)
+    .parse(searchParams.get('modal'));
   const loaderData = useLoaderData() as {
     hello?: string;
   };
