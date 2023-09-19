@@ -24,6 +24,12 @@ export default defineConfig({
     port: 3000,
     open: true,
   },
+  build: {
+    rollupOptions: {
+      // This is to remove the MSW from ever being included in the production build
+      external: id => id.includes('worker'),
+    },
+  },
   test: {
     globals: true,
     environment: 'jsdom',
