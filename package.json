@@ -4,7 +4,7 @@
   "main": "dist/index.js",
   "scripts": {
     "start": "ts-node src/index.ts",
-    "build": "shx rm -rf dist && tsc && shx cp -r ./src/templates dist",
+    "build": "shx rm -rf dist && tsup && shx cp -r ./src/templates dist",
     "prepare": "is-ci || husky install"
   },
   "bin": {
@@ -30,6 +30,7 @@
     "prettier": "^3.0.3",
     "shx": "^0.3.4",
     "ts-node": "^10.9.1",
+    "tsup": "^7.2.0",
     "typescript": "^5.2.2"
   },
   "license": "MIT"
