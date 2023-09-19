@@ -57,7 +57,3 @@ Domain -> DNS -> CDN -> WAF -> Server
 - DNS Resolution + Alising (Route53, Cloudflare, etc)
 
 Domain -> DNS -> CDN -> WAF -> S3
-
-Will add Cookiecutter to help facilitate starting new projects along with a CLI to help manage the templates.
-
-https://github.com/cookiecutter/cookiecutter
