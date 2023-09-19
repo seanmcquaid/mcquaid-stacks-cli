@@ -37,7 +37,7 @@ Turbo repo to manage this?
 
 ### Deployment setup
 
-I am currently using Vercel for my personal projects but I recognize that not every team can use it due to company constraints. In general here's what I recommend : 
+I am currently using Vercel for my personal projects but I recognize that not every team can use it due to company constraints. In general here's what I recommend :
 
 #### SSR
 

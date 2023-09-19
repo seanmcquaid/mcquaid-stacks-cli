@@ -3,7 +3,7 @@ on:
   pull_request:
     types: [opened, synchronize, reopened]
     branches:
-      - '**'
+      - "**"
 
 defaults:
   run:
@@ -24,8 +24,8 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version-file: '.nvmrc'
-          cache: 'pnpm'
+          node-version-file: ".nvmrc"
+          cache: "pnpm"
       - name: Install Dependencies
         run: |
           pnpm install --frozen-lockfile
