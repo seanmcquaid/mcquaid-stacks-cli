@@ -53,7 +53,8 @@ function createProject(projectPath: string) {
 
   fs.mkdirSync(projectPath);
 
-  shell.exec(`cd ${projectPath} && git init`)
+  shell.exec(`cd ${projectPath} && git init`);
+  
   return true;
 }
 
