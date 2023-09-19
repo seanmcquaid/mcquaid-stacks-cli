@@ -24,23 +24,23 @@
     "test:coverage": "vitest run --coverage"
   },
   "devDependencies": {
-    "@arethetypeswrong/cli": "^0.7.0",
+    "@arethetypeswrong/cli": "^0.10.2",
     "@changesets/cli": "^2.26.1",
     "@typescript-eslint/eslint-plugin": "^5.61.0",
     "@typescript-eslint/parser": "^5.61.0",
-    "@typescript-eslint/typescript-estree": "^6.0.0",
+    "@typescript-eslint/typescript-estree": "^6.7.2",
     "bundlesize": "^0.18.1",
-    "eslint": "8.47.0",
+    "eslint": "8.49.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "5.0.0",
     "husky": "^8.0.1",
     "is-ci": "^3.0.1",
     "jsdom": "^22.1.0",
-    "lint-staged": "^14.0.0",
-    "prettier": "^3.0.0",
+    "lint-staged": "^14.0.1",
+    "prettier": "^3.0.3",
     "tsup": "^7.1.0",
-    "typescript": "^5.0.0",
+    "typescript": "^5.2.2",
     "vite": "^4.0.0",
-    "vitest": "^0.34.1"
+    "vitest": "^0.34.4"
   }
 }
