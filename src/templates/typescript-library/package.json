@@ -30,7 +30,7 @@
     "@typescript-eslint/parser": "^5.61.0",
     "@typescript-eslint/typescript-estree": "^6.7.2",
     "bundlesize": "^0.18.1",
-    "eslint": "8.47.0",
+    "eslint": "8.49.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "5.0.0",
     "husky": "^8.0.1",
