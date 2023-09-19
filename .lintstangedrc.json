@@ -1,3 +1,0 @@
-{
-  "*.{js,ts,jsx,tsx}": "eslint ./src/index.ts --fix --max-warnings=0"
-}
