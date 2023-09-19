@@ -1,11 +1,12 @@
 {
   "name": "@mcquaid-stacks/cli",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "main": "dist/index.js",
   "scripts": {
     "start": "ts-node src/index.ts",
     "build": "shx rm -rf dist && tsup && shx cp -r ./src/templates dist",
-    "release": "pnpm build && changeset publish"
+    "release": "pnpm build && changeset publish",
+    "changeset": "changeset"
   },
   "bin": {
     "create-mcquaid-stack": "./dist/index.js"
