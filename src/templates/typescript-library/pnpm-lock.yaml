@@ -6,8 +6,8 @@ settings:
 
 devDependencies:
   '@arethetypeswrong/cli':
-    specifier: ^0.7.0
-    version: 0.7.1
+    specifier: ^0.10.2
+    version: 0.10.2
   '@changesets/cli':
     specifier: ^2.26.1
     version: 2.26.2
@@ -71,11 +71,11 @@ packages:
     resolution: {integrity: sha512-hL80MHK3b++pEp6K23+Nl5r5D1F19DRagp2ruCBIv4McyCiLKq67vUNvEQY1aGCAKNZ8GxV23n5MhOm7RwO8Pg==}
     dev: true
 
-  /@arethetypeswrong/cli@0.7.1:
-    resolution: {integrity: sha512-iSpoJV+8cXrr4fN0ZB/XCd4nFraGe+jYYWY880fLRqoMvmgQvyiKykER2JuTKtIhk7/3h9WVX/Srm4HLUEA8gg==}
+  /@arethetypeswrong/cli@0.10.2:
+    resolution: {integrity: sha512-20JLHXCsBCMeZfMqlbAFa5QTFpyyJJk8pEt4MwUhUadpPnBQC7QnqAhJcDv0uxLFrueK3SQbYPlGaqX0921LjA==}
     hasBin: true
     dependencies:
-      '@arethetypeswrong/core': 0.7.0
+      '@arethetypeswrong/core': 0.10.2
       chalk: 4.1.2
       cli-table3: 0.6.3
       commander: 10.0.1
@@ -86,14 +86,14 @@ packages:
       - encoding
     dev: true
 
-  /@arethetypeswrong/core@0.7.0:
-    resolution: {integrity: sha512-qwWmIm8YNvmSOgDXEDJUEjd1yGX4bTY0838A+wCTHlOm2n/lFhjauZjAxfKu9DHn2TSGnHahD07tGDPp4I7fSg==}
+  /@arethetypeswrong/core@0.10.2:
+    resolution: {integrity: sha512-jL1MPpZKuMkm0EbZn1OLgdTO5hci7g79EUSELEnATdFyTgbPUxJwTXi1Kdont/BG05BZCcxZnOQgYO/whVmwdA==}
     dependencies:
       '@andrewbranch/untar.js': 1.0.2
       fetch-ponyfill: 7.1.0
       fflate: 0.7.4
       semver: 7.5.4
-      typescript: 5.1.6
+      typescript: 5.2.2
       validate-npm-package-name: 5.0.0
     transitivePeerDependencies:
       - encoding
@@ -4445,6 +4445,12 @@ packages:
 
   /typescript@5.1.6:
     resolution: {integrity: sha512-zaWCozRZ6DLEWAWFrVDz1H6FVXzUSfTy5FUMWsQlU8Ym5JP9eO4xkTIROFCQvhQf61z6O/G6ugw3SgAnvvm+HA==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+    dev: true
+
+  /typescript@5.2.2:
+    resolution: {integrity: sha512-mI4WrpHsbCIcwT9cF4FZvr80QUeKvsUsUvKDoR+X/7XHQH98xYD8YHZg7ANtz2GtZt/CBq2QJ0thkGJMHfqc1w==}
     engines: {node: '>=14.17'}
     hasBin: true
     dev: true
