@@ -1,7 +1,10 @@
 {
   "name": "@mcquaid-stacks/cli",
+  "description": "CLI for generating new TypeScript projects quickly",
+  "author": "Sean McQuaid",
   "version": "0.0.0",
   "main": "dist/index.js",
+  "private": false,
   "scripts": {
     "start": "ts-node src/index.ts",
     "build": "shx rm -rf dist && tsup && shx cp -r ./src/templates dist",
