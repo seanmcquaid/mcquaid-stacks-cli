@@ -4,7 +4,8 @@
   "main": "dist/index.js",
   "scripts": {
     "start": "ts-node src/index.ts",
-    "build": "shx rm -rf dist && tsc && shx cp -r ./src/templates dist"
+    "build": "shx rm -rf dist && tsc && shx cp -r ./src/templates dist",
+    "prepare": "is-ci || husky install"
   },
   "bin": {
     "create-mcquaid-stack": "./dist/index.js"
@@ -18,6 +19,15 @@
     "@types/ejs": "^3.1.2",
     "@types/node": "^20.6.2",
     "@types/shelljs": "^0.8.12",
+    "@typescript-eslint/eslint-plugin": "^6.7.2",
+    "@typescript-eslint/parser": "^6.7.2",
+    "eslint": "^8.49.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "husky": "^8.0.3",
+    "is-ci": "^3.0.1",
+    "lint-staged": "^14.0.1",
+    "prettier": "^3.0.3",
     "shx": "^0.3.4",
     "ts-node": "^10.9.1",
     "typescript": "^5.2.2"
