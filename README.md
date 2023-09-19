@@ -29,6 +29,7 @@ Turbo repo to manage this?
 15. MSW
 16. Playwright
 17. React Hot Toast
+18. Faker
 
 ### Things to consider adding on your own for React projects
 
