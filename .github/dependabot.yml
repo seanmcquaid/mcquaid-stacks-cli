@@ -7,3 +7,15 @@ updates:
       interval: weekly
       day: tuesday
     open-pull-requests-limit: 20
+  - package-ecosystem: npm
+    directory: "/src/templates/typescript-library"
+    schedule:
+      interval: weekly
+      day: tuesday
+    open-pull-requests-limit: 20
+  - package-ecosystem: npm
+    directory: "/src/templates/vite-react"
+    schedule:
+      interval: weekly
+      day: tuesday
+    open-pull-requests-limit: 20
