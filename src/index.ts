@@ -1,12 +1,12 @@
 #!/usr/bin/env node
+// @ts-nocheck
 
-import * as inquirer from 'inquirer';
-import * as fs from 'fs';
-import * as path from 'path';
-import * as shell from 'shelljs';
-import chalk from 'chalk';
-import * as yargs from 'yargs';
-import * as ejs from 'ejs';
+const inquirer = require('inquirer');
+const fs = require('fs');
+const path = require('path');
+const shell = require('shelljs');
+const yargs = require('yargs');
+const ejs = require('ejs');
 
 export interface TemplateData {
     projectName: string
@@ -18,19 +18,23 @@ function render(content: string, data: TemplateData) {
 
 const CHOICES = fs.readdirSync('./templates');
 
+const args = yargs.argv as {
+  [key: string]: string;
+};
+
 const QUESTIONS = [
   {
     name: 'template',
     type: 'list',
     message: 'What project template would you like to generate?',
     choices: CHOICES,
-    when: () => !yargs.argv['template']
+    when: async () => args['template'] 
   },
   {
     name: 'name',
     type: 'input',
     message: 'Project name:',
-    when: () => !yargs.argv['name'],
+    when: () => args['name'],
     validate: (input: string) => {
       if (/^([A-Za-z\-\_\d])+$/.test(input)) return true;
       else return 'Project name may only include letters, numbers, underscores and hashes.';
@@ -53,50 +57,50 @@ export interface CliOptions {
   config: TemplateConfig
 }
 
-inquirer.prompt(QUESTIONS)
-  .then(answers => {
+inquirer.default.prompt(QUESTIONS)
+.then(answers => {
 
-    answers = Object.assign({}, answers, yargs.argv);
-    
-    const projectAnswers = answers as { [key: string]: string };
+  answers = Object.assign({}, answers, yargs.argv);
+  
+  const projectAnswers = answers as { [key: string]: string };
 
-    const projectChoice = projectAnswers['template']
-    const projectName = projectAnswers['name']
-    const templatePath = path.join(__dirname, 'templates', projectChoice);
-    const tartgetPath = path.join(CURR_DIR, projectName);
-    const templateConfig = getTemplateConfig(templatePath);
+  const projectChoice = projectAnswers['template']
+  const projectName = projectAnswers['name']
+  const templatePath = path.join(__dirname, 'templates', projectChoice);
+  const tartgetPath = path.join(CURR_DIR, projectName);
+  const templateConfig = getTemplateConfig(templatePath);
 
-    const options: CliOptions = {
-      projectName,
-      templateName: projectChoice,
-      templatePath,
-      tartgetPath,
-      config: templateConfig
-    }
+  const options: CliOptions = {
+    projectName,
+    templateName: projectChoice,
+    templatePath,
+    tartgetPath,
+    config: templateConfig
+  }
 
-    if (!createProject(tartgetPath)) {
-      return;
-    }
+  if (!createProject(tartgetPath)) {
+    return;
+  }
 
-    createDirectoryContents(templatePath, projectName, templateConfig);
+  createDirectoryContents(templatePath, projectName, templateConfig);
 
-    if (!postProcess(options)) {
-      return;
-    }
+  if (!postProcess(options)) {
+    return;
+  }
 
-    showMessage(options);
-  });
+  showMessage(options);
+});
 
 function showMessage(options: CliOptions) {
   console.log('');
-  console.log(chalk.green('Done.'));
-  console.log(chalk.green(`Go into the project: cd ${options.projectName}`));
+  console.log('Done.');
+  console.log(`Go into the project: cd ${options.projectName}`);
 
   const message = options.config.postMessage;
 
   if (message) {
     console.log('');
-    console.log(chalk.yellow(message));
+    console.log(message);
     console.log('');
   }
 
@@ -118,7 +122,7 @@ function getTemplateConfig(templatePath: string): TemplateConfig {
 
 function createProject(projectPath: string) {
   if (fs.existsSync(projectPath)) {
-    console.log(chalk.red(`Folder ${projectPath} exists. Delete or use another name.`));
+    console.log(`Folder ${projectPath} exists. Delete or use another name.`);
     return false;
   }
 
@@ -146,6 +150,8 @@ function postProcessNode(options: CliOptions) {
     cmd = 'yarn';
   } else if (shell.which('npm')) {
     cmd = 'npm install';
+  } else if(shell.which('pnpm')) {
+    cmd = 'pnpm install';
   }
 
   if (cmd) {
@@ -155,7 +161,7 @@ function postProcessNode(options: CliOptions) {
       return false;
     }
   } else {
-    console.log(chalk.red('No yarn or npm found. Cannot run installation.'));
+    console.log('No yarn, pnpm or npm found. Cannot run installation.');
   }
 
   return true;
