@@ -7,7 +7,7 @@ on:
 
 defaults:
   run:
-    working-directory: ./src/templates/vite-react
+    working-directory: ./templates/vite-react
 
 jobs:
   linting:
