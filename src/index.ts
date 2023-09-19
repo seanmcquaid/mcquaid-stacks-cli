@@ -3,7 +3,6 @@
 import * as inquirer from '@inquirer/prompts';
 import * as fs from 'fs';
 import * as path from 'path';
-import * as shell from 'shelljs';
 import * as ejs from 'ejs';
 
 export interface TemplateData {
@@ -52,8 +51,6 @@ function createProject(projectPath: string) {
   }
 
   fs.mkdirSync(projectPath);
-
-  shell.exec(`cd ${projectPath} && git init`);
   
   return true;
 }
