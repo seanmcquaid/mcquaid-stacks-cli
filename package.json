@@ -1,18 +1,19 @@
 {
   "name": "@mcquaid-stacks/cli",
-  "description": "CLI for generating new TypeScript projects quickly",
-  "author": "Sean McQuaid",
-  "version": "0.0.1",
-  "main": "dist/index.js",
+  "version": "0.0.0",
   "private": false,
-  "scripts": {
-    "start": "ts-node src/index.ts",
-    "build": "shx rm -rf dist && tsup && shx cp -r ./src/templates dist",
-    "release": "pnpm build && changeset publish",
-    "changeset": "changeset"
-  },
+  "description": "CLI for generating new TypeScript projects quickly",
+  "license": "MIT",
+  "author": "Sean McQuaid",
+  "main": "dist/index.js",
   "bin": {
     "create-mcquaid-stack": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "shx rm -rf dist && tsup && shx cp -r ./src/templates dist",
+    "changeset": "changeset",
+    "release": "pnpm build && changeset publish",
+    "start": "ts-node src/index.ts"
   },
   "dependencies": {
     "@inquirer/prompts": "^3.1.1",
@@ -32,5 +33,8 @@
   "engines": {
     "node": ">=18.16.0"
   },
-  "license": "MIT"
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
 }
