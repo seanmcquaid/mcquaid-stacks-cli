@@ -7,7 +7,7 @@
 5. Tailwind CSS for styling
 6. i18next for internationalization
 7. Ky for HTTP requests
-8. MSW for mocking HTTP requests
+8. MSW + Faker for mocking HTTP requests
 9. React Testing Library + Vitest for unit testing
 10. ESLint + Prettier for linting
 11. SVGR for SVG Icons
