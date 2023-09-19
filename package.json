@@ -2,7 +2,7 @@
   "name": "@mcquaid-stacks/cli",
   "description": "CLI for generating new TypeScript projects quickly",
   "author": "Sean McQuaid",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "dist/index.js",
   "private": false,
   "scripts": {
