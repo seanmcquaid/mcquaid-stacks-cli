@@ -7,7 +7,7 @@ on:
 
 defaults:
   run:
-    working-directory: ./typescript-library
+    working-directory: ./src/typescript-library
 
 jobs:
   build-lint-tests-size:
