@@ -4,6 +4,7 @@ import * as inquirer from '@inquirer/prompts';
 import * as fs from 'fs';
 import * as path from 'path';
 import * as ejs from 'ejs';
+import * as shelljs from 'shelljs';
 
 export interface TemplateData {
   projectName: string;
@@ -51,6 +52,8 @@ function createProject(projectPath: string) {
   }
 
   fs.mkdirSync(projectPath);
+
+  shelljs.exec(`git init ${projectPath}`);
   
   return true;
 }
