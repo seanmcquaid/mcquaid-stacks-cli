@@ -1,5 +1,11 @@
 # @mcquaid-stacks/cli
 
+## 0.0.2
+
+### Patch Changes
+
+- 7a05b94: Added init git repo
+
 ## 0.0.1
 
 ### Patch Changes
