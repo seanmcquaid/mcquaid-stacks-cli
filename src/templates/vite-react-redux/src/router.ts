@@ -7,12 +7,13 @@ export type Path =
   | `/`
   | `/kitchen-sink`
   | `/react-hook-form-zod`
-  | `/react-query`
-  | `/react-query/:id`
-  | `/react-router-generouted`;
+  | `/react-router-generouted`
+  | `/redux-toolkit`
+  | `/rtk-query`
+  | `/rtk-query/:id`;
 
 export type Params = {
-  '/react-query/:id': { id: string };
+  '/rtk-query/:id': { id: string };
 };
 
 export type ModalPath = never;

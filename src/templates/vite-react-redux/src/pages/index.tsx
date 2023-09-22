@@ -9,8 +9,11 @@ const HomePage = () => {
     <PageWrapper>
       <h1>{t('HomePage.title')}</h1>
       <p>{t('HomePage.subTitle')}</p>
-      <LinkButton to="/react-query" className="m-4">
-        {t('HomePage.reactQuery')}
+      <LinkButton to="/redux-toolkit" className="m-4">
+        {t('HomePage.reduxToolkit')}
+      </LinkButton>
+      <LinkButton to="/rtk-query" className="m-4">
+        {t('HomePage.reduxToolkitQuery')}
       </LinkButton>
       <LinkButton to="/react-hook-form-zod" className="m-4">
         {t('HomePage.reactHookFormZod')}

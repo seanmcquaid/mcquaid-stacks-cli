@@ -10,18 +10,17 @@ import toast from 'react-hot-toast';
 import PageWrapper from '@/components/app/PageWrapper';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
-import useGetPostsQuery, {
-  getPostsQuery,
-} from '@/services/queries/useGetPostsQuery';
-import queryClient from '@/services/queryClient';
 import useAppTranslation from '@/i18n/useAppTranslation';
+import store from '@/store';
+import postsApi, { useGetPostsQuery } from '@/store/postsApi';
 
 export const Loader: LoaderFunction = async () => {
-  const query = getPostsQuery();
+  const { data } = postsApi.endpoints.getPosts.select()(store.getState());
+  const result =
+    data ?? (await store.dispatch(postsApi.endpoints.getPosts.initiate())).data;
+
   return {
-    data:
-      queryClient.getQueryData(query.queryKey) ??
-      (await queryClient.fetchQuery(query)),
+    data: result,
   };
 };
 
