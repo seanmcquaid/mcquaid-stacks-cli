@@ -7,6 +7,7 @@ My personal collection of scaffolding templates for the following :
 3. Next.js
 4. Next.js + Redux
 5. Remix
+6. TypeScript libraries
 
 Turbo repo to manage this?
 
