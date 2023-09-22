@@ -6,11 +6,11 @@ import * as path from 'path';
 import * as ejs from 'ejs';
 import * as shelljs from 'shelljs';
 
-export interface TemplateData {
+interface TemplateData {
   projectName: string;
 }
 
-export function render(content: string, data: TemplateData) {
+function render(content: string, data: TemplateData) {
   return ejs.render(content, data);
 }
 
@@ -18,12 +18,12 @@ const CHOICES = fs.readdirSync(path.join(__dirname, 'templates'));
 
 const CURR_DIR = process.cwd();
 
-export interface TemplateConfig {
+interface TemplateConfig {
   files?: string[];
   postMessage?: string;
 }
 
-export interface CliOptions {
+interface CliOptions {
   projectName: string;
   templateName: string;
   templatePath: string;
@@ -53,7 +53,7 @@ function createProject(projectPath: string) {
 
   fs.mkdirSync(projectPath);
 
-  shelljs.exec(`git init ${projectPath}`);
+  shelljs.exec(`cd ${projectPath} && pnpm install`);
   
   return true;
 }
