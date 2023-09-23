@@ -1,3 +1,3 @@
-import { ReactComponent as PlaceholderIcon } from './placeholder.svg';
+import PlaceholderIcon from './placeholder.svg?react';
 
 export { PlaceholderIcon };
