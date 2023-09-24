@@ -12,7 +12,7 @@
   "scripts": {
     "build": "shx rm -rf dist && tsup && shx cp -r ./src/templates dist",
     "changeset": "changeset",
-    "release": "pnpm build && changeset publish",
+    "release": "pnpm build && changeset publish --access public",
     "start": "ts-node src/index.ts"
   },
   "dependencies": {
