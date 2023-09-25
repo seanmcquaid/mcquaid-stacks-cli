@@ -1,0 +1,53 @@
+name: Pull Request
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches:
+      - develop
+      - qa
+      - staging
+      - prod
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  unit-tests-coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout latest
+        uses: actions/checkout@v3
+      - uses: ./.github/actions/setup-pull-request-job
+      - name: Run Unit Tests
+        run: pnpm coverage
+      - uses: VeryGoodOpenSource/very_good_coverage@v2
+        with:
+          path: './coverage/lcov.info'
+          min_coverage: 80
+  linting:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout latest
+        uses: actions/checkout@v3
+      - uses: ./.github/actions/setup-pull-request-job
+      - name: Lint
+        run: pnpm lint
+  playwright-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout latest
+        uses: actions/checkout@v3
+      - uses: ./.github/actions/setup-pull-request-job
+      - name: Install Playwright Browsers
+        run: pnpm playwright install --with-deps
+      - name: Run Playwright tests
+        run: pnpm playwright:run
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout latest
+        uses: actions/checkout@v3
+      - uses: ./.github/actions/setup-pull-request-job
+      - name: Build
+        run: pnpm build

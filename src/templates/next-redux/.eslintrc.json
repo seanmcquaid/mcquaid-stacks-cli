@@ -1,0 +1,20 @@
+{
+  "plugins": ["vitest", "i18next", "jsx-a11y"],
+  "extends": [
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:i18next/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:playwright/playwright-test",
+    "plugin:vitest/recommended",
+    "prettier"
+  ],
+  "rules": {
+    "@typescript-eslint/no-namespace": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/consistent-type-definitions": ["error"],
+    "@typescript-eslint/consistent-type-imports": "error"
+  }
+}
