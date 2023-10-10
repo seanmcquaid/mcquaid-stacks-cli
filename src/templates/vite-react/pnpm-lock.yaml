@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@generouted/react-router':
-    specifier: ^1.15.9
-    version: 1.15.9(react-router-dom@6.16.0)(react@18.2.0)(vite@4.4.9)
+    specifier: ^1.16.0
+    version: 1.16.0(react-router-dom@6.16.0)(react@18.2.0)(vite@4.4.9)
   '@hookform/resolvers':
     specifier: ^3.3.1
     version: 3.3.1(react-hook-form@7.47.0)
@@ -693,15 +693,15 @@ packages:
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0, npm: '>=6.14.13'}
     dev: true
 
-  /@generouted/react-router@1.15.9(react-router-dom@6.16.0)(react@18.2.0)(vite@4.4.9):
-    resolution: {integrity: sha512-Q+D4FJxjJk9Tseo6ruzKzCRz1hffbHih4td6QaOsWru9iVHSCUlksdWo14mKi9Ljjh+dVWjPCG7mZMKKbrbi9w==}
+  /@generouted/react-router@1.16.0(react-router-dom@6.16.0)(react@18.2.0)(vite@4.4.9):
+    resolution: {integrity: sha512-yk+pQaMwdawY3spudOxvWovF8w8qEwn0eL8kd1YxaJjC+SSK0SQEwk1SYT3eYV+PXSc/ypnbaqaLBzlARj9neg==}
     peerDependencies:
       react: '>=18'
       react-router-dom: '>=6'
       vite: '>=4'
     dependencies:
       fast-glob: 3.3.1
-      generouted: 1.15.9(vite@4.4.9)
+      generouted: 1.16.0(vite@4.4.9)
       react: 18.2.0
       react-router-dom: 6.16.0(react-dom@18.2.0)(react@18.2.0)
       vite: 4.4.9(@types/node@20.8.2)
@@ -3721,8 +3721,8 @@ packages:
       wide-align: 1.1.5
     dev: true
 
-  /generouted@1.15.9(vite@4.4.9):
-    resolution: {integrity: sha512-CiSA4qnTWlRBabd6U1Dcr10sKzfUlQ8dvcFEwjTcBYCzkq/nnameqmT4ppsWNx/6SW7PyUZpzcHnr2i475WUQA==}
+  /generouted@1.16.0(vite@4.4.9):
+    resolution: {integrity: sha512-kpPOZ3/T1dh5+3fzeBKwWD6xLWmzFcgLSNXJGrN6DevMh90tB+qMqDOni3zJSLCBnCI4/wbgWYm1My93zxaE/A==}
     peerDependencies:
       vite: '>=3'
     dependencies:
