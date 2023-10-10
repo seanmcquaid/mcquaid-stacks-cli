@@ -28,7 +28,7 @@
     "@changesets/cli": "^2.26.1",
     "@typescript-eslint/eslint-plugin": "^5.61.0",
     "@typescript-eslint/parser": "^5.61.0",
-    "@typescript-eslint/typescript-estree": "^6.7.4",
+    "@typescript-eslint/typescript-estree": "^6.7.5",
     "bundlesize": "^0.18.1",
     "eslint": "8.50.0",
     "eslint-config-prettier": "^9.0.0",
