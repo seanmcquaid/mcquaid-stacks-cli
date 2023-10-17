@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@generouted/react-router':
-    specifier: ^1.16.0
-    version: 1.16.0(react-router-dom@6.16.0)(react@18.2.0)(vite@4.4.11)
+    specifier: ^1.16.1
+    version: 1.16.1(react-router-dom@6.16.0)(react@18.2.0)(vite@4.4.11)
   '@hookform/resolvers':
     specifier: ^3.3.1
     version: 3.3.1(react-hook-form@7.47.0)
@@ -733,15 +733,15 @@ packages:
       tslib: 2.6.2
     dev: true
 
-  /@generouted/react-router@1.16.0(react-router-dom@6.16.0)(react@18.2.0)(vite@4.4.11):
-    resolution: {integrity: sha512-yk+pQaMwdawY3spudOxvWovF8w8qEwn0eL8kd1YxaJjC+SSK0SQEwk1SYT3eYV+PXSc/ypnbaqaLBzlARj9neg==}
+  /@generouted/react-router@1.16.1(react-router-dom@6.16.0)(react@18.2.0)(vite@4.4.11):
+    resolution: {integrity: sha512-py0Ms4ekQm68mVS7ZgyRMN9hI0vj0sLykHNUjHNiB1VbVfBX5rWuSb0pqBfz2ykFobL5e0otpElEq4M3oJRl4w==}
     peerDependencies:
       react: '>=18'
       react-router-dom: '>=6'
       vite: '>=4'
     dependencies:
       fast-glob: 3.3.1
-      generouted: 1.16.0(vite@4.4.11)
+      generouted: 1.16.1(vite@4.4.11)
       react: 18.2.0
       react-router-dom: 6.16.0(react-dom@18.2.0)(react@18.2.0)
       vite: 4.4.11(@types/node@20.8.4)
@@ -3833,8 +3833,8 @@ packages:
       wide-align: 1.1.5
     dev: true
 
-  /generouted@1.16.0(vite@4.4.11):
-    resolution: {integrity: sha512-kpPOZ3/T1dh5+3fzeBKwWD6xLWmzFcgLSNXJGrN6DevMh90tB+qMqDOni3zJSLCBnCI4/wbgWYm1My93zxaE/A==}
+  /generouted@1.16.1(vite@4.4.11):
+    resolution: {integrity: sha512-BF3aNxGowJHJS47Ketwole1UeidwVAUMwHvGXipW29sq8vNqblLYlZDYW7jNXOptL9s5Hu5BrbM3S95/lyNI7w==}
     peerDependencies:
       vite: '>=3'
     dependencies:
