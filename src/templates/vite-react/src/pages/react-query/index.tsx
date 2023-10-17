@@ -7,12 +7,12 @@ import useGetPostsQuery from '@/services/queries/useGetPostsQuery';
 
 const ReactQueryPage = () => {
   const { t } = useAppTranslation();
-  const { data, isPending, isError } = useGetPostsQuery();
+  const { data, isLoading, isError } = useGetPostsQuery();
   const { mutate: deletePost, isPending: deletePostLoading } =
     useDeletePostMutation();
 
   return (
-    <PageWrapper isLoading={isPending} isError={isError}>
+    <PageWrapper isLoading={isLoading} isError={isError}>
       <h1>{t('ReactQueryPage.title')}</h1>
       <ul className="grid grid-cols-2">
         {data?.map(post => (

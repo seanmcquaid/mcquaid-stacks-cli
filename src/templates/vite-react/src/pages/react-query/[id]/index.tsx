@@ -4,10 +4,10 @@ import useGetPostQuery from '@/services/queries/useGetPostQuery';
 
 const ReactQueryPostPage = () => {
   const { id } = useParams('/react-query/:id');
-  const { data, isPending, isError } = useGetPostQuery(id);
+  const { data, isLoading, isError } = useGetPostQuery(id);
 
   return (
-    <PageWrapper isLoading={isPending} isError={isError}>
+    <PageWrapper isLoading={isLoading} isError={isError}>
       <h1>{data?.title}</h1>
       <p>{data?.body}</p>
     </PageWrapper>
