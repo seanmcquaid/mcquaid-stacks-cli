@@ -9,6 +9,7 @@ export type Path =
   | `/react-hook-form-zod`
   | `/react-query`
   | `/react-query/:id`
+  | `/react-query/DeleteButton`
   | `/react-router-generouted`;
 
 export type Params = {

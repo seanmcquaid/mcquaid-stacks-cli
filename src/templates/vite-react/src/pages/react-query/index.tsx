@@ -1,15 +1,12 @@
 import PageWrapper from '@/components/app/PageWrapper';
-import { Button } from '@/components/ui/Button';
 import LinkButton from '@/components/ui/LinkButton';
 import useAppTranslation from '@/i18n/useAppTranslation';
-import useDeletePostMutation from '@/services/mutations/useDeletePostMutation';
 import useGetPostsQuery from '@/services/queries/useGetPostsQuery';
+import DeleteButton from './DeleteButton';
 
 const ReactQueryPage = () => {
   const { t } = useAppTranslation();
   const { data, isLoading, isError } = useGetPostsQuery();
-  const { mutate: deletePost, isPending: deletePostLoading } =
-    useDeletePostMutation();
 
   return (
     <PageWrapper isLoading={isLoading} isError={isError}>
@@ -18,13 +15,7 @@ const ReactQueryPage = () => {
         {data?.map(post => (
           <li key={post.id} className="flex mt-4 items-center">
             {post.title.substring(0, 5)}
-            <Button
-              onClick={() => deletePost(post.id.toString())}
-              disabled={deletePostLoading}
-              className="ml-4"
-            >
-              {t('ReactQueryPage.delete')}
-            </Button>
+            <DeleteButton id={post.id} />
             <LinkButton
               to={'/react-query/:id'}
               className="ml-4"
