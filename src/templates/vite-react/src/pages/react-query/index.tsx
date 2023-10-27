@@ -8,7 +8,7 @@ import useGetPostsQuery from '@/services/queries/useGetPostsQuery';
 const ReactQueryPage = () => {
   const { t } = useAppTranslation();
   const { data, isLoading, isError } = useGetPostsQuery();
-  const { mutate: deletePost, isLoading: deletePostLoading } =
+  const { mutate: deletePost, isPending: deletePostLoading } =
     useDeletePostMutation();
 
   return (
