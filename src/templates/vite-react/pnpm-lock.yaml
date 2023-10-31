@@ -36,8 +36,8 @@ dependencies:
     specifier: ^7.1.0
     version: 7.1.0
   ky:
-    specifier: ^1.1.0
-    version: 1.1.0
+    specifier: ^1.1.2
+    version: 1.1.2
   lucide-react:
     specifier: ^0.288.0
     version: 0.288.0(react@18.2.0)
@@ -4836,8 +4836,8 @@ packages:
       json-buffer: 3.0.1
     dev: true
 
-  /ky@1.1.0:
-    resolution: {integrity: sha512-n/rS/Yw+pc/j61kl353yIhxpM/FN0VidhPeiMv6Y/QyyCUpSJtHtHlX655wYolZ/Wc3BKO4Q5syWKfzJ5CT7Bg==}
+  /ky@1.1.2:
+    resolution: {integrity: sha512-voehdKw8MleNTfcAVlZ9nObJQiWXvb5b3sYpVP6s8VYEdrmnbs7aYdNfAE0nC8wch8TXjH1ksnwTOvYcxrf1Gw==}
     engines: {node: '>=18'}
     dev: false
 
