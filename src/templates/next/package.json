@@ -6,7 +6,15 @@
     "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prepare": "is-ci || husky install",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:watch": "vitest",
+    "playwright:codegen": "playwright codegen",
+    "playwright:debug": "playwright test --debug",
+    "playwright:run": "playwright test",
+    "playwright:ui": "playwright test --ui"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.2",
