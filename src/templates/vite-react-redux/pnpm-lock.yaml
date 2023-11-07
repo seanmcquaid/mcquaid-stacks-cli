@@ -185,14 +185,14 @@ devDependencies:
     specifier: ^15.0.2
     version: 15.0.2
   msw:
-    specifier: ^2.0.1
-    version: 2.0.1(typescript@5.2.2)
+    specifier: ^2.0.3
+    version: 2.0.3(typescript@5.2.2)
   playwright-lighthouse:
     specifier: ^3.1.0
     version: 3.1.0
   playwright-msw:
     specifier: ^2.2.1
-    version: 2.2.1(@playwright/test@1.39.0)(msw@2.0.1)
+    version: 2.2.1(@playwright/test@1.39.0)(msw@2.0.3)
   postcss:
     specifier: ^8.4.31
     version: 8.4.31
@@ -5216,8 +5216,8 @@ packages:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
     dev: true
 
-  /msw@2.0.1(typescript@5.2.2):
-    resolution: {integrity: sha512-eGcoo5anJmorEkGMQ48dLFx53EJlDL00GjeJtl2dRGm6WwPpzt2fYDZ9ueJ53zMNTtrNtjH9RqbDa+nz7e9Dew==}
+  /msw@2.0.3(typescript@5.2.2):
+    resolution: {integrity: sha512-PFIo99h862DiVazndQmko1vJFNNhog0CYajK6N12ESzeLURYJlUglv9ObzWmRCAN3DRVuq7BUeI+eBgRk7oYaQ==}
     engines: {node: '>=18'}
     hasBin: true
     requiresBuild: true
@@ -5699,7 +5699,7 @@ packages:
       ua-parser-js: 1.0.36
     dev: true
 
-  /playwright-msw@2.2.1(@playwright/test@1.39.0)(msw@2.0.1):
+  /playwright-msw@2.2.1(@playwright/test@1.39.0)(msw@2.0.3):
     resolution: {integrity: sha512-LjT68LWqzJX8boy4KbnPp5ACLf7WDpt6RUem0tQQcQKys+45KNlluzBx8HEl1HNiCBYV/XZw1aI1aD2giKXWRg==}
     engines: {node: '>=14'}
     peerDependencies:
@@ -5708,7 +5708,7 @@ packages:
     dependencies:
       '@mswjs/cookies': 0.2.2
       '@playwright/test': 1.39.0
-      msw: 2.0.1(typescript@5.2.2)
+      msw: 2.0.3(typescript@5.2.2)
       strict-event-emitter: 0.4.6
     dev: true
 
