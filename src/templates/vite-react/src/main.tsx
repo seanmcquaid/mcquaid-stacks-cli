@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { ErrorBoundary } from 'react-error-boundary';
 import { Routes } from '@generouted/react-router/lazy';
 import { QueryClientProvider } from '@tanstack/react-query';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import env from './env';
 import queryClient from './services/queryClient';
 import './styles/index.css';
@@ -27,6 +28,7 @@ prepare().then(() =>
             <Suspense fallback={<LoadingOverlay isLoading />}>
               <Routes />
             </Suspense>
+            <ReactQueryDevtools initialIsOpen={false} />
           </QueryClientProvider>
         </ErrorBoundary>
       </StrictMode>,
