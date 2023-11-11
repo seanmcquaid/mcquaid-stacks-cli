@@ -1,0 +1,6 @@
+[
+  {
+    "path": "dist/assets/*.js",
+    "limit": "6 s"
+  }
+]

@@ -98,4 +98,4 @@ jobs:
       - name: Build the app
         run: pnpm build
       - name: Bundlesize Check
-        run: pnpm bundlesize
+        run: pnpm size-limit
