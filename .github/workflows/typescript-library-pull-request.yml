@@ -11,7 +11,7 @@ defaults:
 
 jobs:
   build-lint-tests-size:
-    name: Build, lint, tests and size
+    name: Build, lint, tests and size - TS Library
     runs-on: ubuntu-latest
 
     steps:
@@ -36,6 +36,6 @@ jobs:
       - name: Build
         run: pnpm build
       - name: Bundle size check
-        run: pnpm bundlesize
+        run: pnpm size-limit
       - name: Check package types
         run: pnpm check-types

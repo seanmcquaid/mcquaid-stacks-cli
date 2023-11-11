@@ -12,6 +12,7 @@ defaults:
 jobs:
   linting:
     runs-on: ubuntu-latest
+    name: Linting - Vite + React
     steps:
       - name: Checkout latest
         uses: actions/checkout@v3
@@ -34,6 +35,7 @@ jobs:
         run: pnpm lint
   playwright-tests:
     runs-on: ubuntu-latest
+    name: Playwright Tests - Vite + React
     steps:
       - name: Checkout latest
         uses: actions/checkout@v3
@@ -59,6 +61,7 @@ jobs:
         run: pnpm playwright:run
   unit-tests-coverage:
     runs-on: ubuntu-latest
+    name: Unit Tests - Vite + React
     steps:
       - name: Checkout latest
         uses: actions/checkout@v3
@@ -77,6 +80,7 @@ jobs:
         run: pnpm test:coverage
   bundle-size:
     runs-on: ubuntu-latest
+    name: Bundle Size - Vite + React
     steps:
       - name: Checkout latest
         uses: actions/checkout@v3
