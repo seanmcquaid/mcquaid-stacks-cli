@@ -67,7 +67,7 @@
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-i18next": "^6.0.3",
     "eslint-plugin-import": "^2.29.0",
-    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
     "eslint-plugin-no-relative-import-paths": "^1.5.3",
     "eslint-plugin-playwright": "^0.18.0",
     "eslint-plugin-prettier": "^5.0.1",
