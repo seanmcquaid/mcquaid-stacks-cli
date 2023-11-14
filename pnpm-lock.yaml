@@ -27,7 +27,7 @@ devDependencies:
     version: 20.8.10
   '@types/shelljs':
     specifier: ^0.8.12
-    version: 0.8.14
+    version: 0.8.15
   shx:
     specifier: ^0.3.4
     version: 0.3.4
@@ -715,8 +715,8 @@ packages:
     resolution: {integrity: sha512-7aqorHYgdNO4DM36stTiGO3DvKoex9TQRwsJU6vMaFGyqpBA1MNZkz+PG3gaNUPpTAOYhT1WR7M1JyA3fbS9Cw==}
     dev: true
 
-  /@types/shelljs@0.8.14:
-    resolution: {integrity: sha512-eqKaGPi60riuxI9pUVeCT02EGo94Y6HT119h7w5bXSELsis6+JqzdEy6H/w2xXl881wcN3VDnb/D0WlgSety5w==}
+  /@types/shelljs@0.8.15:
+    resolution: {integrity: sha512-vzmnCHl6hViPu9GNLQJ+DZFd6BQI2DBTUeOvYHqkWQLMfKAAQYMb/xAmZkTogZI/vqXHCWkqDRymDI5p0QTi5Q==}
     dependencies:
       '@types/glob': 7.2.0
       '@types/node': 20.8.10
