@@ -19,9 +19,3 @@ updates:
       interval: weekly
       day: tuesday
     open-pull-requests-limit: 20
-  - package-ecosystem: npm
-    directory: "/src/templates/vite-react-redux"
-    schedule:
-      interval: weekly
-      day: tuesday
-    open-pull-requests-limit: 20
