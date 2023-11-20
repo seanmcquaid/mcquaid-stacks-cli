@@ -20,23 +20,23 @@ type LinkButtonProps<
         params: Params[P];
       }
     : P extends {
-        pathname: Path;
-        search?: string | undefined;
-        hash?: string | undefined;
-      }
-    ? P['pathname'] extends keyof Params
-      ? {
-          to: P;
-          params: Params[P['pathname']];
+          pathname: Path;
+          search?: string | undefined;
+          hash?: string | undefined;
         }
+      ? P['pathname'] extends keyof Params
+        ? {
+            to: P;
+            params: Params[P['pathname']];
+          }
+        : {
+            to: P;
+            params?: undefined;
+          }
       : {
           to: P;
           params?: undefined;
-        }
-    : {
-        to: P;
-        params?: undefined;
-      });
+        });
 
 const LinkButton = <P extends Path>(props: LinkButtonProps<P>) => (
   <Link
