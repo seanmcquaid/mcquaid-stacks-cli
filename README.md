@@ -2,19 +2,17 @@
 
 My personal collection of scaffolding templates for the following :
 
-1. Vite + React
-2. Vite + React + Redux
-3. Next.js
-4. Next.js + Redux
-5. Remix
-6. TypeScript libraries
+1. Vite + React Router
+2. Next.js
+3. Remix
+4. TypeScript libraries
 
 Turbo repo to manage this?
 
 ## Common libraries/approaches
 
 1. Ky
-2. React Hook Form / Remix Hook Form
+2. React Hook Form
 3. Zod
 4. i18next
 5. i18next-browser-languagedetector
@@ -46,7 +44,7 @@ I am currently using Vercel for my personal projects but I recognize that not ev
 - CDN for Static assets (Cloudfront, Fastly, etc) for static directory
 - Server for SSR (Kubernetes, ECS, etc)
 - Web Application Firewall (Cloudflare, AWS WAF, etc)
-- DNS Resolution + Alising (Route53, Cloudflare, etc)
+- DNS Resolution + Aliasing (Route53, Cloudflare, etc)
 
 Domain -> DNS -> CDN -> WAF -> Server
 
@@ -55,6 +53,6 @@ Domain -> DNS -> CDN -> WAF -> Server
 - CDN for Static assets (Cloudfront, Fastly, etc) for static directory
 - Host static files on S3 or similar
 - Web Application Firewall (Cloudflare, AWS WAF, etc)
-- DNS Resolution + Alising (Route53, Cloudflare, etc)
+- DNS Resolution + Aliasing (Route53, Cloudflare, etc)
 
 Domain -> DNS -> CDN -> WAF -> S3
