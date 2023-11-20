@@ -27,7 +27,7 @@
     "@types/shelljs": "^0.8.12",
     "shx": "^0.3.4",
     "ts-node": "^10.9.1",
-    "tsup": "^7.2.0",
+    "tsup": "^8.0.0",
     "typescript": "^5.2.2"
   },
   "engines": {
