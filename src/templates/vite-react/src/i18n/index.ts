@@ -27,10 +27,10 @@ i18n
   .init({
     detection: {
       order: [
-        'domain',
         'querystring',
         'cookie',
         'localStorage',
+        'domain',
         'navigator',
         'htmlTag',
       ],
