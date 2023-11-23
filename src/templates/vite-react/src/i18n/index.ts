@@ -28,9 +28,9 @@ i18n
     detection: {
       order: [
         'querystring',
+        'domain',
         'cookie',
         'localStorage',
-        'domain',
         'navigator',
         'htmlTag',
       ],
