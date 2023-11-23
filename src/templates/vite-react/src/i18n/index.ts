@@ -13,6 +13,9 @@ i18n
     keySeparator: '.',
     saveMissing: true,
     resources: locales,
+    detection: {
+      lookupFromSubdomainIndex: 2,
+    },
     missingKeyHandler: (lng, ns, key, fallbackValue) => {
       console.warn('Missing Translation Key', lng, ns, key, fallbackValue);
     },
