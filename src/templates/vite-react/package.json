@@ -92,8 +92,9 @@
     "vitest": "^0.34.6"
   },
   "engines": {
-    "node": ">=18.16.0"
+    "node": ">=21.1.0"
   },
+  "packageManager": "pnpm@8.11.0",
   "msw": {
     "workerDirectory": "public"
   }
