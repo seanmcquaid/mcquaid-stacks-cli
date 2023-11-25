@@ -1,6 +1,6 @@
 import PageWrapper from '@/components/app/PageWrapper';
 import LinkButton from '@/components/ui/LinkButton';
-import useAppTranslation from '@/i18n/useAppTranslation';
+import useAppTranslation from '@/hooks/useAppTranslation';
 
 const HomePage = () => {
   const { t } = useAppTranslation();
@@ -16,7 +16,7 @@ const HomePage = () => {
         {t('HomePage.reactHookFormZod')}
       </LinkButton>
       <LinkButton to="/react-router" className="m-4">
-        {t('HomePage.reactRouterGenerouted')}
+        {t('HomePage.reactRouter')}
       </LinkButton>
       <LinkButton to="/kitchen-sink" className="m-4">
         {t('HomePage.kitchenSink')}

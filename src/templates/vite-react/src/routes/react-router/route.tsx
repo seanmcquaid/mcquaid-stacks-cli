@@ -8,7 +8,7 @@ import {
 import { z } from 'zod';
 import PageWrapper from '@/components/app/PageWrapper';
 import { Button } from '@/components/ui/Button';
-import useAppTranslation from '@/i18n/useAppTranslation';
+import useAppTranslation from '@/hooks/useAppTranslation';
 import Modal from '@/components/app/Modal';
 
 export const Loader: LoaderFunction = () => {

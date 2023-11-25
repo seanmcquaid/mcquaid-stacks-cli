@@ -14,7 +14,7 @@ import useGetPostsQuery, {
   getPostsQuery,
 } from '@/services/queries/useGetPostsQuery';
 import queryClient from '@/services/queryClient';
-import useAppTranslation from '@/i18n/useAppTranslation';
+import useAppTranslation from '@/hooks/useAppTranslation';
 
 export const loader: LoaderFunction = async () => {
   const query = getPostsQuery();
