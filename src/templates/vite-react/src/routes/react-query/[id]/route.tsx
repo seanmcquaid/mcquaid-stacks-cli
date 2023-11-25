@@ -1,6 +1,6 @@
+import { useParams } from 'react-router-dom';
 import PageWrapper from '@/components/app/PageWrapper';
 import useGetPostQuery from '@/services/queries/useGetPostQuery';
-import { useParams } from 'react-router-dom';
 
 const ReactQueryPostPage = () => {
   const { id } = useParams();

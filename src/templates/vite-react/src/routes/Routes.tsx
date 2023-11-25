@@ -1,6 +1,6 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import Root from './root';
 import { lazy } from 'react';
+import Root from './root';
 
 const HomePage = lazy(() => import('@/routes/home/route'));
 const NotFoundPage = lazy(() => import('@/routes/404/route'));
