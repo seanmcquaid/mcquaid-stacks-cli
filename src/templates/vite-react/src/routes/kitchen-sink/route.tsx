@@ -63,7 +63,7 @@ const KitchenSinkPage = () => {
     fetcher.submit(formData, {
       method: 'POST',
       encType: 'multipart/form-data',
-      action: '/kitchen-sink?index',
+      action: '/kitchen-sink',
     });
     reset();
   });

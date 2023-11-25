@@ -40,6 +40,7 @@ const enUSLocale = {
   Routes: {
     home: '/',
     kitchenSink: '/kitchen-sink',
+    notFound: '*',
     reactHookFormZod: '/react-hook-form-zod',
     reactQuery: '/react-query',
     reactRouter: '/react-router',

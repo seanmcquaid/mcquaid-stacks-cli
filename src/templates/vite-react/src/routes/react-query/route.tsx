@@ -25,7 +25,10 @@ const ReactQueryPage = () => {
             >
               {t('ReactQueryPage.delete')}
             </Button>
-            <LinkButton to={`/react-query/${post.id}`} className="ml-4">
+            <LinkButton
+              to={`${t('Routes.reactQuery')}/${post.id}`}
+              className="ml-4"
+            >
               {t('ReactQueryPage.view')}
             </LinkButton>
           </li>

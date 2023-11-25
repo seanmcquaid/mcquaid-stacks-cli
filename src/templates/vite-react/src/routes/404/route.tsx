@@ -8,7 +8,7 @@ const NotFoundPage = () => {
   const navigate = useNavigate();
 
   const handleOnClick = () => {
-    navigate('/');
+    navigate(t('Routes.home'));
   };
 
   return (

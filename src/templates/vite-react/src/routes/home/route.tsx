@@ -9,16 +9,16 @@ const HomePage = () => {
     <PageWrapper>
       <h1>{t('HomePage.title')}</h1>
       <p>{t('HomePage.subTitle')}</p>
-      <LinkButton to="/react-query" className="m-4">
+      <LinkButton to={t('Routes.reactQuery')} className="m-4">
         {t('HomePage.reactQuery')}
       </LinkButton>
-      <LinkButton to="/react-hook-form-zod" className="m-4">
+      <LinkButton to={t('Routes.reactHookFormZod')} className="m-4">
         {t('HomePage.reactHookFormZod')}
       </LinkButton>
-      <LinkButton to="/react-router" className="m-4">
+      <LinkButton to={t('Routes.reactRouter')} className="m-4">
         {t('HomePage.reactRouter')}
       </LinkButton>
-      <LinkButton to="/kitchen-sink" className="m-4">
+      <LinkButton to={t('Routes.kitchenSink')} className="m-4">
         {t('HomePage.kitchenSink')}
       </LinkButton>
     </PageWrapper>
