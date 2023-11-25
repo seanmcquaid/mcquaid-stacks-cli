@@ -6,7 +6,6 @@ import {
 } from '@testing-library/react';
 import type { ReactElement, PropsWithChildren } from 'react';
 import DataMemoryRouter from './DataMemoryRouter';
-import type { Path } from '@/router';
 
 const queryClient = new QueryClient();
 
@@ -18,7 +17,7 @@ const renderHook = <T,>(fn: () => T) => {
 };
 
 interface RenderOptions {
-  initialRoute?: Path;
+  initialRoute?: string;
 }
 
 const render = (

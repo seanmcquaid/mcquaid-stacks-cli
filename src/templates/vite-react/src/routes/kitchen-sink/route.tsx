@@ -14,9 +14,9 @@ import useGetPostsQuery, {
   getPostsQuery,
 } from '@/services/queries/useGetPostsQuery';
 import queryClient from '@/services/queryClient';
-import useAppTranslation from '@/i18n/useAppTranslation';
+import useAppTranslation from '@/hooks/useAppTranslation';
 
-export const Loader: LoaderFunction = async () => {
+export const loader: LoaderFunction = async () => {
   const query = getPostsQuery();
   return {
     data:
@@ -25,7 +25,7 @@ export const Loader: LoaderFunction = async () => {
   };
 };
 
-export const Action: ActionFunction = async ({ request }) => {
+export const action: ActionFunction = async ({ request }) => {
   const formData = await request.formData();
   const name = formData.get('name');
 
@@ -63,7 +63,7 @@ const KitchenSinkPage = () => {
     fetcher.submit(formData, {
       method: 'POST',
       encType: 'multipart/form-data',
-      action: '/kitchen-sink?index',
+      action: '/kitchen-sink',
     });
     reset();
   });

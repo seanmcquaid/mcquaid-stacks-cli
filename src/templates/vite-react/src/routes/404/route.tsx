@@ -1,14 +1,14 @@
-import { useNavigate } from '@/router';
+import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/Button';
 import PageWrapper from '@/components/app/PageWrapper';
-import useAppTranslation from '@/i18n/useAppTranslation';
+import useAppTranslation from '@/hooks/useAppTranslation';
 
 const NotFoundPage = () => {
   const { t } = useAppTranslation();
   const navigate = useNavigate();
 
   const handleOnClick = () => {
-    navigate('/');
+    navigate(t('Routes.home'));
   };
 
   return (

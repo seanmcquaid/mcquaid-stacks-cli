@@ -3,7 +3,7 @@ import * as DialogPrimitive from '@radix-ui/react-dialog';
 import { X } from 'lucide-react';
 
 import { cn } from '@/utils/styles.ts';
-import useAppTranslation from '@/i18n/useAppTranslation';
+import useAppTranslation from '@/hooks/useAppTranslation';
 
 const Dialog = DialogPrimitive.Root;
 

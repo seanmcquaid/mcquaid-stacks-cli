@@ -3,7 +3,7 @@ import { ErrorBoundary } from 'react-error-boundary';
 import { Toaster } from 'react-hot-toast';
 import PageError from '@/components/app/PageError';
 
-const App = () => {
+const Root = () => {
   return (
     <ErrorBoundary
       fallback={<PageError errorText="Sorry, something happened" />}
@@ -14,4 +14,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Root;

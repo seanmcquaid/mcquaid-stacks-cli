@@ -1,7 +1,7 @@
 import PageWrapper from '@/components/app/PageWrapper';
 import { Button } from '@/components/ui/Button';
 import LinkButton from '@/components/ui/LinkButton';
-import useAppTranslation from '@/i18n/useAppTranslation';
+import useAppTranslation from '@/hooks/useAppTranslation';
 import useDeletePostMutation from '@/services/mutations/useDeletePostMutation';
 import useGetPostsQuery from '@/services/queries/useGetPostsQuery';
 
@@ -26,9 +26,8 @@ const ReactQueryPage = () => {
               {t('ReactQueryPage.delete')}
             </Button>
             <LinkButton
-              to={'/react-query/:id'}
+              to={`${t('Routes.reactQuery')}/${post.id}`}
               className="ml-4"
-              params={{ id: post.id.toString() }}
             >
               {t('ReactQueryPage.view')}
             </LinkButton>
