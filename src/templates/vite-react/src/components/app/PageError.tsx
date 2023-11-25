@@ -1,5 +1,5 @@
 import { useErrorBoundary } from 'react-error-boundary';
-import { useNavigate } from '@/router';
+import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/Button';
 import useAppTranslation from '@/i18n/useAppTranslation';
 
