@@ -1,6 +1,6 @@
-import { TOptions } from 'i18next';
+import type { TOptions } from 'i18next';
+import type enUSLocale from './locales/en-US';
 import i18n from '.';
-import enUSLocale from './locales/en-US';
 
 type DotPrefix<T extends string> = T extends '' ? '' : `.${T}`;
 
