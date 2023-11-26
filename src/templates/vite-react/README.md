@@ -12,3 +12,4 @@
 10. SVGR for SVG Icons
 11. Playwright for integration tests
 12. React Hot Toast for displaying Toasts
+13. Vite

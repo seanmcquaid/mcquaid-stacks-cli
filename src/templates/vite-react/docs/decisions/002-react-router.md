@@ -6,7 +6,7 @@ Status: accepted
 
 ## Context
 
-Most web applications require routing to navigate between pages. React Router is the most popular routing library for React applications. It is well maintained by the Remix team and has a large community.
+Most web applications require routing to navigate between pages. React Router is the most popular routing library for React applications. It is maintained by the Remix team and has a large community.
 
 ## Decision
 
