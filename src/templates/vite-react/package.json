@@ -57,7 +57,7 @@
     "@typescript-eslint/eslint-plugin": "^6.13.1",
     "@typescript-eslint/parser": "^6.13.1",
     "@vitejs/plugin-react": "^4.2.1",
-    "@vitest/coverage-istanbul": "^0.34.6",
+    "@vitest/coverage-istanbul": "^1.0.1",
     "autoprefixer": "^10.4.16",
     "cross-fetch": "^4.0.0",
     "dpdm": "^3.14.0",
@@ -88,7 +88,7 @@
     "vite": "^5.0.4",
     "vite-plugin-checker": "^0.6.2",
     "vite-plugin-svgr": "^4.2.0",
-    "vitest": "^0.34.6"
+    "vitest": "^1.0.1"
   },
   "engines": {
     "node": ">=21.1.0"
