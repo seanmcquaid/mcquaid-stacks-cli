@@ -185,8 +185,8 @@ devDependencies:
     specifier: ^3.1.0
     version: 3.1.0
   playwright-msw:
-    specifier: ^3.0.0
-    version: 3.0.0(@playwright/test@1.40.1)(msw@2.0.10)
+    specifier: ^3.0.1
+    version: 3.0.1(@playwright/test@1.40.1)(msw@2.0.10)
   postcss:
     specifier: ^8.4.32
     version: 8.4.32
@@ -5513,8 +5513,8 @@ packages:
       ua-parser-js: 1.0.36
     dev: true
 
-  /playwright-msw@3.0.0(@playwright/test@1.40.1)(msw@2.0.10):
-    resolution: {integrity: sha512-AsxozFPFI16d1oop4yuaSKIonAQm3BpCnXWGdooDmaGlGsMpB4IndU+v+9FDZ9HrKLBK5XK2h2fTKoZsTSzXUg==}
+  /playwright-msw@3.0.1(@playwright/test@1.40.1)(msw@2.0.10):
+    resolution: {integrity: sha512-w2bVjt7kPIThOQF9OS/1vDDs0HsQfV9inxMVSUv74x/zhCcrgzVN47xpPk84okf3OcCRHHBJKq8sNeBfCDyhMg==}
     engines: {node: '>=18'}
     peerDependencies:
       '@playwright/test': '>=1.20.0'
