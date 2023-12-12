@@ -71,7 +71,7 @@
     "eslint-plugin-prettier": "^5.0.1",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-vitest": "^0.3.10",
+    "eslint-plugin-vitest": "^0.3.16",
     "husky": "^8.0.3",
     "is-ci": "^3.0.1",
     "jsdom": "^23.0.1",
