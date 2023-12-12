@@ -173,8 +173,8 @@ devDependencies:
     specifier: ^23.0.1
     version: 23.0.1
   lighthouse:
-    specifier: ^11.3.0
-    version: 11.3.0
+    specifier: ^11.4.0
+    version: 11.4.0
   lint-staged:
     specifier: ^15.2.0
     version: 15.2.0
@@ -956,8 +956,8 @@ packages:
       playwright: 1.40.1
     dev: true
 
-  /@puppeteer/browsers@1.8.0:
-    resolution: {integrity: sha512-TkRHIV6k2D8OlUe8RtG+5jgOF/H98Myx0M6AOafC8DdNVOFiBSFa5cpRDtpm8LXOa9sVwe0+e6Q3FC56X/DZfg==}
+  /@puppeteer/browsers@1.9.0:
+    resolution: {integrity: sha512-QwguOLy44YBGC8vuPP2nmpX4MUN2FzWbsnvZJtiCzecU3lHmVZkaC1tq6rToi9a200m8RzlVtDyxCS0UIDrxUg==}
     engines: {node: '>=16.3.0'}
     hasBin: true
     dependencies:
@@ -2541,8 +2541,8 @@ packages:
       - supports-color
     dev: true
 
-  /chromium-bidi@0.4.33(devtools-protocol@0.0.1203626):
-    resolution: {integrity: sha512-IxoFM5WGQOIAd95qrSXzJUv4eXIrh+RvU3rwwqIiwYuvfE7U/Llj4fejbsJnjJMUYCuGtVQsY2gv7oGl4aTNSQ==}
+  /chromium-bidi@0.5.1(devtools-protocol@0.0.1203626):
+    resolution: {integrity: sha512-dcCqOgq9fHKExc2R4JZs/oKbOghWpUNFAJODS8WKRtLhp3avtIH5UDCBrutdqZdh3pARogH8y1ObXm87emwb3g==}
     peerDependencies:
       devtools-protocol: '*'
     dependencies:
@@ -4681,8 +4681,8 @@ packages:
     resolution: {integrity: sha512-i4jTmg7tvZQFwNFiwB+nCK6a7ICR68Xcwo+VIVd6Spi71vBNFUlds5HiDrSbClZdkQDON2Bhqv+KKJIo5zkPeA==}
     dev: true
 
-  /lighthouse@11.3.0:
-    resolution: {integrity: sha512-MxnaryH/VOfd4cpgZQgzJz9rEch6Bw9wm/SitS+K7MLK1oo5dArWMThPauzOwoioz8PD8xZvECtnYoT9Tmq8Aw==}
+  /lighthouse@11.4.0:
+    resolution: {integrity: sha512-NmGBIdLznIBTfla566gpNPdbascVA0uWFG2LyuRQPeMT06ai3QxzDqSpaR5dToDuEQIPkyU0qqxwHj8kst8x+g==}
     engines: {node: '>=18.16'}
     hasBin: true
     dependencies:
@@ -4705,11 +4705,12 @@ packages:
       open: 8.4.2
       parse-cache-control: 1.0.1
       ps-list: 8.1.1
-      puppeteer-core: 21.5.1
+      puppeteer-core: 21.6.0
       robots-parser: 3.0.1
       semver: 5.7.2
       speedline-core: 1.4.3
-      third-party-web: 0.24.0
+      third-party-web: 0.24.1
+      tldts-icann: 6.1.0
       ws: 7.5.9
       yargs: 17.7.2
       yargs-parser: 21.1.1
@@ -5627,12 +5628,12 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
-  /puppeteer-core@21.5.1:
-    resolution: {integrity: sha512-u6c3SZKAOaOQogaTkQvllxT/o2PP16wkbrUWINtMhfvrB4ko+xwqC1pb+vyCPMmNUh3N/CX5YGqb3DWx2fUPSQ==}
-    engines: {node: '>=16.3.0'}
+  /puppeteer-core@21.6.0:
+    resolution: {integrity: sha512-1vrzbp2E1JpBwtIIrriWkN+A0afUxkqRuFTC3uASc5ql6iuK9ppOdIU/CPGKwOyB4YFIQ16mRbK0PK19mbXnaQ==}
+    engines: {node: '>=16.13.2'}
     dependencies:
-      '@puppeteer/browsers': 1.8.0
-      chromium-bidi: 0.4.33(devtools-protocol@0.0.1203626)
+      '@puppeteer/browsers': 1.9.0
+      chromium-bidi: 0.5.1(devtools-protocol@0.0.1203626)
       cross-fetch: 4.0.0
       debug: 4.3.4
       devtools-protocol: 0.0.1203626
@@ -6480,8 +6481,8 @@ packages:
     dependencies:
       any-promise: 1.3.0
 
-  /third-party-web@0.24.0:
-    resolution: {integrity: sha512-mMkV7LE857QCG9DM/mkZoqsEEbJmtimnWBgm/bAmJuRlfVM29OLhPFse1ayrW1xmtJqg7bVU6ZBtjz8vVQGq2g==}
+  /third-party-web@0.24.1:
+    resolution: {integrity: sha512-5VqmcM0QEF7KX1/EX9I8Yohs7GoWzhQHXfLOLGmLGbcw/zPdEohXJNctiLu0x4D0i9EzOUjFXlbmcmXcbZXl1Q==}
     dev: true
 
   /through@2.3.8:
@@ -6509,6 +6510,16 @@ packages:
   /titleize@3.0.0:
     resolution: {integrity: sha512-KxVu8EYHDPBdUYdKZdKtU2aj2XfEx9AfjXxE/Aj0vT06w2icA09Vus1rh6eSu1y01akYg6BjIK/hxyLJINoMLQ==}
     engines: {node: '>=12'}
+    dev: true
+
+  /tldts-core@6.1.0:
+    resolution: {integrity: sha512-kWIs6ECYvpsHXmVezsbU2ZmaPZld6bArFUM2HS/Pz1o1pRCu/y8w6n02IfiefUA5NarwJ7sCjwsrKGtpztXYZQ==}
+    dev: true
+
+  /tldts-icann@6.1.0:
+    resolution: {integrity: sha512-10Ms66dJp79Hg5tXLwgfcT5zJqHzctleqPWYJsqkSXEbqEAbDqhZTC08tceDy0/xMYrE0hSBELVNBdM/Ku18vg==}
+    dependencies:
+      tldts-core: 6.1.0
     dev: true
 
   /tmp@0.0.33:
