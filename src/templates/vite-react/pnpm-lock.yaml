@@ -89,8 +89,8 @@ devDependencies:
     specifier: ^1.40.1
     version: 1.40.1
   '@size-limit/file':
-    specifier: ^11.0.0
-    version: 11.0.0(size-limit@11.0.0)
+    specifier: ^11.0.1
+    version: 11.0.1(size-limit@11.0.1)
   '@testing-library/jest-dom':
     specifier: ^6.1.5
     version: 6.1.5(vitest@1.0.1)
@@ -194,8 +194,8 @@ devDependencies:
     specifier: ^3.1.1
     version: 3.1.1
   size-limit:
-    specifier: ^11.0.0
-    version: 11.0.0
+    specifier: ^11.0.1
+    version: 11.0.1
   tailwindcss:
     specifier: ^3.3.6
     version: 3.3.6
@@ -1531,13 +1531,13 @@ packages:
     engines: {node: '>=18'}
     dev: true
 
-  /@size-limit/file@11.0.0(size-limit@11.0.0):
-    resolution: {integrity: sha512-tTg6sSiFbiogiof3GV4iIRCPS4+46Hvq4QWXGXp00Be/tOnpglXF62xNpCfFwefx9YCXxCyeYSqqaRBjpRCsmQ==}
+  /@size-limit/file@11.0.1(size-limit@11.0.1):
+    resolution: {integrity: sha512-ioSYJ1WY66kc9+3dgTHi5mT/gcaNNCJ22xU87cjzfKiNxmol+lGsNKbplmrJf+QezvPH9kRIFOWxBjGY+DOt3g==}
     engines: {node: ^18.0.0 || >=20.0.0}
     peerDependencies:
-      size-limit: 11.0.0
+      size-limit: 11.0.1
     dependencies:
-      size-limit: 11.0.0
+      size-limit: 11.0.1
     dev: true
 
   /@svgr/babel-plugin-add-jsx-attribute@8.0.0(@babel/core@7.23.5):
@@ -6168,15 +6168,15 @@ packages:
     engines: {node: '>=14'}
     dev: true
 
-  /size-limit@11.0.0:
-    resolution: {integrity: sha512-6+i4rE1GRzx/vRpuitRYQiZJNTXJjde+4P2NPg8AK7pURrE1+hA3mGstzvT8vQ8DuYFnvp9fh4CHM7Heq3EKXA==}
+  /size-limit@11.0.1:
+    resolution: {integrity: sha512-6L80ocVspWPrhIRg8kPl41VypqTGH8/lu9e6TJiSJpkNLtOR2h/EEqdAO/wNJOv/sUVtjX+lVEWrzBpItGP+gQ==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     dependencies:
       bytes-iec: 3.1.1
       chokidar: 3.5.3
       globby: 14.0.0
-      lilconfig: 2.1.0
+      lilconfig: 3.0.0
       nanospinner: 1.1.0
       picocolors: 1.0.0
     dev: true
