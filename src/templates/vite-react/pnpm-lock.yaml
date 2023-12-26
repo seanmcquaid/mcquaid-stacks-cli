@@ -119,8 +119,8 @@ devDependencies:
     specifier: ^4.2.1
     version: 4.2.1(vite@5.0.10)
   '@vitest/coverage-istanbul':
-    specifier: ^1.0.4
-    version: 1.0.4(vitest@1.0.4)
+    specifier: ^1.1.0
+    version: 1.1.0(vitest@1.0.4)
   autoprefixer:
     specifier: ^10.4.16
     version: 10.4.16(postcss@8.4.32)
@@ -490,15 +490,6 @@ packages:
       globals: 11.12.0
     transitivePeerDependencies:
       - supports-color
-    dev: true
-
-  /@babel/types@7.23.3:
-    resolution: {integrity: sha512-OZnvoH2l8PK5eUvEcUyCt/sXgr/h+UWpVuBbOljwcrAgUl6lpchoQ++PHGyQy1AtYnVA6CEq3y5xeEI10brpXw==}
-    engines: {node: '>=6.9.0'}
-    dependencies:
-      '@babel/helper-string-parser': 7.23.4
-      '@babel/helper-validator-identifier': 7.22.20
-      to-fast-properties: 2.0.0
     dev: true
 
   /@babel/types@7.23.5:
@@ -1772,7 +1763,7 @@ packages:
     resolution: {integrity: sha512-qoQprZvz5wQFJwMDqeseRXWv3rqMvhgpbXFfVyWhbx9X47POIA6i/+dXefEmZKoAgOaTdaIgNSMqMIU61yRyzA==}
     dependencies:
       '@babel/parser': 7.23.5
-      '@babel/types': 7.23.3
+      '@babel/types': 7.23.5
       '@types/babel__generator': 7.6.5
       '@types/babel__template': 7.4.2
       '@types/babel__traverse': 7.20.2
@@ -2069,8 +2060,8 @@ packages:
       - supports-color
     dev: true
 
-  /@vitest/coverage-istanbul@1.0.4(vitest@1.0.4):
-    resolution: {integrity: sha512-6qoSzTR+sanwY/dREqu6OFJupo/mHzCcboh03rLwqH2V2B39505lDr9FpqaLwU1vQgeUKNA+CdHPkpNpusxkDw==}
+  /@vitest/coverage-istanbul@1.1.0(vitest@1.0.4):
+    resolution: {integrity: sha512-sjHGQQu7lkJUYSBMOR3f9AyOlK1LBVr0v7LMar/4i167ltabRWlQ2STBDM4P6Wl659NAcHlZ/RXxrAgJPavDMA==}
     peerDependencies:
       vitest: ^1.0.0
     dependencies:
