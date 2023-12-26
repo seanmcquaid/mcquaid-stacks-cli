@@ -182,8 +182,8 @@ devDependencies:
     specifier: ^2.0.11
     version: 2.0.11(typescript@5.2.2)
   playwright-lighthouse:
-    specifier: ^3.1.0
-    version: 3.1.0
+    specifier: ^3.2.0
+    version: 3.2.0
   playwright-msw:
     specifier: ^3.0.1
     version: 3.0.1(@playwright/test@1.40.1)(msw@2.0.11)
@@ -5498,8 +5498,8 @@ packages:
     hasBin: true
     dev: true
 
-  /playwright-lighthouse@3.1.0:
-    resolution: {integrity: sha512-fBzC88BP1HcQD7K3Y/bpk+BaqSFKoCqokqGjqH7roYa85Z9gSL1fpE5RNlRa4L5zKuK/8RThh3Zh3uilqEH2Mw==}
+  /playwright-lighthouse@3.2.0:
+    resolution: {integrity: sha512-OGD2BEJdbCyd5u0+PZ841LKMxGxxohLadippETgZnZ8uaSsK2KZpDNdKZ6vEab811sWTHad52H41uS5hJi0g+g==}
     engines: {node: '>=16.x'}
     dependencies:
       chalk: 4.1.2
