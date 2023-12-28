@@ -1,5 +1,11 @@
 # @mcquaid-stacks/cli
 
+## 0.0.3
+
+### Patch Changes
+
+- 8af1986: Finished docs and cleaned up each current template
+
 ## 0.0.2
 
 ### Patch Changes
