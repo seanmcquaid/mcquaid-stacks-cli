@@ -6,7 +6,7 @@ Status: accepted
 
 ## Context
 
-Our project heavily relies on SVG files for icons and graphics. However, managing these SVGs directly within the React codebase has become cumbersome and less maintainable. SVGR presents itself as a compelling solution due to its ability to transform SVG files into React components, offering easier integration, manipulation, and optimization of SVGs within our React application.
+the project heavily relies on SVG files for icons and graphics. However, managing these SVGs directly within the React codebase has become cumbersome and less maintainable. SVGR presents itself as a compelling solution due to its ability to transform SVG files into React components, offering easier integration, manipulation, and optimization of SVGs within the project.
 
 ## Decision
 

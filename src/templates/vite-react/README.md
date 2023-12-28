@@ -11,5 +11,5 @@
 9. ESLint + Prettier for linting
 10. SVGR for SVG Icons
 11. Playwright for integration tests
-12. React Hot Toast for displaying Toasts
+12. React Hot Toast for displaying Toasts - REMOVE THIS FOR SONNER/SHADCN UI
 13. Vite

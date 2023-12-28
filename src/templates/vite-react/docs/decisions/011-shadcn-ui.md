@@ -10,7 +10,7 @@ In our UI development process, achieving flexibility, accessibility, and consist
 
 ## Decision
 
-After initial exploration and evaluation, we propose integrating "shadcn/ui" as a headless component library for our UI development. Its foundation on Radix UI's principles of accessibility and low-level styling, combined with the flexibility to customize components as needed, aligns with our project's goal of building adaptable and accessible user interfaces. The headless nature of these components allows for a higher degree of customization and facilitates a consistent UI development approach.
+After initial exploration and evaluation, we propose integrating "shadcn/ui" as a headless component library for our UI development. Its foundation on Radix UI's principles of accessibility and low-level styling, combined with the flexibility to customize components as needed, aligns with the project's goal of building adaptable and accessible user interfaces. The headless nature of these components allows for a higher degree of customization and facilitates a consistent UI development approach.
 
 ## Consequences
 

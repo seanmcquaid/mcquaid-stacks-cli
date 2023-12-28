@@ -6,7 +6,7 @@ Status: accepted
 
 ## Context
 
-In our development process, ensuring robust testing for our React components has become increasingly crucial. The existing testing framework has shown limitations in effectively simulating user interactions and maintaining test reliability as our application complexity grows. React Testing Library (RTL) emerges as a candidate due to its focus on testing user behavior rather than implementation details, promoting better test maintenance and more reliable outcomes.
+In our development process, ensuring robust testing for our React components has become increasingly crucial. The existing testing framework has shown limitations in effectively simulating user interactions and maintaining test reliability as the project complexity grows. React Testing Library (RTL) emerges as a candidate due to its focus on testing user behavior rather than implementation details, promoting better test maintenance and more reliable outcomes.
 
 ## Decision
 

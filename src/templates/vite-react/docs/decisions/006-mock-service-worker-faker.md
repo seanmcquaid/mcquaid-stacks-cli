@@ -10,7 +10,7 @@ Our frontend development workflow requires a robust solution for mocking API end
 
 ## Decision
 
-After thorough evaluation, the decision has been made to incorporate Mock Service Worker along with Faker as our solution for mocking API endpoints and generating mock data in the frontend environment. MSW's ability to intercept and mock network requests seamlessly, coupled with Faker's versatility in creating realistic mock data, aligns with our project's need for effective frontend testing without direct backend dependencies. Their ease of integration and configuration further solidified this decision.
+After thorough evaluation, the decision has been made to incorporate Mock Service Worker along with Faker as our solution for mocking API endpoints and generating mock data in the frontend environment. MSW's ability to intercept and mock network requests seamlessly, coupled with Faker's versatility in creating realistic mock data, aligns with the project's need for effective frontend testing without direct backend dependencies. Their ease of integration and configuration further solidified this decision.
 
 ## Consequences
 
