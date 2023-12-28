@@ -42,7 +42,7 @@ const formSchema = z.object({
   }),
 });
 
-const KitchenSinkPage = () => {
+export const Component = () => {
   const { t } = useAppTranslation();
   const { data, ...rest } = useGetPostsQuery();
   const {
@@ -91,5 +91,3 @@ const KitchenSinkPage = () => {
     </PageWrapper>
   );
 };
-
-export default KitchenSinkPage;
