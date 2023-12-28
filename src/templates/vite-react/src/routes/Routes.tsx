@@ -1,12 +1,12 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import Root from './Root';
+import Layout from './Layout';
 import appI18next from '@/i18n/appI18next';
 import PageError from '@/components/app/PageError';
 
 const router = createBrowserRouter([
   {
     path: appI18next.t('Routes.home'),
-    element: <Root />,
+    element: <Layout />,
     errorElement: <PageError errorText="Sorry, something happened" />,
     children: [
       {
