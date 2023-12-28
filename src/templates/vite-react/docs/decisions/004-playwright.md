@@ -10,7 +10,7 @@ The current suite for end-to-end testing has revealed limitations in accurately 
 
 ## Decision
 
-Following comprehensive evaluation and analysis, the decision has been made to incorporate Playwright as our primary framework for end-to-end testing. Playwright's capability to test across multiple browsers and its straightforward API align well with our goal of creating reliable end-to-end tests that can adapt to various environments. Furthermore, its support for headless execution and the ability to simulate complex user interactions were key factors in this decision.
+Following comprehensive evaluation and analysis, the decision has been made to incorporate Playwright as our primary framework for end-to-end testing. Playwright's capability to test across multiple browsers and its straightforward API align well with our goal of creating reliable end-to-end tests that can adapt to various environments. Furthermore, its support for headless execution and the ability to simulate complex user interactions were key factors in this decision. We can use our Mock Service Worker handlers to mock API requests as needed.
 
 ## Consequences
 
