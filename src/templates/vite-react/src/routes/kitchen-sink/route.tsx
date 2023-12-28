@@ -6,7 +6,6 @@ import {
   type LoaderFunction,
 } from 'react-router-dom';
 import { z } from 'zod';
-import toast from 'react-hot-toast';
 import PageWrapper from '@/components/app/PageWrapper';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
@@ -15,6 +14,7 @@ import useGetPostsQuery, {
 } from '@/services/queries/useGetPostsQuery';
 import queryClient from '@/services/queryClient';
 import useAppTranslation from '@/hooks/useAppTranslation';
+import { toast } from '@/hooks/useToast';
 
 export const loader: LoaderFunction = async () => {
   const query = getPostsQuery();
@@ -29,7 +29,9 @@ export const action: ActionFunction = async ({ request }) => {
   const formData = await request.formData();
   const name = formData.get('name');
 
-  toast(`Hello ${name}`);
+  toast({
+    title: `Hello ${name}!`,
+  });
 
   return null;
 };
@@ -40,7 +42,7 @@ const formSchema = z.object({
   }),
 });
 
-const KitchenSinkPage = () => {
+export const Component = () => {
   const { t } = useAppTranslation();
   const { data, ...rest } = useGetPostsQuery();
   const {
@@ -62,8 +64,6 @@ const KitchenSinkPage = () => {
   const handleOnSubmit = handleSubmit(formData => {
     fetcher.submit(formData, {
       method: 'POST',
-      encType: 'multipart/form-data',
-      action: '/kitchen-sink',
     });
     reset();
   });
@@ -91,5 +91,3 @@ const KitchenSinkPage = () => {
     </PageWrapper>
   );
 };
-
-export default KitchenSinkPage;

@@ -2,7 +2,7 @@ import PageWrapper from '@/components/app/PageWrapper';
 import LinkButton from '@/components/ui/LinkButton';
 import useAppTranslation from '@/hooks/useAppTranslation';
 
-const HomePage = () => {
+export const Component = () => {
   const { t } = useAppTranslation();
 
   return (
@@ -24,5 +24,3 @@ const HomePage = () => {
     </PageWrapper>
   );
 };
-
-export default HomePage;

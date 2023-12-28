@@ -119,7 +119,7 @@ const promptUser = async () => {
       })),
     }),
     name: await inquirer.input({
-      message: 'What is your project name?',
+      message: 'What is ythe project name?',
       validate: (input: string) => {
         if (/^([A-Za-z\-\_\d])+$/.test(input)) return true;
         else

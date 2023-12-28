@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/Button';
 import PageWrapper from '@/components/app/PageWrapper';
 import useAppTranslation from '@/hooks/useAppTranslation';
 
-const NotFoundPage = () => {
+export const Component = () => {
   const { t } = useAppTranslation();
   const navigate = useNavigate();
 
@@ -19,5 +19,3 @@ const NotFoundPage = () => {
     </PageWrapper>
   );
 };
-
-export default NotFoundPage;

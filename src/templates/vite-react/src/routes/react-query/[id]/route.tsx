@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom';
 import PageWrapper from '@/components/app/PageWrapper';
 import useGetPostQuery from '@/services/queries/useGetPostQuery';
 
-const ReactQueryPostPage = () => {
+export const Component = () => {
   const { id } = useParams();
   const { data, isLoading, isError } = useGetPostQuery(id!);
 
@@ -13,5 +13,3 @@ const ReactQueryPostPage = () => {
     </PageWrapper>
   );
 };
-
-export default ReactQueryPostPage;

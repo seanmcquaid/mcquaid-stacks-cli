@@ -11,14 +11,14 @@ import { Button } from '@/components/ui/Button';
 import useAppTranslation from '@/hooks/useAppTranslation';
 import Modal from '@/components/app/Modal';
 
-export const Loader: LoaderFunction = () => {
+export const loader: LoaderFunction = () => {
   return {
     hello:
-      "Hello friends! This page is using patterns common to Generouted and React Router v6's Loaders + Actions",
+      "Hello friends! This page is using patterns common to React Router v6's Loaders + Actions",
   };
 };
 
-export const Action: ActionFunction = async ({ request }) => {
+export const action: ActionFunction = async ({ request }) => {
   const json = await request.json();
 
   alert(JSON.stringify(json));
@@ -26,7 +26,7 @@ export const Action: ActionFunction = async ({ request }) => {
   return json;
 };
 
-const ReactRouterGeneroutedPage = () => {
+export const Component = () => {
   const { t } = useAppTranslation();
   const [searchParams, setSearchParams] = useSearchParams();
   const fetcher = useFetcher();
@@ -47,7 +47,7 @@ const ReactRouterGeneroutedPage = () => {
       { hello: 'You have made a successful action occur!' },
       {
         method: 'POST',
-        action: '/react-router-generouted?index',
+        action: '/react-router',
         encType: 'application/json',
       },
     );
@@ -77,5 +77,3 @@ const ReactRouterGeneroutedPage = () => {
     </PageWrapper>
   );
 };
-
-export default ReactRouterGeneroutedPage;

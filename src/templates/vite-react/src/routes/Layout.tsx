@@ -1,17 +1,17 @@
 import { Outlet } from 'react-router-dom';
 import { ErrorBoundary } from 'react-error-boundary';
-import { Toaster } from 'react-hot-toast';
 import PageError from '@/components/app/PageError';
+import { Toaster } from '@/components/ui/Toaster';
 
-const Root = () => {
+const Layout = () => {
   return (
     <ErrorBoundary
-      fallback={<PageError errorText="Sorry, something happened" />}
+      fallback={<PageError errorText="Sorry, something happened at the root" />}
     >
       <Outlet />
-      <Toaster position="bottom-center" />
+      <Toaster />
     </ErrorBoundary>
   );
 };
 
-export default Root;
+export default Layout;
