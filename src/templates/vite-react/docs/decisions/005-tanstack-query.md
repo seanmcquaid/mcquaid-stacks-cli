@@ -1,17 +1,17 @@
 # Tanstack Query
 
-Date: 2023-11-26
+Date: 2023-12-27
 
 Status: accepted
 
 ## Context
 
-Managing server state is one of the toughest things to get right modern web development. Tanstack Query (formerly React Query) is a library for managing, caching, synchronizing and updating server state in React applications. It is also framework agnostic so you can use it with any framework that supports React Hooks.
+Managing asynchronous data fetching and state management in complex React applications can become intricate and error-prone. Existing solutions often involve a mix of various libraries, leading to increased complexity and potential inconsistencies in data handling. TanStack Query emerges as a comprehensive data fetching and state management solution for React applications. Its ability to simplify data fetching, caching, and state management while leveraging React hooks and providing TypeScript support aligns with our project's need for a robust yet simplified data layer.
 
 ## Decision
 
-I highly recommend that you use Tanstack Query for managing server state in your React applications. If you have a need for a tool like Redux, then I would encourage you to use Redux Toolkit Query instead so you don't need the extra dependency.
+After careful evaluation, the decision has been made to integrate TanStack Query as our primary solution for data fetching and state management in React applications. TanStack Query's declarative approach using hooks, the built-in caching mechanism, and its seamless integration with React make it an ideal fit for our project's requirements. Additionally, its support for TypeScript and well-documented API further solidified this decision.
 
 ## Consequences
 
-The only consequence of Tanstack Query is that you will need to learn some fundamental patterns about how to cache data properly that are specific to Tanstack Query. However, once you learn these patterns, you will be able to apply them to any other application that uses Tanstack Query easily.
+The adoption of TanStack Query is expected to yield numerous benefits for our React application's data management. It anticipates a reduction in boilerplate code related to data fetching and state management, improved performance through efficient caching, and enhanced developer experience with a simplified and consistent API. However, there might be a learning curve for team members new to TanStack Query, potentially impacting initial development timelines. In the long term, leveraging TanStack Query is anticipated to streamline data management, improve scalability, and maintain a more organized and predictable state within our React application.

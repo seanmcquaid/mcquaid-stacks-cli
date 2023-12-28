@@ -2,16 +2,16 @@
 
 Date: 2023-12-27
 
-Status: accepted
+Status: proposed
 
 ## Context
 
-I want to use a unit test runner that is fast and simple. Previously, Jest was the preferred unit test runner for React apps, however, it has fallen out of favor due to it's lack of consistence support. I also wanted to use the same configuration as my development/production build setup.
+In our JavaScript project, we are exploring an efficient and modern unit test runner that aligns well with the Vite ecosystem. Vitest, built on top of Vite, offers a streamlined and performant solution for running unit tests in JavaScript projects. Leveraging the speed and module-based architecture of Vite, Vitest aims to provide a fast and developer-friendly environment for writing and executing unit tests.
 
 ## Decision
 
-I am using Vitest as my unit test runner. It is built on top of our build tool, Vite and has a very similar API to Jest.
+After initial exploration and evaluation, we propose adopting Vitest as the primary unit test runner for our JavaScript projects built with Vite. Vitest's integration with Vite's module system, quick test execution, and developer-centric features make it an appealing choice to streamline our unit testing workflow. Its compatibility with modern JavaScript features and seamless integration within the Vite ecosystem influenced this proposed decision.
 
 ## Consequences
 
-There are minimal consequences to using Vitest. You are able to use the same API as Jest, but with the benefits of Vite's speed and simplicity. You are also able to use the same configuration as Vite, which is a huge benefit.
+If accepted, the adoption of Vitest is anticipated to bring several benefits to our JavaScript projects. It expects to offer faster test execution times, a more developer-friendly testing experience, and improved compatibility with Vite's module-based architecture. However, there might be a learning curve for team members transitioning to Vitest, potentially impacting initial test implementation timelines. In the long run, leveraging Vitest is expected to enhance our unit testing practices and improve overall code quality.

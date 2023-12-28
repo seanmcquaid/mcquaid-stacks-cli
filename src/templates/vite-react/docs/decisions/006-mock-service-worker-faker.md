@@ -1,17 +1,17 @@
 # Mock Service Worker + Faker
 
-Date: 2023-11-26
+Date: 2023-12-27
 
 Status: accepted
 
 ## Context
 
-Managing server state is one of the toughest things to get right modern web development. Tanstack Query (formerly React Query) is a library for managing, caching, synchronizing and updating server state in React applications. It is also framework agnostic so you can use it with any framework that supports React Hooks.
+Our frontend development workflow requires a robust solution for mocking API endpoints during development and testing phases. Creating a dependable, consistent environment for testing frontend components reliant on backend services has proven challenging. Mock Service Worker (MSW), combined with Faker, offers an efficient way to mock API endpoints and generate realistic mock data dynamically. MSW intercepts and manages network requests, while Faker provides customizable fake data generation, enabling more comprehensive and reliable frontend testing.
 
 ## Decision
 
-I highly recommend that you use Tanstack Query for managing server state in your React applications. If you have a need for a tool like Redux, then I would encourage you to use Redux Toolkit Query instead so you don't need the extra dependency.
+After thorough evaluation, the decision has been made to incorporate Mock Service Worker along with Faker as our solution for mocking API endpoints and generating mock data in the frontend environment. MSW's ability to intercept and mock network requests seamlessly, coupled with Faker's versatility in creating realistic mock data, aligns with our project's need for effective frontend testing without direct backend dependencies. Their ease of integration and configuration further solidified this decision.
 
 ## Consequences
 
-The only consequence of Tanstack Query is that you will need to learn some fundamental patterns about how to cache data properly that are specific to Tanstack Query. However, once you learn these patterns, you will be able to apply them to any other application that uses Tanstack Query easily.
+The adoption of Mock Service Worker and Faker is expected to yield several benefits to our frontend development and testing processes. It anticipates more reliable frontend testing by providing a controlled environment for API mocking and generating realistic mock data. However, there might be a learning curve for team members new to Mock Service Worker and Faker, potentially impacting initial implementation timelines. In the long term, leveraging these tools is anticipated to enhance testing efficiency, reduce dependency on backend services during frontend development, and improve overall code quality.

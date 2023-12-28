@@ -6,12 +6,12 @@ Status: accepted
 
 ## Context
 
-Form validation and state management is a common requirement for web applications. You can definitely build your own solutions for this but there are a lot of libraries out there that handle this for you with significantly less code.
+Managing forms in React applications can often lead to complex state management and boilerplate code. Existing form libraries may introduce unnecessary complexities or limitations. React Hook Form is a lightweight and performant form library that leverages React hooks, offering a simple and efficient approach to form management. Its emphasis on uncontrolled components and minimal re-renders aligns well with our project's need for streamlined form handling.
 
 ## Decision
 
-I recommend utilizing React Hook Form for form validation and state management along with Zod in your web applications. It is primarily hook based, has a set of resolvers that you easily pivot to in the event Zod loses support, and is very well maintained.
+After comprehensive evaluation, the decision has been made to adopt React Hook Form as our primary form management solution in the React application. React Hook Form's approach using hooks, minimal setup, and focus on uncontrolled components provide a more straightforward and performant way to handle forms compared to other alternatives. Its flexibility, validation options, and ease of integration further solidified this decision.
 
 ## Consequences
 
-The main consequence of using React Hook Form is that if you need client side form validation, this is really the only way you should be doing it. However, migration away from React Hook Form should not be too difficult in the event you decide to pivot to something later on.
+The adoption of React Hook Form is expected to bring numerous benefits to our application's form handling. It anticipates reduced complexity and improved performance by minimizing unnecessary re-renders and simplifying form state management. However, there might be a learning curve for team members transitioning to React Hook Form, potentially impacting initial form implementations. In the long term, leveraging React Hook Form is anticipated to streamline form development, improve user experience, and enhance overall code maintainability.
