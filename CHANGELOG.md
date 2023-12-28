@@ -1,5 +1,11 @@
 # @mcquaid-stacks/cli
 
+## 0.0.5
+
+### Patch Changes
+
+- 84573c6: Docs and cleanup
+
 ## 0.0.4
 
 ### Patch Changes
