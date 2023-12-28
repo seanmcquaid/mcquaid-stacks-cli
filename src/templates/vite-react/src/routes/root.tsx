@@ -6,10 +6,10 @@ import { Toaster } from '@/components/ui/toaster';
 const Root = () => {
   return (
     <ErrorBoundary
-      fallback={<PageError errorText="Sorry, something happened" />}
+      fallback={<PageError errorText="Sorry, something happened at the root" />}
     >
       <Outlet />
-      <Toaster/>
+      <Toaster />
     </ErrorBoundary>
   );
 };
