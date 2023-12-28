@@ -1,8 +1,8 @@
-### Deployment setup
+# Deployment setup
 
 I am currently using Vercel for my personal projects but I recognize that not every team can use it due to company constraints. In general here's what I recommend :
 
-#### CSR/Static
+## Client Side Rendering
 
 - CDN for Static assets (Cloudfront, Fastly, etc) for static directory
 - Host static files on S3 or similar
@@ -11,7 +11,7 @@ I am currently using Vercel for my personal projects but I recognize that not ev
 
 Domain -> DNS -> CDN -> WAF -> S3
 
-#### SSR
+## Server Side Rendering
 
 - CDN for Static assets (Cloudfront, Fastly, etc) for static directory
 - Server for SSR (Kubernetes, ECS, etc)
