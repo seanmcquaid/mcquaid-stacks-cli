@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import { ErrorBoundary } from 'react-error-boundary';
-import { Toaster } from 'react-hot-toast';
 import PageError from '@/components/app/PageError';
+import { Toaster } from '@/components/ui/toaster';
 
 const Root = () => {
   return (
@@ -9,7 +9,7 @@ const Root = () => {
       fallback={<PageError errorText="Sorry, something happened" />}
     >
       <Outlet />
-      <Toaster position="bottom-center" />
+      <Toaster/>
     </ErrorBoundary>
   );
 };
