@@ -1,5 +1,11 @@
 # @mcquaid-stacks/cli
 
+## 0.0.4
+
+### Patch Changes
+
+- b48999c: Docs
+
 ## 0.0.3
 
 ### Patch Changes
