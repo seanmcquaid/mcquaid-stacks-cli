@@ -14,4 +14,4 @@ After thorough evaluation and consideration, the decision has been made to integ
 
 ## Consequences
 
-The adoption of React Testing Library anticipates several positive outcomes for our development process. The shift will likely result in clearer, more maintainable tests, reducing false positives and enabling faster debugging. However, this transition might require a learning curve for team members unfamiliar with RTL's approach, which could initially impact productivity. Long-term benefits include improved test reliability and easier onboarding for new developers joining the project.
+The adoption of React Testing Library anticipates several positive outcomes for our development process. The shift will likely result in clearer, more maintainable tests, reducing false positives and enabling faster debugging. However, this transition might require a learning curve for those unfamiliar with RTL's approach, which could initially impact productivity. Long-term benefits include improved test reliability and easier onboarding for new developers joining the project.
