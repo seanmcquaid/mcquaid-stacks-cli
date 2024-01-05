@@ -1,5 +1,5 @@
 import { useErrorBoundary } from 'react-error-boundary';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from '@tanstack/react-router';
 import { Button } from '@/components/ui/Button';
 import useAppTranslation from '@/hooks/useAppTranslation';
 
@@ -19,7 +19,7 @@ const PageError = ({
   const { resetBoundary } = useErrorBoundary();
 
   const handleGoBack = () => {
-    navigate(-1);
+    navigate({ to: '/' });
   };
 
   const handleRefresh = () => {

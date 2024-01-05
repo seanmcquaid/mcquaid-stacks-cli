@@ -1,4 +1,4 @@
-import { lazy, startTransition, StrictMode, Suspense } from 'react';
+import { startTransition, StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { ErrorBoundary } from 'react-error-boundary';
 import { QueryClientProvider } from '@tanstack/react-query';
@@ -8,9 +8,8 @@ import queryClient from './services/queryClient';
 import './styles/index.css';
 import './i18n';
 import PageError from './components/app/PageError';
-import LoadingOverlay from './components/ui/LoadingOverlay';
-
-const Routes = lazy(() => import('@/routes/Routes'));
+import router from './router';
+import { RouterProvider } from '@tanstack/react-router';
 
 const prepare = async () => {
   if (env.MODE === 'development' && env.VITE_APP_MSW_ENABLED) {
@@ -26,9 +25,7 @@ prepare().then(() =>
       <StrictMode>
         <ErrorBoundary fallback={<PageError shouldAllowRefresh />}>
           <QueryClientProvider client={queryClient}>
-            <Suspense fallback={<LoadingOverlay isLoading />}>
-              <Routes />
-            </Suspense>
+            <RouterProvider router={router} />
             <ReactQueryDevtools initialIsOpen={false} />
           </QueryClientProvider>
         </ErrorBoundary>
