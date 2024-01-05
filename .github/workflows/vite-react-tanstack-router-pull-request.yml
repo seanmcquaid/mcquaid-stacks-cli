@@ -12,7 +12,7 @@ defaults:
 jobs:
   linting:
     runs-on: ubuntu-latest
-    name: Linting - Vite + React + TanStackRouter
+    name: Linting - Vite + React + TanStack Router
     steps:
       - name: Checkout latest
         uses: actions/checkout@v3
@@ -35,7 +35,7 @@ jobs:
         run: pnpm lint
   playwright-tests:
     runs-on: ubuntu-latest
-    name: Playwright Tests - Vite + React + TanStackRouter
+    name: Playwright Tests - Vite + React + TanStack Router
     steps:
       - name: Checkout latest
         uses: actions/checkout@v3
@@ -61,7 +61,7 @@ jobs:
         run: pnpm playwright:run
   unit-tests-coverage:
     runs-on: ubuntu-latest
-    name: Unit Tests - Vite + React + TanStackRouter
+    name: Unit Tests - Vite + React + TanStack Router
     steps:
       - name: Checkout latest
         uses: actions/checkout@v3
@@ -80,7 +80,7 @@ jobs:
         run: pnpm test:coverage
   bundle-size:
     runs-on: ubuntu-latest
-    name: Bundle Size - Vite + React + TanStackRouter
+    name: Bundle Size - Vite + React + TanStack Router
     steps:
       - name: Checkout latest
         uses: actions/checkout@v3
