@@ -14,7 +14,13 @@ updates:
       day: tuesday
     open-pull-requests-limit: 20
   - package-ecosystem: npm
-    directory: "/src/templates/vite-react"
+    directory: "/src/templates/vite-react-router"
+    schedule:
+      interval: weekly
+      day: tuesday
+    open-pull-requests-limit: 20
+  - package-ecosystem: npm
+    directory: "/src/templates/vite-react-tanstack-router"
     schedule:
       interval: weekly
       day: tuesday
