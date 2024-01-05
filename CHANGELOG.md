@@ -1,5 +1,11 @@
 # @mcquaid-stacks/cli
 
+## 0.0.6
+
+### Patch Changes
+
+- 5b8d331: Added template for TanStack Router and renamed vite react to vite-react-router
+
 ## 0.0.5
 
 ### Patch Changes
