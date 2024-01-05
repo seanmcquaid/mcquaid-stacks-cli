@@ -1,9 +1,9 @@
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
+import { FileRoute } from '@tanstack/react-router';
 import { Input } from '@/components/ui/Input';
 import PageWrapper from '@/components/app/PageWrapper';
-import { FileRoute } from '@tanstack/react-router';
 
 const formSchema = z
   .object({

@@ -1,7 +1,7 @@
+import { FileRoute } from '@tanstack/react-router';
 import PageWrapper from '@/components/app/PageWrapper';
 import LinkButton from '@/components/ui/LinkButton';
 import useAppTranslation from '@/hooks/useAppTranslation';
-import { FileRoute } from '@tanstack/react-router';
 
 const Home = () => {
   const { t } = useAppTranslation();

@@ -1,7 +1,7 @@
+import { useNavigate } from '@tanstack/react-router';
 import { Button } from '@/components/ui/Button';
 import PageWrapper from '@/components/app/PageWrapper';
 import useAppTranslation from '@/hooks/useAppTranslation';
-import { useNavigate } from '@tanstack/react-router';
 
 const NotFound = () => {
   const { t } = useAppTranslation();

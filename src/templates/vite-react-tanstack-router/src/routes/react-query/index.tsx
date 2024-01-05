@@ -1,10 +1,10 @@
+import { FileRoute } from '@tanstack/react-router';
 import PageWrapper from '@/components/app/PageWrapper';
 import { Button } from '@/components/ui/Button';
 import LinkButton from '@/components/ui/LinkButton';
 import useAppTranslation from '@/hooks/useAppTranslation';
 import useDeletePostMutation from '@/services/mutations/useDeletePostMutation';
 import useGetPostsQuery from '@/services/queries/useGetPostsQuery';
-import { FileRoute } from '@tanstack/react-router';
 
 const ReactQuery = () => {
   const { t } = useAppTranslation();

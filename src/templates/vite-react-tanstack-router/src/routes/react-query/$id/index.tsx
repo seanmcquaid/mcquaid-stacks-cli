@@ -1,6 +1,6 @@
+import { FileRoute } from '@tanstack/react-router';
 import PageWrapper from '@/components/app/PageWrapper';
 import useGetPostQuery from '@/services/queries/useGetPostQuery';
-import { FileRoute } from '@tanstack/react-router';
 
 const ReactQueryParams = () => {
   const { id } = Route.useParams();

@@ -1,8 +1,8 @@
 import { ErrorBoundary } from 'react-error-boundary';
 import { Outlet, RootRoute } from '@tanstack/react-router';
+import { Suspense, lazy } from 'react';
 import PageError from '@/components/app/PageError';
 import { Toaster } from '@/components/ui/Toaster';
-import { Suspense, lazy } from 'react';
 
 const TanStackRouterDevtools =
   process.env.NODE_ENV === 'production'

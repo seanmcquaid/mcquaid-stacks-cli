@@ -1,9 +1,9 @@
 import { z } from 'zod';
+import { FileRoute, useNavigate } from '@tanstack/react-router';
 import PageWrapper from '@/components/app/PageWrapper';
 import { Button } from '@/components/ui/Button';
 import useAppTranslation from '@/hooks/useAppTranslation';
 import Modal from '@/components/app/Modal';
-import { FileRoute, useNavigate } from '@tanstack/react-router';
 import { useToast } from '@/hooks/useToast';
 
 const TanStackRouter = () => {

@@ -1,6 +1,7 @@
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
+import { FileRoute } from '@tanstack/react-router';
 import PageWrapper from '@/components/app/PageWrapper';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
@@ -10,7 +11,6 @@ import useGetPostsQuery, {
 import queryClient from '@/services/queryClient';
 import useAppTranslation from '@/hooks/useAppTranslation';
 import { toast } from '@/hooks/useToast';
-import { FileRoute } from '@tanstack/react-router';
 
 const formSchema = z.object({
   name: z.string().min(3).max(50, {
