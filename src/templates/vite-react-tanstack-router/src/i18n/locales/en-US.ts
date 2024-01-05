@@ -8,9 +8,9 @@ const enUSLocale = {
     kitchenSink: 'Kitchen Sink',
     reactHookFormZod: 'React Hook Form with Zod',
     reactQuery: 'Querying and Mutating Data with React Query',
-    reactRouter: 'React Router',
     subTitle:
       'Below you will find a list of example routes with commonly used patterns for React projects',
+    tanstackRouter: 'TanStack Router',
     title: 'Welcome to a scaffolded project with INSERT NAME HERE!',
   },
   KitchenSinkPage: {
@@ -34,16 +34,16 @@ const enUSLocale = {
     title: 'Querying and Mutating Data with React Query',
     view: 'View',
   },
-  ReactRouterGeneroutedPage: {
-    openModal: 'Open Modal',
-  },
   Routes: {
     home: '/',
     kitchenSink: '/kitchen-sink',
     notFound: '*',
     reactHookFormZod: '/react-hook-form-zod',
     reactQuery: '/react-query',
-    reactRouter: '/react-router',
+    tanstackRouter: '/tanstack-router',
+  },
+  TanStackRouterPage: {
+    openModal: 'Open Modal',
   },
 } as const;
 
