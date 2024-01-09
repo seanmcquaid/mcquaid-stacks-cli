@@ -77,7 +77,7 @@
     "eslint-plugin-vitest": "^0.3.20",
     "husky": "^8.0.3",
     "is-ci": "^3.0.1",
-    "jsdom": "^23.0.1",
+    "jsdom": "^23.2.0",
     "lighthouse": "^11.4.0",
     "lint-staged": "^15.2.0",
     "msw": "^2.0.13",
