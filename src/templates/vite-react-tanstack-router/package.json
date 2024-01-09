@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "build": "tsr generate && tsc && vite build",
-    "dev": "concurrently \"tsr watch\" \"vite --host\"",
+    "build": "tsc && vite build",
+    "dev": "vite --host",
     "lint": "eslint e2e src --max-warnings=0",
     "prepare": "is-ci || husky install",
     "preview": "vite preview",
@@ -51,6 +51,7 @@
     "@size-limit/file": "^11.0.1",
     "@tanstack/router-cli": "^1.1.5",
     "@tanstack/router-devtools": "^1.1.5",
+    "@tanstack/router-vite-plugin": "^1.2.2",
     "@testing-library/jest-dom": "^6.2.0",
     "@testing-library/react": "^14.1.2",
     "@testing-library/user-event": "^14.5.2",
