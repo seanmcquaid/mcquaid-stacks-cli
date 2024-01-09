@@ -188,14 +188,14 @@ devDependencies:
     specifier: ^15.2.0
     version: 15.2.0
   msw:
-    specifier: ^2.0.11
-    version: 2.0.11(typescript@5.2.2)
+    specifier: ^2.0.13
+    version: 2.0.13(typescript@5.2.2)
   playwright-lighthouse:
     specifier: ^3.2.5
     version: 3.2.5(playwright-core@1.40.1)(typescript@5.2.2)
   playwright-msw:
     specifier: ^3.0.1
-    version: 3.0.1(@playwright/test@1.40.1)(msw@2.0.11)
+    version: 3.0.1(@playwright/test@1.40.1)(msw@2.0.13)
   postcss:
     specifier: ^8.4.33
     version: 8.4.33
@@ -1876,8 +1876,8 @@ packages:
     engines: {node: '>=18'}
     dev: true
 
-  /@mswjs/interceptors@0.25.13:
-    resolution: {integrity: sha512-xfjR81WwXPHwhDbqJRHlxYmboJuiSaIKpP4I5TJVFl/EmByOU13jOBT9hmEnxcjR3jvFYoqoNKt7MM9uqerj9A==}
+  /@mswjs/interceptors@0.25.14:
+    resolution: {integrity: sha512-2dnIxl+obqIqjoPXTFldhe6pcdOrqiz+GcLaQQ6hmL02OldAF7nIC+rUgTWm+iF6lvmyCVhFFqbgbapNhR8eag==}
     engines: {node: '>=18'}
     dependencies:
       '@open-draft/deferred-promise': 2.2.0
@@ -6384,13 +6384,13 @@ packages:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
     dev: true
 
-  /msw@2.0.11(typescript@5.2.2):
-    resolution: {integrity: sha512-dAXFS2DxZX0uFqMPhS3oUAu8S/5IQ5qKKSwtXl3/dMTeML0C8JfSvbeWtowYg6pu4Iehgp5L/pHLrlIcG++y/A==}
+  /msw@2.0.13(typescript@5.2.2):
+    resolution: {integrity: sha512-FN4GUOTxm+cucXsFFNIZooHWNGGGRZCa5HxcrbdPxSIZMmGkPW2XewidZPcQn6AXO5SisZtfijXFGDlme/BbUw==}
     engines: {node: '>=18'}
     hasBin: true
     requiresBuild: true
     peerDependencies:
-      typescript: '>= 4.7.x <= 5.2.x'
+      typescript: '>= 4.7.x <= 5.3.x'
     peerDependenciesMeta:
       typescript:
         optional: true
@@ -6399,7 +6399,7 @@ packages:
       '@bundled-es-modules/js-levenshtein': 2.0.1
       '@bundled-es-modules/statuses': 1.0.1
       '@mswjs/cookies': 1.1.0
-      '@mswjs/interceptors': 0.25.13
+      '@mswjs/interceptors': 0.25.14
       '@open-draft/until': 2.1.0
       '@types/cookie': 0.4.1
       '@types/js-levenshtein': 1.1.1
@@ -6855,7 +6855,7 @@ packages:
       - utf-8-validate
     dev: true
 
-  /playwright-msw@3.0.1(@playwright/test@1.40.1)(msw@2.0.11):
+  /playwright-msw@3.0.1(@playwright/test@1.40.1)(msw@2.0.13):
     resolution: {integrity: sha512-w2bVjt7kPIThOQF9OS/1vDDs0HsQfV9inxMVSUv74x/zhCcrgzVN47xpPk84okf3OcCRHHBJKq8sNeBfCDyhMg==}
     engines: {node: '>=18'}
     peerDependencies:
@@ -6864,7 +6864,7 @@ packages:
     dependencies:
       '@mswjs/cookies': 1.1.0
       '@playwright/test': 1.40.1
-      msw: 2.0.11(typescript@5.2.2)
+      msw: 2.0.13(typescript@5.2.2)
       strict-event-emitter: 0.5.1
     dev: true
 
