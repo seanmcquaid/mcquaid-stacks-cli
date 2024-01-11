@@ -48,7 +48,7 @@ const searchParamsSchema = z.object({
   modal: z.coerce.boolean().catch(false),
 });
 
-export const Route = new FileRoute('/tanstack-router/').createRoute({
+export const Route = new FileRoute('/tanstack-router').createRoute({
   component: TanStackRouter,
   loader: () => {
     return {

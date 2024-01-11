@@ -66,7 +66,7 @@ const KitchenSink = () => {
   );
 };
 
-export const Route = new FileRoute('/kitchen-sink/').createRoute({
+export const Route = new FileRoute('/kitchen-sink').createRoute({
   component: KitchenSink,
   loader: async () => {
     const query = getPostsQuery();

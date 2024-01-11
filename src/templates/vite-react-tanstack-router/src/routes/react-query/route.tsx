@@ -39,6 +39,6 @@ const ReactQuery = () => {
   );
 };
 
-export const Route = new FileRoute('/react-query/').createRoute({
+export const Route = new FileRoute('/react-query').createRoute({
   component: ReactQuery,
 });

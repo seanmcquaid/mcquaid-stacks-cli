@@ -14,6 +14,6 @@ const ReactQueryParams = () => {
   );
 };
 
-export const Route = new FileRoute('/react-query/$id/').createRoute({
+export const Route = new FileRoute('/react-query/$id').createRoute({
   component: ReactQueryParams,
 });

@@ -66,6 +66,6 @@ const ReactHookFormZod = () => {
   );
 };
 
-export const Route = new FileRoute('/react-hook-form-zod/').createRoute({
+export const Route = new FileRoute('/react-hook-form-zod').createRoute({
   component: ReactHookFormZod,
 });
