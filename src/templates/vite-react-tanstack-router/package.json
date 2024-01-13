@@ -83,7 +83,7 @@
     "playwright-lighthouse": "^3.2.6",
     "playwright-msw": "^3.0.1",
     "postcss": "^8.4.33",
-    "prettier": "^3.1.1",
+    "prettier": "^3.2.1",
     "size-limit": "^11.0.1",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.2.2",
