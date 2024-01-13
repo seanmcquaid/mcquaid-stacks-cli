@@ -2,6 +2,7 @@
 import { Outlet } from '@remix-run/react';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { Toaster } from './components/ui/Toaster';
+import './styles/index.css';
 
 const Root = () => {
   return (

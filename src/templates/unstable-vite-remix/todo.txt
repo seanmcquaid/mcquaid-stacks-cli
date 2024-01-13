@@ -1,0 +1,2 @@
+1. Fix Tailwind/styling
+2. Figure out ESM issue with Loading Spinner library

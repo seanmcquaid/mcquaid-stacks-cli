@@ -26,7 +26,7 @@ export const clientAction: ClientActionFunction = async ({ request }) => {
   return json;
 };
 
-export const Component = () => {
+const RemixPage = () => {
   const { t } = useAppTranslation();
   const [searchParams, setSearchParams] = useSearchParams();
   const fetcher = useFetcher();
@@ -77,3 +77,5 @@ export const Component = () => {
     </PageWrapper>
   );
 };
+
+export default RemixPage;
