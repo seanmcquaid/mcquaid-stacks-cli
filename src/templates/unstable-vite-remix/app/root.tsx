@@ -1,11 +1,29 @@
 import './styles/index.css';
 
 /* eslint-disable i18next/no-literal-string */
-import { Outlet, Links } from '@remix-run/react';
+import { Outlet, Links, LiveReload, Meta, Scripts } from '@remix-run/react';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { Toaster } from './components/ui/Toaster';
 import { QueryClientProvider } from '@tanstack/react-query';
 import queryClient from './services/queryClient';
+
+export function HydrateFallback() {
+  return (
+    <html lang="en">
+      <head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <Meta />
+        <Links />
+      </head>
+      <body>
+        <p>Loading...</p>
+        <Scripts />
+        <LiveReload />
+      </body>
+    </html>
+  );
+}
 
 const Root = () => {
   return (
@@ -33,6 +51,8 @@ const Root = () => {
             <Toaster />
           </QueryClientProvider>
         </div>
+        <Scripts />
+        <LiveReload />
         <noscript>
           Your browser does not support JavaScript or it is not enabled! Please
           re-enable JavaScript in order to use this site.
