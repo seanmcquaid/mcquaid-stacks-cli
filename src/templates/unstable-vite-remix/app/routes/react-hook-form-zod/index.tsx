@@ -21,7 +21,7 @@ const formSchema = z
     path: ['confirmPassword'],
   });
 
-export const Component = () => {
+const ReactHookFormZod = () => {
   const {
     register,
     formState: { errors },
@@ -64,3 +64,5 @@ export const Component = () => {
     </PageWrapper>
   );
 };
+
+export default ReactHookFormZod;

@@ -2,7 +2,7 @@ import { useParams } from '@remix-run/react';
 import PageWrapper from '@/components/app/PageWrapper';
 import useGetPostQuery from '@/services/queries/useGetPostQuery';
 
-export const Component = () => {
+const ReactQueryPostPage = () => {
   const { id } = useParams();
   const { data, isLoading, isError } = useGetPostQuery(id!);
 
@@ -13,3 +13,5 @@ export const Component = () => {
     </PageWrapper>
   );
 };
+
+export default ReactQueryPostPage;

@@ -1,5 +1,7 @@
 /* eslint-disable i18next/no-literal-string */
 import { Outlet } from '@remix-run/react';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+import { Toaster } from './components/ui/Toaster';
 
 const Root = () => {
   return (
@@ -21,6 +23,8 @@ const Root = () => {
       <body className="h-screen w-full">
         <div id="root" className="h-screen w-full">
           <Outlet />
+          <ReactQueryDevtools initialIsOpen={false} />
+          <Toaster />
         </div>
         <noscript>
           Your browser does not support JavaScript or it is not enabled! Please

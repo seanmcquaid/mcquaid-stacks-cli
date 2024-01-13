@@ -86,6 +86,7 @@
     "playwright-msw": "^3.0.1",
     "postcss": "^8.4.33",
     "prettier": "^3.1.1",
+    "remix-flat-routes": "^0.6.4",
     "size-limit": "^11.0.1",
     "tailwindcss": "^3.4.0",
     "typescript": "^5.2.2",

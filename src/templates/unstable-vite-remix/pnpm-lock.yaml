@@ -205,6 +205,9 @@ devDependencies:
   prettier:
     specifier: ^3.1.1
     version: 3.1.1
+  remix-flat-routes:
+    specifier: ^0.6.4
+    version: 0.6.4(@remix-run/dev@2.5.0)
   size-limit:
     specifier: ^11.0.1
     version: 11.0.1
@@ -2243,6 +2246,15 @@ packages:
       set-cookie-parser: 2.6.0
       source-map: 0.7.4
       typescript: 5.2.2
+
+  /@remix-run/v1-route-convention@0.1.4(@remix-run/dev@2.5.0):
+    resolution: {integrity: sha512-fVTr9YlNLWfaiM/6Y56sOtcY8x1bBJQHY0sDWO5+Z/vjJ2Ni7fe2fwrzs1jUFciMPXqBQdFGePnkuiYLz3cuUA==}
+    peerDependencies:
+      '@remix-run/dev': ^1.15.0 || ^2.0.0
+    dependencies:
+      '@remix-run/dev': 2.5.0(@remix-run/serve@2.5.0)(@types/node@20.10.6)(typescript@5.2.2)(vite@5.0.10)
+      minimatch: 7.4.6
+    dev: true
 
   /@remix-run/web-blob@3.1.0:
     resolution: {integrity: sha512-owGzFLbqPH9PlKb8KvpNJ0NO74HWE2euAn61eEiyCXX/oteoVzTVSN8mpLgDjaxBf2btj5/nUllSUgpyd6IH6g==}
@@ -7178,6 +7190,20 @@ packages:
     dependencies:
       brace-expansion: 1.1.11
 
+  /minimatch@5.1.6:
+    resolution: {integrity: sha512-lKwV/1brpG6mBUFHtb7NUmtABCb2WZZmm2wNiOA5hAb8VdCS4B3dtMWyvcoViccwAW/COERjXLt0zP1zXUN26g==}
+    engines: {node: '>=10'}
+    dependencies:
+      brace-expansion: 2.0.1
+    dev: true
+
+  /minimatch@7.4.6:
+    resolution: {integrity: sha512-sBz8G/YjVniEz6lKPNpKxXwazJe4c19fEfV2GDMX6AjFz+MX9uDWIZW8XreVhkFW3fkIdTv/gxWr/Kks5FFAVw==}
+    engines: {node: '>=10'}
+    dependencies:
+      brace-expansion: 2.0.1
+    dev: true
+
   /minimatch@9.0.3:
     resolution: {integrity: sha512-RHiac9mvaRw0x3AYRgDC1CxAP7HTcNrrECeA8YYJeWnpo+2Q5CegtZjaotWTWxDG3UeGA1coE05iH1mPjT/2mg==}
     engines: {node: '>=16 || 14 >=14.17'}
@@ -8527,6 +8553,18 @@ packages:
       '@types/mdast': 3.0.15
       mdast-util-to-hast: 12.3.0
       unified: 10.1.2
+    dev: true
+
+  /remix-flat-routes@0.6.4(@remix-run/dev@2.5.0):
+    resolution: {integrity: sha512-/0bTfaNSd2O3ak+cCLAlmHIsgm7YWiaBiu5ENUyuSWSNwF/KaHuKFhcHHhozPevQ8ROgCZG9tNbWzH6ktJoprA==}
+    hasBin: true
+    peerDependencies:
+      '@remix-run/dev': ^1.15.0 || ^2
+    dependencies:
+      '@remix-run/dev': 2.5.0(@remix-run/serve@2.5.0)(@types/node@20.10.6)(typescript@5.2.2)(vite@5.0.10)
+      '@remix-run/v1-route-convention': 0.1.4(@remix-run/dev@2.5.0)
+      fs-extra: 11.1.1
+      minimatch: 5.1.6
     dev: true
 
   /require-directory@2.1.1:

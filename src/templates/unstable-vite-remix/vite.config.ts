@@ -6,12 +6,19 @@ import { defineConfig } from 'vite';
 import { unstable_vitePlugin as remix } from '@remix-run/dev';
 import svgr from 'vite-plugin-svgr';
 import checker from 'vite-plugin-checker';
+import { flatRoutes } from 'remix-flat-routes';
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     remix({
       unstable_ssr: false,
+      // ignore all files in routes folder to prevent
+      // default remix convention from picking up routes
+      ignoredRouteFiles: ['**/*'],
+      routes: async defineRoutes => {
+        return flatRoutes('routes', defineRoutes);
+      },
     }),
     svgr(),
     checker({ typescript: true }),
