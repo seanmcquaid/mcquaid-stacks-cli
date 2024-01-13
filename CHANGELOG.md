@@ -1,5 +1,11 @@
 # @mcquaid-stacks/cli
 
+## 0.0.7
+
+### Patch Changes
+
+- aae4ce9: File based routing + Vite plugin for Tanstack Router
+
 ## 0.0.6
 
 ### Patch Changes
