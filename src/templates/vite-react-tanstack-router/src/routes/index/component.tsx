@@ -1,9 +1,8 @@
-import { FileRoute } from '@tanstack/react-router';
 import PageWrapper from '@/components/app/PageWrapper';
 import LinkButton from '@/components/ui/LinkButton';
 import useAppTranslation from '@/hooks/useAppTranslation';
 
-const Home = () => {
+export const component = function HomePage() {
   const { t } = useAppTranslation();
 
   return (
@@ -25,7 +24,3 @@ const Home = () => {
     </PageWrapper>
   );
 };
-
-export const Route = new FileRoute('/').createRoute({
-  component: Home,
-});

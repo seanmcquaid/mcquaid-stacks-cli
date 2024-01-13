@@ -1,4 +1,3 @@
-import { FileRoute } from '@tanstack/react-router';
 import PageWrapper from '@/components/app/PageWrapper';
 import { Button } from '@/components/ui/Button';
 import LinkButton from '@/components/ui/LinkButton';
@@ -6,7 +5,7 @@ import useAppTranslation from '@/hooks/useAppTranslation';
 import useDeletePostMutation from '@/services/mutations/useDeletePostMutation';
 import useGetPostsQuery from '@/services/queries/useGetPostsQuery';
 
-const ReactQuery = () => {
+export const component = function ReactQueryPage() {
   const { t } = useAppTranslation();
   const { data, isLoading, isError } = useGetPostsQuery();
   const { mutate: deletePost, isPending: deletePostLoading } =
@@ -38,7 +37,3 @@ const ReactQuery = () => {
     </PageWrapper>
   );
 };
-
-export const Route = new FileRoute('/react-query').createRoute({
-  component: ReactQuery,
-});
