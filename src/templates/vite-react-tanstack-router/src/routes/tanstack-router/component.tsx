@@ -1,10 +1,10 @@
 import { useNavigate } from '@tanstack/react-router';
+import { Route } from './route';
 import Modal from '@/components/app/Modal';
 import PageWrapper from '@/components/app/PageWrapper';
 import { Button } from '@/components/ui/Button';
 import useAppTranslation from '@/hooks/useAppTranslation';
 import { useToast } from '@/hooks/useToast';
-import { Route } from './route';
 
 export const component = function TanStackRouter() {
   const { t } = useAppTranslation();

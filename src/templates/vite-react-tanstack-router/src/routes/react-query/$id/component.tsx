@@ -1,5 +1,5 @@
-import useGetPostQuery from '@/services/queries/useGetPostQuery';
 import { Route } from './route';
+import useGetPostQuery from '@/services/queries/useGetPostQuery';
 import PageWrapper from '@/components/app/PageWrapper';
 
 export const component = function ReactQueryPostPage() {
