@@ -5,7 +5,7 @@ import useAppTranslation from '@/hooks/useAppTranslation';
 import useDeletePostMutation from '@/services/mutations/useDeletePostMutation';
 import useGetPostsQuery from '@/services/queries/useGetPostsQuery';
 
-export const Component = () => {
+const ReactQueryPage = () => {
   const { t } = useAppTranslation();
   const { data, isLoading, isError } = useGetPostsQuery();
   const { mutate: deletePost, isPending: deletePostLoading } =
@@ -37,3 +37,5 @@ export const Component = () => {
     </PageWrapper>
   );
 };
+
+export default ReactQueryPage;

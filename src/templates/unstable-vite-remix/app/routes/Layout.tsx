@@ -1,4 +1,4 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet } from '@remix-run/react';
 import { ErrorBoundary } from 'react-error-boundary';
 import PageError from '@/components/app/PageError';
 import { Toaster } from '@/components/ui/Toaster';

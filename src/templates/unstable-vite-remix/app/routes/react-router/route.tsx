@@ -1,24 +1,24 @@
 import {
   useSearchParams,
-  type ActionFunction,
-  type LoaderFunction,
+  type ClientActionFunction,
+  type ClientLoaderFunction,
   useFetcher,
   useLoaderData,
-} from 'react-router-dom';
+} from '@remix-run/react';
 import { z } from 'zod';
 import PageWrapper from '@/components/app/PageWrapper';
 import { Button } from '@/components/ui/Button';
 import useAppTranslation from '@/hooks/useAppTranslation';
 import Modal from '@/components/app/Modal';
 
-export const loader: LoaderFunction = () => {
+export const clientLoader: ClientLoaderFunction = () => {
   return {
     hello:
       "Hello friends! This page is using patterns common to React Router v6's Loaders + Actions",
   };
 };
 
-export const action: ActionFunction = async ({ request }) => {
+export const clientAction: ClientActionFunction = async ({ request }) => {
   const json = await request.json();
 
   alert(JSON.stringify(json));

@@ -5,7 +5,6 @@ import {
   renderHook as rtlRenderHook,
 } from '@testing-library/react';
 import type { ReactElement, PropsWithChildren } from 'react';
-import DataMemoryRouter from './DataMemoryRouter';
 
 const queryClient = new QueryClient();
 
@@ -16,24 +15,9 @@ const renderHook = <T,>(fn: () => T) => {
   return rtlRenderHook(fn, { wrapper: Wrapper });
 };
 
-interface RenderOptions {
-  initialRoute?: string;
-}
-
-const render = (
-  ui: ReactElement,
-  renderOptions?: RenderOptions,
-): RenderResult => {
+const render = (ui: ReactElement): RenderResult => {
   const Wrapper = ({ children }: PropsWithChildren) => (
-    <QueryClientProvider client={queryClient}>
-      {renderOptions?.initialRoute ? (
-        <DataMemoryRouter initialEntries={[renderOptions.initialRoute]}>
-          {children}
-        </DataMemoryRouter>
-      ) : (
-        children
-      )}
-    </QueryClientProvider>
+    <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
   );
 
   return rtlRender(ui, { wrapper: Wrapper });

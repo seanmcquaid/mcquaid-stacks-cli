@@ -2,9 +2,9 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import {
   useFetcher,
-  type ActionFunction,
-  type LoaderFunction,
-} from 'react-router-dom';
+  type ClientActionFunction,
+  type ClientLoaderFunction,
+} from '@remix-run/react';
 import { z } from 'zod';
 import PageWrapper from '@/components/app/PageWrapper';
 import { Button } from '@/components/ui/Button';
@@ -16,7 +16,7 @@ import queryClient from '@/services/queryClient';
 import useAppTranslation from '@/hooks/useAppTranslation';
 import { toast } from '@/hooks/useToast';
 
-export const loader: LoaderFunction = async () => {
+export const clientLoader: ClientLoaderFunction = async () => {
   const query = getPostsQuery();
   return {
     data:
@@ -25,7 +25,7 @@ export const loader: LoaderFunction = async () => {
   };
 };
 
-export const action: ActionFunction = async ({ request }) => {
+export const clientAction: ClientActionFunction = async ({ request }) => {
   const formData = await request.formData();
   const name = formData.get('name');
 
