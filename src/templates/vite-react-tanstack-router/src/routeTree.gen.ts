@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { FileRoute, lazyFn, lazyRouteComponent } from '@tanstack/react-router';
 
 import { Route as rootRoute } from './routes/__root';
