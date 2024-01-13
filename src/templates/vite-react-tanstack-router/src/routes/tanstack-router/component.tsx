@@ -1,17 +1,16 @@
-import { RouteApi, useNavigate } from '@tanstack/react-router';
+import { useNavigate } from '@tanstack/react-router';
 import Modal from '@/components/app/Modal';
 import PageWrapper from '@/components/app/PageWrapper';
 import { Button } from '@/components/ui/Button';
 import useAppTranslation from '@/hooks/useAppTranslation';
 import { useToast } from '@/hooks/useToast';
-
-const api = new RouteApi({ id: '/tanstack-router' });
+import { Route } from './route';
 
 export const component = function TanStackRouter() {
   const { t } = useAppTranslation();
-  const { modal } = api.useSearch();
+  const { modal } = Route.useSearch();
   const navigate = useNavigate();
-  const loaderData = api.useLoaderData();
+  const loaderData = Route.useLoaderData();
   const { toast } = useToast();
 
   const handleOpenModal = () => {

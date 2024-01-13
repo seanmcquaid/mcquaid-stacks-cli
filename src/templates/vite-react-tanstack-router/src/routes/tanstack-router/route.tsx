@@ -7,4 +7,10 @@ const searchParamsSchema = z.object({
 
 export const Route = new FileRoute('/tanstack-router').createRoute({
   validateSearch: searchParamsSchema,
+  loader: async () => {
+    return {
+      hello:
+        'Hello friends! This page is using patterns common to TanStack Router',
+    };
+  },
 });
