@@ -1,8 +1,11 @@
+import './styles/index.css';
+
 /* eslint-disable i18next/no-literal-string */
-import { Outlet } from '@remix-run/react';
+import { Outlet, Links } from '@remix-run/react';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { Toaster } from './components/ui/Toaster';
-import './styles/index.css';
+import { QueryClientProvider } from '@tanstack/react-query';
+import queryClient from './services/queryClient';
 
 const Root = () => {
   return (
@@ -20,12 +23,15 @@ const Root = () => {
         <meta httpEquiv="Pragma" content="no-cache" />
         <meta httpEquiv="Expires" content="0" />
         <title>unstable-vite-remix</title>
+        <Links />
       </head>
       <body className="h-screen w-full">
         <div id="root" className="h-screen w-full">
-          <Outlet />
-          <ReactQueryDevtools initialIsOpen={false} />
-          <Toaster />
+          <QueryClientProvider client={queryClient}>
+            <Outlet />
+            <ReactQueryDevtools initialIsOpen={false} />
+            <Toaster />
+          </QueryClientProvider>
         </div>
         <noscript>
           Your browser does not support JavaScript or it is not enabled! Please

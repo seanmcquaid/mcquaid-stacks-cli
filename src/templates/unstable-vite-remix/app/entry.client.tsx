@@ -1,8 +1,6 @@
 import { RemixBrowser } from '@remix-run/react';
-import { QueryClientProvider } from '@tanstack/react-query';
 import { startTransition, StrictMode } from 'react';
 import { hydrateRoot } from 'react-dom/client';
-import queryClient from './services/queryClient';
 import env from './env';
 import './i18n';
 
@@ -19,9 +17,7 @@ prepare().then(() =>
     hydrateRoot(
       document,
       <StrictMode>
-        <QueryClientProvider client={queryClient}>
-          <RemixBrowser />
-        </QueryClientProvider>
+        <RemixBrowser />
       </StrictMode>,
     );
   }),
