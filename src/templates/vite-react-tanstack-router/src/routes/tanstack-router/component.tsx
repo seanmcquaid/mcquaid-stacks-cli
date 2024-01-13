@@ -1,12 +1,12 @@
-import { z } from 'zod';
-import { FileRoute, useNavigate } from '@tanstack/react-router';
+import { useNavigate } from '@tanstack/react-router';
+import { Route } from './route';
+import Modal from '@/components/app/Modal';
 import PageWrapper from '@/components/app/PageWrapper';
 import { Button } from '@/components/ui/Button';
 import useAppTranslation from '@/hooks/useAppTranslation';
-import Modal from '@/components/app/Modal';
 import { useToast } from '@/hooks/useToast';
 
-const TanStackRouter = () => {
+export const component = function TanStackRouter() {
   const { t } = useAppTranslation();
   const { modal } = Route.useSearch();
   const navigate = useNavigate();
@@ -43,18 +43,3 @@ const TanStackRouter = () => {
     </PageWrapper>
   );
 };
-
-const searchParamsSchema = z.object({
-  modal: z.coerce.boolean().catch(false),
-});
-
-export const Route = new FileRoute('/tanstack-router/').createRoute({
-  component: TanStackRouter,
-  loader: () => {
-    return {
-      hello:
-        'Hello friends! This page is using patterns common to TanStack Router',
-    };
-  },
-  validateSearch: searchParamsSchema,
-});

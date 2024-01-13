@@ -1,14 +1,10 @@
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
-import { FileRoute } from '@tanstack/react-router';
 import PageWrapper from '@/components/app/PageWrapper';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
-import useGetPostsQuery, {
-  getPostsQuery,
-} from '@/services/queries/useGetPostsQuery';
-import queryClient from '@/services/queryClient';
+import useGetPostsQuery from '@/services/queries/useGetPostsQuery';
 import useAppTranslation from '@/hooks/useAppTranslation';
 import { toast } from '@/hooks/useToast';
 
@@ -18,7 +14,7 @@ const formSchema = z.object({
   }),
 });
 
-const KitchenSink = () => {
+export const component = function KitchenSink() {
   const { t } = useAppTranslation();
   const { data, ...rest } = useGetPostsQuery();
   const {
@@ -65,15 +61,3 @@ const KitchenSink = () => {
     </PageWrapper>
   );
 };
-
-export const Route = new FileRoute('/kitchen-sink/').createRoute({
-  component: KitchenSink,
-  loader: async () => {
-    const query = getPostsQuery();
-    return {
-      data:
-        queryClient.getQueryData(query.queryKey) ??
-        (await queryClient.fetchQuery(query)),
-    };
-  },
-});
