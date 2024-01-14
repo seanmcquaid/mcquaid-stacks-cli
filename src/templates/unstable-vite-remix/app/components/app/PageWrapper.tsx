@@ -1,4 +1,5 @@
 import type { PropsWithChildren } from 'react';
+import LoadingSpinner from '../ui/LoadingSpinner';
 import PageError from './PageError';
 
 interface PageWrapperProps extends PropsWithChildren {
@@ -18,7 +19,7 @@ const PageWrapper = ({
   if (isLoading) {
     return (
       <div className="flex h-full w-full items-center justify-center">
-        Loading
+        <LoadingSpinner />
       </div>
     );
   }

@@ -1,5 +1,5 @@
-import spinners from 'react-spinners';
+import { Loader2 } from 'lucide-react';
 
-const LoadingSpinner = () => <spinners.ClipLoader loading size={100} />;
+const LoadingSpinner = () => <Loader2 className="animate-spin" />;
 
 export default LoadingSpinner;
