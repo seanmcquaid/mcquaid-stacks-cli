@@ -46,7 +46,7 @@
     "@typescript-eslint/consistent-type-imports": "error",
     "no-relative-import-paths/no-relative-import-paths": [
       "warn",
-      { "allowSameFolder": true, "rootDir": "src", "prefix": "@" }
+      { "allowSameFolder": true, "rootDir": "app", "prefix": "@" }
     ]
   }
 }

@@ -9,7 +9,7 @@ import LoadingOverlay from './components/ui/LoadingOverlay';
 
 export function HydrateFallback() {
   return (
-    <html lang="en">
+    <html lang="en-US" className="h-screen w-full">
       <head>
         <meta charSet="UTF-8" />
         <meta name="description" content="Vite App" />
@@ -41,7 +41,7 @@ export function HydrateFallback() {
 
 const Root = () => {
   return (
-    <html lang="en" className="h-screen w-full">
+    <html lang="en-US" className="h-screen w-full">
       <head>
         <meta charSet="UTF-8" />
         <meta name="description" content="Vite App" />
