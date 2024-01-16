@@ -188,8 +188,8 @@ devDependencies:
     specifier: ^2.0.13
     version: 2.0.14(typescript@5.3.3)
   playwright-lighthouse:
-    specifier: ^3.2.6
-    version: 3.2.6(playwright-core@1.40.1)(typescript@5.3.3)
+    specifier: ^4.0.0
+    version: 4.0.0(lighthouse@11.4.0)(playwright-core@1.40.1)
   playwright-msw:
     specifier: ^3.0.1
     version: 3.0.1(@playwright/test@1.40.1)(msw@2.0.14)
@@ -1946,28 +1946,6 @@ packages:
       playwright: 1.40.1
     dev: true
 
-  /@puppeteer/browsers@1.4.6(typescript@5.3.3):
-    resolution: {integrity: sha512-x4BEjr2SjOPowNeiguzjozQbsc6h437ovD/wu+JpaenxVLm3jkgzHY2xOslMTp50HoTvQreMjiexiGQw1sqZlQ==}
-    engines: {node: '>=16.3.0'}
-    hasBin: true
-    peerDependencies:
-      typescript: '>= 4.7.4'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
-    dependencies:
-      debug: 4.3.4
-      extract-zip: 2.0.1
-      progress: 2.0.3
-      proxy-agent: 6.3.0
-      tar-fs: 3.0.4
-      typescript: 5.3.3
-      unbzip2-stream: 1.4.3
-      yargs: 17.7.1
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
   /@puppeteer/browsers@1.9.0:
     resolution: {integrity: sha512-QwguOLy44YBGC8vuPP2nmpX4MUN2FzWbsnvZJtiCzecU3lHmVZkaC1tq6rToi9a200m8RzlVtDyxCS0UIDrxUg==}
     engines: {node: '>=16.3.0'}
@@ -3620,11 +3598,6 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /axe-core@4.7.2:
-    resolution: {integrity: sha512-zIURGIS1E1Q4pcrMjp+nnEh+16G56eG/MUllJH8yEvw7asDo7Ac9uhC9KIH5jzpITueEZolfYglnCGIuSBz39g==}
-    engines: {node: '>=4'}
-    dev: true
-
   /axe-core@4.8.2:
     resolution: {integrity: sha512-/dlp0fxyM3R8YW7MFzaHWXrf4zzbr0vaYb23VBFCl83R7nWNPg/yaQw2Dc8jzCMmDVLhSdzH8MjrsuIUuvX+6g==}
     engines: {node: '>=4'}
@@ -3863,19 +3836,6 @@ packages:
     optionalDependencies:
       fsevents: 2.3.3
 
-  /chrome-launcher@0.15.2:
-    resolution: {integrity: sha512-zdLEwNo3aUVzIhKhTtXfxhdvZhUghrnmkvcAq2NoDd+LeOHKf03H5jwZ8T/STsAlzyALkBVK552iaG1fGf1xVQ==}
-    engines: {node: '>=12.13.0'}
-    hasBin: true
-    dependencies:
-      '@types/node': 20.11.0
-      escape-string-regexp: 4.0.0
-      is-wsl: 2.2.0
-      lighthouse-logger: 1.4.2
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
   /chrome-launcher@1.1.0:
     resolution: {integrity: sha512-rJYWeEAERwWIr3c3mEVXwNiODPEdMRlRxHc47B1qHPOolHZnkj7rMv1QSUfPoG6MgatWj5AxSpnKKR4QEwEQIQ==}
     engines: {node: '>=12.13.0'}
@@ -3887,15 +3847,6 @@ packages:
       lighthouse-logger: 2.0.1
     transitivePeerDependencies:
       - supports-color
-    dev: true
-
-  /chromium-bidi@0.4.16(devtools-protocol@0.0.1147663):
-    resolution: {integrity: sha512-7ZbXdWERxRxSwo3txsBjjmc/NLxqb1Bk30mRb0BMS4YIaiV6zvKZqL/UAH+DdqcDYayDWk2n/y8klkBDODrPvA==}
-    peerDependencies:
-      devtools-protocol: '*'
-    dependencies:
-      devtools-protocol: 0.0.1147663
-      mitt: 3.0.0
     dev: true
 
   /chromium-bidi@0.5.1(devtools-protocol@0.0.1203626):
@@ -4277,14 +4228,6 @@ packages:
   /detect-node-es@1.1.0:
     resolution: {integrity: sha512-ypdmJU/TbBby2Dxibuv7ZLW3Bs1QEmM7nHjEANfohJLvE0XVujisn1qPJcZxg+qDucsr+bP6fLD1rPS3AhJ7EQ==}
     dev: false
-
-  /devtools-protocol@0.0.1147663:
-    resolution: {integrity: sha512-hyWmRrexdhbZ1tcJUGpO95ivbRhWXz++F4Ko+n21AY5PNln2ovoJw+8ZMNDTtip+CNFQfrtLVh/w4009dXO/eQ==}
-    dev: true
-
-  /devtools-protocol@0.0.1155343:
-    resolution: {integrity: sha512-oD9vGBV2wTc7fAzAM6KC0chSgs234V8+qDEeK+mcbRj2UvcuA7lgBztGi/opj/iahcXD3BSj8Ymvib628yy9FA==}
-    dev: true
 
   /devtools-protocol@0.0.1203626:
     resolution: {integrity: sha512-nEzHZteIUZfGCZtTiS1fRpC8UZmsfD1SiyPvaUNvS13dvKf666OAm8YTi0+Ca3n1nLEyu49Cy4+dPWpaHFJk9g==}
@@ -5497,11 +5440,6 @@ packages:
       side-channel: 1.0.4
     dev: true
 
-  /intl-messageformat-parser@1.8.1:
-    resolution: {integrity: sha512-IMSCKVf0USrM/959vj3xac7s8f87sc+80Y/ipBzdKy4ifBv5Gsj2tZ41EAaURVg01QU71fYr77uA8Meh6kELbg==}
-    deprecated: We've written a new parser that's 6x faster and is backwards compatible. Please use @formatjs/icu-messageformat-parser
-    dev: true
-
   /intl-messageformat@10.5.3:
     resolution: {integrity: sha512-TzKn1uhJBMyuKTO4zUX47SU+d66fu1W9tVzIiZrQ6hBqQQeYscBMIzKL/qEXnFbJrH9uU5VV3+T5fWib4SIcKA==}
     dependencies:
@@ -5509,12 +5447,6 @@ packages:
       '@formatjs/fast-memoize': 2.2.0
       '@formatjs/icu-messageformat-parser': 2.6.2
       tslib: 2.6.2
-    dev: true
-
-  /intl-messageformat@4.4.0:
-    resolution: {integrity: sha512-z+Bj2rS3LZSYU4+sNitdHrwnBhr0wO80ZJSW8EzKDBowwUe3Q/UsvgCGjrwa+HPzoGCLEb9HAjfJgo4j2Sac8w==}
-    dependencies:
-      intl-messageformat-parser: 1.8.1
     dev: true
 
   /invariant@2.2.4:
@@ -6008,15 +5940,6 @@ packages:
       type-check: 0.4.0
     dev: true
 
-  /lighthouse-logger@1.4.2:
-    resolution: {integrity: sha512-gPWxznF6TKmUHrOQjlVo2UbaL2EJ71mb2CCeRs/2qBpi4L/g4LUVc9+3lKQ6DTUZwJswfM7ainGrLO1+fOqa2g==}
-    dependencies:
-      debug: 2.6.9
-      marky: 1.2.5
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
   /lighthouse-logger@2.0.1:
     resolution: {integrity: sha512-ioBrW3s2i97noEmnXxmUq7cjIcVRjT5HBpAYy8zE11CxU9HqlWHHeRxfeN1tn8F7OEMVPIC9x1f8t3Z7US9ehQ==}
     dependencies:
@@ -6026,52 +5949,8 @@ packages:
       - supports-color
     dev: true
 
-  /lighthouse-stack-packs@1.11.0:
-    resolution: {integrity: sha512-sRr0z1S/I26VffRLq9KJsKtLk856YrJlNGmcJmbLX8dFn3MuzVPUbstuChEhqnSxZb8TZmVfthuXuwhG9vRoSw==}
-    dev: true
-
   /lighthouse-stack-packs@1.12.1:
     resolution: {integrity: sha512-i4jTmg7tvZQFwNFiwB+nCK6a7ICR68Xcwo+VIVd6Spi71vBNFUlds5HiDrSbClZdkQDON2Bhqv+KKJIo5zkPeA==}
-    dev: true
-
-  /lighthouse@10.4.0(typescript@5.3.3):
-    resolution: {integrity: sha512-XQWHEWkJ8YxSPsxttBJORy5+hQrzbvGkYfeP3fJjyYKioWkF2MXfFqNK4ZuV4jL8pBu7Z91qnQP6In0bq1yXww==}
-    engines: {node: '>=16.16'}
-    hasBin: true
-    dependencies:
-      '@sentry/node': 6.19.7
-      axe-core: 4.7.2
-      chrome-launcher: 0.15.2
-      configstore: 5.0.1
-      csp_evaluator: 1.1.1
-      devtools-protocol: 0.0.1155343
-      enquirer: 2.4.1
-      http-link-header: 1.1.1
-      intl-messageformat: 4.4.0
-      jpeg-js: 0.4.4
-      js-library-detector: 6.7.0
-      lighthouse-logger: 1.4.2
-      lighthouse-stack-packs: 1.11.0
-      lodash: 4.17.21
-      lookup-closest-locale: 6.2.0
-      metaviewport-parser: 0.3.0
-      open: 8.4.2
-      parse-cache-control: 1.0.1
-      ps-list: 8.1.1
-      puppeteer-core: 20.9.0(typescript@5.3.3)
-      robots-parser: 3.0.1
-      semver: 5.7.2
-      speedline-core: 1.4.3
-      third-party-web: 0.23.4
-      ws: 7.5.9
-      yargs: 17.7.2
-      yargs-parser: 21.1.1
-    transitivePeerDependencies:
-      - bufferutil
-      - encoding
-      - supports-color
-      - typescript
-      - utf-8-validate
     dev: true
 
   /lighthouse@11.4.0:
@@ -6371,10 +6250,6 @@ packages:
   /minipass@7.0.3:
     resolution: {integrity: sha512-LhbbwCfz3vsb12j/WkWQPZfKTsgqIe1Nf/ti1pKjYESGLHIVjWU96G9/ljLH4F9mWNVhlQOm0VySdAWzf05dpg==}
     engines: {node: '>=16 || 14 >=14.17'}
-    dev: true
-
-  /mitt@3.0.0:
-    resolution: {integrity: sha512-7dX2/10ITVyqh4aOSVI9gdape+t9l2/8QxHrFmUXu4EEUpdlxl6RudZUPZoc+zuY2hk1j7XxVroIVIan/pD/SQ==}
     dev: true
 
   /mitt@3.0.1:
@@ -6852,25 +6727,20 @@ packages:
     hasBin: true
     dev: true
 
-  /playwright-lighthouse@3.2.6(playwright-core@1.40.1)(typescript@5.3.3):
-    resolution: {integrity: sha512-J8m2ulohHPcEccZ05Azb153ub4YWj0jvMFuleywoFuyjI5l0fZI1KGX97sOZExeV20lRvby0gDB1KD+KdJlg7A==}
+  /playwright-lighthouse@4.0.0(lighthouse@11.4.0)(playwright-core@1.40.1):
+    resolution: {integrity: sha512-8sLhKLYD9k08UjKMSPzYBCZZ6Ct+wZPUe+K58hZEHIdyyXHg+jniWgd+C2W57B+MDstHiYSbyBiN9S8mzUH82w==}
     engines: {node: '>=16.x'}
     peerDependencies:
+      lighthouse: '>= 10.0.0'
       playwright-core: ^1.19.2
     peerDependenciesMeta:
       playwright-core:
         optional: true
     dependencies:
       chalk: 4.1.2
-      lighthouse: 10.4.0(typescript@5.3.3)
+      lighthouse: 11.4.0
       playwright-core: 1.40.1
       ua-parser-js: 1.0.36
-    transitivePeerDependencies:
-      - bufferutil
-      - encoding
-      - supports-color
-      - typescript
-      - utf-8-validate
     dev: true
 
   /playwright-msw@3.0.1(@playwright/test@1.40.1)(msw@2.0.14):
@@ -7008,22 +6878,6 @@ packages:
       react-is: 16.13.1
     dev: true
 
-  /proxy-agent@6.3.0:
-    resolution: {integrity: sha512-0LdR757eTj/JfuU7TL2YCuAZnxWXu3tkJbg4Oq3geW/qFNT/32T0sp2HnZ9O0lMR4q3vwAt0+xCA8SR0WAD0og==}
-    engines: {node: '>= 14'}
-    dependencies:
-      agent-base: 7.1.0
-      debug: 4.3.4
-      http-proxy-agent: 7.0.0
-      https-proxy-agent: 7.0.2
-      lru-cache: 7.18.3
-      pac-proxy-agent: 7.0.1
-      proxy-from-env: 1.1.0
-      socks-proxy-agent: 8.0.2
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
   /proxy-agent@6.3.1:
     resolution: {integrity: sha512-Rb5RVBy1iyqOtNl15Cw/llpeLH8bsb37gM1FUfKQ+Wck6xHlbAhWGUFiTRHtkjqGTA5pSHz6+0hrPW/oECihPQ==}
     engines: {node: '>= 14'}
@@ -7072,29 +6926,6 @@ packages:
   /punycode@2.3.1:
     resolution: {integrity: sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==}
     engines: {node: '>=6'}
-    dev: true
-
-  /puppeteer-core@20.9.0(typescript@5.3.3):
-    resolution: {integrity: sha512-H9fYZQzMTRrkboEfPmf7m3CLDN6JvbxXA3qTtS+dFt27tR+CsFHzPsT6pzp6lYL6bJbAPaR0HaPO6uSi+F94Pg==}
-    engines: {node: '>=16.3.0'}
-    peerDependencies:
-      typescript: '>= 4.7.4'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
-    dependencies:
-      '@puppeteer/browsers': 1.4.6(typescript@5.3.3)
-      chromium-bidi: 0.4.16(devtools-protocol@0.0.1147663)
-      cross-fetch: 4.0.0
-      debug: 4.3.4
-      devtools-protocol: 0.0.1147663
-      typescript: 5.3.3
-      ws: 8.13.0
-    transitivePeerDependencies:
-      - bufferutil
-      - encoding
-      - supports-color
-      - utf-8-validate
     dev: true
 
   /puppeteer-core@21.6.1:
@@ -7954,10 +7785,6 @@ packages:
     dependencies:
       any-promise: 1.3.0
 
-  /third-party-web@0.23.4:
-    resolution: {integrity: sha512-kwYnSZRhEvv0SBW2fp8SBBKRglMoBjV8xz6C31m0ewqOtknB5UL+Ihg+M81hyFY5ldkZuGWPb+e4GVDkzf/gYg==}
-    dev: true
-
   /third-party-web@0.24.1:
     resolution: {integrity: sha512-5VqmcM0QEF7KX1/EX9I8Yohs7GoWzhQHXfLOLGmLGbcw/zPdEohXJNctiLu0x4D0i9EzOUjFXlbmcmXcbZXl1Q==}
     dev: true
@@ -8723,19 +8550,6 @@ packages:
         optional: true
     dev: true
 
-  /ws@8.13.0:
-    resolution: {integrity: sha512-x9vcZYTrFPC7aSIbj7sRCYo7L/Xb8Iy+pW0ng0wt2vCJv7M9HOMy0UoN3rr+IFC7hb7vXoqS+P9ktyLLLhO+LA==}
-    engines: {node: '>=10.0.0'}
-    peerDependencies:
-      bufferutil: ^4.0.1
-      utf-8-validate: '>=5.0.2'
-    peerDependenciesMeta:
-      bufferutil:
-        optional: true
-      utf-8-validate:
-        optional: true
-    dev: true
-
   /ws@8.15.1:
     resolution: {integrity: sha512-W5OZiCjXEmk0yZ66ZN82beM5Sz7l7coYxpRkzS+p9PP+ToQry8szKh+61eNktr7EA9DOwvFGhfC605jDHbP6QQ==}
     engines: {node: '>=10.0.0'}
@@ -8796,19 +8610,6 @@ packages:
   /yargs-parser@21.1.1:
     resolution: {integrity: sha512-tVpsJW7DdjecAiFpbIB1e3qxIQsE6NoPc5/eTdrbbIC4h0LVsWhnoa3g+m2HclBIujHzsxZ4VJVA+GUuc2/LBw==}
     engines: {node: '>=12'}
-    dev: true
-
-  /yargs@17.7.1:
-    resolution: {integrity: sha512-cwiTb08Xuv5fqF4AovYacTFNxk62th7LKJ6BL9IGUpTJrWoU7/7WdQGTP2SjKf1dUNBGzDd28p/Yfs/GI6JrLw==}
-    engines: {node: '>=12'}
-    dependencies:
-      cliui: 8.0.1
-      escalade: 3.1.1
-      get-caller-file: 2.0.5
-      require-directory: 2.1.1
-      string-width: 4.2.3
-      y18n: 5.0.8
-      yargs-parser: 21.1.1
     dev: true
 
   /yargs@17.7.2:
