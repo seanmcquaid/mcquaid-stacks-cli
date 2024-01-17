@@ -1,24 +1,19 @@
-import {
-  useSearchParams,
-  type ClientActionFunction,
-  type ClientLoaderFunction,
-  useFetcher,
-  useLoaderData,
-} from '@remix-run/react';
+import type { ClientActionFunctionArgs } from '@remix-run/react';
+import { useSearchParams, useFetcher, useLoaderData } from '@remix-run/react';
 import { z } from 'zod';
 import PageWrapper from '@/components/app/PageWrapper';
 import { Button } from '@/components/ui/Button';
 import useAppTranslation from '@/hooks/useAppTranslation';
 import Modal from '@/components/app/Modal';
 
-export const clientLoader: ClientLoaderFunction = () => {
+export const clientLoader = () => {
   return {
     hello:
       "Hello friends! This page is using patterns common to React Router v6's Loaders + Actions",
   };
 };
 
-export const clientAction: ClientActionFunction = async ({ request }) => {
+export const clientAction = async ({ request }: ClientActionFunctionArgs) => {
   const json = await request.json();
 
   alert(JSON.stringify(json));
@@ -34,9 +29,7 @@ const RemixPage = () => {
     .boolean()
     .catch(false)
     .parse(searchParams.get('modal'));
-  const loaderData = useLoaderData() as {
-    hello?: string;
-  };
+  const loaderData = useLoaderData<typeof clientLoader>();
 
   const handleOpenModal = () => {
     setSearchParams({ modal: 'open' });
@@ -47,7 +40,6 @@ const RemixPage = () => {
       { hello: 'You have made a successful action occur!' },
       {
         method: 'POST',
-        action: '/react-router',
         encType: 'application/json',
       },
     );
