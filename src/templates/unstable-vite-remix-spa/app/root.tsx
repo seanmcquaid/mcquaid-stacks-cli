@@ -1,11 +1,37 @@
 /* eslint-disable i18next/no-literal-string */
 import './styles/index.css';
-import { Outlet, Links, LiveReload, Meta, Scripts } from '@remix-run/react';
+import {
+  Outlet,
+  Links,
+  LiveReload,
+  Meta,
+  Scripts,
+  useRouteError,
+} from '@remix-run/react';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { QueryClientProvider } from '@tanstack/react-query';
 import { Toaster } from './components/ui/Toaster';
 import queryClient from './services/queryClient';
 import LoadingOverlay from './components/ui/LoadingOverlay';
+import PageError from './components/app/PageError';
+
+export function ErrorBoundary() {
+  const error = useRouteError();
+  console.error(error);
+  return (
+    <html lang="en-US">
+      <head>
+        <title>Oh no!</title>
+        <Meta />
+        <Links />
+      </head>
+      <body>
+        <PageError errorText="There was an app crash!" />
+        <Scripts />
+      </body>
+    </html>
+  );
+}
 
 export function HydrateFallback() {
   return (
