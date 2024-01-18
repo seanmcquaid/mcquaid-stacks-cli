@@ -7,7 +7,6 @@ import {
   Meta,
   Scripts,
   useRouteError,
-  isRouteErrorResponse,
   useNavigation,
 } from '@remix-run/react';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
@@ -23,20 +22,10 @@ export function ErrorBoundary() {
   const error = useRouteError();
   const { i18n } = useAppTranslation();
 
-  const renderErrorContent = () => {
-    if (isRouteErrorResponse(error)) {
-      return (
-        <PageError
-          titleText={error.status.toString()}
-          errorText={error.statusText}
-        />
-      );
-    } else if (error instanceof Error) {
-      return <PageError titleText={error.name} errorText={error.message} />;
-    } else {
-      return <PageError errorText="There was an app crash!" />;
-    }
-  };
+  useEffect(() => {
+    // Log to service of some sort
+    console.error(error);
+  }, [error]);
 
   return (
     <html lang={i18n.language}>
@@ -57,7 +46,7 @@ export function ErrorBoundary() {
         <Links />
       </head>
       <body>
-        {renderErrorContent()}
+        <PageError errorText="There was an app crash!" />
         <Scripts />
         <LiveReload />
       </body>
