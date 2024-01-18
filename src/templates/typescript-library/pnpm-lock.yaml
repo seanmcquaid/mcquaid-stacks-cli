@@ -12,8 +12,8 @@ devDependencies:
     specifier: ^2.27.1
     version: 2.27.1
   '@size-limit/file':
-    specifier: ^11.0.1
-    version: 11.0.1(size-limit@11.0.1)
+    specifier: ^11.0.2
+    version: 11.0.2(size-limit@11.0.2)
   '@typescript-eslint/eslint-plugin':
     specifier: ^5.61.0
     version: 5.62.0(@typescript-eslint/parser@5.62.0)(eslint@8.56.0)(typescript@5.3.3)
@@ -48,8 +48,8 @@ devDependencies:
     specifier: ^3.2.2
     version: 3.2.2
   size-limit:
-    specifier: ^11.0.1
-    version: 11.0.1
+    specifier: ^11.0.2
+    version: 11.0.2
   tsup:
     specifier: ^8.0.1
     version: 8.0.1(typescript@5.3.3)
@@ -790,13 +790,13 @@ packages:
     engines: {node: '>=18'}
     dev: true
 
-  /@size-limit/file@11.0.1(size-limit@11.0.1):
-    resolution: {integrity: sha512-ioSYJ1WY66kc9+3dgTHi5mT/gcaNNCJ22xU87cjzfKiNxmol+lGsNKbplmrJf+QezvPH9kRIFOWxBjGY+DOt3g==}
+  /@size-limit/file@11.0.2(size-limit@11.0.2):
+    resolution: {integrity: sha512-874lrMtWYRL+xb/6xzejjwD+krfHTOo+2uFGpZfJScvuNv91Ni2O7k0o09zC70VzCYBGkXquV92ln/H+/ognGg==}
     engines: {node: ^18.0.0 || >=20.0.0}
     peerDependencies:
-      size-limit: 11.0.1
+      size-limit: 11.0.2
     dependencies:
-      size-limit: 11.0.1
+      size-limit: 11.0.2
     dev: true
 
   /@types/estree@1.0.5:
@@ -3664,8 +3664,8 @@ packages:
     engines: {node: '>=14'}
     dev: true
 
-  /size-limit@11.0.1:
-    resolution: {integrity: sha512-6L80ocVspWPrhIRg8kPl41VypqTGH8/lu9e6TJiSJpkNLtOR2h/EEqdAO/wNJOv/sUVtjX+lVEWrzBpItGP+gQ==}
+  /size-limit@11.0.2:
+    resolution: {integrity: sha512-iFZ8iTR/3zPqxSwEIdGnTVYVU0F2nhodLQG/G6zpi/NxECYAK9ntq2lNr+prXH7h3gyBjx2Umt2D/oS2Qzz+eg==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     dependencies:
