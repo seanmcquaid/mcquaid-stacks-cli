@@ -26,7 +26,7 @@ updates:
       day: tuesday
     open-pull-requests-limit: 20
   - package-ecosystem: npm
-    directory: "/src/templates/unstable-vite-remix-spa"
+    directory: "/src/templates/vite-remix-spa"
     schedule:
       interval: weekly
       day: tuesday

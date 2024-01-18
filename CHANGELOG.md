@@ -1,5 +1,11 @@
 # @mcquaid-stacks/cli
 
+## 0.0.8
+
+### Patch Changes
+
+- d3c8f41: Added an unstable template for Vite + Remix SPA Mode
+
 ## 0.0.7
 
 ### Patch Changes
