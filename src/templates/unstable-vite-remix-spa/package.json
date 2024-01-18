@@ -1,5 +1,5 @@
 {
-  "name": "unstable-vite-remix",
+  "name": "<%= projectName %>",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
