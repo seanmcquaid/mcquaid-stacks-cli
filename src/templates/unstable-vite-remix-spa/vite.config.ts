@@ -45,7 +45,7 @@ export default defineConfig({
   test: {
     globals: true,
     environment: 'jsdom',
-    setupFiles: ['./src/setupTests.ts'],
+    setupFiles: ['./src/utils/setupTests.ts'],
     exclude: ['e2e', 'node_modules'],
     coverage: {
       provider: 'istanbul',
@@ -53,15 +53,11 @@ export default defineConfig({
       all: true,
       include: ['src/**/*.ts', 'src/**/*.tsx'],
       exclude: [
-        'src/setupTests.ts',
         'src/utils/testing',
         'src/i18n',
         'src/main.tsx',
         'src/env.ts',
         'src/types',
-        'src/router.ts',
-        'src/pages/_app.tsx',
-        'src/pages/404.tsx',
         'src/icons',
         'src/styles',
       ],
