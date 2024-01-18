@@ -81,7 +81,7 @@ devDependencies:
     version: 3.13.3(@faker-js/faker@8.3.1)(zod@3.22.4)
   '@axe-core/playwright':
     specifier: ^4.8.3
-    version: 4.8.3(playwright-core@1.40.1)
+    version: 4.8.3(playwright-core@1.41.0)
   '@faker-js/faker':
     specifier: ^8.3.1
     version: 8.3.1
@@ -179,14 +179,14 @@ devDependencies:
     specifier: ^15.2.0
     version: 15.2.0
   msw:
-    specifier: ^2.1.0
-    version: 2.1.0(typescript@5.3.3)
+    specifier: ^2.1.2
+    version: 2.1.2(typescript@5.3.3)
   playwright-lighthouse:
     specifier: ^4.0.0
-    version: 4.0.0(lighthouse@11.4.0)(playwright-core@1.40.1)
+    version: 4.0.0(lighthouse@11.4.0)(playwright-core@1.41.0)
   playwright-msw:
     specifier: ^3.0.1
-    version: 3.0.1(@playwright/test@1.41.0)(msw@2.1.0)
+    version: 3.0.1(@playwright/test@1.41.0)(msw@2.1.2)
   postcss:
     specifier: ^8.4.33
     version: 8.4.33
@@ -257,13 +257,13 @@ packages:
       is-potential-custom-element-name: 1.0.1
     dev: true
 
-  /@axe-core/playwright@4.8.3(playwright-core@1.40.1):
+  /@axe-core/playwright@4.8.3(playwright-core@1.41.0):
     resolution: {integrity: sha512-YtbkAWeOp5oQeI8vS6KYqJDa5yTl5O1wJP8KOZAAVjhxeiK/Y1ssxnZuGRobARyVh3eS6O3jdxTv/iCK1RfgaA==}
     peerDependencies:
       playwright-core: '>= 1.0.0'
     dependencies:
       axe-core: 4.8.3
-      playwright-core: 1.40.1
+      playwright-core: 1.41.0
     dev: true
 
   /@babel/code-frame@7.22.13:
@@ -5084,8 +5084,8 @@ packages:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
     dev: true
 
-  /msw@2.1.0(typescript@5.3.3):
-    resolution: {integrity: sha512-Y89vzaL56fUMOLLXZmGHLRlboBQ1AXan4Rz20nJC76pRaoq4F8XQXPwyW9BW9cTY6MTrVnyHY24axSl//LJdOg==}
+  /msw@2.1.2(typescript@5.3.3):
+    resolution: {integrity: sha512-7OKbeZNFQTCPFe++o+zZHMkQRIUi4D/5N1dAD3lOlaV+2Wpv3Srp3VFrFeH+2ftZJbb4jAiC0caZoW1efr80KQ==}
     engines: {node: '>=18'}
     hasBin: true
     requiresBuild: true
@@ -5496,19 +5496,13 @@ packages:
       pathe: 1.1.1
     dev: true
 
-  /playwright-core@1.40.1:
-    resolution: {integrity: sha512-+hkOycxPiV534c4HhpfX6yrlawqVUzITRKwHAmYfmsVreltEl6fAZJ3DPfLMOODw0H3s1Itd6MDCWmP1fl/QvQ==}
-    engines: {node: '>=16'}
-    hasBin: true
-    dev: true
-
   /playwright-core@1.41.0:
     resolution: {integrity: sha512-UGKASUhXmvqm2Lxa1fNr8sFwAtqjpgBRr9jQ7XBI8Rn5uFiEowGUGwrruUQsVPIom4bk7Lt+oLGpXobnXzrBIw==}
     engines: {node: '>=16'}
     hasBin: true
     dev: true
 
-  /playwright-lighthouse@4.0.0(lighthouse@11.4.0)(playwright-core@1.40.1):
+  /playwright-lighthouse@4.0.0(lighthouse@11.4.0)(playwright-core@1.41.0):
     resolution: {integrity: sha512-8sLhKLYD9k08UjKMSPzYBCZZ6Ct+wZPUe+K58hZEHIdyyXHg+jniWgd+C2W57B+MDstHiYSbyBiN9S8mzUH82w==}
     engines: {node: '>=16.x'}
     peerDependencies:
@@ -5520,11 +5514,11 @@ packages:
     dependencies:
       chalk: 4.1.2
       lighthouse: 11.4.0
-      playwright-core: 1.40.1
+      playwright-core: 1.41.0
       ua-parser-js: 1.0.36
     dev: true
 
-  /playwright-msw@3.0.1(@playwright/test@1.41.0)(msw@2.1.0):
+  /playwright-msw@3.0.1(@playwright/test@1.41.0)(msw@2.1.2):
     resolution: {integrity: sha512-w2bVjt7kPIThOQF9OS/1vDDs0HsQfV9inxMVSUv74x/zhCcrgzVN47xpPk84okf3OcCRHHBJKq8sNeBfCDyhMg==}
     engines: {node: '>=18'}
     peerDependencies:
@@ -5533,7 +5527,7 @@ packages:
     dependencies:
       '@mswjs/cookies': 1.1.0
       '@playwright/test': 1.41.0
-      msw: 2.1.0(typescript@5.3.3)
+      msw: 2.1.2(typescript@5.3.3)
       strict-event-emitter: 0.5.1
     dev: true
 
