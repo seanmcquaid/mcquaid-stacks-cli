@@ -119,8 +119,8 @@ devDependencies:
     specifier: ^4.2.1
     version: 4.2.1(vite@5.0.11)
   '@vitest/coverage-istanbul':
-    specifier: ^1.2.0
-    version: 1.2.0(vitest@1.2.1)
+    specifier: ^1.2.1
+    version: 1.2.1(vitest@1.2.1)
   autoprefixer:
     specifier: ^10.4.17
     version: 10.4.17(postcss@8.4.33)
@@ -2162,8 +2162,8 @@ packages:
       - supports-color
     dev: true
 
-  /@vitest/coverage-istanbul@1.2.0(vitest@1.2.1):
-    resolution: {integrity: sha512-hNN/pUR5la6P/L78+YcRl05Lpf6APXlH9ujkmCxxjVWtVG6WuKuqUMhHgYQBYfiOORBwDZ1MBgSUGCMPh4kpmQ==}
+  /@vitest/coverage-istanbul@1.2.1(vitest@1.2.1):
+    resolution: {integrity: sha512-j8M4R3XbQ7cmLqJd7mfxCpEc0bQ7S6o5VIEt7c0Auri2lT1hkd89Sa/mOYDnuGasTNawamW+0d9vDRK/5uhVXw==}
     peerDependencies:
       vitest: ^1.0.0
     dependencies:
@@ -2173,7 +2173,7 @@ packages:
       istanbul-lib-report: 3.0.1
       istanbul-lib-source-maps: 4.0.1
       istanbul-reports: 3.1.6
-      magicast: 0.3.2
+      magicast: 0.3.3
       picocolors: 1.0.0
       test-exclude: 6.0.0
       vitest: 1.2.1(@types/node@20.11.5)(jsdom@23.2.0)
@@ -4958,8 +4958,8 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.15
     dev: true
 
-  /magicast@0.3.2:
-    resolution: {integrity: sha512-Fjwkl6a0syt9TFN0JSYpOybxiMCkYNEeOTnOTNRbjphirLakznZXAqrXgj/7GG3D1dvETONNwrBfinvAbpunDg==}
+  /magicast@0.3.3:
+    resolution: {integrity: sha512-ZbrP1Qxnpoes8sz47AM0z08U+jW6TyRgZzcWy3Ma3vDhJttwMwAFDMMQFobwdBxByBD46JYmxRzeF7w2+wJEuw==}
     dependencies:
       '@babel/parser': 7.23.6
       '@babel/types': 7.23.6
