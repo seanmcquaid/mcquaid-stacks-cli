@@ -16,8 +16,9 @@ These templates are meant to be a starting point for new projects and are not me
 1. Vite + React Router
 2. TypeScript Libraries
 3. Vite + TanStack Router
+4. Vite + Remix SPA Mode
 
 ## Future Templates
 
 1. Next.js
-2. Remix
+2. Remix - SSR
