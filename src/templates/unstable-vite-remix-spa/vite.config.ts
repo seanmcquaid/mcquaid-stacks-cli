@@ -11,15 +11,17 @@ import { flatRoutes } from 'remix-flat-routes';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    remix({
-      unstable_ssr: false,
-      // ignore all files in routes folder to prevent
-      // default remix convention from picking up routes
-      ignoredRouteFiles: ['**/*'],
-      routes: async defineRoutes => {
-        return flatRoutes('routes', defineRoutes);
-      },
-    }),
+    // disable remix plugin for vitest
+    !process.env.VITEST &&
+      remix({
+        unstable_ssr: false,
+        // ignore all files in routes folder to prevent
+        // default remix convention from picking up routes
+        ignoredRouteFiles: ['**/*'],
+        routes: async defineRoutes => {
+          return flatRoutes('routes', defineRoutes);
+        },
+      }),
     svgr(),
     checker({ typescript: true }),
   ],
