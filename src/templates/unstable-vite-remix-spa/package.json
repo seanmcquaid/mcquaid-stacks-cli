@@ -7,7 +7,6 @@
     "dev": "remix vite:dev",
     "lint": "eslint e2e app --max-warnings=0",
     "prepare": "is-ci || husky install",
-    "preview": "vite preview",
     "test": "vitest run",
     "test:coverage": "vitest run --coverage",
     "test:watch": "vitest",

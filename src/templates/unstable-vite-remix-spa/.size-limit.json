@@ -1,6 +1,6 @@
 [
   {
-    "path": "dist/assets/*.js",
+    "path": "build/assets/*.js",
     "limit": "175 kB"
   }
 ]
