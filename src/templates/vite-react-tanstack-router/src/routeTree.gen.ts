@@ -1,15 +1,16 @@
-import { FileRoute, lazyFn, lazyRouteComponent } from '@tanstack/react-router'
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { FileRoute, lazyFn, lazyRouteComponent } from '@tanstack/react-router';
 
-import { Route as rootRoute } from './routes/__root'
-import { Route as TanstackRouterRouteImport } from './routes/tanstack-router/route'
-import { Route as ReactQueryIdRouteImport } from './routes/react-query/$id/route'
+import { Route as rootRoute } from './routes/__root';
+import { Route as TanstackRouterRouteImport } from './routes/tanstack-router/route';
+import { Route as ReactQueryIdRouteImport } from './routes/react-query/$id/route';
 
-const ReactQueryComponentImport = new FileRoute('/react-query').createRoute()
+const ReactQueryComponentImport = new FileRoute('/react-query').createRoute();
 const ReactHookFormZodComponentImport = new FileRoute(
   '/react-hook-form-zod',
-).createRoute()
-const KitchenSinkLoaderImport = new FileRoute('/kitchen-sink').createRoute()
-const IndexComponentImport = new FileRoute('/').createRoute()
+).createRoute();
+const KitchenSinkLoaderImport = new FileRoute('/kitchen-sink').createRoute();
+const IndexComponentImport = new FileRoute('/').createRoute();
 
 const ReactQueryComponentRoute = ReactQueryComponentImport.update({
   path: '/react-query',
@@ -19,7 +20,7 @@ const ReactQueryComponentRoute = ReactQueryComponentImport.update({
     () => import('./routes/react-query/component'),
     'component',
   ),
-})
+});
 
 const ReactHookFormZodComponentRoute = ReactHookFormZodComponentImport.update({
   path: '/react-hook-form-zod',
@@ -29,7 +30,7 @@ const ReactHookFormZodComponentRoute = ReactHookFormZodComponentImport.update({
     () => import('./routes/react-hook-form-zod/component'),
     'component',
   ),
-})
+});
 
 const KitchenSinkLoaderRoute = KitchenSinkLoaderImport.update({
   path: '/kitchen-sink',
@@ -43,7 +44,7 @@ const KitchenSinkLoaderRoute = KitchenSinkLoaderImport.update({
       () => import('./routes/kitchen-sink/component'),
       'component',
     ),
-  })
+  });
 
 const TanstackRouterRouteRoute = TanstackRouterRouteImport.update({
   path: '/tanstack-router',
@@ -53,7 +54,7 @@ const TanstackRouterRouteRoute = TanstackRouterRouteImport.update({
     () => import('./routes/tanstack-router/component'),
     'component',
   ),
-})
+});
 
 const IndexComponentRoute = IndexComponentImport.update({
   path: '/',
@@ -63,7 +64,7 @@ const IndexComponentRoute = IndexComponentImport.update({
     () => import('./routes/index/component'),
     'component',
   ),
-})
+});
 
 const ReactQueryIdRouteRoute = ReactQueryIdRouteImport.update({
   path: '/$id',
@@ -73,33 +74,33 @@ const ReactQueryIdRouteRoute = ReactQueryIdRouteImport.update({
     () => import('./routes/react-query/$id/component'),
     'component',
   ),
-})
+});
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
     '/': {
-      preLoaderRoute: typeof IndexComponentImport
-      parentRoute: typeof rootRoute
-    }
+      preLoaderRoute: typeof IndexComponentImport;
+      parentRoute: typeof rootRoute;
+    };
     '/tanstack-router': {
-      preLoaderRoute: typeof TanstackRouterRouteImport
-      parentRoute: typeof rootRoute
-    }
+      preLoaderRoute: typeof TanstackRouterRouteImport;
+      parentRoute: typeof rootRoute;
+    };
     '/kitchen-sink': {
-      preLoaderRoute: typeof KitchenSinkLoaderImport
-      parentRoute: typeof rootRoute
-    }
+      preLoaderRoute: typeof KitchenSinkLoaderImport;
+      parentRoute: typeof rootRoute;
+    };
     '/react-hook-form-zod': {
-      preLoaderRoute: typeof ReactHookFormZodComponentImport
-      parentRoute: typeof rootRoute
-    }
+      preLoaderRoute: typeof ReactHookFormZodComponentImport;
+      parentRoute: typeof rootRoute;
+    };
     '/react-query': {
-      preLoaderRoute: typeof ReactQueryComponentImport
-      parentRoute: typeof rootRoute
-    }
+      preLoaderRoute: typeof ReactQueryComponentImport;
+      parentRoute: typeof rootRoute;
+    };
     '/react-query/$id': {
-      preLoaderRoute: typeof ReactQueryIdRouteImport
-      parentRoute: typeof ReactQueryComponentImport
-    }
+      preLoaderRoute: typeof ReactQueryIdRouteImport;
+      parentRoute: typeof ReactQueryComponentImport;
+    };
   }
 }
 export const routeTree = rootRoute.addChildren([
@@ -108,4 +109,4 @@ export const routeTree = rootRoute.addChildren([
   KitchenSinkLoaderRoute,
   ReactHookFormZodComponentRoute,
   ReactQueryComponentRoute.addChildren([ReactQueryIdRouteRoute]),
-])
+]);
