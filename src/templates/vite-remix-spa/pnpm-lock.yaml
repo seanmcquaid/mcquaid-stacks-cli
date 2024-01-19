@@ -24,8 +24,8 @@ dependencies:
     specifier: ^2.5.1
     version: 2.5.1(typescript@5.3.3)
   '@remix-run/react':
-    specifier: ^2.5.0
-    version: 2.5.0(react-dom@18.2.0)(react@18.2.0)(typescript@5.3.3)
+    specifier: ^2.5.1
+    version: 2.5.1(react-dom@18.2.0)(react@18.2.0)(typescript@5.3.3)
   '@remix-run/serve':
     specifier: ^2.5.1
     version: 2.5.1(typescript@5.3.3)
@@ -2146,8 +2146,8 @@ packages:
       stream-slice: 0.1.2
       typescript: 5.3.3
 
-  /@remix-run/react@2.5.0(react-dom@18.2.0)(react@18.2.0)(typescript@5.3.3):
-    resolution: {integrity: sha512-CHClKLyUmTAUzDVIOFifRYJ4Lw/LMUQgtFq1grjRDyYRWXIAwxhoZx6BTzcseFUbOwbHGDZ37QCh2e7LFNtRHQ==}
+  /@remix-run/react@2.5.1(react-dom@18.2.0)(react@18.2.0)(typescript@5.3.3):
+    resolution: {integrity: sha512-MNXHLj4Iu9Iyi+3uY61JZJ1Rtx2nM/z11j9AtwQdEADkh1/t9GruhtT/8VLplToOl0qWZKItboWScKf6uRQsrw==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       react: ^18.0.0
@@ -2158,11 +2158,11 @@ packages:
         optional: true
     dependencies:
       '@remix-run/router': 1.14.2
-      '@remix-run/server-runtime': 2.5.0(typescript@5.3.3)
+      '@remix-run/server-runtime': 2.5.1(typescript@5.3.3)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
-      react-router: 6.21.2(react@18.2.0)
-      react-router-dom: 6.21.2(react-dom@18.2.0)(react@18.2.0)
+      react-router: 6.21.3(react@18.2.0)
+      react-router-dom: 6.21.3(react-dom@18.2.0)(react@18.2.0)
       typescript: 5.3.3
     dev: false
 
@@ -2203,6 +2203,7 @@ packages:
       set-cookie-parser: 2.6.0
       source-map: 0.7.4
       typescript: 5.3.3
+    dev: true
 
   /@remix-run/server-runtime@2.5.1(typescript@5.3.3):
     resolution: {integrity: sha512-bP31jrVbYTJ2eP5sxZfDgT1YyXzDlzsfMxGYVzpaoLCYDJAekq1QpHLLXKGOXhmyb46O9rdhlQKfwD6WpAxr3A==}
@@ -8291,8 +8292,8 @@ packages:
       use-sidecar: 1.1.2(@types/react@18.2.48)(react@18.2.0)
     dev: false
 
-  /react-router-dom@6.21.2(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-tE13UukgUOh2/sqYr6jPzZTzmzc70aGRP4pAjG2if0IP3aUT+sBtAKUJh0qMh0zylJHGLmzS+XWVaON4UklHeg==}
+  /react-router-dom@6.21.3(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-kNzubk7n4YHSrErzjLK72j0B5i969GsuCGazRl3G6j1zqZBLjuSlYBdVdkDOgzGdPIffUOc9nmgiadTEVoq91g==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
       react: '>=16.8'
@@ -8301,11 +8302,11 @@ packages:
       '@remix-run/router': 1.14.2
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
-      react-router: 6.21.2(react@18.2.0)
+      react-router: 6.21.3(react@18.2.0)
     dev: false
 
-  /react-router@6.21.2(react@18.2.0):
-    resolution: {integrity: sha512-jJcgiwDsnaHIeC+IN7atO0XiSRCrOsQAHHbChtJxmgqG2IaYQXSnhqGb5vk2CU/wBQA12Zt+TkbuJjIn65gzbA==}
+  /react-router@6.21.3(react@18.2.0):
+    resolution: {integrity: sha512-a0H638ZXULv1OdkmiK6s6itNhoy33ywxmUFT/xtSoVyf9VnC7n7+VT4LjVzdIHSaF5TIh9ylUgxMXksHTgGrKg==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
       react: '>=16.8'
