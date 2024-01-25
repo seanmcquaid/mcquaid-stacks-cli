@@ -179,8 +179,8 @@ devDependencies:
     specifier: ^24.0.0
     version: 24.0.0
   lighthouse:
-    specifier: ^11.4.0
-    version: 11.4.0
+    specifier: ^11.5.0
+    version: 11.5.0
   lint-staged:
     specifier: ^15.2.0
     version: 15.2.0
@@ -189,7 +189,7 @@ devDependencies:
     version: 2.1.4(typescript@5.3.3)
   playwright-lighthouse:
     specifier: ^4.0.0
-    version: 4.0.0(lighthouse@11.4.0)(playwright-core@1.41.1)
+    version: 4.0.0(lighthouse@11.5.0)(playwright-core@1.41.1)
   playwright-msw:
     specifier: ^3.0.1
     version: 3.0.1(@playwright/test@1.41.1)(msw@2.1.4)
@@ -927,6 +927,10 @@ packages:
     resolution: {integrity: sha512-U69T3ItWHvLwGg5eJ0n3I62nWuE6ilHlmz7zM0npLBRvPRd7e6NYmg54vvRtP5mZG7kZqZCFVdsTWo7BPtBujg==}
     dev: true
 
+  /@paulirish/trace_engine@0.0.7:
+    resolution: {integrity: sha512-TC639y9YlejyQcTG6LqJ3GJGuFfV9IJTBRsxyl+bGqxkfzyqJ+LG00fOht2FgnfwkCHImlIFBg4HDrX+2LHPHQ==}
+    dev: true
+
   /@pkgjs/parseargs@0.11.0:
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
     engines: {node: '>=14'}
@@ -947,8 +951,8 @@ packages:
       playwright: 1.41.1
     dev: true
 
-  /@puppeteer/browsers@1.9.0:
-    resolution: {integrity: sha512-QwguOLy44YBGC8vuPP2nmpX4MUN2FzWbsnvZJtiCzecU3lHmVZkaC1tq6rToi9a200m8RzlVtDyxCS0UIDrxUg==}
+  /@puppeteer/browsers@1.9.1:
+    resolution: {integrity: sha512-PuvK6xZzGhKPvlx3fpfdM2kYY3P/hB1URtK8wA7XUJ6prn6pp22zvJHu48th0SGcHL9SutbPHrFuQgfXTFobWA==}
     engines: {node: '>=16.3.0'}
     hasBin: true
     dependencies:
@@ -2490,11 +2494,6 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /axe-core@4.8.2:
-    resolution: {integrity: sha512-/dlp0fxyM3R8YW7MFzaHWXrf4zzbr0vaYb23VBFCl83R7nWNPg/yaQw2Dc8jzCMmDVLhSdzH8MjrsuIUuvX+6g==}
-    engines: {node: '>=4'}
-    dev: true
-
   /axe-core@4.8.3:
     resolution: {integrity: sha512-d5ZQHPSPkF9Tw+yfyDcRoUOc4g/8UloJJe5J8m4L5+c7AtDdjDLRxew/knnI4CxvtdxEUVgWz4x3OIQUIFiMfw==}
     engines: {node: '>=4'}
@@ -2689,12 +2688,12 @@ packages:
       - supports-color
     dev: true
 
-  /chromium-bidi@0.5.1(devtools-protocol@0.0.1203626):
-    resolution: {integrity: sha512-dcCqOgq9fHKExc2R4JZs/oKbOghWpUNFAJODS8WKRtLhp3avtIH5UDCBrutdqZdh3pARogH8y1ObXm87emwb3g==}
+  /chromium-bidi@0.5.4(devtools-protocol@0.0.1232444):
+    resolution: {integrity: sha512-p9CdiHl0xNh4P7oVa44zXgJJw+pvnHXFDB+tVdo25xaPLgQDVf2kQO+TDxD2fp2Evqi7vs/vGRINMzl1qJrWiw==}
     peerDependencies:
       devtools-protocol: '*'
     dependencies:
-      devtools-protocol: 0.0.1203626
+      devtools-protocol: 0.0.1232444
       mitt: 3.0.1
       urlpattern-polyfill: 9.0.0
     dev: true
@@ -3050,12 +3049,12 @@ packages:
     resolution: {integrity: sha512-ypdmJU/TbBby2Dxibuv7ZLW3Bs1QEmM7nHjEANfohJLvE0XVujisn1qPJcZxg+qDucsr+bP6fLD1rPS3AhJ7EQ==}
     dev: false
 
-  /devtools-protocol@0.0.1203626:
-    resolution: {integrity: sha512-nEzHZteIUZfGCZtTiS1fRpC8UZmsfD1SiyPvaUNvS13dvKf666OAm8YTi0+Ca3n1nLEyu49Cy4+dPWpaHFJk9g==}
-    dev: true
-
   /devtools-protocol@0.0.1211954:
     resolution: {integrity: sha512-f6BRhngr9wpHN8omZOoSaEJFscTL+tjNhmeBqHHC3CZ3K2N75sDeKXZeTkAEkTCcrusDatfwjRRBh0uz4ov/sA==}
+    dev: true
+
+  /devtools-protocol@0.0.1232444:
+    resolution: {integrity: sha512-pM27vqEfxSxRkTMnF+XCmxSEb6duO5R+t8A9DEEJgy4Wz2RVanje2mmj99B6A3zv2r/qGfYlOvYznUhuokizmg==}
     dev: true
 
   /didyoumean@1.2.2:
@@ -4751,13 +4750,14 @@ packages:
     resolution: {integrity: sha512-i4jTmg7tvZQFwNFiwB+nCK6a7ICR68Xcwo+VIVd6Spi71vBNFUlds5HiDrSbClZdkQDON2Bhqv+KKJIo5zkPeA==}
     dev: true
 
-  /lighthouse@11.4.0:
-    resolution: {integrity: sha512-NmGBIdLznIBTfla566gpNPdbascVA0uWFG2LyuRQPeMT06ai3QxzDqSpaR5dToDuEQIPkyU0qqxwHj8kst8x+g==}
+  /lighthouse@11.5.0:
+    resolution: {integrity: sha512-ViRwYKdFv425dus2qz4HoYTOMytHCL2zT/huyc86vr4LGbzRpFR2CxL2Vs6AzwGvsYj8TWw34/2SF0IVnTJxGw==}
     engines: {node: '>=18.16'}
     hasBin: true
     dependencies:
+      '@paulirish/trace_engine': 0.0.7
       '@sentry/node': 6.19.7
-      axe-core: 4.8.2
+      axe-core: 4.8.3
       chrome-launcher: 1.1.0
       configstore: 5.0.1
       csp_evaluator: 1.1.1
@@ -4775,7 +4775,7 @@ packages:
       open: 8.4.2
       parse-cache-control: 1.0.1
       ps-list: 8.1.1
-      puppeteer-core: 21.6.1
+      puppeteer-core: 21.9.0
       robots-parser: 3.0.1
       semver: 5.7.2
       speedline-core: 1.4.3
@@ -5494,7 +5494,7 @@ packages:
     hasBin: true
     dev: true
 
-  /playwright-lighthouse@4.0.0(lighthouse@11.4.0)(playwright-core@1.41.1):
+  /playwright-lighthouse@4.0.0(lighthouse@11.5.0)(playwright-core@1.41.1):
     resolution: {integrity: sha512-8sLhKLYD9k08UjKMSPzYBCZZ6Ct+wZPUe+K58hZEHIdyyXHg+jniWgd+C2W57B+MDstHiYSbyBiN9S8mzUH82w==}
     engines: {node: '>=16.x'}
     peerDependencies:
@@ -5505,7 +5505,7 @@ packages:
         optional: true
     dependencies:
       chalk: 4.1.2
-      lighthouse: 11.4.0
+      lighthouse: 11.5.0
       playwright-core: 1.41.1
       ua-parser-js: 1.0.36
     dev: true
@@ -5686,16 +5686,16 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
-  /puppeteer-core@21.6.1:
-    resolution: {integrity: sha512-0chaaK/RL9S1U3bsyR4fUeUfoj51vNnjWvXgG6DcsyMjwYNpLcAThv187i1rZCo7QhJP0wZN8plQkjNyrq2h+A==}
+  /puppeteer-core@21.9.0:
+    resolution: {integrity: sha512-QgowcczLAoLWlV38s3y3VuEvjJGfKU5rR6Q23GUbiGOaiQi+QpaWQ+aXdzP9LHVSUPmHdAaWhcvMztYSw3f8gQ==}
     engines: {node: '>=16.13.2'}
     dependencies:
-      '@puppeteer/browsers': 1.9.0
-      chromium-bidi: 0.5.1(devtools-protocol@0.0.1203626)
+      '@puppeteer/browsers': 1.9.1
+      chromium-bidi: 0.5.4(devtools-protocol@0.0.1232444)
       cross-fetch: 4.0.0
       debug: 4.3.4
-      devtools-protocol: 0.0.1203626
-      ws: 8.15.1
+      devtools-protocol: 0.0.1232444
+      ws: 8.16.0
     transitivePeerDependencies:
       - bufferutil
       - encoding
@@ -7197,19 +7197,6 @@ packages:
     peerDependencies:
       bufferutil: ^4.0.1
       utf-8-validate: ^5.0.2
-    peerDependenciesMeta:
-      bufferutil:
-        optional: true
-      utf-8-validate:
-        optional: true
-    dev: true
-
-  /ws@8.15.1:
-    resolution: {integrity: sha512-W5OZiCjXEmk0yZ66ZN82beM5Sz7l7coYxpRkzS+p9PP+ToQry8szKh+61eNktr7EA9DOwvFGhfC605jDHbP6QQ==}
-    engines: {node: '>=10.0.0'}
-    peerDependencies:
-      bufferutil: ^4.0.1
-      utf-8-validate: '>=5.0.2'
     peerDependenciesMeta:
       bufferutil:
         optional: true
