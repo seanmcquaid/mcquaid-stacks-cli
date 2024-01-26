@@ -6,7 +6,7 @@
     "build": "tsc && vite build",
     "dev": "vite --host",
     "lint": "eslint e2e src --max-warnings=0",
-    "prepare": "is-ci || husky install",
+    "prepare": "is-ci || husky",
     "preview": "vite preview",
     "test": "vitest run",
     "test:coverage": "vitest run --coverage",

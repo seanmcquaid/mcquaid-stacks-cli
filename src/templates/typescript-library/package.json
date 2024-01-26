@@ -16,7 +16,7 @@
     "changeset": "changeset",
     "check-types": "npm pack && attw --pack",
     "lint": "eslint src --max-warnings=0",
-    "prepare": "is-ci || husky install",
+    "prepare": "is-ci || husky",
     "release": "pnpm build && changeset publish",
     "test": "vitest run",
     "test:watch": "vitest",
