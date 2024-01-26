@@ -1,8 +1,9 @@
+import { createLazyFileRoute } from '@tanstack/react-router';
 import PageWrapper from '@/components/app/PageWrapper';
 import LinkButton from '@/components/ui/LinkButton';
 import useAppTranslation from '@/hooks/useAppTranslation';
 
-export const component = function HomePage() {
+const HomePage = () => {
   const { t } = useAppTranslation();
 
   return (
@@ -24,3 +25,7 @@ export const component = function HomePage() {
     </PageWrapper>
   );
 };
+
+export const Route = createLazyFileRoute('/')({
+  component: HomePage,
+});
