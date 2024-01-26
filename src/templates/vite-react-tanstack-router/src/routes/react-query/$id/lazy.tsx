@@ -1,8 +1,8 @@
-import { Route } from './route.lazy';
+import { createLazyFileRoute } from '@tanstack/react-router';
 import useGetPostQuery from '@/services/queries/useGetPostQuery';
 import PageWrapper from '@/components/app/PageWrapper';
 
-export const component = function ReactQueryPostPage() {
+const ReactQueryPostPage = () => {
   const { id } = Route.useParams();
   const { data, isLoading, isError } = useGetPostQuery(id!);
 
@@ -13,3 +13,7 @@ export const component = function ReactQueryPostPage() {
     </PageWrapper>
   );
 };
+
+export const Route = createLazyFileRoute('/react-query/$id')({
+  component: ReactQueryPostPage,
+});

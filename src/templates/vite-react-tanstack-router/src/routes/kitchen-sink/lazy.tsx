@@ -1,6 +1,7 @@
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
+import { createLazyFileRoute } from '@tanstack/react-router';
 import PageWrapper from '@/components/app/PageWrapper';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
@@ -14,7 +15,7 @@ const formSchema = z.object({
   }),
 });
 
-export const component = function KitchenSink() {
+const KitchenSinkPage = () => {
   const { t } = useAppTranslation();
   const { data, ...rest } = useGetPostsQuery();
   const {
@@ -61,3 +62,7 @@ export const component = function KitchenSink() {
     </PageWrapper>
   );
 };
+
+export const Route = createLazyFileRoute('/kitchen-sink')({
+  component: KitchenSinkPage,
+});

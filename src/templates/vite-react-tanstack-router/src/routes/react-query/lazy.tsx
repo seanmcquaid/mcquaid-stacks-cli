@@ -1,3 +1,4 @@
+import { createLazyFileRoute } from '@tanstack/react-router';
 import PageWrapper from '@/components/app/PageWrapper';
 import { Button } from '@/components/ui/Button';
 import LinkButton from '@/components/ui/LinkButton';
@@ -5,7 +6,7 @@ import useAppTranslation from '@/hooks/useAppTranslation';
 import useDeletePostMutation from '@/services/mutations/useDeletePostMutation';
 import useGetPostsQuery from '@/services/queries/useGetPostsQuery';
 
-export const component = function ReactQueryPage() {
+const ReactQueryPage = () => {
   const { t } = useAppTranslation();
   const { data, isLoading, isError } = useGetPostsQuery();
   const { mutate: deletePost, isPending: deletePostLoading } =
@@ -37,3 +38,7 @@ export const component = function ReactQueryPage() {
     </PageWrapper>
   );
 };
+
+export const Route = createLazyFileRoute('/react-query')({
+  component: ReactQueryPage,
+});
