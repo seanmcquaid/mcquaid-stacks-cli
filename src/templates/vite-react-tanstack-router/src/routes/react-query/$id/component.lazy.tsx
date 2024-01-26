@@ -1,4 +1,4 @@
-import { Route } from './route';
+import { Route } from './route.lazy';
 import useGetPostQuery from '@/services/queries/useGetPostQuery';
 import PageWrapper from '@/components/app/PageWrapper';
 

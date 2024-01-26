@@ -1,5 +1,5 @@
 import { useNavigate } from '@tanstack/react-router';
-import { Route } from './route';
+import { Route } from './route.lazy';
 import Modal from '@/components/app/Modal';
 import PageWrapper from '@/components/app/PageWrapper';
 import { Button } from '@/components/ui/Button';
