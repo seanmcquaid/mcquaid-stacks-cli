@@ -27,7 +27,7 @@
     "@tanstack/react-query-devtools": "^5.17.21",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
-    "i18next": "^23.7.19",
+    "i18next": "^23.7.20",
     "i18next-browser-languagedetector": "^7.2.0",
     "ky": "^1.2.0",
     "lucide-react": "^0.316.0",
