@@ -27,8 +27,8 @@ dependencies:
     specifier: ^5.17.21
     version: 5.17.21(@tanstack/react-query@5.17.19)(react@18.2.0)
   '@tanstack/react-router':
-    specifier: ^1.12.16
-    version: 1.12.16(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^1.14.0
+    version: 1.14.0(react-dom@18.2.0)(react@18.2.0)
   class-variance-authority:
     specifier: ^0.7.0
     version: 0.7.0
@@ -1762,8 +1762,8 @@ packages:
       tiny-warning: 1.0.3
     dev: true
 
-  /@tanstack/react-router@1.12.16(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-GEiOhyC7pHnVvrzLPiMXB3xP2uyZycYc//p5RrTre4fNjn3c//NFK7Ck9mMHZYvZW6x3j029yBHfzmopXM0gnQ==}
+  /@tanstack/react-router@1.14.0(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-Dods/Ne9uxJSOgg3yfINIfjPs5cSxhkuw9EWj+sk/XI/CGZ+E2cwOJA8xmO1KoShXl04wpi6NRjsDuH6uohE+g==}
     engines: {node: '>=12'}
     peerDependencies:
       react: '>=16'
