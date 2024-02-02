@@ -48,7 +48,7 @@
     "@faker-js/faker": "^8.4.0",
     "@playwright/test": "^1.41.2",
     "@size-limit/file": "^11.0.2",
-    "@tanstack/router-devtools": "^1.15.7",
+    "@tanstack/router-devtools": "^1.15.13",
     "@tanstack/router-vite-plugin": "^1.15.11",
     "@testing-library/jest-dom": "^6.4.1",
     "@testing-library/react": "^14.2.1",
