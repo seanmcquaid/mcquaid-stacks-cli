@@ -21,8 +21,8 @@ dependencies:
     specifier: ^1.1.5
     version: 1.1.5(@types/react-dom@18.2.18)(@types/react@18.2.51)(react-dom@18.2.0)(react@18.2.0)
   '@remix-run/node':
-    specifier: ^2.5.1
-    version: 2.5.1(typescript@5.3.3)
+    specifier: ^2.6.0
+    version: 2.6.0(typescript@5.3.3)
   '@remix-run/react':
     specifier: ^2.5.1
     version: 2.5.1(react-dom@18.2.0)(react@18.2.0)(typescript@5.3.3)
@@ -2114,6 +2114,7 @@ packages:
       source-map-support: 0.5.21
       stream-slice: 0.1.2
       typescript: 5.3.3
+    dev: true
 
   /@remix-run/node@2.6.0(typescript@5.3.3):
     resolution: {integrity: sha512-bWemy3g258Kdqi+4OxIEZ7QS64T96jNK6a7NdlPXGJZqeLpxM5NmlCl/slSdx52oTi9r5Xoz1Tm4uR37nD1/Xw==}
