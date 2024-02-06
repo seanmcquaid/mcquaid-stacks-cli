@@ -83,7 +83,7 @@
     "msw": "^2.1.5",
     "playwright-lighthouse": "^4.0.0",
     "playwright-msw": "^3.0.1",
-    "postcss": "^8.4.33",
+    "postcss": "^8.4.34",
     "prettier": "^3.2.5",
     "remix-flat-routes": "^0.6.4",
     "size-limit": "^11.0.2",
