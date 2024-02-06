@@ -49,7 +49,7 @@
     "@axe-core/playwright": "^4.8.4",
     "@faker-js/faker": "^8.4.0",
     "@playwright/test": "^1.41.2",
-    "@remix-run/dev": "^2.5.1",
+    "@remix-run/dev": "^2.6.0",
     "@size-limit/file": "^11.0.2",
     "@testing-library/jest-dom": "^6.4.1",
     "@testing-library/react": "^14.2.1",
