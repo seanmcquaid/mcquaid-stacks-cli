@@ -14,7 +14,7 @@ export default defineConfig({
     // disable remix plugin for vitest
     !process.env.VITEST &&
       remix({
-        unstable_ssr: false,
+        unstable_ssr: true,
         // ignore all files in routes folder to prevent
         // default remix convention from picking up routes
         ignoredRouteFiles: ['**/*'],
