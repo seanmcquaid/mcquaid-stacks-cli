@@ -25,6 +25,9 @@ export default defineConfig({
     svgr(),
     checker({ typescript: true }),
   ],
+  ssr: {
+    noExternal: ['remix-i18next'],
+  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './app'),
