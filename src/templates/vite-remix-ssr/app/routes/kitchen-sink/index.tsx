@@ -40,6 +40,8 @@ export const clientLoader = async ({
   };
 };
 
+clientLoader.hydrate = true;
+
 export const clientAction = async ({ request }: ClientActionFunctionArgs) => {
   const formData = await request.formData();
   const name = formData.get('name');
