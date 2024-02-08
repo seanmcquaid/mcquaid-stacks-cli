@@ -6,8 +6,6 @@ const envSchema = sharedEnvSchema.extend({
   NODE_ENV: z.enum(['development', 'test', 'production']),
 });
 
-console.log(process.env);
-
 const env = envSchema.parse(process.env);
 
 export default env;

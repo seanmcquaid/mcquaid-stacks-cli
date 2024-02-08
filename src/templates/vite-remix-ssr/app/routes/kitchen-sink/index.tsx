@@ -1,24 +1,44 @@
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
-import type { ClientActionFunctionArgs } from '@remix-run/react';
+import type {
+  ClientActionFunctionArgs,
+  ClientLoaderFunctionArgs,
+} from '@remix-run/react';
 import { useFetcher } from '@remix-run/react';
 import { z } from 'zod';
 import PageWrapper from '@/components/app/PageWrapper';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
-import useGetPostsQuery, {
-  getPostsQuery,
-} from '@/services/queries/useGetPostsQuery';
+import useGetPostsQuery from '@/services/queries/useGetPostsQuery';
 import queryClient from '@/services/queryClient';
 import useAppTranslation from '@/hooks/useAppTranslation';
 import { toast } from '@/hooks/useToast';
+import postsService from '@/services/postsService';
+import type Post from '@/types/Post';
+import QueryKey from '@/constants/QueryKey';
 
-export const clientLoader = async () => {
-  const query = getPostsQuery();
+export const loader = async () => {
+  const posts = await postsService.getPosts();
+
+  return posts;
+};
+
+export const clientLoader = async ({
+  serverLoader,
+}: ClientLoaderFunctionArgs) => {
+  const posts = queryClient.getQueryData<Post[]>([QueryKey.GET_POSTS]);
+
+  if (posts) {
+    return { posts };
+  }
+
+  const loaderData = serverLoader() as Promise<Post[]>;
+
   return {
-    data:
-      queryClient.getQueryData(query.queryKey) ??
-      (await queryClient.fetchQuery(query)),
+    posts: await queryClient.fetchQuery({
+      queryKey: [QueryKey.GET_POSTS],
+      queryFn: () => loaderData,
+    }),
   };
 };
 
