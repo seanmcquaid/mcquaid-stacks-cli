@@ -5,7 +5,7 @@ import './i18n/i18next.client';
 import { I18nextProvider } from 'react-i18next';
 import i18next from './i18n/i18next.client';
 import prepareMsw from './utils/testing/prepareMsw.client';
-import './env.server';
+import './env.client';
 
 prepareMsw().then(() =>
   startTransition(() => {

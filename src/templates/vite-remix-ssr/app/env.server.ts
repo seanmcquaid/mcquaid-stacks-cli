@@ -1,11 +1,13 @@
 import { z } from 'zod';
+import sharedEnvSchema from './sharedEnvSchema';
 
-const envSchema = z.object({
-  VITE_APP_ENVIRONMENT: z.enum(['dev', 'qa', 'staging', 'prod']),
-  VITE_APP_MSW_ENABLED: z.coerce.boolean().optional(),
-  MODE: z.enum(['development', 'test', 'production']),
+const envSchema = sharedEnvSchema.extend({
+  EXAMPLE_SECRET_KEY: z.string(),
+  NODE_ENV: z.enum(['development', 'test', 'production']),
 });
 
-const env = envSchema.parse(import.meta.env);
+console.log(process.env);
+
+const env = envSchema.parse(process.env);
 
 export default env;
