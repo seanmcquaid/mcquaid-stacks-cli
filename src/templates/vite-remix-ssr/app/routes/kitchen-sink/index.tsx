@@ -32,12 +32,10 @@ export const clientLoader = async ({
     return { posts };
   }
 
-  const loaderData = serverLoader() as Promise<Post[]>;
-
   return {
     posts: await queryClient.fetchQuery({
       queryKey: [QueryKey.GET_POSTS],
-      queryFn: () => loaderData,
+      queryFn: () => serverLoader<Post[]>(),
     }),
   };
 };
