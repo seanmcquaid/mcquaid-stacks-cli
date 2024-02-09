@@ -4,7 +4,7 @@ import type {
   ClientActionFunctionArgs,
   ClientLoaderFunctionArgs,
 } from '@remix-run/react';
-import { useFetcher } from '@remix-run/react';
+import { useFetcher, useNavigate } from '@remix-run/react';
 import { z } from 'zod';
 import PageWrapper from '@/components/app/PageWrapper';
 import { Button } from '@/components/ui/Button';
@@ -77,6 +77,7 @@ const KitchenSinkPage = () => {
   const isFormValid = isValid && isDirty;
   const fetcher = useFetcher();
   const isFetcherLoading = fetcher.state !== 'idle';
+  const navigate = useNavigate();
 
   const handleOnSubmit = handleSubmit(formData => {
     fetcher.submit(formData, {
@@ -101,7 +102,9 @@ const KitchenSinkPage = () => {
       <ul className="grid grid-cols-2">
         {data?.map(post => (
           <li key={post.id} className="flex mt-4 items-center">
-            {post.title.substring(0, 4)}
+            <button onClick={() => navigate(`/react-query/${post.id}`)}>
+              {post.title.substring(0, 4)}
+            </button>
           </li>
         ))}
       </ul>
