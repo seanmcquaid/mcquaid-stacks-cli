@@ -15,4 +15,5 @@ These templates are meant to be a starting point for new projects and are not me
 
 1. TypeScript Libraries
 2. Vite + TanStack Router
-3. Vite + Remix SPA Mode
+3. Vite + Remix SPA
+4. Vite + Remix SSR
