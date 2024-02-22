@@ -3,7 +3,6 @@ import './styles/index.css';
 import {
   Outlet,
   Links,
-  LiveReload,
   Meta,
   Scripts,
   useRouteError,
@@ -59,7 +58,6 @@ export function ErrorBoundary() {
       <body>
         <PageError errorText="There was an app crash!" />
         <Scripts />
-        <LiveReload />
       </body>
     </html>
   );
@@ -94,7 +92,6 @@ export function HydrateFallback() {
       <body>
         <LoadingOverlay isLoading={isLoading} />
         <Scripts />
-        <LiveReload />
         <noscript>
           Your browser does not support JavaScript or it is not enabled! Please
           re-enable JavaScript in order to use this site.
@@ -132,10 +129,12 @@ const Root = () => {
         <LoadingOverlay isLoading={isLoadingPage} />
         <QueryClientProvider client={queryClient}>
           <Outlet />
-          <ReactQueryDevtools initialIsOpen={false} />
+          <ReactQueryDevtools
+            initialIsOpen={false}
+            buttonPosition="top-right"
+          />
           <Toaster />
           <Scripts />
-          <LiveReload />
         </QueryClientProvider>
       </body>
     </html>

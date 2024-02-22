@@ -7,10 +7,12 @@ import { vitePlugin as remix } from '@remix-run/dev';
 import svgr from 'vite-plugin-svgr';
 import checker from 'vite-plugin-checker';
 import { flatRoutes } from 'remix-flat-routes';
+import { remixDevTools } from 'remix-development-tools/vite';
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
+    remixDevTools(),
     // disable remix plugin for vitest
     !process.env.VITEST &&
       remix({
