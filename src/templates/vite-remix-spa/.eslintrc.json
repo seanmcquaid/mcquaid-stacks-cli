@@ -51,7 +51,7 @@
   },
   "overrides": [
     {
-      "files": ["src/**/*.{ts,tsx}"],
+      "files": ["app/**/**.{ts,tsx}"],
       "rules": {
         "playwright/no-standalone-expect": "off"
       }
