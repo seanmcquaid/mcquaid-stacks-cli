@@ -78,11 +78,11 @@ dependencies:
     specifier: ^7.50.1
     version: 7.50.1(react@18.2.0)
   react-i18next:
-    specifier: ^14.0.0
-    version: 14.0.0(i18next@23.9.0)(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^14.0.5
+    version: 14.0.5(i18next@23.9.0)(react-dom@18.2.0)(react@18.2.0)
   remix-i18next:
     specifier: ^5.5.0
-    version: 5.5.0(@remix-run/react@2.5.0)(@remix-run/server-runtime@2.5.0)(i18next@23.9.0)(react-i18next@14.0.0)(react@18.2.0)
+    version: 5.5.0(@remix-run/react@2.5.0)(@remix-run/server-runtime@2.5.0)(i18next@23.9.0)(react-i18next@14.0.5)(react@18.2.0)
   tailwind-merge:
     specifier: ^2.2.0
     version: 2.2.0
@@ -615,6 +615,13 @@ packages:
     engines: {node: '>=6.9.0'}
     dependencies:
       regenerator-runtime: 0.14.0
+
+  /@babel/runtime@7.23.9:
+    resolution: {integrity: sha512-0CX6F+BI2s9dkUqr08KFrAIZgNFj75rdBU/DjCyYLIaV/quFjkk6T+EJ2LkZHyZTbEV4L5p97mNkUsHl2wLFAw==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      regenerator-runtime: 0.14.0
+    dev: false
 
   /@babel/template@7.22.15:
     resolution: {integrity: sha512-QPErUVm4uyJa60rkI73qneDacvdvzxshT3kksGqlGWYdOTIUOwJ7RDUL8sGqslY1uXWSL6xMFKEXDS3ox2uF0w==}
@@ -8190,8 +8197,8 @@ packages:
       react: 18.2.0
     dev: false
 
-  /react-i18next@14.0.0(i18next@23.9.0)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-OCrS8rHNAmnr8ggGRDxjakzihrMW7HCbsplduTm3EuuQ6fyvWGT41ksZpqbduYoqJurBmEsEVZ1pILSUWkHZng==}
+  /react-i18next@14.0.5(i18next@23.9.0)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-5+bQSeEtgJrMBABBL5lO7jPdSNAbeAZ+MlFWDw//7FnVacuVu3l9EeWFzBQvZsKy+cihkbThWOAThEdH8YjGEw==}
     peerDependencies:
       i18next: '>= 23.2.3'
       react: '>= 16.8.0'
@@ -8203,7 +8210,7 @@ packages:
       react-native:
         optional: true
     dependencies:
-      '@babel/runtime': 7.23.2
+      '@babel/runtime': 7.23.9
       html-parse-stringify: 3.0.1
       i18next: 23.9.0
       react: 18.2.0
@@ -8431,7 +8438,7 @@ packages:
       minimatch: 5.1.6
     dev: true
 
-  /remix-i18next@5.5.0(@remix-run/react@2.5.0)(@remix-run/server-runtime@2.5.0)(i18next@23.9.0)(react-i18next@14.0.0)(react@18.2.0):
+  /remix-i18next@5.5.0(@remix-run/react@2.5.0)(@remix-run/server-runtime@2.5.0)(i18next@23.9.0)(react-i18next@14.0.5)(react@18.2.0):
     resolution: {integrity: sha512-QAHYlwb/0fmoSmH+t7AiJ3EhyG4SSQNQnAAPfqbkn/3UJfWO+NFFVxuggGx25FRJ3SOPexaspoiaCddcEayPAQ==}
     peerDependencies:
       '@remix-run/react': ^1.0.0 || ^2.0.0
@@ -8447,7 +8454,7 @@ packages:
       intl-parse-accept-language: 1.0.0
       lru-cache: 7.18.3
       react: 18.2.0
-      react-i18next: 14.0.0(i18next@23.9.0)(react-dom@18.2.0)(react@18.2.0)
+      react-i18next: 14.0.5(i18next@23.9.0)(react-dom@18.2.0)(react@18.2.0)
       use-consistent-value: 1.0.0(react@18.2.0)
     dev: false
 
