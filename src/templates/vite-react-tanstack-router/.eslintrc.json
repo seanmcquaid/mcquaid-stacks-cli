@@ -48,5 +48,13 @@
       "warn",
       { "allowSameFolder": true, "rootDir": "src", "prefix": "@" }
     ]
-  }
+  },
+  "overrides": [
+    {
+      "files": ["src/**/*.{ts,tsx}"],
+      "rules": {
+        "playwright/no-standalone-expect": "off"
+      }
+    }
+  ]
 }

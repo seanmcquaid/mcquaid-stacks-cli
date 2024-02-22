@@ -3,7 +3,7 @@
 
 import path from 'path';
 import { defineConfig } from 'vite';
-import { unstable_vitePlugin as remix } from '@remix-run/dev';
+import { vitePlugin as remix } from '@remix-run/dev';
 import svgr from 'vite-plugin-svgr';
 import checker from 'vite-plugin-checker';
 import { flatRoutes } from 'remix-flat-routes';
@@ -14,7 +14,7 @@ export default defineConfig({
     // disable remix plugin for vitest
     !process.env.VITEST &&
       remix({
-        unstable_ssr: false,
+        ssr: false,
         // ignore all files in routes folder to prevent
         // default remix convention from picking up routes
         ignoredRouteFiles: ['**/*'],
