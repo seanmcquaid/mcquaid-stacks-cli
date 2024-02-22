@@ -1,5 +1,11 @@
 # @mcquaid-stacks/cli
 
+## 0.0.10
+
+### Patch Changes
+
+- b7e2cef: Small fixes
+
 ## 0.0.9
 
 ### Patch Changes
