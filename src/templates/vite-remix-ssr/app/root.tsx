@@ -51,7 +51,7 @@ export function ErrorBoundary() {
         />
         <meta httpEquiv="Pragma" content="no-cache" />
         <meta httpEquiv="Expires" content="0" />
-        <title>{'vite-remix-ssr/app'}</title>
+        <title>{'<%= projectName %>'}</title>
         <Meta />
         <Links />
       </head>
@@ -85,7 +85,7 @@ export function HydrateFallback() {
         />
         <meta httpEquiv="Pragma" content="no-cache" />
         <meta httpEquiv="Expires" content="0" />
-        <title>{'vite-remix-ssr/app'}</title>
+        <title>{'<%= projectName %>'}</title>
         <Meta />
         <Links />
       </head>
@@ -121,7 +121,7 @@ const Root = () => {
         />
         <meta httpEquiv="Pragma" content="no-cache" />
         <meta httpEquiv="Expires" content="0" />
-        <title>{'vite-remix-ssr/app'}</title>
+        <title>{'<%= projectName %>'}</title>
         <Meta />
         <Links />
       </head>
