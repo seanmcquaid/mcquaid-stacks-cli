@@ -57,8 +57,8 @@ dependencies:
     specifier: ^2.3.1
     version: 2.3.1
   i18next-http-backend:
-    specifier: ^2.4.3
-    version: 2.4.3
+    specifier: ^2.5.0
+    version: 2.5.0
   isbot:
     specifier: ^4.4.0
     version: 4.4.0
@@ -5731,8 +5731,8 @@ packages:
     resolution: {integrity: sha512-tvfXskmG/9o+TJ5Fxu54sSO5OkY6d+uMn+K6JiUGLJrwxAVfer+8V3nU8jq3ts9Pe5lXJv4b1N7foIjJ8Iy2Gg==}
     dev: false
 
-  /i18next-http-backend@2.4.3:
-    resolution: {integrity: sha512-jo2M03O6n1/DNb51WSQ8PsQ0xEELzLZRdYUTbf17mLw3rVwnJF9hwNgMXvEFSxxb+N8dT+o0vtigA6s5mGWyPA==}
+  /i18next-http-backend@2.5.0:
+    resolution: {integrity: sha512-Z/aQsGZk1gSxt2/DztXk92DuDD20J+rNudT7ZCdTrNOiK8uQppfvdjq9+DFQfpAnFPn3VZS+KQIr1S/W1KxhpQ==}
     dependencies:
       cross-fetch: 4.0.0
     transitivePeerDependencies:
