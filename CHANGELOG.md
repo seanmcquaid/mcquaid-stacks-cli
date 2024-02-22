@@ -1,5 +1,11 @@
 # @mcquaid-stacks/cli
 
+## 0.0.9
+
+### Patch Changes
+
+- a246c7f: Add template for Remix SSR and remove Vite + React Router template
+
 ## 0.0.8
 
 ### Patch Changes
