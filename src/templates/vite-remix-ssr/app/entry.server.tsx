@@ -8,12 +8,18 @@ import { renderToPipeableStream } from 'react-dom/server';
 import { createInstance } from 'i18next';
 import { I18nextProvider, initReactI18next } from 'react-i18next';
 import Backend from 'i18next-fs-backend';
+import server from '../mocks/server';
 import i18next from './i18n/i18next.server';
 import i18n from './i18n/config';
 import 'dotenv/config';
 import './env.server';
+import env from './env.server';
 
 const ABORT_DELAY = 5000;
+
+if (env.VITE_APP_MSW_ENABLED && env.NODE_ENV === 'development') {
+  server.listen();
+}
 
 export default async function handleRequest(
   request: Request,
