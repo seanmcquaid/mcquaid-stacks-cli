@@ -30,7 +30,7 @@
     "@tanstack/react-query-devtools": "^5.17.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
-    "dotenv": "^16.4.3",
+    "dotenv": "^16.4.5",
     "http-server": "^14.1.1",
     "i18next": "^23.7.16",
     "i18next-browser-languagedetector": "^7.2.0",
