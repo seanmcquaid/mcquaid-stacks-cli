@@ -25,3 +25,9 @@ updates:
       interval: weekly
       day: tuesday
     open-pull-requests-limit: 20
+  - package-ecosystem: npm
+    directory: "/src/templates/vite-remix-ssr"
+    schedule:
+      interval: weekly
+      day: tuesday
+    open-pull-requests-limit: 20
