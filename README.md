@@ -11,14 +11,8 @@ These templates are meant to be a starting point for new projects and are not me
     create-mcquaid-stack
 ```
 
-## Current Templates
+## Templates
 
-1. Vite + React Router
-2. TypeScript Libraries
-3. Vite + TanStack Router
-4. Vite + Remix SPA Mode
-
-## Future Templates
-
-1. Next.js
-2. Remix - SSR
+1. TypeScript Libraries
+2. Vite + TanStack Router
+3. Vite + Remix SPA Mode
