@@ -96,13 +96,13 @@ dependencies:
 devDependencies:
   '@anatine/zod-mock':
     specifier: ^3.13.3
-    version: 3.13.3(@faker-js/faker@8.3.1)(zod@3.22.4)
+    version: 3.13.3(@faker-js/faker@8.4.1)(zod@3.22.4)
   '@axe-core/playwright':
     specifier: ^4.8.3
     version: 4.8.3(playwright-core@1.41.0)
   '@faker-js/faker':
-    specifier: ^8.3.1
-    version: 8.3.1
+    specifier: ^8.4.1
+    version: 8.4.1
   '@playwright/test':
     specifier: ^1.41.0
     version: 1.41.0
@@ -262,13 +262,13 @@ packages:
       '@jridgewell/trace-mapping': 0.3.19
     dev: true
 
-  /@anatine/zod-mock@3.13.3(@faker-js/faker@8.3.1)(zod@3.22.4):
+  /@anatine/zod-mock@3.13.3(@faker-js/faker@8.4.1)(zod@3.22.4):
     resolution: {integrity: sha512-AN+0YEFE7s6BpuALQHhEoVmJmD+0gPnf4Fehc6oE5NHbM3X2ZD5fW5M6vvot29NWUB6nxvj0gu+BPQ9cVnxALw==}
     peerDependencies:
       '@faker-js/faker': ^7.0.0 || ^8.0.0
       zod: ^3.21.4
     dependencies:
-      '@faker-js/faker': 8.3.1
+      '@faker-js/faker': 8.4.1
       randexp: 0.5.3
       zod: 3.22.4
     dev: true
@@ -1313,8 +1313,8 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
-  /@faker-js/faker@8.3.1:
-    resolution: {integrity: sha512-FdgpFxY6V6rLZE9mmIBb9hM0xpfvQOSNOLnzolzKwsE1DH+gC7lEKV1p1IbR0lAYyvYd5a4u3qWJzowUkw1bIw==}
+  /@faker-js/faker@8.4.1:
+    resolution: {integrity: sha512-XQ3cU+Q8Uqmrbf2e0cIC/QN43sTBSC8KF12u29Mb47tWrt2hAgBXSgpZMj4Ao8Uk0iJcU99QsOCaIL8934obCg==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0, npm: '>=6.14.13'}
     dev: true
 
