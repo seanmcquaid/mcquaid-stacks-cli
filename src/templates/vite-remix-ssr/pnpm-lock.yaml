@@ -81,8 +81,8 @@ dependencies:
     specifier: ^14.0.5
     version: 14.0.5(i18next@23.10.0)(react-dom@18.2.0)(react@18.2.0)
   remix-i18next:
-    specifier: ^5.5.0
-    version: 5.5.0(@remix-run/react@2.7.2)(@remix-run/server-runtime@2.7.2)(i18next@23.10.0)(react-i18next@14.0.5)(react@18.2.0)
+    specifier: ^6.0.1
+    version: 6.0.1(@remix-run/node@2.7.2)(@remix-run/react@2.7.2)(i18next@23.10.0)(react-i18next@14.0.5)(react@18.2.0)
   tailwind-merge:
     specifier: ^2.2.1
     version: 2.2.1
@@ -5568,6 +5568,7 @@ packages:
 
   /fast-deep-equal@3.1.3:
     resolution: {integrity: sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==}
+    dev: true
 
   /fast-diff@1.3.0:
     resolution: {integrity: sha512-VxPP4NqbUjj6MaAOafWeUn2cXWLcCtljklUtZf0Ind4XQ+QPtmA0b18zZy0jIQx+ExRVCR/ZQpBmik5lXshNsw==}
@@ -7127,6 +7128,7 @@ packages:
   /lru-cache@7.18.3:
     resolution: {integrity: sha512-jumlc0BIUrS3qJGgIkWZsyfAM7NCWiBcCDhnd+3NNM5KbBmLTgHVfWBcg6W+rLUsIpzpERPsvwUP7CckAQSOoA==}
     engines: {node: '>=12'}
+    dev: true
 
   /lru_map@0.3.3:
     resolution: {integrity: sha512-Pn9cox5CsMYngeDbmChANltQl+5pi6XmTrraMSzhPmMBbmgcxmqWry0U3PGapCU1yB4/LqCcom7qhHZiF/jGfQ==}
@@ -9041,24 +9043,32 @@ packages:
       minimatch: 5.1.6
     dev: true
 
-  /remix-i18next@5.5.0(@remix-run/react@2.7.2)(@remix-run/server-runtime@2.7.2)(i18next@23.10.0)(react-i18next@14.0.5)(react@18.2.0):
-    resolution: {integrity: sha512-QAHYlwb/0fmoSmH+t7AiJ3EhyG4SSQNQnAAPfqbkn/3UJfWO+NFFVxuggGx25FRJ3SOPexaspoiaCddcEayPAQ==}
+  /remix-i18next@6.0.1(@remix-run/node@2.7.2)(@remix-run/react@2.7.2)(i18next@23.10.0)(react-i18next@14.0.5)(react@18.2.0):
+    resolution: {integrity: sha512-zO7sYe/Ui4s/ZGHMZoScFUNsuarykzQsQ9AB3KPswb7lLahwqIu+K09XFNZBUGBOPHOUl9txv0+2vOrIiGCSPA==}
+    engines: {node: '>=18.0.0'}
     peerDependencies:
-      '@remix-run/react': ^1.0.0 || ^2.0.0
-      '@remix-run/server-runtime': ^1.0.0 || ^2.0.0
+      '@remix-run/cloudflare': ^2.0.0
+      '@remix-run/deno': ^2.0.0
+      '@remix-run/node': ^2.0.0
+      '@remix-run/react': ^2.0.0
       i18next: ^23.1.0
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
       react-i18next: ^13.0.0 || ^14.0.0
+    peerDependenciesMeta:
+      '@remix-run/cloudflare':
+        optional: true
+      '@remix-run/deno':
+        optional: true
+      '@remix-run/node':
+        optional: true
     dependencies:
+      '@remix-run/node': 2.7.2(typescript@5.3.3)
       '@remix-run/react': 2.7.2(react-dom@18.2.0)(react@18.2.0)(typescript@5.3.3)
-      '@remix-run/server-runtime': 2.7.2(typescript@5.3.3)
       accept-language-parser: 1.5.0
       i18next: 23.10.0
       intl-parse-accept-language: 1.0.0
-      lru-cache: 7.18.3
       react: 18.2.0
       react-i18next: 14.0.5(i18next@23.10.0)(react-dom@18.2.0)(react@18.2.0)
-      use-consistent-value: 1.0.0(react@18.2.0)
     dev: false
 
   /require-directory@2.1.1:
@@ -10244,16 +10254,6 @@ packages:
       '@types/react': 18.2.60
       react: 18.2.0
       tslib: 2.6.2
-
-  /use-consistent-value@1.0.0(react@18.2.0):
-    resolution: {integrity: sha512-enIOysu0IwqjafsUXvhZPajB6UYjxwu8w38xWaHLfVs1onIyg2c0DwPgcknxqO0TpYpAHXdFDXOp7Cs9HbTIkw==}
-    engines: {node: '>=10'}
-    peerDependencies:
-      react: '>=16'
-    dependencies:
-      fast-deep-equal: 3.1.3
-      react: 18.2.0
-    dev: false
 
   /use-sidecar@1.1.2(@types/react@18.2.60)(react@18.2.0):
     resolution: {integrity: sha512-epTbsLuzZ7lPClpz2TyryBfztm7m+28DlEv2ZCQ3MDr5ssiwyOwGH/e5F9CkfWjJ1t4clvI58yF822/GUkjjhw==}
