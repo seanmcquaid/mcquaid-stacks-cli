@@ -44,7 +44,7 @@
     "react-hook-form": "^7.50.1",
     "react-i18next": "^14.0.5",
     "remix-i18next": "^5.5.0",
-    "tailwind-merge": "^2.2.0",
+    "tailwind-merge": "^2.2.1",
     "tailwindcss-animate": "^1.0.7",
     "zod": "^3.22.4"
   },
