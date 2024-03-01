@@ -14,6 +14,7 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { QueryClientProvider } from '@tanstack/react-query';
 import { useEffect, useState } from 'react';
 import type { LoaderFunctionArgs } from '@remix-run/node';
+import { useChangeLanguage } from 'remix-i18next/react';
 import { Toaster } from './components/ui/Toaster';
 import queryClient from './services/queryClient';
 import PageError from './components/app/PageError';
@@ -106,6 +107,8 @@ const Root = () => {
   const { i18n } = useAppTranslation();
   const navigation = useNavigation();
   const isLoadingPage = navigation.state === 'loading';
+
+  useChangeLanguage(locale);
 
   return (
     <html lang={locale} dir={i18n.dir()} className="h-screen w-full">
