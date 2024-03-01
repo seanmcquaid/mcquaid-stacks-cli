@@ -14,6 +14,7 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { QueryClientProvider } from '@tanstack/react-query';
 import { useEffect, useState } from 'react';
 import type { LoaderFunctionArgs } from '@remix-run/node';
+import { useChangeLanguage } from 'remix-i18next/react';
 import { Toaster } from './components/ui/Toaster';
 import queryClient from './services/queryClient';
 import PageError from './components/app/PageError';
@@ -21,7 +22,6 @@ import useAppTranslation from './hooks/useAppTranslation';
 import LoadingOverlay from './components/ui/LoadingOverlay';
 import i18next from './i18n/i18next.server';
 import setAcceptLanguageHeaders from './i18n/setAcceptLanguageHeaders';
-import { useChangeLanguage } from 'remix-i18next/react';
 
 export async function loader({ request }: LoaderFunctionArgs) {
   setAcceptLanguageHeaders(request);
