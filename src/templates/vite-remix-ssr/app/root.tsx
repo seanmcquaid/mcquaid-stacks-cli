@@ -21,6 +21,7 @@ import useAppTranslation from './hooks/useAppTranslation';
 import LoadingOverlay from './components/ui/LoadingOverlay';
 import i18next from './i18n/i18next.server';
 import setAcceptLanguageHeaders from './i18n/setAcceptLanguageHeaders';
+import { useChangeLanguage } from 'remix-i18next/react';
 
 export async function loader({ request }: LoaderFunctionArgs) {
   setAcceptLanguageHeaders(request);
@@ -106,6 +107,8 @@ const Root = () => {
   const { i18n } = useAppTranslation();
   const navigation = useNavigation();
   const isLoadingPage = navigation.state === 'loading';
+
+  useChangeLanguage(locale);
 
   return (
     <html lang={locale} dir={i18n.dir()} className="h-screen w-full">

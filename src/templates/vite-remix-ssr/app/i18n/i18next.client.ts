@@ -3,6 +3,7 @@ import I18nextBrowserLanguageDetector from 'i18next-browser-languagedetector';
 import Backend from 'i18next-http-backend';
 import { initReactI18next } from 'react-i18next';
 import config from './config';
+import { getInitialNamespaces } from 'remix-i18next/client';
 
 i18next
   .use(initReactI18next)
@@ -10,6 +11,7 @@ i18next
   .use(Backend)
   .init({
     ...config,
+    ns: getInitialNamespaces(),
     backend: { loadPath: './locales/{{lng}}.ts' },
     detection: {
       order: ['htmlTag'],

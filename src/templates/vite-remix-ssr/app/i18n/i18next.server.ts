@@ -1,5 +1,5 @@
 import Backend from 'i18next-fs-backend';
-import { RemixI18Next } from 'remix-i18next';
+import { RemixI18Next } from 'remix-i18next/server';
 import config from './config';
 
 const i18next = new RemixI18Next({
