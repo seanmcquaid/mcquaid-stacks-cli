@@ -42,8 +42,8 @@ dependencies:
     specifier: ^7.2.0
     version: 7.2.0
   ky:
-    specifier: ^1.2.1
-    version: 1.2.1
+    specifier: ^1.2.2
+    version: 1.2.2
   lucide-react:
     specifier: ^0.341.0
     version: 0.341.0(react@18.2.0)
@@ -81,7 +81,7 @@ devDependencies:
     version: 3.13.3(@faker-js/faker@8.4.1)(zod@3.22.4)
   '@axe-core/playwright':
     specifier: ^4.8.5
-    version: 4.8.5(playwright-core@1.41.2)
+    version: 4.8.5(playwright-core@1.42.1)
   '@faker-js/faker':
     specifier: ^8.4.1
     version: 8.4.1
@@ -189,7 +189,7 @@ devDependencies:
     version: 2.2.2(typescript@5.3.3)
   playwright-lighthouse:
     specifier: ^4.0.0
-    version: 4.0.0(lighthouse@11.6.0)(playwright-core@1.41.2)
+    version: 4.0.0(lighthouse@11.6.0)(playwright-core@1.42.1)
   playwright-msw:
     specifier: ^3.0.1
     version: 3.0.1(@playwright/test@1.42.1)(msw@2.2.2)
@@ -255,13 +255,13 @@ packages:
       zod: 3.22.4
     dev: true
 
-  /@axe-core/playwright@4.8.5(playwright-core@1.41.2):
+  /@axe-core/playwright@4.8.5(playwright-core@1.42.1):
     resolution: {integrity: sha512-GFdXXAEn9uk0Vyzgl2eEP+VwvgGzas0YSnacoJ/0U237G83zWZ1PhbP/RDymm0cqevoA+xRjMo+ONzh9Q711nw==}
     peerDependencies:
       playwright-core: '>= 1.0.0'
     dependencies:
       axe-core: 4.8.4
-      playwright-core: 1.41.2
+      playwright-core: 1.42.1
     dev: true
 
   /@babel/code-frame@7.23.5:
@@ -5031,8 +5031,8 @@ packages:
       json-buffer: 3.0.1
     dev: true
 
-  /ky@1.2.1:
-    resolution: {integrity: sha512-7L6uTdeFQdmCmHCQ3I/K/bbU1OphhHkHgJcD8AJFiG70FOppdrnAnbZDcL1pxtW5mgieX/nQISEoDKxnJ5Ib2w==}
+  /ky@1.2.2:
+    resolution: {integrity: sha512-gYA2QOI3uIaImJPJjaBbLCdvKHzwxsuB03s7PjrXmoO6tcn6k53rwYoSRgqrmVsEV6wFFegOXDVjABxFZ0aRSg==}
     engines: {node: '>=18'}
     dev: false
 
@@ -5803,19 +5803,13 @@ packages:
       pathe: 1.1.1
     dev: true
 
-  /playwright-core@1.41.2:
-    resolution: {integrity: sha512-VaTvwCA4Y8kxEe+kfm2+uUUw5Lubf38RxF7FpBxLPmGe5sdNkSg5e3ChEigaGrX7qdqT3pt2m/98LiyvU2x6CA==}
-    engines: {node: '>=16'}
-    hasBin: true
-    dev: true
-
   /playwright-core@1.42.1:
     resolution: {integrity: sha512-mxz6zclokgrke9p1vtdy/COWBH+eOZgYUVVU34C73M+4j4HLlQJHtfcqiqqxpP0o8HhMkflvfbquLX5dg6wlfA==}
     engines: {node: '>=16'}
     hasBin: true
     dev: true
 
-  /playwright-lighthouse@4.0.0(lighthouse@11.6.0)(playwright-core@1.41.2):
+  /playwright-lighthouse@4.0.0(lighthouse@11.6.0)(playwright-core@1.42.1):
     resolution: {integrity: sha512-8sLhKLYD9k08UjKMSPzYBCZZ6Ct+wZPUe+K58hZEHIdyyXHg+jniWgd+C2W57B+MDstHiYSbyBiN9S8mzUH82w==}
     engines: {node: '>=16.x'}
     peerDependencies:
@@ -5827,7 +5821,7 @@ packages:
     dependencies:
       chalk: 4.1.2
       lighthouse: 11.6.0
-      playwright-core: 1.41.2
+      playwright-core: 1.42.1
       ua-parser-js: 1.0.36
     dev: true
 
