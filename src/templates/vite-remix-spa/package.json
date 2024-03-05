@@ -33,7 +33,7 @@
     "http-server": "^14.1.1",
     "i18next": "^23.10.0",
     "i18next-browser-languagedetector": "^7.2.0",
-    "isbot": "^5.1.0",
+    "isbot": "^5.1.1",
     "ky": "^1.2.1",
     "lucide-react": "^0.344.0",
     "react": "^18.2.0",
