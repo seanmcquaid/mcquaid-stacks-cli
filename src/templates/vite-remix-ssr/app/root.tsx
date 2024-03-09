@@ -95,11 +95,8 @@ export function HydrateFallback() {
 }
 
 const Root = () => {
-  const { locale } = useLoaderData<typeof loader>();
   const navigation = useNavigation();
   const isLoadingPage = navigation.state === 'loading';
-
-  useChangeLanguage(locale);
 
   return (
     <QueryClientProvider client={queryClient}>
