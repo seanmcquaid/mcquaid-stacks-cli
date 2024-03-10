@@ -28,7 +28,7 @@
     "@tanstack/react-router": "^1.19.4",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
-    "i18next": "^23.10.0",
+    "i18next": "^23.10.1",
     "i18next-browser-languagedetector": "^7.2.0",
     "ky": "^1.2.2",
     "lucide-react": "^0.349.0",
