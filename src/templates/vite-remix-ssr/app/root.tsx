@@ -85,7 +85,6 @@ export function HydrateFallback() {
   return (
     <>
       <LoadingOverlay isLoading={isLoading} />
-      <Scripts />
       <noscript>
         Your browser does not support JavaScript or it is not enabled! Please
         re-enable JavaScript in order to use this site.
@@ -104,8 +103,6 @@ const Root = () => {
       <Outlet />
       <ReactQueryDevtools initialIsOpen={false} buttonPosition="top-right" />
       <Toaster />
-      <Scripts />
-      <ScrollRestoration />
     </QueryClientProvider>
   );
 };
