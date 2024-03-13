@@ -22,11 +22,11 @@ This is where all of your i18n related files will live. I have a locales directo
 
 ## /icons
 
-This is where all of your icons will live. I like to use svgs for my icons and I use [svgr](https://react-svgr.com/) to convert them to react components.
+This is where all of your icons will live. I like to use svgs for my icons and I use [svgr](https://react-svgr.com/) to convert them to React components.
 
 ## /routes
 
-This is where all of your routes will live. I have each nested directory named after the URL path that it represents. I also have a `Routes.ts` file that exports all of the routes so I can easily import them into my `main.tsx` file.
+This is where all of your routes will live. I am utilizing Remix Flat Routes to guide my directory structure and to allow for easy organization of related pages.
 
 ## /services
 
