@@ -1,5 +1,11 @@
 # @mcquaid-stacks/cli
 
+## 0.0.11
+
+### Patch Changes
+
+- 98a6583: Remove TanStack template
+
 ## 0.0.10
 
 ### Patch Changes
