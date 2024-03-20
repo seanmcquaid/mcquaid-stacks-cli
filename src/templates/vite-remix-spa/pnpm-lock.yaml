@@ -203,8 +203,8 @@ devDependencies:
     specifier: ^3.2.5
     version: 3.2.5
   remix-development-tools:
-    specifier: ^4.0.8
-    version: 4.0.8(@remix-run/node@2.8.1)(@remix-run/react@2.8.1)(@types/react-dom@18.2.22)(@types/react@18.2.67)(react-dom@18.2.0)(react@18.2.0)(vite@5.1.6)
+    specifier: ^4.0.9
+    version: 4.0.9(@remix-run/node@2.8.1)(@remix-run/react@2.8.1)(@types/react-dom@18.2.22)(@types/react@18.2.67)(react-dom@18.2.0)(react@18.2.0)(vite@5.1.6)
   remix-flat-routes:
     specifier: ^0.6.4
     version: 0.6.4(@remix-run/dev@2.8.1)
@@ -9115,8 +9115,8 @@ packages:
       unified: 10.1.2
     dev: true
 
-  /remix-development-tools@4.0.8(@remix-run/node@2.8.1)(@remix-run/react@2.8.1)(@types/react-dom@18.2.22)(@types/react@18.2.67)(react-dom@18.2.0)(react@18.2.0)(vite@5.1.6):
-    resolution: {integrity: sha512-vdQNAd74njEIhWuXlNPIzZoIxF5elsRtioaxapXwlZF/s7rtkN/JXAyvjA4UNtFlo5WnWGjtdVJgv7Qnsy9r5Q==}
+  /remix-development-tools@4.0.9(@remix-run/node@2.8.1)(@remix-run/react@2.8.1)(@types/react-dom@18.2.22)(@types/react@18.2.67)(react-dom@18.2.0)(react@18.2.0)(vite@5.1.6):
+    resolution: {integrity: sha512-Vo63pnyyOyhAEFQ4YwoYvRc3AsfYI7jedm/NjrkltMslxf59gVFlROs0XEQ5A12OdyU2qW0k8N4KBnFpYw+hQQ==}
     peerDependencies:
       '@remix-run/react': '>=1.15'
       react: '>=17'
