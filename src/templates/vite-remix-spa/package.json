@@ -45,7 +45,7 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
-    "@anatine/zod-mock": "^3.13.3",
+    "@anatine/zod-mock": "^3.13.4",
     "@axe-core/playwright": "^4.8.5",
     "@faker-js/faker": "^8.4.1",
     "@playwright/test": "^1.42.1",
