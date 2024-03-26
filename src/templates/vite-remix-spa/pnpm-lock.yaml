@@ -158,8 +158,8 @@ devDependencies:
     specifier: ^1.5.3
     version: 1.5.3
   eslint-plugin-playwright:
-    specifier: ^1.5.2
-    version: 1.5.2(eslint@8.57.0)
+    specifier: ^1.5.4
+    version: 1.5.4(eslint@8.57.0)
   eslint-plugin-prettier:
     specifier: ^5.1.3
     version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.57.0)(prettier@3.2.5)
@@ -5335,8 +5335,8 @@ packages:
     resolution: {integrity: sha512-z7c7Km1U0zdLyPziWeRKSsN2mPaGaBHDjfXn98B8XjRIhFi2bPqduRYcxWih1kI5al5tQtiChXVmspLkB0wNsQ==}
     dev: true
 
-  /eslint-plugin-playwright@1.5.2(eslint@8.57.0):
-    resolution: {integrity: sha512-TMzLrLGQMccngU8GogtzIc9u5RzXGnfsQEUjLfEfshINuVR2fS4SHfDtU7xYP90Vwm5vflHECf610KTdGvO53w==}
+  /eslint-plugin-playwright@1.5.4(eslint@8.57.0):
+    resolution: {integrity: sha512-J38Wy3Vc2f9y73J+KRmgXgbYI8TZ3zbz6qBbTj3PhpFndUS572jZ7kqQ3rJ9si5BaMHT7lmZzraO+3UjwIDV4Q==}
     engines: {node: '>=16.6.0'}
     peerDependencies:
       eslint: '>=8.40.0'
