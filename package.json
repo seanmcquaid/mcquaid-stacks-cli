@@ -9,6 +9,9 @@
   "bin": {
     "create-mcquaid-stack": "./dist/index.js"
   },
+  "files": [
+    "dist/*"
+  ],
   "scripts": {
     "build": "shx rm -rf dist && tsup && shx cp -r ./src/templates/. dist",
     "changeset": "changeset",
