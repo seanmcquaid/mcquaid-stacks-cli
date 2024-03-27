@@ -1,5 +1,11 @@
 # @mcquaid-stacks/cli
 
+## 0.0.12
+
+### Patch Changes
+
+- 4bc71ec: fix gitignore issue
+
 ## 0.0.11
 
 ### Patch Changes
