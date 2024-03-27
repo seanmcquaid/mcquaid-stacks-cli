@@ -1,5 +1,11 @@
 # @mcquaid-stacks/cli
 
+## 0.0.13
+
+### Patch Changes
+
+- 5163d6c: fix gitignore attempt 2
+
 ## 0.0.12
 
 ### Patch Changes
