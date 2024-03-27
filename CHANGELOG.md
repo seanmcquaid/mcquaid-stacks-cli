@@ -1,5 +1,11 @@
 # @mcquaid-stacks/cli
 
+## 0.0.16
+
+### Patch Changes
+
+- 81d6b8c: another attempt
+
 ## 0.0.15
 
 ### Patch Changes
