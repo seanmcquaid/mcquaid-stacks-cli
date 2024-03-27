@@ -1,5 +1,11 @@
 # @mcquaid-stacks/cli
 
+## 0.0.14
+
+### Patch Changes
+
+- 9f5bce5: attempt 3 at adding ignore
+
 ## 0.0.13
 
 ### Patch Changes
