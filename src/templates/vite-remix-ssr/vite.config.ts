@@ -42,6 +42,18 @@ export default defineConfig({
   server: {
     port: 3000,
     open: true,
+    // https://github.com/remix-run/remix/discussions/8917#discussioncomment-8640023
+    warmup: {
+      clientFiles: [
+        './app/entry.client.tsx',
+        './app/root.tsx',
+        './app/routes/**/*',
+      ],
+    },
+  },
+  // https://github.com/remix-run/remix/discussions/8917#discussioncomment-8640023
+  optimizeDeps: {
+    include: ['./app/entry.client.tsx', './app/root.tsx', './app/routes/**/*'],
   },
   build: {
     rollupOptions: {
