@@ -1,5 +1,11 @@
 # @mcquaid-stacks/cli
 
+## 0.0.17
+
+### Patch Changes
+
+- bc901f2: template fix
+
 ## 0.0.16
 
 ### Patch Changes
