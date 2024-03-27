@@ -1,5 +1,11 @@
 # @mcquaid-stacks/cli
 
+## 0.0.15
+
+### Patch Changes
+
+- 3c95aae: final attempt at the cli level
+
 ## 0.0.14
 
 ### Patch Changes
