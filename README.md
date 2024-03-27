@@ -4,7 +4,7 @@ Throughout my years of working in web development, I have found myself using the
 
 These templates are meant to be a starting point for new projects and are not meant to be a one-size-fits-all solution. I have created these templates to fit my needs and preferences, but I am always open to suggestions and improvements. If you have any suggestions or improvements, please feel free to open an issue on the repo!
 
-## Scaffolding a new project 
+## Scaffolding a new project
 
 ```bash
     npm i -g @mcquaid-stacks/cli
