@@ -80,6 +80,9 @@ dependencies:
   react-i18next:
     specifier: ^14.1.0
     version: 14.1.0(i18next@23.10.1)(react-dom@18.2.0)(react@18.2.0)
+  remix-hook-form:
+    specifier: ^4.2.0
+    version: 4.2.0(@remix-run/react@2.8.1)(react-dom@18.2.0)(react-hook-form@7.51.1)(react@18.2.0)
   remix-i18next:
     specifier: ^6.0.1
     version: 6.0.1(@remix-run/node@2.8.1)(@remix-run/react@2.8.1)(i18next@23.10.1)(react-i18next@14.1.0)(react@18.2.0)
@@ -9204,6 +9207,20 @@ packages:
       fs-extra: 11.1.1
       minimatch: 5.1.6
     dev: true
+
+  /remix-hook-form@4.2.0(@remix-run/react@2.8.1)(react-dom@18.2.0)(react-hook-form@7.51.1)(react@18.2.0):
+    resolution: {integrity: sha512-fUxA8tDZPexRuqyfGDSlSwB6um1Tr1Juo6X+sRKhJpVABV83+NUb5bmZwrrbRdYF7Wu9knlUYcpFJjPiaHbmGw==}
+    peerDependencies:
+      '@remix-run/react': ^2.0.0
+      react: ^18.2.0
+      react-dom: ^18.2.0
+      react-hook-form: ^7.51.0
+    dependencies:
+      '@remix-run/react': 2.8.1(react-dom@18.2.0)(react@18.2.0)(typescript@5.4.3)
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      react-hook-form: 7.51.1(react@18.2.0)
+    dev: false
 
   /remix-i18next@6.0.1(@remix-run/node@2.8.1)(@remix-run/react@2.8.1)(i18next@23.10.1)(react-i18next@14.1.0)(react@18.2.0):
     resolution: {integrity: sha512-zO7sYe/Ui4s/ZGHMZoScFUNsuarykzQsQ9AB3KPswb7lLahwqIu+K09XFNZBUGBOPHOUl9txv0+2vOrIiGCSPA==}
