@@ -12,8 +12,8 @@ const HomePage = () => {
       <LinkButton to={t('Routes.reactQuery')} className="m-4">
         {t('HomePage.reactQuery')}
       </LinkButton>
-      <LinkButton to={t('Routes.reactHookFormZod')} className="m-4">
-        {t('HomePage.reactHookFormZod')}
+      <LinkButton to={t('Routes.remixHookFormZod')} className="m-4">
+        {t('HomePage.remixHookFormZod')}
       </LinkButton>
       <LinkButton to={t('Routes.remix')} className="m-4">
         {t('HomePage.remix')}
