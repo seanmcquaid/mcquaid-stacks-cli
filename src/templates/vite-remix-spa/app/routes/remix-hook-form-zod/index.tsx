@@ -1,10 +1,10 @@
 import { zodResolver } from '@hookform/resolvers/zod';
-import { useForm } from 'react-hook-form';
 import { z } from 'zod';
+import { useRemixForm } from 'remix-hook-form';
 import { Input } from '@/components/ui/Input';
 import PageWrapper from '@/components/app/PageWrapper';
 
-const formSchema = z
+const formDataSchema = z
   .object({
     username: z.string().email({
       message: 'Please enter a valid email',
@@ -21,18 +21,17 @@ const formSchema = z
     path: ['confirmPassword'],
   });
 
-const ReactHookFormZod = () => {
+type FormData = z.infer<typeof formDataSchema>;
+
+const resolver = zodResolver(formDataSchema);
+
+const RemixHookFormZod = () => {
   const {
     register,
     formState: { errors },
-  } = useForm({
-    defaultValues: {
-      username: '',
-      password: '',
-      confirmPassword: '',
-    },
-    resolver: zodResolver(formSchema),
+  } = useRemixForm<FormData>({
     mode: 'onBlur',
+    resolver,
   });
   return (
     <PageWrapper>
@@ -65,4 +64,4 @@ const ReactHookFormZod = () => {
   );
 };
 
-export default ReactHookFormZod;
+export default RemixHookFormZod;

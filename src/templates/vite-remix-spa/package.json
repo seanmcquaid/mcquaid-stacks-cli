@@ -40,6 +40,7 @@
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.51.1",
     "react-i18next": "^14.1.0",
+    "remix-hook-form": "^4.2.0",
     "tailwind-merge": "^2.2.2",
     "tailwindcss-animate": "^1.0.7",
     "zod": "^3.22.4"
@@ -50,6 +51,7 @@
     "@faker-js/faker": "^8.4.1",
     "@playwright/test": "^1.42.1",
     "@remix-run/dev": "^2.8.1",
+    "@remix-run/testing": "^2.8.1",
     "@size-limit/file": "^11.1.2",
     "@testing-library/jest-dom": "^6.4.2",
     "@testing-library/react": "^14.2.2",

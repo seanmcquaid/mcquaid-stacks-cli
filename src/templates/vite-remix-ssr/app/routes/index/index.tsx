@@ -13,7 +13,7 @@ const HomePage = () => {
         {t('HomePage.reactQuery')}
       </LinkButton>
       <LinkButton to={t('Routes.remixHookFormZod')} className="m-4">
-        {t('HomePage.reactHookFormZod')}
+        {t('HomePage.remixHookFormZod')}
       </LinkButton>
       <LinkButton to={t('Routes.remix')} className="m-4">
         {t('HomePage.remix')}
