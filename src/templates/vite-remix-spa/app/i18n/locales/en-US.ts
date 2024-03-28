@@ -41,8 +41,8 @@ const enUSLocale = {
     home: '/',
     kitchenSink: '/kitchen-sink',
     reactQuery: '/react-query',
-    remixHookFormZod: '/remix-hook-form-zod',
     remix: '/remix',
+    remixHookFormZod: '/remix-hook-form-zod',
   },
 } as const;
 
