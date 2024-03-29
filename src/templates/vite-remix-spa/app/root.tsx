@@ -42,6 +42,10 @@ export function Layout({ children }: PropsWithChildren) {
         {children}
         <Scripts />
         <ScrollRestoration />
+        <noscript>
+          Your browser does not support JavaScript or it is not enabled! Please
+          re-enable JavaScript in order to use this site.
+        </noscript>
       </body>
     </html>
   );
@@ -65,15 +69,7 @@ export function HydrateFallback() {
     setIsLoading(true);
   }, []);
 
-  return (
-    <>
-      <LoadingOverlay isLoading={isLoading} />
-      <noscript>
-        Your browser does not support JavaScript or it is not enabled! Please
-        re-enable JavaScript in order to use this site.
-      </noscript>
-    </>
-  );
+  return <LoadingOverlay isLoading={isLoading} />;
 }
 
 const Root = () => {
