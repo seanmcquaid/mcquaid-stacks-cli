@@ -14,7 +14,7 @@ import {
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { QueryClientProvider } from '@tanstack/react-query';
 import type { PropsWithChildren } from 'react';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import type { LoaderFunctionArgs } from '@remix-run/node';
 import { useChangeLanguage } from 'remix-i18next/react';
 import { Toaster } from './components/ui/Toaster';
@@ -76,21 +76,7 @@ export function ErrorBoundary() {
 }
 
 export function HydrateFallback() {
-  const [isLoading, setIsLoading] = useState(false);
-
-  useEffect(() => {
-    setIsLoading(true);
-  }, []);
-
-  return (
-    <>
-      <LoadingOverlay isLoading={isLoading} />
-      <noscript>
-        Your browser does not support JavaScript or it is not enabled! Please
-        re-enable JavaScript in order to use this site.
-      </noscript>
-    </>
-  );
+  return <LoadingOverlay isLoading />;
 }
 
 const Root = () => {
