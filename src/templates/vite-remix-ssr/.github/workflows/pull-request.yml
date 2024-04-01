@@ -53,4 +53,3 @@ jobs:
         run: pnpm playwright install --with-deps
       - name: Run Playwright tests
         run: pnpm playwright:run-integration
-      # I would recommend reporting the results somewhere accessible for your team after the tests are run
