@@ -12,7 +12,8 @@
     "test:watch": "vitest",
     "playwright:codegen": "playwright codegen",
     "playwright:debug": "playwright test --debug",
-    "playwright:run": "playwright test",
+    "playwright:run-integration": "playwright test playwright/integration",
+    "playwright:run-e2e": "playwright test playwright/e2e",
     "playwright:ui": "playwright test --ui",
     "size-limit": "size-limit",
     "start": "http-server -p 3000 build/client/"
