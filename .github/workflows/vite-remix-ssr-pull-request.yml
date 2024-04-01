@@ -35,7 +35,7 @@ jobs:
         run: pnpm lint
   playwright-integration-tests:
     runs-on: ubuntu-latest
-    name: Playwright Tests - Vite + Remix SPA
+    name: Playwright Integration Tests - Vite + Remix SSR
     steps:
       - name: Checkout latest
         uses: actions/checkout@v3
@@ -61,7 +61,7 @@ jobs:
         run: pnpm playwright:run-integration
   playwright-e2e-tests:
     runs-on: ubuntu-latest
-    name: Playwright Tests - Vite + Remix SPA
+    name: Playwright E2E Tests - Vite + Remix SSR
     steps:
       - name: Checkout latest
         uses: actions/checkout@v3
