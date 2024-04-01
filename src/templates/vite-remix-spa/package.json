@@ -5,7 +5,7 @@
   "scripts": {
     "build": "tsc && remix vite:build",
     "dev": "remix vite:dev",
-    "lint": "eslint e2e app --max-warnings=0",
+    "lint": "eslint playwright app --max-warnings=0",
     "prepare": "is-ci || husky",
     "test": "vitest run",
     "test:coverage": "vitest run --coverage",
