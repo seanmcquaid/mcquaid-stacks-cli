@@ -40,7 +40,20 @@ jobs:
         run: pnpm build
       - name: Bundlesize Check
         run: pnpm size-limit
-  playwright-tests:
+  playwright-integration-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout latest
+        uses: actions/checkout@v3
+      - uses: ./.github/actions/setup-pull-request-job
+      - name: Setup MSW
+        run: |
+          echo "VITE_APP_MSW_ENABLED=true" >> .env
+      - name: Install Playwright Browsers
+        run: pnpm playwright install --with-deps
+      - name: Run Playwright tests
+        run: pnpm playwright:run-integration
+  playwright-e2e-tests:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout latest
@@ -49,4 +62,4 @@ jobs:
       - name: Install Playwright Browsers
         run: pnpm playwright install --with-deps
       - name: Run Playwright tests
-        run: pnpm playwright:run
+        run: pnpm playwright:run-e2e
