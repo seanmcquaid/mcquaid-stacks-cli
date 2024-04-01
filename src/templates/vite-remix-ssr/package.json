@@ -5,14 +5,15 @@
   "scripts": {
     "build": "tsc && remix vite:build",
     "dev": "remix vite:dev",
-    "lint": "eslint e2e app --max-warnings=0",
+    "lint": "eslint playwright app --max-warnings=0",
     "prepare": "is-ci || husky install",
     "test": "vitest run",
     "test:coverage": "vitest run --coverage",
     "test:watch": "vitest",
     "playwright:codegen": "playwright codegen",
     "playwright:debug": "playwright test --debug",
-    "playwright:run": "playwright test",
+    "playwright:run-integration": "playwright test playwright/integration",
+    "playwright:run-e2e": "playwright test playwright/e2e",
     "playwright:ui": "playwright test --ui",
     "size-limit": "size-limit",
     "start": "remix-serve ./build/server/index.js"
