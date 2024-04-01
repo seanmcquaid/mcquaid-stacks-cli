@@ -46,6 +46,9 @@ jobs:
       - name: Checkout latest
         uses: actions/checkout@v3
       - uses: ./.github/actions/setup-pull-request-job
+      - name: Set env to dev
+        run: |
+          echo "VITE_APP_MSW_ENABLED=true" >> .env
       - name: Install Playwright Browsers
         run: pnpm playwright install --with-deps
       - name: Run Playwright tests
