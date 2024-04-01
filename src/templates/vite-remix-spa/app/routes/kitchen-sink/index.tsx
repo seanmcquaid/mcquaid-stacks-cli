@@ -49,7 +49,7 @@ export const clientAction = async ({ request }: ClientActionFunctionArgs) => {
     title: `Hello ${name}!`,
   });
 
-  return json(data);
+  return data;
 };
 
 const KitchenSinkPage = () => {
