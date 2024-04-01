@@ -33,9 +33,9 @@ jobs:
         run: pnpm install --frozen-lockfile
       - name: Lint
         run: pnpm lint
-  playwright-tests:
+  playwright-integration-tests:
     runs-on: ubuntu-latest
-    name: Playwright Tests - Vite + Remix SSR
+    name: Playwright Tests - Vite + Remix SPA
     steps:
       - name: Checkout latest
         uses: actions/checkout@v3
@@ -58,7 +58,32 @@ jobs:
       - name: Install Playwright Browsers
         run: pnpm playwright install --with-deps
       - name: Run Playwright tests
-        run: pnpm playwright:run
+        run: pnpm playwright:run-integration
+  playwright-e2e-tests:
+    runs-on: ubuntu-latest
+    name: Playwright Tests - Vite + Remix SPA
+    steps:
+      - name: Checkout latest
+        uses: actions/checkout@v3
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8.6.2
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: ".nvmrc"
+          cache: "pnpm"
+      - name: Set env to dev
+        run: |
+          touch .env
+          echo "VITE_APP_ENVIRONMENT=dev" >> .env
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Install Playwright Browsers
+        run: pnpm playwright install --with-deps
+      - name: Run Playwright tests
+        run: pnpm playwright:run-e2e
   unit-tests-coverage:
     runs-on: ubuntu-latest
     name: Unit Tests - Vite + Remix SSR
