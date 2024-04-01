@@ -3,7 +3,6 @@ import { getValidatedFormData, useRemixForm } from 'remix-hook-form';
 import type { ClientActionFunctionArgs } from '@remix-run/react';
 import { Form, useLoaderData } from '@remix-run/react';
 import { z } from 'zod';
-import { json } from '@remix-run/node';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
 import queryClient from '@/services/queryClient';
@@ -43,7 +42,7 @@ export const clientAction = async ({ request }: ClientActionFunctionArgs) => {
   } = await getValidatedFormData<FormData>(request, resolver);
   if (errors) {
     // The keys "errors" and "defaultValue" are picked up automatically by useRemixForm
-    return json({ errors, defaultValues });
+    return { errors, defaultValues };
   }
 
   toast({
