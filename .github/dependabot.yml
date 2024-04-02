@@ -1,13 +1,13 @@
 version: 2
 
 updates:
-  - package-ecosystem: github-actions
+  - package-ecosystem: npm
     directory: "/"
     schedule:
       interval: weekly
       day: tuesday
     open-pull-requests-limit: 20
-  - package-ecosystem: npm
+  - package-ecosystem: github-actions
     directory: "/"
     schedule:
       interval: weekly
@@ -19,6 +19,11 @@ updates:
       interval: weekly
       day: tuesday
     open-pull-requests-limit: 20
+  - package-ecosystem: github-actions
+    directory: "/src/templates/typescript-library"
+    schedule:
+      interval: weekly
+      day: tuesday
     open-pull-requests-limit: 20
   - package-ecosystem: npm
     directory: "/src/templates/vite-remix-spa"
@@ -26,7 +31,19 @@ updates:
       interval: weekly
       day: tuesday
     open-pull-requests-limit: 20
+  - package-ecosystem: github-actions
+    directory: "/src/templates/vite-remix-spa"
+    schedule:
+      interval: weekly
+      day: tuesday
+    open-pull-requests-limit: 20
   - package-ecosystem: npm
+    directory: "/src/templates/vite-remix-ssr"
+    schedule:
+      interval: weekly
+      day: tuesday
+    open-pull-requests-limit: 20
+  - package-ecosystem: github-actions
     directory: "/src/templates/vite-remix-ssr"
     schedule:
       interval: weekly
