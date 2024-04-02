@@ -20,7 +20,7 @@ updates:
       day: tuesday
     open-pull-requests-limit: 20
   - package-ecosystem: github-actions
-    directory: "/src/templates/typescript-library/.github"
+    directory: "/src/templates/typescript-library/.github/workflows"
     schedule:
       interval: weekly
       day: tuesday
@@ -32,7 +32,13 @@ updates:
       day: tuesday
     open-pull-requests-limit: 20
   - package-ecosystem: github-actions
-    directory: "/src/templates/vite-remix-spa/.github"
+    directory: "/src/templates/vite-remix-spa/.github/workflows"
+    schedule:
+      interval: weekly
+      day: tuesday
+    open-pull-requests-limit: 20
+  - package-ecosystem: github-actions
+    directory: "/src/templates/vite-remix-spa/.github/actions"
     schedule:
       interval: weekly
       day: tuesday
@@ -44,7 +50,13 @@ updates:
       day: tuesday
     open-pull-requests-limit: 20
   - package-ecosystem: github-actions
-    directory: "/src/templates/vite-remix-ssr/.github"
+    directory: "/src/templates/vite-remix-ssr/.github/workflows"
+    schedule:
+      interval: weekly
+      day: tuesday
+    open-pull-requests-limit: 20
+  - package-ecosystem: github-actions
+    directory: "/src/templates/vite-remix-ssr/.github/actions"
     schedule:
       interval: weekly
       day: tuesday
