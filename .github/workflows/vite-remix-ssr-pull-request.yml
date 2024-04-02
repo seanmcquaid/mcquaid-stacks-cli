@@ -17,7 +17,7 @@ jobs:
       - name: Checkout latest
         uses: actions/checkout@v3
       - name: Setup PNPM
-        uses: pnpm/action-setup@v2
+        uses: pnpm/action-setup@v3
         with:
           version: 8.6.2
       - name: Setup Node
@@ -40,7 +40,7 @@ jobs:
       - name: Checkout latest
         uses: actions/checkout@v3
       - name: Setup PNPM
-        uses: pnpm/action-setup@v2
+        uses: pnpm/action-setup@v3
         with:
           version: 8.6.2
       - name: Setup Node
@@ -66,7 +66,7 @@ jobs:
       - name: Checkout latest
         uses: actions/checkout@v3
       - name: Setup PNPM
-        uses: pnpm/action-setup@v2
+        uses: pnpm/action-setup@v3
         with:
           version: 8.6.2
       - name: Setup Node
@@ -91,7 +91,7 @@ jobs:
       - name: Checkout latest
         uses: actions/checkout@v3
       - name: Setup PNPM
-        uses: pnpm/action-setup@v2
+        uses: pnpm/action-setup@v3
         with:
           version: 8.6.2
       - name: Setup Node
@@ -110,7 +110,7 @@ jobs:
       - name: Checkout latest
         uses: actions/checkout@v3
       - name: Setup PNPM
-        uses: pnpm/action-setup@v2
+        uses: pnpm/action-setup@v3
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
