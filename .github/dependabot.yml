@@ -38,7 +38,7 @@ updates:
       day: tuesday
     open-pull-requests-limit: 20
   - package-ecosystem: github-actions
-    directory: "/src/templates/vite-remix-spa/.github/actions"
+    directory: "/src/templates/vite-remix-spa/.github/actions/setup-pull-request-job"
     schedule:
       interval: weekly
       day: tuesday
@@ -56,7 +56,7 @@ updates:
       day: tuesday
     open-pull-requests-limit: 20
   - package-ecosystem: github-actions
-    directory: "/src/templates/vite-remix-ssr/.github/actions"
+    directory: "/src/templates/vite-remix-ssr/.github/actions/setup-pull-request-job"
     schedule:
       interval: weekly
       day: tuesday
