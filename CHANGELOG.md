@@ -1,5 +1,11 @@
 # @mcquaid-stacks/cli
 
+## 0.0.18
+
+### Patch Changes
+
+- 551eb26: testing docs + updated playwright tests
+
 ## 0.0.17
 
 ### Patch Changes
