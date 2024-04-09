@@ -188,8 +188,8 @@ devDependencies:
     specifier: ^24.0.0
     version: 24.0.0
   lighthouse:
-    specifier: ^11.7.0
-    version: 11.7.0
+    specifier: ^11.7.1
+    version: 11.7.1
   lint-staged:
     specifier: ^15.2.2
     version: 15.2.2
@@ -198,7 +198,7 @@ devDependencies:
     version: 2.2.13(typescript@5.4.4)
   playwright-lighthouse:
     specifier: ^4.0.0
-    version: 4.0.0(lighthouse@11.7.0)(playwright-core@1.43.0)
+    version: 4.0.0(lighthouse@11.7.1)(playwright-core@1.43.0)
   playwright-msw:
     specifier: ^3.0.1
     version: 3.0.1(@playwright/test@1.43.0)(msw@2.2.13)
@@ -1455,8 +1455,8 @@ packages:
     resolution: {integrity: sha512-U69T3ItWHvLwGg5eJ0n3I62nWuE6ilHlmz7zM0npLBRvPRd7e6NYmg54vvRtP5mZG7kZqZCFVdsTWo7BPtBujg==}
     dev: true
 
-  /@paulirish/trace_engine@0.0.12:
-    resolution: {integrity: sha512-PglukOOYGvjqgMVKNSa3a4grWrWzL97L47bgDCzqAnDSTJ+vDOKxMPXR3rsnLECoZzpbb9LCzS3CEg/NwwhRHQ==}
+  /@paulirish/trace_engine@0.0.19:
+    resolution: {integrity: sha512-3tjEzXBBtU83DkCJAdU2UwBBunspiwTCn+Y5jOxm592cfEuLr/T7Lcn+QhRerVqkSik2mnjN4X6NgHZjI9Biwg==}
     dev: true
 
   /@pkgjs/parseargs@0.11.0:
@@ -6788,12 +6788,12 @@ packages:
     resolution: {integrity: sha512-i4jTmg7tvZQFwNFiwB+nCK6a7ICR68Xcwo+VIVd6Spi71vBNFUlds5HiDrSbClZdkQDON2Bhqv+KKJIo5zkPeA==}
     dev: true
 
-  /lighthouse@11.7.0:
-    resolution: {integrity: sha512-oQ9fJyNGibt00Q+046ROZXNcMUwFSEcgsJljww3xLtMkWpq5dnmw7zw39CJFGhXcpAA8D6ayiFuWo7uDXjld/g==}
+  /lighthouse@11.7.1:
+    resolution: {integrity: sha512-QuvkZvobZ8Gjv2Jkxl6TKhV5JYBzU+lzpqTY+Y1iH5IUc1SMYK4IOpBnSpp6PkM2FbNyur9uoNutPhsuLLqGTg==}
     engines: {node: '>=18.16'}
     hasBin: true
     dependencies:
-      '@paulirish/trace_engine': 0.0.12
+      '@paulirish/trace_engine': 0.0.19
       '@sentry/node': 6.19.7
       axe-core: 4.9.0
       chrome-launcher: 1.1.1
@@ -8201,7 +8201,7 @@ packages:
     hasBin: true
     dev: true
 
-  /playwright-lighthouse@4.0.0(lighthouse@11.7.0)(playwright-core@1.43.0):
+  /playwright-lighthouse@4.0.0(lighthouse@11.7.1)(playwright-core@1.43.0):
     resolution: {integrity: sha512-8sLhKLYD9k08UjKMSPzYBCZZ6Ct+wZPUe+K58hZEHIdyyXHg+jniWgd+C2W57B+MDstHiYSbyBiN9S8mzUH82w==}
     engines: {node: '>=16.x'}
     peerDependencies:
@@ -8212,7 +8212,7 @@ packages:
         optional: true
     dependencies:
       chalk: 4.1.2
-      lighthouse: 11.7.0
+      lighthouse: 11.7.1
       playwright-core: 1.43.0
       ua-parser-js: 1.0.37
     dev: true
