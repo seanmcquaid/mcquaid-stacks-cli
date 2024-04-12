@@ -42,7 +42,7 @@
     "tsup": "^8.0.2",
     "typescript": "^5.4.4",
     "vite": "^5.2.8",
-    "vitest": "^1.4.0"
+    "vitest": "^1.5.0"
   },
   "engines": {
     "node": ">=21.1.0"
