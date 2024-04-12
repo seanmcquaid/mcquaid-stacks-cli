@@ -7,7 +7,7 @@ settings:
 dependencies:
   '@hookform/resolvers':
     specifier: ^3.3.4
-    version: 3.3.4(react-hook-form@7.51.2)
+    version: 3.3.4(react-hook-form@7.51.3)
   '@radix-ui/react-accordion':
     specifier: ^1.1.2
     version: 1.1.2(@types/react-dom@18.2.25)(@types/react@18.2.77)(react-dom@18.2.0)(react@18.2.0)
@@ -75,14 +75,14 @@ dependencies:
     specifier: ^18.2.0
     version: 18.2.0(react@18.2.0)
   react-hook-form:
-    specifier: ^7.51.2
-    version: 7.51.2(react@18.2.0)
+    specifier: ^7.51.3
+    version: 7.51.3(react@18.2.0)
   react-i18next:
     specifier: ^14.1.0
     version: 14.1.0(i18next@23.11.1)(react-dom@18.2.0)(react@18.2.0)
   remix-hook-form:
     specifier: ^4.3.1
-    version: 4.3.1(@remix-run/react@2.8.1)(react-dom@18.2.0)(react-hook-form@7.51.2)(react@18.2.0)
+    version: 4.3.1(@remix-run/react@2.8.1)(react-dom@18.2.0)(react-hook-form@7.51.3)(react@18.2.0)
   remix-i18next:
     specifier: ^6.1.0
     version: 6.1.0(@remix-run/node@2.8.1)(@remix-run/react@2.8.1)(i18next@23.11.1)(react-i18next@14.1.0)(react@18.2.0)
@@ -102,7 +102,7 @@ devDependencies:
     version: 3.13.4(@faker-js/faker@8.4.1)(zod@3.22.4)
   '@axe-core/playwright':
     specifier: ^4.9.0
-    version: 4.9.0(playwright-core@1.43.0)
+    version: 4.9.0(playwright-core@1.43.1)
   '@faker-js/faker':
     specifier: ^8.4.1
     version: 8.4.1
@@ -210,7 +210,7 @@ devDependencies:
     version: 2.2.13(typescript@5.4.4)
   playwright-lighthouse:
     specifier: ^4.0.0
-    version: 4.0.0(lighthouse@11.7.1)(playwright-core@1.43.0)
+    version: 4.0.0(lighthouse@11.7.1)(playwright-core@1.43.1)
   playwright-msw:
     specifier: ^3.0.1
     version: 3.0.1(@playwright/test@1.43.1)(msw@2.2.13)
@@ -282,13 +282,13 @@ packages:
       zod: 3.22.4
     dev: true
 
-  /@axe-core/playwright@4.9.0(playwright-core@1.43.0):
+  /@axe-core/playwright@4.9.0(playwright-core@1.43.1):
     resolution: {integrity: sha512-Q1Lz75dNsX38jof+aev7RficDMdH/HLOLySkDdXR0fUoeFcLdw4UNgDO2CNNP4CTpoesEdfYRdd6VmDXjhBgbA==}
     peerDependencies:
       playwright-core: '>= 1.0.0'
     dependencies:
       axe-core: 4.9.0
-      playwright-core: 1.43.0
+      playwright-core: 1.43.1
     dev: true
 
   /@babel/code-frame@7.24.2:
@@ -1232,12 +1232,12 @@ packages:
       tslib: 2.6.2
     dev: true
 
-  /@hookform/resolvers@3.3.4(react-hook-form@7.51.2):
+  /@hookform/resolvers@3.3.4(react-hook-form@7.51.3):
     resolution: {integrity: sha512-o5cgpGOuJYrd+iMKvkttOclgwRW86EsWJZZRC23prf0uU2i48Htq4PuT73AVb9ionFyZrwYEITuOFGF+BydEtQ==}
     peerDependencies:
       react-hook-form: ^7.0.0
     dependencies:
-      react-hook-form: 7.51.2(react@18.2.0)
+      react-hook-form: 7.51.3(react@18.2.0)
     dev: false
 
   /@humanwhocodes/config-array@0.11.14:
@@ -8182,19 +8182,13 @@ packages:
       pathe: 1.1.2
     dev: true
 
-  /playwright-core@1.43.0:
-    resolution: {integrity: sha512-iWFjyBUH97+pUFiyTqSLd8cDMMOS0r2ZYz2qEsPjH8/bX++sbIJT35MSwKnp1r/OQBAqC5XO99xFbJ9XClhf4w==}
-    engines: {node: '>=16'}
-    hasBin: true
-    dev: true
-
   /playwright-core@1.43.1:
     resolution: {integrity: sha512-EI36Mto2Vrx6VF7rm708qSnesVQKbxEWvPrfA1IPY6HgczBplDx7ENtx+K2n4kJ41sLLkuGfmb0ZLSSXlDhqPg==}
     engines: {node: '>=16'}
     hasBin: true
     dev: true
 
-  /playwright-lighthouse@4.0.0(lighthouse@11.7.1)(playwright-core@1.43.0):
+  /playwright-lighthouse@4.0.0(lighthouse@11.7.1)(playwright-core@1.43.1):
     resolution: {integrity: sha512-8sLhKLYD9k08UjKMSPzYBCZZ6Ct+wZPUe+K58hZEHIdyyXHg+jniWgd+C2W57B+MDstHiYSbyBiN9S8mzUH82w==}
     engines: {node: '>=16.x'}
     peerDependencies:
@@ -8206,7 +8200,7 @@ packages:
     dependencies:
       chalk: 4.1.2
       lighthouse: 11.7.1
-      playwright-core: 1.43.0
+      playwright-core: 1.43.1
       ua-parser-js: 1.0.37
     dev: true
 
@@ -8622,8 +8616,8 @@ packages:
       react: 18.2.0
       scheduler: 0.23.0
 
-  /react-hook-form@7.51.2(react@18.2.0):
-    resolution: {integrity: sha512-y++lwaWjtzDt/XNnyGDQy6goHskFualmDlf+jzEZvjvz6KWDf7EboL7pUvRCzPTJd0EOPpdekYaQLEvvG6m6HA==}
+  /react-hook-form@7.51.3(react@18.2.0):
+    resolution: {integrity: sha512-cvJ/wbHdhYx8aviSWh28w9ImjmVsb5Y05n1+FW786vEZQJV5STNM0pW6ujS+oiBecb0ARBxJFyAnXj9+GHXACQ==}
     engines: {node: '>=12.22.0'}
     peerDependencies:
       react: ^16.8.0 || ^17 || ^18
@@ -8902,7 +8896,7 @@ packages:
       minimatch: 5.1.6
     dev: true
 
-  /remix-hook-form@4.3.1(@remix-run/react@2.8.1)(react-dom@18.2.0)(react-hook-form@7.51.2)(react@18.2.0):
+  /remix-hook-form@4.3.1(@remix-run/react@2.8.1)(react-dom@18.2.0)(react-hook-form@7.51.3)(react@18.2.0):
     resolution: {integrity: sha512-6MO2amNTDe0t6j2msmkwCcHpMmDBXK8IbwHQcHWfgm82wCrIcWkM0DCtnC/ISfyyPv7EBhKYK5gSUUM9WalHcw==}
     peerDependencies:
       '@remix-run/react': ^2.0.0
@@ -8913,7 +8907,7 @@ packages:
       '@remix-run/react': 2.8.1(react-dom@18.2.0)(react@18.2.0)(typescript@5.4.4)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
-      react-hook-form: 7.51.2(react@18.2.0)
+      react-hook-form: 7.51.3(react@18.2.0)
     dev: false
 
   /remix-i18next@6.1.0(@remix-run/node@2.8.1)(@remix-run/react@2.8.1)(i18next@23.11.1)(react-i18next@14.1.0)(react@18.2.0):
