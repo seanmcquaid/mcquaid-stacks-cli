@@ -36,7 +36,7 @@
     "i18next": "^23.11.2",
     "i18next-browser-languagedetector": "^7.2.1",
     "i18next-fs-backend": "^2.3.1",
-    "i18next-http-backend": "^2.5.0",
+    "i18next-http-backend": "^2.5.1",
     "isbot": "^5.1.4",
     "ky": "^1.2.3",
     "lucide-react": "^0.368.0",
