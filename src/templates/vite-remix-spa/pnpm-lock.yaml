@@ -81,13 +81,13 @@ dependencies:
     specifier: ^1.0.7
     version: 1.0.7(tailwindcss@3.4.3)
   zod:
-    specifier: ^3.22.4
-    version: 3.22.4
+    specifier: ^3.23.3
+    version: 3.23.3
 
 devDependencies:
   '@anatine/zod-mock':
     specifier: ^3.13.4
-    version: 3.13.4(@faker-js/faker@8.4.1)(zod@3.22.4)
+    version: 3.13.4(@faker-js/faker@8.4.1)(zod@3.23.3)
   '@axe-core/playwright':
     specifier: ^4.9.0
     version: 4.9.0(playwright-core@1.43.1)
@@ -259,7 +259,7 @@ packages:
       '@jridgewell/trace-mapping': 0.3.25
     dev: true
 
-  /@anatine/zod-mock@3.13.4(@faker-js/faker@8.4.1)(zod@3.22.4):
+  /@anatine/zod-mock@3.13.4(@faker-js/faker@8.4.1)(zod@3.23.3):
     resolution: {integrity: sha512-yO/KeuyYsEDCTcQ+7CiRuY3dnafMHIZUMok6Ci7aERRCTQ+/XmsiPk/RnMx5wlLmWBTmX9kw+PavbMsjM+sAJA==}
     peerDependencies:
       '@faker-js/faker': ^7.0.0 || ^8.0.0
@@ -267,7 +267,7 @@ packages:
     dependencies:
       '@faker-js/faker': 8.4.1
       randexp: 0.5.3
-      zod: 3.22.4
+      zod: 3.23.3
     dev: true
 
   /@axe-core/playwright@4.9.0(playwright-core@1.43.1):
@@ -8839,7 +8839,7 @@ packages:
       tailwind-merge: 1.14.0
       uuid: 9.0.1
       vite: 5.2.10(@types/node@20.12.7)
-      zod: 3.22.4
+      zod: 3.23.3
     transitivePeerDependencies:
       - '@types/react'
       - '@types/react-dom'
@@ -10673,6 +10673,10 @@ packages:
 
   /zod@3.22.4:
     resolution: {integrity: sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg==}
+    dev: true
+
+  /zod@3.23.3:
+    resolution: {integrity: sha512-tPvq1B/2Yu/dh2uAIH2/BhUlUeLIUvAjr6dpL/75I0pCYefHgjhXk1o1Kob3kTU8C7yU1j396jFHlsVWFi9ogg==}
 
   /zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
