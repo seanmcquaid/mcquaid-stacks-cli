@@ -44,7 +44,7 @@
     "remix-hook-form": "^4.3.1",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
-    "zod": "^3.23.4"
+    "zod": "^3.23.5"
   },
   "devDependencies": {
     "@anatine/zod-mock": "^3.13.4",
