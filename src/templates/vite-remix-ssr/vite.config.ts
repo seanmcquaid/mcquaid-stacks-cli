@@ -74,7 +74,7 @@ export default defineConfig({
       exclude: [
         'app/utils/testing',
         'app/i18n',
-        'app/main.tsx',
+        'app/root.tsx',
         'app/env.ts',
         'app/types',
         'app/icons',
