@@ -81,16 +81,16 @@ dependencies:
     specifier: ^1.0.7
     version: 1.0.7(tailwindcss@3.4.3)
   zod:
-    specifier: ^3.23.5
-    version: 3.23.5
+    specifier: ^3.23.6
+    version: 3.23.6
 
 devDependencies:
   '@anatine/zod-mock':
     specifier: ^3.13.4
-    version: 3.13.4(@faker-js/faker@8.4.1)(zod@3.23.5)
+    version: 3.13.4(@faker-js/faker@8.4.1)(zod@3.23.6)
   '@axe-core/playwright':
     specifier: ^4.9.0
-    version: 4.9.0(playwright-core@1.43.1)
+    version: 4.9.0(playwright-core@1.44.0)
   '@faker-js/faker':
     specifier: ^8.4.1
     version: 8.4.1
@@ -198,7 +198,7 @@ devDependencies:
     version: 2.2.14(typescript@5.4.5)
   playwright-lighthouse:
     specifier: ^4.0.0
-    version: 4.0.0(lighthouse@12.0.0)(playwright-core@1.43.1)
+    version: 4.0.0(lighthouse@12.0.0)(playwright-core@1.44.0)
   playwright-msw:
     specifier: ^3.0.1
     version: 3.0.1(@playwright/test@1.44.0)(msw@2.2.14)
@@ -259,7 +259,7 @@ packages:
       '@jridgewell/trace-mapping': 0.3.25
     dev: true
 
-  /@anatine/zod-mock@3.13.4(@faker-js/faker@8.4.1)(zod@3.23.5):
+  /@anatine/zod-mock@3.13.4(@faker-js/faker@8.4.1)(zod@3.23.6):
     resolution: {integrity: sha512-yO/KeuyYsEDCTcQ+7CiRuY3dnafMHIZUMok6Ci7aERRCTQ+/XmsiPk/RnMx5wlLmWBTmX9kw+PavbMsjM+sAJA==}
     peerDependencies:
       '@faker-js/faker': ^7.0.0 || ^8.0.0
@@ -267,16 +267,16 @@ packages:
     dependencies:
       '@faker-js/faker': 8.4.1
       randexp: 0.5.3
-      zod: 3.23.5
+      zod: 3.23.6
     dev: true
 
-  /@axe-core/playwright@4.9.0(playwright-core@1.43.1):
+  /@axe-core/playwright@4.9.0(playwright-core@1.44.0):
     resolution: {integrity: sha512-Q1Lz75dNsX38jof+aev7RficDMdH/HLOLySkDdXR0fUoeFcLdw4UNgDO2CNNP4CTpoesEdfYRdd6VmDXjhBgbA==}
     peerDependencies:
       playwright-core: '>= 1.0.0'
     dependencies:
       axe-core: 4.9.0
-      playwright-core: 1.43.1
+      playwright-core: 1.44.0
     dev: true
 
   /@babel/code-frame@7.24.2:
@@ -8103,19 +8103,13 @@ packages:
       pathe: 1.1.2
     dev: true
 
-  /playwright-core@1.43.1:
-    resolution: {integrity: sha512-EI36Mto2Vrx6VF7rm708qSnesVQKbxEWvPrfA1IPY6HgczBplDx7ENtx+K2n4kJ41sLLkuGfmb0ZLSSXlDhqPg==}
-    engines: {node: '>=16'}
-    hasBin: true
-    dev: true
-
   /playwright-core@1.44.0:
     resolution: {integrity: sha512-ZTbkNpFfYcGWohvTTl+xewITm7EOuqIqex0c7dNZ+aXsbrLj0qI8XlGKfPpipjm0Wny/4Lt4CJsWJk1stVS5qQ==}
     engines: {node: '>=16'}
     hasBin: true
     dev: true
 
-  /playwright-lighthouse@4.0.0(lighthouse@12.0.0)(playwright-core@1.43.1):
+  /playwright-lighthouse@4.0.0(lighthouse@12.0.0)(playwright-core@1.44.0):
     resolution: {integrity: sha512-8sLhKLYD9k08UjKMSPzYBCZZ6Ct+wZPUe+K58hZEHIdyyXHg+jniWgd+C2W57B+MDstHiYSbyBiN9S8mzUH82w==}
     engines: {node: '>=16.x'}
     peerDependencies:
@@ -8127,7 +8121,7 @@ packages:
     dependencies:
       chalk: 4.1.2
       lighthouse: 12.0.0
-      playwright-core: 1.43.1
+      playwright-core: 1.44.0
       ua-parser-js: 1.0.37
     dev: true
 
@@ -8805,7 +8799,7 @@ packages:
       tailwind-merge: 1.14.0
       uuid: 9.0.1
       vite: 5.2.11(@types/node@20.12.10)
-      zod: 3.23.5
+      zod: 3.23.6
     transitivePeerDependencies:
       - '@types/react'
       - '@types/react-dom'
@@ -10648,8 +10642,8 @@ packages:
     resolution: {integrity: sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg==}
     dev: true
 
-  /zod@3.23.5:
-    resolution: {integrity: sha512-fkwiq0VIQTksNNA131rDOsVJcns0pfVUjHzLrNBiF/O/Xxb5lQyEXkhZWcJ7npWsYlvs+h0jFWXXy4X46Em1JA==}
+  /zod@3.23.6:
+    resolution: {integrity: sha512-RTHJlZhsRbuA8Hmp/iNL7jnfc4nZishjsanDAfEY1QpDQZCahUp3xDzl+zfweE9BklxMUcgBgS1b7Lvie/ZVwA==}
 
   /zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
