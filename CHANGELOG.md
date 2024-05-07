@@ -1,5 +1,11 @@
 # @mcquaid-stacks/cli
 
+## 0.0.19
+
+### Patch Changes
+
+- 75459ae: Dependency upgrades
+
 ## 0.0.18
 
 ### Patch Changes
