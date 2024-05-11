@@ -39,7 +39,7 @@ jobs:
       - name: Build the app
         run: pnpm build
       - name: Bundlesize Check
-        run: pnpm size-limit
+        run: pnpm bundlesize
   playwright-integration-tests:
     runs-on: ubuntu-latest
     steps:
