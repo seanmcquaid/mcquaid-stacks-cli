@@ -1,0 +1,12 @@
+{
+  "files": [
+    {
+      "path": "./dist/*.js",
+      "maxSize": "10 kB"
+    },
+    {
+      "path": "./dist/*.cjs",
+      "maxSize": "10 kB"
+    }
+  ]
+}
