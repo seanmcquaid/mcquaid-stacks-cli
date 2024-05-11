@@ -10,13 +10,7 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "noEmit": true
-  },
-  "exclude": [
-    "**.test.ts",
-    "**.test.tsx",
-    "**/**.test.ts",
-    "**/**.test.tsx",
-    "vite.config.ts"
-  ]
+    "noEmit": true,
+    "types": ["vite/client", "vitest/globals"]
+  }
 }
