@@ -1,0 +1,8 @@
+{
+  "files": [
+    {
+      "path": "./build/client/*.js",
+      "maxSize": "300 kB"
+    }
+  ]
+}
