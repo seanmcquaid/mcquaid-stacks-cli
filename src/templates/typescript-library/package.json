@@ -1,6 +1,5 @@
 {
   "name": "<%= projectName %>",
-  "type": "module",
   "version": "0.0.1",
   "description": "",
   "license": "ISC",
