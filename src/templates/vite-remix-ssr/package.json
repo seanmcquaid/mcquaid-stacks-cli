@@ -15,7 +15,7 @@
     "playwright:run-integration": "playwright test playwright/integration",
     "playwright:run-e2e": "playwright test playwright/e2e",
     "playwright:ui": "playwright test --ui",
-    "size-limit": "size-limit",
+    "bundlesize": "bundlesize",
     "start": "remix-serve ./build/server/index.js"
   },
   "dependencies": {
