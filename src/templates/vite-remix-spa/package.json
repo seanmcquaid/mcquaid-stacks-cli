@@ -89,7 +89,7 @@
     "postcss": "^8.4.38",
     "prettier": "^3.2.5",
     "remix-development-tools": "^4.1.6",
-    "remix-flat-routes": "^0.6.4",
+    "remix-flat-routes": "^0.6.5",
     "tailwindcss": "^3.4.3",
     "typescript": "^5.4.5",
     "vite": "^5.2.11",
