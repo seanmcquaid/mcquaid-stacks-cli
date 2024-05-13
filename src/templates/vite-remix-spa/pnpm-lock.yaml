@@ -84,12 +84,12 @@ importers:
         specifier: ^1.0.7
         version: 1.0.7(tailwindcss@3.4.3)
       zod:
-        specifier: ^3.23.6
-        version: 3.23.6
+        specifier: ^3.23.8
+        version: 3.23.8
     devDependencies:
       '@anatine/zod-mock':
         specifier: ^3.13.4
-        version: 3.13.4(@faker-js/faker@8.4.1)(zod@3.23.6)
+        version: 3.13.4(@faker-js/faker@8.4.1)(zod@3.23.8)
       '@axe-core/playwright':
         specifier: ^4.9.0
         version: 4.9.0(playwright-core@1.44.0)
@@ -6002,8 +6002,8 @@ packages:
   zod@3.22.4:
     resolution: {integrity: sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg==}
 
-  zod@3.23.6:
-    resolution: {integrity: sha512-RTHJlZhsRbuA8Hmp/iNL7jnfc4nZishjsanDAfEY1QpDQZCahUp3xDzl+zfweE9BklxMUcgBgS1b7Lvie/ZVwA==}
+  zod@3.23.8:
+    resolution: {integrity: sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g==}
 
   zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
@@ -6021,11 +6021,11 @@ snapshots:
       '@jridgewell/gen-mapping': 0.3.5
       '@jridgewell/trace-mapping': 0.3.25
 
-  '@anatine/zod-mock@3.13.4(@faker-js/faker@8.4.1)(zod@3.23.6)':
+  '@anatine/zod-mock@3.13.4(@faker-js/faker@8.4.1)(zod@3.23.8)':
     dependencies:
       '@faker-js/faker': 8.4.1
       randexp: 0.5.3
-      zod: 3.23.6
+      zod: 3.23.8
 
   '@axe-core/playwright@4.9.0(playwright-core@1.44.0)':
     dependencies:
@@ -11434,7 +11434,7 @@ snapshots:
       tailwind-merge: 1.14.0
       uuid: 9.0.1
       vite: 5.2.11(@types/node@20.12.10)
-      zod: 3.23.6
+      zod: 3.23.8
     transitivePeerDependencies:
       - '@types/react'
       - '@types/react-dom'
@@ -12589,6 +12589,6 @@ snapshots:
 
   zod@3.22.4: {}
 
-  zod@3.23.6: {}
+  zod@3.23.8: {}
 
   zwitch@2.0.4: {}
