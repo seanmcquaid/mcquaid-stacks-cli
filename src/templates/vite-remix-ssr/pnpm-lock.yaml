@@ -226,8 +226,8 @@ importers:
         specifier: ^4.1.6
         version: 4.1.6(@remix-run/react@2.9.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.4.5))(@types/react-dom@18.3.0)(@types/react@18.3.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(vite@5.2.11(@types/node@20.12.10))
       remix-flat-routes:
-        specifier: ^0.6.4
-        version: 0.6.4(@remix-run/dev@2.9.2(@remix-run/react@2.9.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.4.5))(@remix-run/serve@2.9.2(typescript@5.4.5))(@types/node@20.12.10)(babel-plugin-macros@3.1.0)(typescript@5.4.5)(vite@5.2.11(@types/node@20.12.10)))
+        specifier: ^0.6.5
+        version: 0.6.5(@remix-run/dev@2.9.2(@remix-run/react@2.9.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.4.5))(@remix-run/serve@2.9.2(typescript@5.4.5))(@types/node@20.12.10)(babel-plugin-macros@3.1.0)(typescript@5.4.5)(vite@5.2.11(@types/node@20.12.10)))
       tailwindcss:
         specifier: ^3.4.3
         version: 3.4.3
@@ -5169,8 +5169,8 @@ packages:
       react-dom: '>=17'
       vite: '>=5.0.0'
 
-  remix-flat-routes@0.6.4:
-    resolution: {integrity: sha512-/0bTfaNSd2O3ak+cCLAlmHIsgm7YWiaBiu5ENUyuSWSNwF/KaHuKFhcHHhozPevQ8ROgCZG9tNbWzH6ktJoprA==}
+  remix-flat-routes@0.6.5:
+    resolution: {integrity: sha512-VvPak+LCxL4Fm6Kb/nqPLipB71k9p+GXpzRNPVxs9FmCeJ7hxVmQ3HQMpStzuRQyAh0PMkaX6mBiRlCRHTCYHw==}
     hasBin: true
     peerDependencies:
       '@remix-run/dev': ^1.15.0 || ^2
@@ -11903,7 +11903,7 @@ snapshots:
       - '@types/react'
       - '@types/react-dom'
 
-  remix-flat-routes@0.6.4(@remix-run/dev@2.9.2(@remix-run/react@2.9.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.4.5))(@remix-run/serve@2.9.2(typescript@5.4.5))(@types/node@20.12.10)(babel-plugin-macros@3.1.0)(typescript@5.4.5)(vite@5.2.11(@types/node@20.12.10))):
+  remix-flat-routes@0.6.5(@remix-run/dev@2.9.2(@remix-run/react@2.9.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.4.5))(@remix-run/serve@2.9.2(typescript@5.4.5))(@types/node@20.12.10)(babel-plugin-macros@3.1.0)(typescript@5.4.5)(vite@5.2.11(@types/node@20.12.10))):
     dependencies:
       '@remix-run/dev': 2.9.2(@remix-run/react@2.9.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.4.5))(@remix-run/serve@2.9.2(typescript@5.4.5))(@types/node@20.12.10)(babel-plugin-macros@3.1.0)(typescript@5.4.5)(vite@5.2.11(@types/node@20.12.10))
       '@remix-run/v1-route-convention': 0.1.4(@remix-run/dev@2.9.2(@remix-run/react@2.9.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.4.5))(@remix-run/serve@2.9.2(typescript@5.4.5))(@types/node@20.12.10)(babel-plugin-macros@3.1.0)(typescript@5.4.5)(vite@5.2.11(@types/node@20.12.10)))
