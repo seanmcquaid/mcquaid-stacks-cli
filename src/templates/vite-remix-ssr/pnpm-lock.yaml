@@ -103,8 +103,8 @@ importers:
         specifier: ^3.13.4
         version: 3.13.4(@faker-js/faker@8.4.1)(zod@3.23.8)
       '@axe-core/playwright':
-        specifier: ^4.9.0
-        version: 4.9.0(playwright-core@1.44.0)
+        specifier: ^4.9.1
+        version: 4.9.1(playwright-core@1.44.0)
       '@faker-js/faker':
         specifier: ^8.4.1
         version: 8.4.1
@@ -270,8 +270,8 @@ packages:
       '@faker-js/faker': ^7.0.0 || ^8.0.0
       zod: ^3.21.4
 
-  '@axe-core/playwright@4.9.0':
-    resolution: {integrity: sha512-Q1Lz75dNsX38jof+aev7RficDMdH/HLOLySkDdXR0fUoeFcLdw4UNgDO2CNNP4CTpoesEdfYRdd6VmDXjhBgbA==}
+  '@axe-core/playwright@4.9.1':
+    resolution: {integrity: sha512-8m4WZbZq7/aq7ZY5IG8GqV+ZdvtGn/iJdom+wBg+iv/3BAOBIfNQtIu697a41438DzEEyptXWmC3Xl5Kx/o9/g==}
     peerDependencies:
       playwright-core: '>= 1.0.0'
 
@@ -2064,6 +2064,7 @@ packages:
 
   are-we-there-yet@1.1.7:
     resolution: {integrity: sha512-nxwy40TuMiUGqMyRHgCSWZ9FM4VAoRP4xUYSTv5ImRog+h9yISPbVH7H8fASCIzYn9wlEv4zvFL7uKDMCFQm3g==}
+    deprecated: This package is no longer supported.
 
   arg@5.0.2:
     resolution: {integrity: sha512-PYjyFOLKQ9y57JvQ6QLo8dAgNqswh8M1RMJYdQduT6xbWSgK36P/Z/v+p888pM69jMMfS8Xd8F6I1kQ/I9HUGg==}
@@ -2159,6 +2160,10 @@ packages:
 
   axe-core@4.9.0:
     resolution: {integrity: sha512-H5orY+M2Fr56DWmMFpMrq5Ge93qjNdPVqzBv5gWK3aD1OvjBEJlEzxf09z93dGVQeI0LiW+aCMIx1QtShC/zUw==}
+    engines: {node: '>=4'}
+
+  axe-core@4.9.1:
+    resolution: {integrity: sha512-QbUdXJVTpvUTHU7871ppZkdOLBeGUKBQWHkHrvN2V9IQWGMt61zf3B45BtzjxEJzYuj0JBjBZP/hmYS/R9pmAw==}
     engines: {node: '>=4'}
 
   axios@1.6.0:
@@ -3310,6 +3315,7 @@ packages:
 
   gauge@2.7.4:
     resolution: {integrity: sha512-14x4kjc6lkD3ltw589k0NrPD6cCNTD6CWoVUNpB85+DrtONoZn+Rug6xZU5RvSC4+TZPxA5AnBibQYAvZn41Hg==}
+    deprecated: This package is no longer supported.
 
   generic-names@4.0.0:
     resolution: {integrity: sha512-ySFolZQfw9FoDb3ed9d80Cm9f0+r7qj+HJkWjeD9RBfpxEVTlVhol+gvaQB/78WbwYfbnNh8nWHHBSlg072y6A==}
@@ -4517,6 +4523,7 @@ packages:
 
   npmlog@4.1.2:
     resolution: {integrity: sha512-2uUqazuKlTaSI/dC8AzicUck7+IrEaOnN/e0jd3Xtt1KcGpwx30v50mL7oPyr/h9bL3E4aZccVwpwP+5W9Vjkg==}
+    deprecated: This package is no longer supported.
 
   number-is-nan@1.0.1:
     resolution: {integrity: sha512-4jbtZXNAsfZbAHiiqjLPBiCl16dES1zI4Hpzzxw61Tk+loF+sBDBKx1ICKKKwIqQ7M0mFn1TmkN7euSncWgHiQ==}
@@ -6253,9 +6260,9 @@ snapshots:
       randexp: 0.5.3
       zod: 3.23.8
 
-  '@axe-core/playwright@4.9.0(playwright-core@1.44.0)':
+  '@axe-core/playwright@4.9.1(playwright-core@1.44.0)':
     dependencies:
-      axe-core: 4.9.0
+      axe-core: 4.9.1
       playwright-core: 1.44.0
 
   '@babel/code-frame@7.24.2':
@@ -8348,6 +8355,8 @@ snapshots:
   axe-core@4.7.0: {}
 
   axe-core@4.9.0: {}
+
+  axe-core@4.9.1: {}
 
   axios@1.6.0:
     dependencies:
