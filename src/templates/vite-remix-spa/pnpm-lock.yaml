@@ -36,8 +36,8 @@ importers:
         specifier: ^5.38.0
         version: 5.38.0(react@18.3.1)
       '@tanstack/react-query-devtools':
-        specifier: ^5.37.1
-        version: 5.37.1(@tanstack/react-query@5.38.0(react@18.3.1))(react@18.3.1)
+        specifier: ^5.38.0
+        version: 5.38.0(@tanstack/react-query@5.38.0(react@18.3.1))(react@18.3.1)
       class-variance-authority:
         specifier: ^0.7.0
         version: 0.7.0
@@ -1657,10 +1657,10 @@ packages:
   '@tanstack/query-devtools@5.37.1':
     resolution: {integrity: sha512-XcG4IIHIv0YQKrexTqo2zogQWR1Sz672tX2KsfE9kzB+9zhx44vRKH5si4WDILE1PIWQpStFs/NnrDQrBAUQpg==}
 
-  '@tanstack/react-query-devtools@5.37.1':
-    resolution: {integrity: sha512-fWL3rV/avL9HsHt3RVYxuLCqSHghBwSGPIUMDZ9hfg9PDjQaeI9d8kJj6yLoCBWUhTue5/rQbISvFtr+yxyYyA==}
+  '@tanstack/react-query-devtools@5.38.0':
+    resolution: {integrity: sha512-jEgraQ1gxMPBYgmhcrvaAvksSY9Wz949ZHID+YXkV3t5jhXzoGwawAMYNDurpRjsNzzHEyuu/GwThkgXgTZj6Q==}
     peerDependencies:
-      '@tanstack/react-query': ^5.37.1
+      '@tanstack/react-query': ^5.38.0
       react: ^18.0.0
 
   '@tanstack/react-query@5.38.0':
@@ -3356,6 +3356,7 @@ packages:
 
   glob@7.2.3:
     resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
+    deprecated: Glob versions prior to v9 are no longer supported
 
   globals@11.12.0:
     resolution: {integrity: sha512-WOBp/EEGUiIsJSp7wcv/y6MO+lV9UoncWqxuFfm8eBwzWNgyfBd6Gz+IeKQ9jCmyhoH99g15M3T+QaVHFjizVA==}
@@ -5186,6 +5187,7 @@ packages:
 
   rimraf@3.0.2:
     resolution: {integrity: sha512-JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA==}
+    deprecated: Rimraf versions prior to v4 are no longer supported
     hasBin: true
 
   robots-parser@3.0.1:
@@ -7639,7 +7641,7 @@ snapshots:
 
   '@tanstack/query-devtools@5.37.1': {}
 
-  '@tanstack/react-query-devtools@5.37.1(@tanstack/react-query@5.38.0(react@18.3.1))(react@18.3.1)':
+  '@tanstack/react-query-devtools@5.38.0(@tanstack/react-query@5.38.0(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@tanstack/query-devtools': 5.37.1
       '@tanstack/react-query': 5.38.0(react@18.3.1)
