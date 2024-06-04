@@ -26,7 +26,7 @@ importers:
         version: 3.1.5
       '@types/node':
         specifier: ^20.6.2
-        version: 20.13.0
+        version: 20.14.1
       '@types/shelljs':
         specifier: ^0.8.12
         version: 0.8.15
@@ -35,10 +35,10 @@ importers:
         version: 0.3.4
       ts-node:
         specifier: ^10.9.1
-        version: 10.9.2(@types/node@20.13.0)(typescript@5.4.5)
+        version: 10.9.2(@types/node@20.14.1)(typescript@5.4.5)
       tsup:
         specifier: ^8.0.0
-        version: 8.0.2(ts-node@10.9.2(@types/node@20.13.0)(typescript@5.4.5))(typescript@5.4.5)
+        version: 8.0.2(ts-node@10.9.2(@types/node@20.14.1)(typescript@5.4.5))(typescript@5.4.5)
       typescript:
         specifier: ^5.2.2
         version: 5.4.5
@@ -426,8 +426,8 @@ packages:
   '@types/node@12.20.55':
     resolution: {integrity: sha512-J8xLz7q2OFulZ2cyGTLE1TbbZcjpno7FaN6zdJNrgAdrJ+DZzh/uFR6YrTb4C+nXakvud8Q4+rbhoIWlYQbUFQ==}
 
-  '@types/node@20.13.0':
-    resolution: {integrity: sha512-FM6AOb3khNkNIXPnHFDYaHerSv8uN22C91z098AnGccVu+Pcdhi+pNUFDi0iLmPIsVE0JBD0KVS7mzUYt4nRzQ==}
+  '@types/node@20.14.1':
+    resolution: {integrity: sha512-T2MzSGEu+ysB/FkWfqmhV3PLyQlowdptmmgD20C6QxsS8Fmv5SjpZ1ayXaEC0S21/h5UJ9iA6W/5vSNU5l00OA==}
 
   '@types/normalize-package-data@2.4.1':
     resolution: {integrity: sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==}
@@ -1941,7 +1941,7 @@ snapshots:
       '@inquirer/figures': 1.0.3
       '@inquirer/type': 1.3.3
       '@types/mute-stream': 0.0.4
-      '@types/node': 20.13.0
+      '@types/node': 20.14.1
       '@types/wrap-ansi': 3.0.0
       ansi-escapes: 4.3.2
       chalk: 4.1.2
@@ -2098,7 +2098,7 @@ snapshots:
   '@types/glob@7.2.0':
     dependencies:
       '@types/minimatch': 5.1.2
-      '@types/node': 20.13.0
+      '@types/node': 20.14.1
 
   '@types/minimatch@5.1.2': {}
 
@@ -2106,11 +2106,11 @@ snapshots:
 
   '@types/mute-stream@0.0.4':
     dependencies:
-      '@types/node': 20.13.0
+      '@types/node': 20.14.1
 
   '@types/node@12.20.55': {}
 
-  '@types/node@20.13.0':
+  '@types/node@20.14.1':
     dependencies:
       undici-types: 5.26.5
 
@@ -2121,7 +2121,7 @@ snapshots:
   '@types/shelljs@0.8.15':
     dependencies:
       '@types/glob': 7.2.0
-      '@types/node': 20.13.0
+      '@types/node': 20.14.1
 
   '@types/wrap-ansi@3.0.0': {}
 
@@ -2955,12 +2955,12 @@ snapshots:
     dependencies:
       find-up: 4.1.0
 
-  postcss-load-config@4.0.1(ts-node@10.9.2(@types/node@20.13.0)(typescript@5.4.5)):
+  postcss-load-config@4.0.1(ts-node@10.9.2(@types/node@20.14.1)(typescript@5.4.5)):
     dependencies:
       lilconfig: 2.1.0
       yaml: 2.3.1
     optionalDependencies:
-      ts-node: 10.9.2(@types/node@20.13.0)(typescript@5.4.5)
+      ts-node: 10.9.2(@types/node@20.14.1)(typescript@5.4.5)
 
   preferred-pm@3.1.2:
     dependencies:
@@ -3240,14 +3240,14 @@ snapshots:
 
   ts-interface-checker@0.1.13: {}
 
-  ts-node@10.9.2(@types/node@20.13.0)(typescript@5.4.5):
+  ts-node@10.9.2(@types/node@20.14.1)(typescript@5.4.5):
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
       '@tsconfig/node10': 1.0.9
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
-      '@types/node': 20.13.0
+      '@types/node': 20.14.1
       acorn: 8.10.0
       acorn-walk: 8.2.0
       arg: 4.1.3
@@ -3258,7 +3258,7 @@ snapshots:
       v8-compile-cache-lib: 3.0.1
       yn: 3.1.1
 
-  tsup@8.0.2(ts-node@10.9.2(@types/node@20.13.0)(typescript@5.4.5))(typescript@5.4.5):
+  tsup@8.0.2(ts-node@10.9.2(@types/node@20.14.1)(typescript@5.4.5))(typescript@5.4.5):
     dependencies:
       bundle-require: 4.0.1(esbuild@0.19.5)
       cac: 6.7.14
@@ -3268,7 +3268,7 @@ snapshots:
       execa: 5.1.1
       globby: 11.1.0
       joycon: 3.1.1
-      postcss-load-config: 4.0.1(ts-node@10.9.2(@types/node@20.13.0)(typescript@5.4.5))
+      postcss-load-config: 4.0.1(ts-node@10.9.2(@types/node@20.14.1)(typescript@5.4.5))
       resolve-from: 5.0.0
       rollup: 4.4.1
       source-map: 0.8.0-beta.0
