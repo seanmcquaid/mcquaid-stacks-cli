@@ -3,11 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prepare": "is-ci || husky"
+    "prepare": "is-ci || husky",
+    "bundlesize": "bundlesize"
   },
   "dependencies": {
     "next": "14.2.3",
@@ -18,6 +19,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "bundlesize": "^0.18.2",
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
     "husky": "^9.0.11",

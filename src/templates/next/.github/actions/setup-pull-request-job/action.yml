@@ -1,7 +1,7 @@
 name: Pull Request
 
 runs:
-  using: 'composite'
+  using: "composite"
   steps:
     - name: Checkout repo
       uses: actions/checkout@v4
@@ -10,8 +10,8 @@ runs:
     - name: Setup Node
       uses: actions/setup-node@v4
       with:
-        node-version-file: '.nvmrc'
-        cache: 'pnpm'
+        node-version-file: ".nvmrc"
+        cache: "pnpm"
     - name: Set env to dev
       shell: bash
       run: |
