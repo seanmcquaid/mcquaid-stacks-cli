@@ -6,7 +6,7 @@
     "build": "tsc && remix vite:build",
     "dev": "remix vite:dev",
     "lint": "eslint playwright app --max-warnings=0",
-    "prepare": "is-ci || husky install",
+    "prepare": "is-ci || husky",
     "test": "vitest run",
     "test:coverage": "vitest run --coverage",
     "test:watch": "vitest",
