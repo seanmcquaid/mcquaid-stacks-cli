@@ -1,9 +1,15 @@
-import { Link, type LinkProps } from '@remix-run/react';
 import type { VariantProps } from 'class-variance-authority';
+import type { ReactNode } from 'react';
+import type { LinkProps } from 'next/link';
 import { buttonVariants } from './Button';
 import { cn } from '@/utils/styles';
+import Link from 'next/link';
 
-type LinkButtonProps = LinkProps & VariantProps<typeof buttonVariants>;
+type LinkButtonProps = LinkProps &
+  VariantProps<typeof buttonVariants> & {
+    children: ReactNode;
+    className?: string;
+  };
 
 const LinkButton = (props: LinkButtonProps) => (
   <Link

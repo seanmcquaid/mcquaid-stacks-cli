@@ -22,6 +22,8 @@ export default async function RootLayout({
 }>) {
   const header = headers().get('accept-language') ?? '';
   const lang = acceptLanguage.get(header) ?? 'en-US';
+  // set cookie here for language
+
   return (
     <html lang={lang}>
       <body className={inter.className}>

@@ -1,4 +1,5 @@
-import { useNavigate } from '@remix-run/react';
+'use client';
+import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/Button';
 import useAppTranslation from '@/hooks/useAppTranslation';
 
@@ -9,10 +10,10 @@ interface PageErrorProps {
 
 const PageError = ({ errorText, titleText }: PageErrorProps) => {
   const { t } = useAppTranslation();
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const handleGoBack = () => {
-    navigate(-1);
+    router.back();
   };
 
   return (
