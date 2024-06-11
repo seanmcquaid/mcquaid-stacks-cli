@@ -1,12 +1,8 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import '@/styles/index.css';
-import { headers } from 'next/headers';
-import acceptLanguage from 'accept-language';
-import i18nConfig from '../i18n/config';
 import Providers from './Providers';
-
-acceptLanguage.languages(i18nConfig.supportedLngs);
+import getLanguageFromHeaders from '@/i18n/getLanguageFromHeaders';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -20,9 +16,7 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const header = headers().get('accept-language') ?? '';
-  const lang = acceptLanguage.get(header) ?? 'en-US';
-  // set cookie here for language
+  const lang = getLanguageFromHeaders();
 
   return (
     <html lang={lang}>

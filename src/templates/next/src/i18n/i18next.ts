@@ -12,8 +12,7 @@ i18next
     ...config,
     backend: { loadPath: './locales/{{lng}}.ts' },
     detection: {
-      order: ['cookie'],
-      caches: [],
+      order: ['htmlTag'],
     },
   });
 
