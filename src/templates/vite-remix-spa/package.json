@@ -90,7 +90,7 @@
     "prettier": "^3.3.2",
     "remix-development-tools": "^4.2.0",
     "remix-flat-routes": "^0.6.5",
-    "tailwindcss": "^3.4.3",
+    "tailwindcss": "^3.4.4",
     "typescript": "^5.4.5",
     "vite": "^5.2.12",
     "vite-plugin-checker": "^0.6.4",
