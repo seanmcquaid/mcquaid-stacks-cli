@@ -3,7 +3,7 @@ import LinkButton from '@/components/ui/LinkButton';
 import getAppFixedT from '@/i18n/getAppFixedT';
 
 const HomePage = async () => {
-  const t = await getAppFixedT();
+  const { t } = await getAppFixedT();
 
   return (
     <PageWrapper>
