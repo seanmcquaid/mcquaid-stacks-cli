@@ -1,8 +1,8 @@
 import { createInstance } from 'i18next';
 import I18NextHttpBackend from 'i18next-http-backend';
 import type { TOptions } from 'i18next';
-import config from './config';
-import getLanguageFromHeaders from './getLanguageFromHeaders';
+import i18nConfig from './i18nConfig';
+import getLanguageFromReferer from './getLanguageFromReferer';
 import type enUSLocale from '@/i18n/locales/en-US';
 
 type DotPrefix<T extends string> = T extends '' ? '' : `.${T}`;
@@ -24,7 +24,7 @@ type LocaleKeys = DotNestedKeys<typeof enUSLocale>;
 const initI18next = async () => {
   const i18nInstance = createInstance();
   await i18nInstance.use(I18NextHttpBackend).init({
-    ...config,
+    ...i18nConfig,
     backend: { loadPath: './locales/{{lng}}.ts' },
   });
   return i18nInstance;
@@ -32,7 +32,7 @@ const initI18next = async () => {
 
 const getAppFixedT = async () => {
   const i18n = await initI18next();
-  const lang = getLanguageFromHeaders();
+  const lang = getLanguageFromReferer();
   const t = i18n.getFixedT(lang);
 
   return {

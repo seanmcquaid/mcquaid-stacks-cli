@@ -1,7 +1,7 @@
 import type { InitOptions } from 'i18next';
 import locales from './locales';
 
-export default {
+const i18nConfig = {
   fallbackLng: 'en-US',
   supportedLngs: ['en-US', 'en-CA'],
   load: 'currentOnly',
@@ -16,3 +16,5 @@ export default {
   },
   react: { useSuspense: false },
 } satisfies InitOptions;
+
+export default i18nConfig;
