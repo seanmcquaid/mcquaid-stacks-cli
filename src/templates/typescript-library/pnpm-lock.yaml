@@ -30,8 +30,8 @@ importers:
         specifier: ^0.5.4
         version: 0.5.4(eslint@8.57.0)(typescript@5.4.5)(vitest@1.6.0(jsdom@24.1.0))
       globals:
-        specifier: ^15.4.0
-        version: 15.4.0
+        specifier: ^15.6.0
+        version: 15.6.0
       husky:
         specifier: ^9.0.11
         version: 9.0.11
@@ -1460,8 +1460,8 @@ packages:
     resolution: {integrity: sha512-Qg5QtVkCy/kv3FUSlu4ukeZDVf9ee0iXLAUYX13gbR17bnejFTzr4iS9bY7kwCf1NztRNm1t91fjOiyx4CSwPQ==}
     engines: {node: '>=8'}
 
-  globals@15.4.0:
-    resolution: {integrity: sha512-unnwvMZpv0eDUyjNyh9DH/yxUaRYrEjW/qK4QcdrHg3oO11igUQrCSgODHEqxlKg8v2CD2Sd7UkqqEBoz5U7TQ==}
+  globals@15.6.0:
+    resolution: {integrity: sha512-UzcJi88Hw//CurUIRa9Jxb0vgOCcuD/MNjwmXp633cyaRKkCWACkoqHCtfZv43b1kqXGg/fpOa8bwgacCeXsVg==}
     engines: {node: '>=18'}
 
   globalthis@1.0.3:
@@ -4498,7 +4498,7 @@ snapshots:
     dependencies:
       type-fest: 0.20.2
 
-  globals@15.4.0: {}
+  globals@15.6.0: {}
 
   globalthis@1.0.3:
     dependencies:
