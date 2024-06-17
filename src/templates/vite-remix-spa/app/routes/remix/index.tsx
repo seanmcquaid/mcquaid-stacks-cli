@@ -9,7 +9,7 @@ import Modal from '@/components/app/Modal';
 export const clientLoader = () => {
   return {
     hello:
-      "Hello friends! This page is using patterns common to React Router v6's Loaders + Actions",
+      "Hello friends! This page is using patterns common to Remix's Loaders + Actions",
   };
 };
 
@@ -55,9 +55,7 @@ const RemixPage = () => {
   return (
     <PageWrapper>
       <h1>{loaderData?.hello}</h1>
-      <Button onClick={handleOpenModal}>
-        {t('ReactRouterGeneroutedPage.openModal')}
-      </Button>
+      <Button onClick={handleOpenModal}>{t('RemixPage.openModal')}</Button>
       <Modal
         title="Modal Title"
         description="Modal Description"

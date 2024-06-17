@@ -6,10 +6,10 @@ import { Button } from '@/components/ui/Button';
 import useAppTranslation from '@/hooks/useAppTranslation';
 import Modal from '@/components/app/Modal';
 
-export const clientLoader = () => {
+export const loader = () => {
   return {
     hello:
-      "Hello friends! This page is using patterns common to React Router v6's Loaders + Actions",
+      "Hello friends! This page is using patterns common to Remix v6's Loaders + Actions",
   };
 };
 
@@ -29,7 +29,7 @@ const RemixPage = () => {
     .boolean()
     .catch(false)
     .parse(searchParams.get('modal'));
-  const loaderData = useLoaderData<typeof clientLoader>();
+  const loaderData = useLoaderData<typeof loader>();
 
   const handleOpenModal = () => {
     setSearchParams({ modal: 'open' });
@@ -55,9 +55,7 @@ const RemixPage = () => {
   return (
     <PageWrapper>
       <h1>{loaderData?.hello}</h1>
-      <Button onClick={handleOpenModal}>
-        {t('ReactRouterGeneroutedPage.openModal')}
-      </Button>
+      <Button onClick={handleOpenModal}>{t('RemixPage.openModal')}</Button>
       <Modal
         title="Modal Title"
         description="Modal Description"
