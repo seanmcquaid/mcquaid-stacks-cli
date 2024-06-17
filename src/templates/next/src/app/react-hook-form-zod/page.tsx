@@ -10,12 +10,22 @@ const formDataSchema = z
     username: z.string().email({
       message: 'Please enter a valid email',
     }),
-    password: z.string().min(3).max(10, {
-      message: 'Password must be between 3 and 10 characters',
-    }),
-    confirmPassword: z.string().min(3).max(10, {
-      message: 'Password must be between 3 and 10 characters',
-    }),
+    password: z
+      .string()
+      .min(3, {
+        message: 'Password must be between 3 and 10 characters',
+      })
+      .max(10, {
+        message: 'Password must be between 3 and 10 characters',
+      }),
+    confirmPassword: z
+      .string()
+      .min(3, {
+        message: 'Password must be between 3 and 10 characters',
+      })
+      .max(10, {
+        message: 'Password must be between 3 and 10 characters',
+      }),
   })
   .refine(data => data.password === data.confirmPassword, {
     message: 'Passwords do not match',
