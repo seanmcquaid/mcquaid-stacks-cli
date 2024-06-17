@@ -34,7 +34,7 @@ const enUSLocale = {
     title: 'Querying and Mutating Data with React Query',
     view: 'View',
   },
-  ReactRouterGeneroutedPage: {
+  RemixPage: {
     openModal: 'Open Modal',
   },
   Routes: {
