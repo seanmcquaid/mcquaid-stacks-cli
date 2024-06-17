@@ -9,7 +9,7 @@ export default defineConfig({
     mockReset: true,
     environment: 'jsdom',
     globals: true,
-    setupFiles: ['./src/setupTests.ts'],
+    setupFiles: ['./src/utils/testing/setupTests.ts'],
     include: [
       'src/**/*.test.tsx',
       'src/**/*.test.ts',
