@@ -1,21 +1,13 @@
-import type { AnyZodObject, z } from 'zod';
+import type { Schema, ZodObjectDef, z } from 'zod';
 
-const getValidatedFormData = <T extends AnyZodObject>({
+const getValidatedFormData = <T extends Schema<unknown, ZodObjectDef>>({
   schema,
   formData,
 }: {
   formData: FormData;
   schema: T;
-}):
-  | {
-      errors: {
-        [key: string]: string;
-      };
-    }
-  | {
-      data: z.infer<T>;
-    } => {
-  const schemaKeys = Object.keys(schema.shape);
+}) => {
+  const schemaKeys = Object.keys(schema._def.shape());
   const formDataFromSchema = schemaKeys.reduce(
     (acc, key) => ({
       ...acc,
@@ -28,20 +20,19 @@ const getValidatedFormData = <T extends AnyZodObject>({
   const validatedFormData = schema.safeParse(formDataFromSchema);
 
   if (!validatedFormData.success) {
-    console.log(validatedFormData.error.errors);
     const errors = validatedFormData.error.errors.reduce(
       (acc, error) => ({
         ...acc,
         [error.path[0]]: error.message,
       }),
       {} as {
-        [key: string]: string;
+        [Key in keyof z.infer<T>]: string;
       },
     );
     return { errors };
   } else {
     return {
-      data: validatedFormData.data,
+      data: validatedFormData.data as z.infer<T>,
     };
   }
 };
