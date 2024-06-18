@@ -2,6 +2,7 @@
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { QueryClientProvider } from '@tanstack/react-query';
 import type { PropsWithChildren } from 'react';
+import { ReactQueryStreamedHydration } from '@tanstack/react-query-next-experimental';
 import { Toaster } from '@/components/ui/Toaster';
 import queryClient from '@/services/queryClient';
 import '@/i18n/i18next';
@@ -16,9 +17,11 @@ const Providers = ({ children, lang }: ProvidersProps) => {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {children}
-      <ReactQueryDevtools initialIsOpen={false} buttonPosition="top-right" />
-      <Toaster />
+      <ReactQueryStreamedHydration>
+        {children}
+        <ReactQueryDevtools initialIsOpen={false} buttonPosition="top-right" />
+        <Toaster />
+      </ReactQueryStreamedHydration>
     </QueryClientProvider>
   );
 };
