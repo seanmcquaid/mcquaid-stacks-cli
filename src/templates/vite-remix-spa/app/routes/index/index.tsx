@@ -15,9 +15,6 @@ const HomePage = () => {
       <LinkButton to={t('Routes.remixHookFormZod')} className="m-4">
         {t('HomePage.remixHookFormZod')}
       </LinkButton>
-      <LinkButton to={t('Routes.remix')} className="m-4">
-        {t('HomePage.remix')}
-      </LinkButton>
       <LinkButton to={t('Routes.kitchenSink')} className="m-4">
         {t('HomePage.kitchenSink')}
       </LinkButton>
