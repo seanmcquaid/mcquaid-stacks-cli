@@ -5,9 +5,15 @@
     "plugin:i18next/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:vitest/recommended",
-    "next/core-web-vitals"
+    "next/core-web-vitals",
+    "plugin:@tanstack/eslint-plugin-query/recommended"
   ],
-  "plugins": ["import", "no-relative-import-paths", "eslint-plugin-prettier"],
+  "plugins": [
+    "import",
+    "no-relative-import-paths",
+    "eslint-plugin-prettier",
+    "@tanstack/query"
+  ],
   "parser": "@typescript-eslint/parser",
   "env": {
     "browser": true,

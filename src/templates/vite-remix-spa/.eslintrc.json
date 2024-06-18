@@ -8,9 +8,10 @@
     "plugin:@typescript-eslint/recommended",
     "plugin:playwright/playwright-test",
     "plugin:vitest/recommended",
-    "eslint-config-prettier"
+    "eslint-config-prettier",
+    "plugin:@tanstack/eslint-plugin-query/recommended"
   ],
-  "plugins": ["import", "no-relative-import-paths", "eslint-plugin-prettier"],
+  "plugins": ["import", "no-relative-import-paths", "eslint-plugin-prettier", "@tanstack/query"],
   "parser": "@typescript-eslint/parser",
   "env": {
     "browser": true,
