@@ -1,5 +1,11 @@
 # @mcquaid-stacks/cli
 
+## 0.0.20
+
+### Patch Changes
+
+- 724e462: Added template for Next
+
 ## 0.0.19
 
 ### Patch Changes
