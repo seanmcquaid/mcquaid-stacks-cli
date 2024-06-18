@@ -34,14 +34,10 @@ const enUSLocale = {
     title: 'Querying and Mutating Data with React Query',
     view: 'View',
   },
-  RemixPage: {
-    openModal: 'Open Modal',
-  },
   Routes: {
     home: '/',
     kitchenSink: '/kitchen-sink',
     reactQuery: '/react-query',
-    remix: '/remix',
     remixHookFormZod: '/remix-hook-form-zod',
   },
 } as const;
