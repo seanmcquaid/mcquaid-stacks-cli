@@ -16,5 +16,4 @@ These templates are meant to be a starting point for new projects and are not me
 1. TypeScript Libraries
 2. Vite + Remix SPA
 3. Vite + Remix SSR
-4. Turbo + Next SPA
-5. Turbo + Next SSR
+4. Turbo + Next SSR
