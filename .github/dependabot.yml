@@ -62,19 +62,19 @@ updates:
       day: tuesday
     open-pull-requests-limit: 20
   - package-ecosystem: npm
-    directory: "/src/templates/next/"
+    directory: "/src/templates/turbo-next-ssr/"
     schedule:
       interval: weekly
       day: tuesday
     open-pull-requests-limit: 20
   - package-ecosystem: github-actions
-    directory: "/src/templates/next/.github/workflows"
+    directory: "/src/templates/turbo-next-ssr/.github/workflows"
     schedule:
       interval: weekly
       day: tuesday
     open-pull-requests-limit: 20
   - package-ecosystem: github-actions
-    directory: "/src/templates/next/.github/actions/setup-pull-request-job"
+    directory: "/src/templates/turbo-next-ssr/.github/actions/setup-pull-request-job"
     schedule:
       interval: weekly
       day: tuesday
