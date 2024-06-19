@@ -1,8 +1,0 @@
-{
-  "/kitchen-sink/page": "app/kitchen-sink/page.js",
-  "/react-query/page": "app/react-query/page.js",
-  "/page": "app/page.js",
-  "/react-query/[id]/page": "app/react-query/[id]/page.js",
-  "/react-hook-form-zod/page": "app/react-hook-form-zod/page.js",
-  "/_not-found/page": "app/_not-found/page.js"
-}
