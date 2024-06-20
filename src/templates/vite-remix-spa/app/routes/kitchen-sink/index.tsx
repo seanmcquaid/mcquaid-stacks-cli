@@ -75,7 +75,7 @@ const KitchenSinkPage = () => {
       </Form>
       <ul className="grid grid-cols-2">
         {data?.map(post => (
-          <li key={post.id} className="flex mt-4 items-center">
+          <li key={post.id} className="mt-4 flex items-center">
             <LinkButton to={`/react-query/${post.id}`}>
               {post.title.substring(0, 4)}
             </LinkButton>

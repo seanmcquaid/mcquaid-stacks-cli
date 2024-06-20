@@ -28,7 +28,7 @@ const PageWrapper = ({
     return <PageError errorText={errorText} titleText={errorTitleText} />;
   }
 
-  return <div className="flex h-full w-full p-8 flex-col">{children}</div>;
+  return <div className="flex h-full w-full flex-col p-8">{children}</div>;
 };
 
 export default PageWrapper;

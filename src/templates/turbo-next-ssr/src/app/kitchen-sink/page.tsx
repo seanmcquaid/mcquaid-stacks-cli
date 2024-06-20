@@ -10,7 +10,7 @@ const KitchenSinkPage = async () => {
       <KitchenSinkForm />
       <ul className="grid grid-cols-2">
         {posts?.map(post => (
-          <li key={post.id} className="flex mt-4 items-center">
+          <li key={post.id} className="mt-4 flex items-center">
             <LinkButton href={`/react-query/${post.id}`}>
               {post.title.substring(0, 4)}
             </LinkButton>
