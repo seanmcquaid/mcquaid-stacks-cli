@@ -1,5 +1,11 @@
 # @mcquaid-stacks/cli
 
+## 0.0.21
+
+### Patch Changes
+
+- 89e543d: Small naming and fixes for the Next template
+
 ## 0.0.20
 
 ### Patch Changes
