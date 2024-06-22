@@ -1,7 +1,6 @@
 import _import from 'eslint-plugin-import';
 import noRelativeImportPaths from 'eslint-plugin-no-relative-import-paths';
 import prettier from 'eslint-plugin-prettier';
-import * as tanstackQuery from '@tanstack/eslint-plugin-query';
 import { fixupPluginRules } from '@eslint/compat';
 import globals from 'globals';
 import tsParser from '@typescript-eslint/parser';
@@ -36,7 +35,6 @@ export default [
       import: fixupPluginRules(_import),
       'no-relative-import-paths': noRelativeImportPaths,
       prettier,
-      '@tanstack/query': tanstackQuery,
     },
 
     languageOptions: {
