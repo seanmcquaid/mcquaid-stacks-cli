@@ -1,8 +1,8 @@
-import { fixupConfigRules, fixupPluginRules } from '@eslint/compat';
 import _import from 'eslint-plugin-import';
 import noRelativeImportPaths from 'eslint-plugin-no-relative-import-paths';
 import prettier from 'eslint-plugin-prettier';
 import * as tanstackQuery from '@tanstack/eslint-plugin-query';
+import { fixupPluginRules } from '@eslint/compat';
 import globals from 'globals';
 import tsParser from '@typescript-eslint/parser';
 import path from 'node:path';
@@ -22,19 +22,14 @@ export default [
   {
     ignores: ['**/node_modules/'],
   },
-  ...fixupConfigRules(
-    compat.extends(
-      'eslint:recommended',
-      'plugin:react/recommended',
-      'plugin:react-hooks/recommended',
-      'plugin:jsx-a11y/recommended',
-      'plugin:i18next/recommended',
-      'plugin:@typescript-eslint/recommended',
-      'plugin:playwright/playwright-test',
-      'plugin:vitest/recommended',
-      'eslint-config-prettier',
-      'plugin:@tanstack/eslint-plugin-query/recommended',
-    ),
+  ...compat.extends(
+    'eslint:recommended',
+    'plugin:jsx-a11y/recommended',
+    'plugin:i18next/recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:vitest/recommended',
+    'next/core-web-vitals',
+    'plugin:@tanstack/eslint-plugin-query/recommended',
   ),
   {
     plugins: {
@@ -77,8 +72,7 @@ export default [
       'react/react-in-jsx-scope': 'off',
       '@typescript-eslint/no-namespace': 'off',
       'react/no-unescaped-entities': 'off',
-      'playwright/missing-playwright-await': 'off',
-      '@typescript-eslint/consistent-type-definitions': ['error'],
+      '@typescript-eslint/consistent-type-definitions': 'error',
       '@typescript-eslint/consistent-type-imports': 'error',
 
       'no-relative-import-paths/no-relative-import-paths': [
@@ -89,13 +83,6 @@ export default [
           prefix: '@',
         },
       ],
-    },
-  },
-  {
-    files: ['app/**/**.{ts,tsx}'],
-
-    rules: {
-      'playwright/no-standalone-expect': 'off',
     },
   },
 ];
