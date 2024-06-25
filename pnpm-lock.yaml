@@ -26,7 +26,7 @@ importers:
         version: 3.1.5
       '@types/node':
         specifier: ^20.6.2
-        version: 20.14.5
+        version: 20.14.8
       '@types/shelljs':
         specifier: ^0.8.12
         version: 0.8.15
@@ -35,10 +35,10 @@ importers:
         version: 0.3.4
       ts-node:
         specifier: ^10.9.1
-        version: 10.9.2(@types/node@20.14.5)(typescript@5.4.5)
+        version: 10.9.2(@types/node@20.14.8)(typescript@5.4.5)
       tsup:
         specifier: ^8.0.0
-        version: 8.1.0(ts-node@10.9.2(@types/node@20.14.5)(typescript@5.4.5))(typescript@5.4.5)
+        version: 8.1.0(ts-node@10.9.2(@types/node@20.14.8)(typescript@5.4.5))(typescript@5.4.5)
       typescript:
         specifier: ^5.2.2
         version: 5.4.5
@@ -431,9 +431,6 @@ packages:
 
   '@types/node@12.20.55':
     resolution: {integrity: sha512-J8xLz7q2OFulZ2cyGTLE1TbbZcjpno7FaN6zdJNrgAdrJ+DZzh/uFR6YrTb4C+nXakvud8Q4+rbhoIWlYQbUFQ==}
-
-  '@types/node@20.14.5':
-    resolution: {integrity: sha512-aoRR+fJkZT2l0aGOJhuA8frnCSoNX6W7U2mpNq63+BxBIj5BQFt8rHy627kijCmm63ijdSdwvGgpUsU6MBsZZA==}
 
   '@types/node@20.14.8':
     resolution: {integrity: sha512-DO+2/jZinXfROG7j7WKFn/3C6nFwxy2lLpgLjEXJz+0XKphZlTLJ14mo8Vfg8X5BWN6XjyESXq+LcYdT7tR3bA==}
@@ -2110,7 +2107,7 @@ snapshots:
   '@types/glob@7.2.0':
     dependencies:
       '@types/minimatch': 5.1.2
-      '@types/node': 20.14.5
+      '@types/node': 20.14.8
 
   '@types/minimatch@5.1.2': {}
 
@@ -2121,10 +2118,6 @@ snapshots:
       '@types/node': 20.14.8
 
   '@types/node@12.20.55': {}
-
-  '@types/node@20.14.5':
-    dependencies:
-      undici-types: 5.26.5
 
   '@types/node@20.14.8':
     dependencies:
@@ -2137,7 +2130,7 @@ snapshots:
   '@types/shelljs@0.8.15':
     dependencies:
       '@types/glob': 7.2.0
-      '@types/node': 20.14.5
+      '@types/node': 20.14.8
 
   '@types/wrap-ansi@3.0.0': {}
 
@@ -2972,12 +2965,12 @@ snapshots:
     dependencies:
       find-up: 4.1.0
 
-  postcss-load-config@4.0.1(ts-node@10.9.2(@types/node@20.14.5)(typescript@5.4.5)):
+  postcss-load-config@4.0.1(ts-node@10.9.2(@types/node@20.14.8)(typescript@5.4.5)):
     dependencies:
       lilconfig: 2.1.0
       yaml: 2.3.1
     optionalDependencies:
-      ts-node: 10.9.2(@types/node@20.14.5)(typescript@5.4.5)
+      ts-node: 10.9.2(@types/node@20.14.8)(typescript@5.4.5)
 
   preferred-pm@3.1.2:
     dependencies:
@@ -3257,14 +3250,14 @@ snapshots:
 
   ts-interface-checker@0.1.13: {}
 
-  ts-node@10.9.2(@types/node@20.14.5)(typescript@5.4.5):
+  ts-node@10.9.2(@types/node@20.14.8)(typescript@5.4.5):
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
       '@tsconfig/node10': 1.0.9
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
-      '@types/node': 20.14.5
+      '@types/node': 20.14.8
       acorn: 8.10.0
       acorn-walk: 8.2.0
       arg: 4.1.3
@@ -3275,7 +3268,7 @@ snapshots:
       v8-compile-cache-lib: 3.0.1
       yn: 3.1.1
 
-  tsup@8.1.0(ts-node@10.9.2(@types/node@20.14.5)(typescript@5.4.5))(typescript@5.4.5):
+  tsup@8.1.0(ts-node@10.9.2(@types/node@20.14.8)(typescript@5.4.5))(typescript@5.4.5):
     dependencies:
       bundle-require: 4.0.1(esbuild@0.21.4)
       cac: 6.7.14
@@ -3285,7 +3278,7 @@ snapshots:
       execa: 5.1.1
       globby: 11.1.0
       joycon: 3.1.1
-      postcss-load-config: 4.0.1(ts-node@10.9.2(@types/node@20.14.5)(typescript@5.4.5))
+      postcss-load-config: 4.0.1(ts-node@10.9.2(@types/node@20.14.8)(typescript@5.4.5))
       resolve-from: 5.0.0
       rollup: 4.4.1
       source-map: 0.8.0-beta.0
