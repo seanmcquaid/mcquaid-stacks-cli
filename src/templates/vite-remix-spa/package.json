@@ -87,7 +87,7 @@
     "msw": "^2.3.1",
     "playwright-lighthouse": "^4.0.0",
     "playwright-msw": "^3.0.1",
-    "postcss": "^8.4.38",
+    "postcss": "^8.4.39",
     "prettier": "^3.3.2",
     "prettier-plugin-tailwindcss": "^0.6.5",
     "remix-development-tools": "^4.2.1",
