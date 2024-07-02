@@ -52,7 +52,7 @@
     "@faker-js/faker": "^8.4.1",
     "@playwright/test": "^1.45.0",
     "@remix-run/dev": "^2.9.2",
-    "@remix-run/testing": "^2.9.2",
+    "@remix-run/testing": "^2.10.0",
     "@tanstack/eslint-plugin-query": "^5.49.1",
     "@testing-library/jest-dom": "^6.4.6",
     "@testing-library/react": "^16.0.0",
