@@ -1,5 +1,11 @@
 # @mcquaid-stacks/cli
 
+## 0.0.23
+
+### Patch Changes
+
+- 1075104: TS Config paths
+
 ## 0.0.22
 
 ### Patch Changes
