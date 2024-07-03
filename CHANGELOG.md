@@ -1,5 +1,11 @@
 # @mcquaid-stacks/cli
 
+## 0.0.22
+
+### Patch Changes
+
+- 864c460: Upgrade dependencies
+
 ## 0.0.21
 
 ### Patch Changes
