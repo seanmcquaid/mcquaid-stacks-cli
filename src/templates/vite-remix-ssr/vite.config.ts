@@ -1,17 +1,18 @@
 /// <reference types="vitest" />
 /// <reference types="vite/client" />
 
-import path from 'path';
 import { defineConfig } from 'vite';
 import { vitePlugin as remix } from '@remix-run/dev';
 import svgr from 'vite-plugin-svgr';
 import checker from 'vite-plugin-checker';
 import { flatRoutes } from 'remix-flat-routes';
 import { remixDevTools } from 'remix-development-tools';
+import tsconfigPaths from 'vite-tsconfig-paths';
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
+    tsconfigPaths(),
     remixDevTools(),
     // disable remix plugin for vitest
     !process.env.VITEST &&
@@ -29,11 +30,6 @@ export default defineConfig({
   ],
   ssr: {
     noExternal: ['remix-i18next'],
-  },
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, './app'),
-    },
   },
   preview: {
     port: 3000,
