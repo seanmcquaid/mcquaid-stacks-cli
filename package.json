@@ -1,6 +1,6 @@
 {
   "name": "@mcquaid-stacks/cli",
-  "version": "0.0.24",
+  "version": "0.0.25",
   "private": false,
   "description": "CLI for generating new TypeScript projects quickly",
   "license": "MIT",
