@@ -1,5 +1,11 @@
 # @mcquaid-stacks/cli
 
+## 0.0.25
+
+### Patch Changes
+
+- bfee886: Ensure query data from TSQ
+
 ## 0.0.24
 
 ### Patch Changes
