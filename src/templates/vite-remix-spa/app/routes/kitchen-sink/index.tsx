@@ -7,8 +7,6 @@ import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
 import queryClient from '@/services/queryClient';
 import { toast } from '@/hooks/useToast';
-import type Post from '@/types/Post';
-import QueryKey from '@/constants/QueryKey';
 import LinkButton from '@/components/ui/LinkButton';
 import { getPostsQuery } from '@/services/queries/useGetPostsQuery';
 
@@ -23,13 +21,9 @@ type FormData = z.infer<typeof formDataSchema>;
 const resolver = zodResolver(formDataSchema);
 
 export const clientLoader = async () => {
-  const posts = queryClient.getQueryData<Post[]>([QueryKey.GET_POSTS]);
+  const posts = await queryClient.ensureQueryData(getPostsQuery());
 
-  if (posts) {
-    return posts;
-  }
-
-  return await queryClient.fetchQuery(getPostsQuery());
+  return posts;
 };
 
 clientLoader.hydrate = true;

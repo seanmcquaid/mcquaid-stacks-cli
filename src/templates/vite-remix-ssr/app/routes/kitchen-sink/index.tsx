@@ -36,16 +36,12 @@ export const loader = async () => {
 export const clientLoader = async ({
   serverLoader,
 }: ClientLoaderFunctionArgs) => {
-  const posts = queryClient.getQueryData<Post[]>([QueryKey.GET_POSTS]);
-
-  if (posts) {
-    return posts;
-  }
-
-  return await queryClient.fetchQuery({
+  const posts = await queryClient.ensureQueryData({
     queryKey: [QueryKey.GET_POSTS],
     queryFn: () => serverLoader<Post[]>(),
   });
+
+  return posts;
 };
 
 clientLoader.hydrate = true;
