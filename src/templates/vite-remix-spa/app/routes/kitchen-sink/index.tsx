@@ -23,13 +23,9 @@ type FormData = z.infer<typeof formDataSchema>;
 const resolver = zodResolver(formDataSchema);
 
 export const clientLoader = async () => {
-  const posts = queryClient.getQueryData<Post[]>([QueryKey.GET_POSTS]);
+  const posts = await queryClient.ensureQueryData(getPostsQuery())
 
-  if (posts) {
-    return posts;
-  }
-
-  return await queryClient.fetchQuery(getPostsQuery());
+  return posts;
 };
 
 clientLoader.hydrate = true;
