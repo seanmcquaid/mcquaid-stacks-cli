@@ -1,5 +1,11 @@
 # @mcquaid-stacks/cli
 
+## 0.0.24
+
+### Patch Changes
+
+- 031b626: fix tsconfig
+
 ## 0.0.23
 
 ### Patch Changes
