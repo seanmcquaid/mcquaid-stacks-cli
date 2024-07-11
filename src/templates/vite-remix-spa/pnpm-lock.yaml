@@ -157,8 +157,8 @@ importers:
         specifier: ^9.1.0
         version: 9.1.0(eslint@8.57.0)
       eslint-plugin-i18next:
-        specifier: ^6.0.3
-        version: 6.0.3
+        specifier: ^6.0.7
+        version: 6.0.7
       eslint-plugin-import:
         specifier: ^2.29.1
         version: 2.29.1(@typescript-eslint/parser@7.15.0(eslint@8.57.0)(typescript@5.5.3))(eslint@8.57.0)
@@ -3234,8 +3234,8 @@ packages:
       eslint-import-resolver-webpack:
         optional: true
 
-  eslint-plugin-i18next@6.0.3:
-    resolution: {integrity: sha512-RtQXYfg6PZCjejIQ/YG+dUj/x15jPhufJ9hUDGH0kCpJ6CkVMAWOQ9exU1CrbPmzeykxLjrXkjAaOZF/V7+DOA==}
+  eslint-plugin-i18next@6.0.7:
+    resolution: {integrity: sha512-wPPn7ypn0VL0y1sPhilaWuFTfem1HHY6rHEMflry8cSFrE9mlhrw6ykoYGp0cL94WGCu6wokylW0nDySOUp4nQ==}
     engines: {node: '>=0.10.0'}
 
   eslint-plugin-import@2.29.1:
@@ -9876,7 +9876,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-i18next@6.0.3:
+  eslint-plugin-i18next@6.0.7:
     dependencies:
       lodash: 4.17.21
       requireindex: 1.1.0
