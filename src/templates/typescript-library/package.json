@@ -37,7 +37,7 @@
     "jsdom": "^24.1.0",
     "lint-staged": "^15.2.7",
     "prettier": "^3.3.3",
-    "tsup": "^8.1.0",
+    "tsup": "^8.1.2",
     "typescript": "^5.5.3",
     "typescript-eslint": "^7.16.1",
     "vite": "^5.3.4",
