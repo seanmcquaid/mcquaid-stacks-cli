@@ -1,6 +1,3 @@
-/// <reference types="vitest" />
-/// <reference types="vite/client" />
-
 import { defineConfig } from 'vite';
 import { vitePlugin as remix } from '@remix-run/dev';
 import svgr from 'vite-plugin-svgr';

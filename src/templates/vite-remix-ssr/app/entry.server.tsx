@@ -12,12 +12,11 @@ import server from '../mocks/server';
 import i18next from './i18n/i18next.server';
 import i18n from './i18n/config';
 import 'dotenv/config';
-import './env.server';
-import env from './env.server';
+import serverEnv from './env.server';
 
 const ABORT_DELAY = 5000;
 
-if (env.VITE_APP_MSW_ENABLED && env.NODE_ENV === 'development') {
+if (serverEnv.VITE_APP_MSW_ENABLED && serverEnv.NODE_ENV === 'development') {
   server.listen();
 }
 

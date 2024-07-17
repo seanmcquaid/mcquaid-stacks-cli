@@ -1,8 +1,7 @@
+import clientEnv from '@/env.client';
+
 const prepareMsw = async () => {
-  if (
-    import.meta.env.MODE === 'development' &&
-    import.meta.env.VITE_APP_MSW_ENABLED
-  ) {
+  if (clientEnv.MODE === 'development' && clientEnv.VITE_APP_MSW_ENABLED) {
     const worker = await import('../../../mocks/worker');
     worker.default.start({ onUnhandledRequest: 'bypass' });
   }
