@@ -106,8 +106,8 @@ importers:
         specifier: ^2.10.3
         version: 2.10.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.4)
       '@tanstack/eslint-plugin-query':
-        specifier: ^5.51.12
-        version: 5.51.12(eslint@8.57.0)(typescript@5.5.4)
+        specifier: ^5.51.15
+        version: 5.51.15(eslint@8.57.0)(typescript@5.5.4)
       '@testing-library/jest-dom':
         specifier: ^6.4.8
         version: 6.4.8
@@ -1781,8 +1781,8 @@ packages:
     peerDependencies:
       '@svgr/core': '*'
 
-  '@tanstack/eslint-plugin-query@5.51.12':
-    resolution: {integrity: sha512-vzUXXIVzDP2c6wVSJ+1imPGaKQ2ILuWnta64FJc/JnQ5WunfO17bQJSk6uKDbzTQG/YKgPYBMG3C9qFA4b7Ayg==}
+  '@tanstack/eslint-plugin-query@5.51.15':
+    resolution: {integrity: sha512-btX03EOGvNxTGJDqHMmQwfSt/hp93Z8I4FNBijoyEdDnjGi4jVjpGP7nEi9LaMnHFsylucptVGb6GQngWs07bA==}
     peerDependencies:
       eslint: ^8 || ^9
 
@@ -8107,7 +8107,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@tanstack/eslint-plugin-query@5.51.12(eslint@8.57.0)(typescript@5.5.4)':
+  '@tanstack/eslint-plugin-query@5.51.15(eslint@8.57.0)(typescript@5.5.4)':
     dependencies:
       '@typescript-eslint/utils': 8.0.0-alpha.30(eslint@8.57.0)(typescript@5.5.4)
       eslint: 8.57.0
