@@ -38,7 +38,7 @@ export function Layout({ children }: PropsWithChildren) {
   useChangeLanguage(locale);
 
   return (
-    <html lang={locale} dir={i18n.dir()} className="min-h-screen w-full ">
+    <html lang={locale} dir={i18n.dir()} className="min-h-screen w-full">
       <head>
         <meta charSet="UTF-8" />
         <meta name="description" content="Vite App" />

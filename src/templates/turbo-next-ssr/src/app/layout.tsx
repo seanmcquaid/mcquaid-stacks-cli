@@ -7,13 +7,10 @@ export default function RootLayout({ children }: PropsWithChildren) {
   const lang = getLanguageFromReferer();
 
   return (
-    <html
-      lang={lang}
-      className="h-full min-h-full w-full min-w-full overflow-auto"
-    >
-      <body className="flex h-full min-h-full w-full min-w-full flex-col overflow-auto">
+    <html lang={lang} className="min-h-screen w-full">
+      <body className="min-h-screen w-full">
         <Providers lang={lang}>
-          <main className="flex-1">{children}</main>
+          <main className="min-h-screen w-full">{children}</main>
         </Providers>
       </body>
     </html>
