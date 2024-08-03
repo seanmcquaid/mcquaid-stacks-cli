@@ -1,5 +1,11 @@
 # @mcquaid-stacks/cli
 
+## 0.0.26
+
+### Patch Changes
+
+- 0cb38c2: Fix up layout for each template
+
 ## 0.0.25
 
 ### Patch Changes
