@@ -38,8 +38,8 @@ export function Layout({ children }: PropsWithChildren) {
         <Meta />
         <Links />
       </head>
-      <body className="h-full min-h-full w-full min-w-full overflow-auto">
-        <main className="h-full w-full">{children}</main>
+      <body className="flex h-full min-h-full w-full min-w-full flex-col overflow-auto">
+        <main className="flex-1">{children}</main>
         <Scripts />
         <ScrollRestoration />
         <noscript>

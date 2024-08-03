@@ -59,8 +59,8 @@ export function Layout({ children }: PropsWithChildren) {
         <Meta />
         <Links />
       </head>
-      <body className="h-full w-full min-h-full min-w-full overflow-auto">
-        <main className="h-full w-full">{children}</main>
+      <body className="h-full w-full min-h-full min-w-full overflow-auto flex flex-col">
+        <main className="flex-1">{children}</main>
         <Scripts />
         <ScrollRestoration />
       </body>
