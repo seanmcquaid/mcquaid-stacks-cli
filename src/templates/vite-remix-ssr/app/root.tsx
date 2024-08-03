@@ -38,11 +38,7 @@ export function Layout({ children }: PropsWithChildren) {
   useChangeLanguage(locale);
 
   return (
-    <html
-      lang={locale}
-      dir={i18n.dir()}
-      className="h-full w-full min-h-full min-w-full overflow-auto"
-    >
+    <html lang={locale} dir={i18n.dir()} className="min-h-screen w-full ">
       <head>
         <meta charSet="UTF-8" />
         <meta name="description" content="Vite App" />
@@ -59,8 +55,8 @@ export function Layout({ children }: PropsWithChildren) {
         <Meta />
         <Links />
       </head>
-      <body className="h-full w-full min-h-full min-w-full overflow-auto flex flex-col">
-        <main className="flex-1">{children}</main>
+      <body className="min-h-screen w-full">
+        <main className="min-h-screen w-full">{children}</main>
         <Scripts />
         <ScrollRestoration />
       </body>
