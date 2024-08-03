@@ -39,7 +39,7 @@ export function Layout({ children }: PropsWithChildren) {
         <Links />
       </head>
       <body className="min-h-screen w-full">
-        <main className="min-h-screen w-full">{children}</main>
+        <main className="h-screen w-full">{children}</main>
         <Scripts />
         <ScrollRestoration />
         <noscript>

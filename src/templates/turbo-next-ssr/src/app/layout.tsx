@@ -10,7 +10,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
     <html lang={lang} className="min-h-screen w-full">
       <body className="min-h-screen w-full">
         <Providers lang={lang}>
-          <main className="min-h-screen w-full">{children}</main>
+          <main className="h-screen w-full">{children}</main>
         </Providers>
       </body>
     </html>
