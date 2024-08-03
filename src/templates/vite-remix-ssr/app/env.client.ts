@@ -6,6 +6,6 @@ const clientEnvSchema = z.object({
   MODE: z.enum(['development', 'test', 'production']),
 });
 
-const clientEnv = clientEnvSchema.parse(process.env);
+const clientEnv = clientEnvSchema.parse(import.meta.env);
 
 export default clientEnv;
