@@ -1,5 +1,11 @@
 # @mcquaid-stacks/cli
 
+## 0.0.29
+
+### Patch Changes
+
+- d20e5c4: Last layout fix needed for now
+
 ## 0.0.28
 
 ### Patch Changes
