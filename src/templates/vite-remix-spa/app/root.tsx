@@ -21,7 +21,7 @@ import LoadingOverlay from './components/ui/LoadingOverlay';
 export function Layout({ children }: PropsWithChildren) {
   return (
     // eslint-disable-next-line jsx-a11y/html-has-lang
-    <html className="min-h-screen w-full">
+    <html className="h-screen min-h-screen w-full overflow-auto">
       <head>
         <meta charSet="UTF-8" />
         <meta name="description" content="Vite App" />
@@ -38,8 +38,8 @@ export function Layout({ children }: PropsWithChildren) {
         <Meta />
         <Links />
       </head>
-      <body className="min-h-screen w-full">
-        <main className="h-screen w-full">{children}</main>
+      <body className="flex h-screen min-h-screen w-full flex-col overflow-auto">
+        <main className="flex-1">{children}</main>
         <Scripts />
         <ScrollRestoration />
         <noscript>
