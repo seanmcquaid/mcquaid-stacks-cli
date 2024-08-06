@@ -38,7 +38,7 @@ importers:
         version: 10.9.2(@types/node@22.0.0)(typescript@5.5.3)
       tsup:
         specifier: ^8.0.0
-        version: 8.2.3(typescript@5.5.3)
+        version: 8.2.4(typescript@5.5.3)
       typescript:
         specifier: ^5.2.2
         version: 5.5.3
@@ -1255,8 +1255,8 @@ packages:
       '@swc/wasm':
         optional: true
 
-  tsup@8.2.3:
-    resolution: {integrity: sha512-6YNT44oUfXRbZuSMNmN36GzwPPIlD2wBccY7looM2fkTcxkf2NEmwr3OZuDZoySklnrIG4hoEtzy8yUXYOqNcg==}
+  tsup@8.2.4:
+    resolution: {integrity: sha512-akpCPePnBnC/CXgRrcy72ZSntgIEUa1jN0oJbbvpALWKNOz1B7aM+UVDWGRGIO/T/PZugAESWDJUAb5FD48o8Q==}
     engines: {node: '>=18'}
     hasBin: true
     peerDependencies:
@@ -2569,7 +2569,7 @@ snapshots:
       v8-compile-cache-lib: 3.0.1
       yn: 3.1.1
 
-  tsup@8.2.3(typescript@5.5.3):
+  tsup@8.2.4(typescript@5.5.3):
     dependencies:
       bundle-require: 5.0.0(esbuild@0.23.0)
       cac: 6.7.14
