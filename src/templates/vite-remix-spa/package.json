@@ -28,7 +28,7 @@
     "@remix-run/react": "^2.10.3",
     "@remix-run/serve": "^2.10.3",
     "@tanstack/react-query": "^5.51.15",
-    "@tanstack/react-query-devtools": "^5.51.11",
+    "@tanstack/react-query-devtools": "^5.51.15",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "http-server": "^14.1.1",
