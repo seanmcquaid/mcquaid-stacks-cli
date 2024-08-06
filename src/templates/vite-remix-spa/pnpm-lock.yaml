@@ -75,8 +75,8 @@ importers:
         specifier: ^15.0.0
         version: 15.0.0(i18next@23.12.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       remix-hook-form:
-        specifier: ^5.0.1
-        version: 5.0.1(@remix-run/react@2.10.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.4))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.52.1(react@18.3.1))(react@18.3.1)
+        specifier: ^5.0.4
+        version: 5.0.4(@remix-run/react@2.10.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.4))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.52.1(react@18.3.1))(react@18.3.1)
       tailwind-merge:
         specifier: ^2.4.0
         version: 2.4.0
@@ -5347,8 +5347,8 @@ packages:
     peerDependencies:
       '@remix-run/dev': ^1.15.0 || ^2
 
-  remix-hook-form@5.0.1:
-    resolution: {integrity: sha512-7rjuIfx6JzemPKv2Y31IWpNTar3KeWRwJ2klJzchWSwgioPkloahqnwM89MBiAXDOFMYt2TcGR8SSl1PVTTuqQ==}
+  remix-hook-form@5.0.4:
+    resolution: {integrity: sha512-KLYJKk29SU+jDbOph9fIinevx6vg1YOeaCo1h4x9eIw/s8eBe/nTnSDu3/CLPazU/vxpyiWh/EwE4DkKjvVXyQ==}
     peerDependencies:
       '@remix-run/react': ^2.0.0
       react: ^18.2.0
@@ -12294,7 +12294,7 @@ snapshots:
       fs-extra: 11.2.0
       minimatch: 5.1.6
 
-  remix-hook-form@5.0.1(@remix-run/react@2.10.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.4))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.52.1(react@18.3.1))(react@18.3.1):
+  remix-hook-form@5.0.4(@remix-run/react@2.10.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.4))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.52.1(react@18.3.1))(react@18.3.1):
     dependencies:
       '@remix-run/react': 2.10.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.4)
       react: 18.3.1
