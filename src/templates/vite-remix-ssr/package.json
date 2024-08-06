@@ -26,7 +26,7 @@
     "@radix-ui/react-toast": "^1.2.1",
     "@remix-run/node": "^2.10.3",
     "@remix-run/react": "^2.10.3",
-    "@remix-run/serve": "^2.10.3",
+    "@remix-run/serve": "^2.11.1",
     "@tanstack/react-query": "^5.51.15",
     "@tanstack/react-query-devtools": "^5.51.11",
     "class-variance-authority": "^0.7.0",
