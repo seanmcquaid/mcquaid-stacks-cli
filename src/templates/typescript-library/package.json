@@ -24,7 +24,7 @@
     "bundlesize": "bundlesize"
   },
   "devDependencies": {
-    "@arethetypeswrong/cli": "^0.15.3",
+    "@arethetypeswrong/cli": "^0.15.4",
     "@changesets/cli": "^2.27.7",
     "@eslint/js": "^9.9.0",
     "bundlesize": "^0.18.2",
