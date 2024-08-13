@@ -87,8 +87,8 @@ importers:
         specifier: ^5.0.4
         version: 5.0.4(@remix-run/react@2.11.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.4))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.52.2(react@18.3.1))(react@18.3.1)
       remix-i18next:
-        specifier: ^6.2.0
-        version: 6.2.0(@remix-run/node@2.11.1(typescript@5.5.4))(@remix-run/react@2.11.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.4))(i18next@23.12.2)(react-i18next@15.0.1(i18next@23.12.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
+        specifier: ^6.3.0
+        version: 6.3.0(@remix-run/node@2.11.1(typescript@5.5.4))(@remix-run/react@2.11.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.4))(i18next@23.12.2)(react-i18next@15.0.1(i18next@23.12.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
       tailwind-merge:
         specifier: ^2.5.2
         version: 2.5.2
@@ -5529,8 +5529,8 @@ packages:
       react-dom: ^18.2.0
       react-hook-form: ^7.51.0
 
-  remix-i18next@6.2.0:
-    resolution: {integrity: sha512-kxfx7ZqQUJdMsEycQEJYUceyyjCMBUqdXritjr3cXbsEP/yzZFbWHOTMdcirlQD8i8Wy7SJXVr5Cf8BNIcxeUQ==}
+  remix-i18next@6.3.0:
+    resolution: {integrity: sha512-QisIBEv/XR29/FldR9NDwrQ712FRXceJlzstE+2dES2fG8K0TOcGan/bTOD+e+WLEwDqTf1lbBrqp5P7Ik/Eww==}
     engines: {node: '>=20.0.0'}
     peerDependencies:
       '@remix-run/cloudflare': ^2.0.0
@@ -12651,7 +12651,7 @@ snapshots:
       react-dom: 18.3.1(react@18.3.1)
       react-hook-form: 7.52.2(react@18.3.1)
 
-  remix-i18next@6.2.0(@remix-run/node@2.11.1(typescript@5.5.4))(@remix-run/react@2.11.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.4))(i18next@23.12.2)(react-i18next@15.0.1(i18next@23.12.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1):
+  remix-i18next@6.3.0(@remix-run/node@2.11.1(typescript@5.5.4))(@remix-run/react@2.11.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.4))(i18next@23.12.2)(react-i18next@15.0.1(i18next@23.12.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1):
     dependencies:
       '@remix-run/react': 2.11.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.4)
       i18next: 23.12.2
