@@ -21,12 +21,14 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
-    "bundlesize": "bundlesize"
+    "bundlesize": "bundlesize",
+    "treeshake-check": "agadoo dist/index.mjs"
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.15.4",
     "@changesets/cli": "^2.27.7",
     "@eslint/js": "^9.9.0",
+    "agadoo": "^3.0.0",
     "bundlesize": "^0.18.2",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "5.2.1",
