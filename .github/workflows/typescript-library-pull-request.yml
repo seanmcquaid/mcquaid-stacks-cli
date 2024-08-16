@@ -37,3 +37,5 @@ jobs:
         run: pnpm bundlesize
       - name: Check package types
         run: pnpm check-types
+      - name: Check tree-shaking
+        run: pnpm treeshake-check
