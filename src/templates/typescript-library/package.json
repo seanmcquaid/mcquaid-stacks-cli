@@ -5,6 +5,13 @@
   "license": "ISC",
   "author": "",
   "sideEffects": false,
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
@@ -13,16 +20,16 @@
   ],
   "scripts": {
     "build": "tsup",
+    "bundlesize": "bundlesize",
     "changeset": "changeset",
+    "check-treeshaking": "agadoo dist/index.mjs",
     "check-types": "npm pack && attw --pack",
     "lint": "eslint src --max-warnings=0",
     "prepare": "is-ci || husky",
     "release": "pnpm build && changeset publish",
     "test": "vitest run",
-    "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
-    "bundlesize": "bundlesize",
-    "check-treeshaking": "agadoo dist/index.mjs"
+    "test:watch": "vitest"
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.15.4",
@@ -45,8 +52,8 @@
     "vite": "^5.4.0",
     "vitest": "^2.0.5"
   },
+  "packageManager": "pnpm@9.1.1",
   "engines": {
     "node": ">=21.1.0"
-  },
-  "packageManager": "pnpm@9.1.1"
+  }
 }
