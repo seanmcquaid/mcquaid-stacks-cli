@@ -1,5 +1,11 @@
 # @mcquaid-stacks/cli
 
+## 0.0.30
+
+### Patch Changes
+
+- 44bd2c7: Added tree shaking checks
+
 ## 0.0.29
 
 ### Patch Changes
