@@ -5,9 +5,9 @@
   "license": "ISC",
   "author": "",
   "sideEffects": false,
-  "main": "dist/index.mjs",
+  "main": "dist/index.js",
   "module": "dist/index.mjs",
-  "types": "dist/index.d.mts",
+  "types": "dist/index.d.ts",
   "files": [
     "/dist"
   ],
@@ -22,7 +22,7 @@
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
     "bundlesize": "bundlesize",
-    "treeshake-check": "agadoo dist/index.mjs"
+    "check-treeshaking": "agadoo dist/index.mjs"
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.15.4",
