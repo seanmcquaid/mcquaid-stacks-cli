@@ -60,8 +60,8 @@ importers:
         specifier: ^2.3.2
         version: 2.3.2
       i18next-http-backend:
-        specifier: ^2.5.2
-        version: 2.5.2
+        specifier: ^2.6.0
+        version: 2.6.0
       isbot:
         specifier: ^5.1.14
         version: 5.1.14
@@ -3762,8 +3762,8 @@ packages:
   i18next-fs-backend@2.3.2:
     resolution: {integrity: sha512-LIwUlkqDZnUI8lnUxBnEj8K/FrHQTT/Sc+1rvDm9E8YvvY5YxzoEAASNx+W5M9DfD5s77lI5vSAFWeTp26B/3Q==}
 
-  i18next-http-backend@2.5.2:
-    resolution: {integrity: sha512-+K8HbDfrvc1/2X8jpb7RLhI9ZxBDpx3xogYkQwGKlWAUXLSEGXzgdt3EcUjLlBCdMwdQY+K+EUF6oh8oB6rwHw==}
+  i18next-http-backend@2.6.0:
+    resolution: {integrity: sha512-WX5pXYNrAz2fj8ajsAuCIsogOEvJL+aHw4RTQAD/uqPoLV1FHqa6IsUULTfa3GtREVQbApp0U3woLhz9EuR2pQ==}
 
   i18next@23.12.3:
     resolution: {integrity: sha512-DyigQmrR10V9U2N6pjhbfahW13GY7n8BQD9swN09JuRRropgsksWVi4vRLeex0Qf7zCPnBfIqQfhcBzdZBQBYw==}
@@ -10574,7 +10574,7 @@ snapshots:
 
   i18next-fs-backend@2.3.2: {}
 
-  i18next-http-backend@2.5.2:
+  i18next-http-backend@2.6.0:
     dependencies:
       cross-fetch: 4.0.0
     transitivePeerDependencies:
