@@ -52,7 +52,7 @@
   },
   "devDependencies": {
     "@anatine/zod-mock": "^3.13.4",
-    "@axe-core/playwright": "^4.9.1",
+    "@axe-core/playwright": "^4.10.0",
     "@faker-js/faker": "^8.4.1",
     "@playwright/test": "^1.46.0",
     "@remix-run/dev": "^2.11.2",
