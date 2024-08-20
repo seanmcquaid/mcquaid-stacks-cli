@@ -41,7 +41,7 @@
   },
   "devDependencies": {
     "@tanstack/eslint-plugin-query": "^5.51.15",
-    "@tanstack/react-query-devtools": "^5.51.21",
+    "@tanstack/react-query-devtools": "^5.51.24",
     "@testing-library/jest-dom": "^6.4.8",
     "@testing-library/react": "^16.0.0",
     "@types/node": "^22",
