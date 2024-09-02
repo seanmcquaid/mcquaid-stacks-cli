@@ -1,5 +1,11 @@
 # @mcquaid-stacks/cli
 
+## 0.0.31
+
+### Patch Changes
+
+- 2249a7a: Added query options
+
 ## 0.0.30
 
 ### Patch Changes
