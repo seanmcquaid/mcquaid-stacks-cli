@@ -40,7 +40,7 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
-    "@tanstack/eslint-plugin-query": "^5.52.0",
+    "@tanstack/eslint-plugin-query": "^5.53.0",
     "@tanstack/react-query-devtools": "^5.51.24",
     "@testing-library/jest-dom": "^6.5.0",
     "@testing-library/react": "^16.0.0",
