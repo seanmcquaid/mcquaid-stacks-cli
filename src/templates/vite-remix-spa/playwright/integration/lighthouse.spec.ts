@@ -2,9 +2,8 @@ import { test } from '@playwright/test';
 import { playAudit } from 'playwright-lighthouse';
 
 test.describe('Lighthouse tests', () => {
-  // eslint-disable-next-line playwright/no-skipped-test, playwright/expect-expect
+  // eslint-disable-next-line playwright/no-skipped-test
   test.skip(
-    // eslint-disable-next-line playwright/valid-title
     ({ browserName }) => browserName !== 'chromium',
     'Lighthouse only supports Chromium',
   );
