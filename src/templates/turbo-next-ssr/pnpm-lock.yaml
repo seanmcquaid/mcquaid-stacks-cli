@@ -85,8 +85,8 @@ importers:
         specifier: ^5.53.0
         version: 5.53.0(eslint@8.57.0)(typescript@5.5.4)
       '@tanstack/react-query-devtools':
-        specifier: ^5.53.2
-        version: 5.53.2(@tanstack/react-query@5.53.3(react@18.3.1))(react@18.3.1)
+        specifier: ^5.54.0
+        version: 5.54.0(@tanstack/react-query@5.53.3(react@18.3.1))(react@18.3.1)
       '@testing-library/jest-dom':
         specifier: ^6.5.0
         version: 6.5.0
@@ -1540,13 +1540,13 @@ packages:
   '@tanstack/query-core@5.53.3':
     resolution: {integrity: sha512-ZfjAgd7NpqDx0e4aYBt7EmS2enbulPrJwowTy+mayRE93WUUH+sIYHun1TdRjpGwDPMNNZ5D6goh7n3CwoO+HA==}
 
-  '@tanstack/query-devtools@5.52.3':
-    resolution: {integrity: sha512-oGX9qJuNpr4vOQyeksqHr+FgLQGs5UooK87R1wTtcsUUdrRKGSgs3cBllZMtWBJxg+yVvg0TlHNGYLMjvqX3GA==}
+  '@tanstack/query-devtools@5.54.0':
+    resolution: {integrity: sha512-B8Sa6mh7/4m2fyk2/YnUXeOZ1/us7G/C/i1It8YcCbieXc8vf1AdSYjR+mZIoJeKOKLqA741hZqfj8d4F1NCVg==}
 
-  '@tanstack/react-query-devtools@5.53.2':
-    resolution: {integrity: sha512-PvsJqEZMyj/Iur4y/UhxSmxjZaP/KvstO+bGiioI0FbjFerjaeZNRv0WzHU/iSs3TutBt7EMUMC2k9MSGeb3CA==}
+  '@tanstack/react-query-devtools@5.54.0':
+    resolution: {integrity: sha512-0GoijDWrCxB8CnWbu8U2xeg7XYeT0yhI6dPbAz7KHr2nyXELsdBZGHrr6PlfLR5jAHJ2OBpK2vu6blwkAjkuOA==}
     peerDependencies:
-      '@tanstack/react-query': ^5.53.2
+      '@tanstack/react-query': ^5.53.3
       react: ^18 || ^19
 
   '@tanstack/react-query-next-experimental@5.51.11':
@@ -6100,11 +6100,11 @@ snapshots:
 
   '@tanstack/query-core@5.53.3': {}
 
-  '@tanstack/query-devtools@5.52.3': {}
+  '@tanstack/query-devtools@5.54.0': {}
 
-  '@tanstack/react-query-devtools@5.53.2(@tanstack/react-query@5.53.3(react@18.3.1))(react@18.3.1)':
+  '@tanstack/react-query-devtools@5.54.0(@tanstack/react-query@5.53.3(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@tanstack/query-devtools': 5.52.3
+      '@tanstack/query-devtools': 5.54.0
       '@tanstack/react-query': 5.53.3(react@18.3.1)
       react: 18.3.1
 
