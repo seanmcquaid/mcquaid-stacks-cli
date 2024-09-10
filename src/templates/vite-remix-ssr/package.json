@@ -57,7 +57,7 @@
     "@eslint/eslintrc": "^3.1.0",
     "@eslint/js": "^9.10.0",
     "@faker-js/faker": "^8.4.1",
-    "@playwright/test": "^1.46.1",
+    "@playwright/test": "^1.47.0",
     "@remix-run/dev": "^2.11.2",
     "@remix-run/testing": "^2.11.2",
     "@tanstack/eslint-plugin-query": "^5.53.0",
