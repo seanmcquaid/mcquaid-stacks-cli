@@ -86,7 +86,7 @@
     "husky": "^9.1.5",
     "is-ci": "^3.0.1",
     "jsdom": "^25.0.0",
-    "lighthouse": "^12.2.0",
+    "lighthouse": "^12.2.1",
     "lint-staged": "^15.2.10",
     "msw": "^2.4.1",
     "playwright-lighthouse": "^4.0.0",
