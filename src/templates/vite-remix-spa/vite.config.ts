@@ -14,6 +14,9 @@ export default defineConfig({
     // disable remix plugin for vitest
     !process.env.VITEST &&
       remix({
+        future: {
+          unstable_optimizeDeps: true,
+        },
         ssr: false,
         // ignore all files in routes folder to prevent
         // default remix convention from picking up routes
@@ -40,10 +43,6 @@ export default defineConfig({
         './app/routes/**/*',
       ],
     },
-  },
-  // https://github.com/remix-run/remix/discussions/8917#discussioncomment-8640023
-  optimizeDeps: {
-    include: ['./app/entry.client.tsx', './app/root.tsx', './app/routes/**/*'],
   },
   build: {
     rollupOptions: {
