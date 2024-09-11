@@ -223,14 +223,14 @@ importers:
         specifier: ^15.2.10
         version: 15.2.10
       msw:
-        specifier: ^2.4.4
-        version: 2.4.4(typescript@5.6.2)
+        specifier: ^2.4.5
+        version: 2.4.5(typescript@5.6.2)
       playwright-lighthouse:
         specifier: ^4.0.0
         version: 4.0.0(lighthouse@12.2.1)(playwright-core@1.47.0)
       playwright-msw:
         specifier: ^3.0.1
-        version: 3.0.1(@playwright/test@1.47.0)(msw@2.4.4(typescript@5.6.2))
+        version: 3.0.1(@playwright/test@1.47.0)(msw@2.4.5(typescript@5.6.2))
       postcss:
         specifier: ^8.4.45
         version: 8.4.45
@@ -4771,8 +4771,8 @@ packages:
   ms@2.1.3:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
 
-  msw@2.4.4:
-    resolution: {integrity: sha512-iuM0qGs4YmgYCLH+xqb07w2e/e4fYmsx3+WHVlIOUA34TW1sw+wRpNmOlXnLDkw/T7233Jnm6t+aNf4v2E3e2Q==}
+  msw@2.4.5:
+    resolution: {integrity: sha512-lX7knS9us1EKs1Y/ihB4eYEJ9VCq+ZGezrPSspbRw0iEaoOn1q0vZkR0joZ6w1S4u46ZD+VLJ522EQihIIkRCg==}
     engines: {node: '>=18'}
     hasBin: true
     peerDependencies:
@@ -4970,9 +4970,6 @@ packages:
 
   outdent@0.8.0:
     resolution: {integrity: sha512-KiOAIsdpUTcAXuykya5fnVVT+/5uS0Q1mrkRHcF89tpieSmY33O/tmc54CqwA+bfhbtEfZUNLHaPUiB9X3jt1A==}
-
-  outvariant@1.4.2:
-    resolution: {integrity: sha512-Ou3dJ6bA/UJ5GVHxah4LnqDwZRwAmWxrG3wtrHrbGnP4RnLCtA64A4F+ae7Y8ww660JaddSoArUR5HjipWSHAQ==}
 
   outvariant@1.4.3:
     resolution: {integrity: sha512-+Sl2UErvtsoajRDKCE5/dBz4DIvHXQQnAxtQTF04OJxY0+DyZXSo5P5Bb7XYWOh81syohlYL24hbDwxedPUJCA==}
@@ -11863,7 +11860,7 @@ snapshots:
 
   ms@2.1.3: {}
 
-  msw@2.4.4(typescript@5.6.2):
+  msw@2.4.5(typescript@5.6.2):
     dependencies:
       '@bundled-es-modules/cookie': 2.0.0
       '@bundled-es-modules/statuses': 1.0.1
@@ -11877,7 +11874,7 @@ snapshots:
       graphql: 16.8.1
       headers-polyfill: 4.0.3
       is-node-process: 1.2.0
-      outvariant: 1.4.2
+      outvariant: 1.4.3
       path-to-regexp: 6.2.1
       strict-event-emitter: 0.5.1
       type-fest: 4.14.0
@@ -12080,8 +12077,6 @@ snapshots:
 
   outdent@0.8.0: {}
 
-  outvariant@1.4.2: {}
-
   outvariant@1.4.3: {}
 
   p-limit@3.1.0:
@@ -12229,11 +12224,11 @@ snapshots:
     optionalDependencies:
       playwright-core: 1.47.0
 
-  playwright-msw@3.0.1(@playwright/test@1.47.0)(msw@2.4.4(typescript@5.6.2)):
+  playwright-msw@3.0.1(@playwright/test@1.47.0)(msw@2.4.5(typescript@5.6.2)):
     dependencies:
       '@mswjs/cookies': 1.1.0
       '@playwright/test': 1.47.0
-      msw: 2.4.4(typescript@5.6.2)
+      msw: 2.4.5(typescript@5.6.2)
       strict-event-emitter: 0.5.1
 
   playwright@1.47.0:
