@@ -6,6 +6,12 @@ import { flatRoutes } from 'remix-flat-routes';
 import { remixDevTools } from 'remix-development-tools';
 import tsconfigPaths from 'vite-tsconfig-paths';
 
+declare module '@remix-run/server-runtime' {
+  interface Future {
+    unstable_singleFetch: true; // 👈 enable _types_ for single-fetch
+  }
+}
+
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -14,6 +20,13 @@ export default defineConfig({
     // disable remix plugin for vitest
     !process.env.VITEST &&
       remix({
+        future: {
+          unstable_singleFetch: true,
+          unstable_optimizeDeps: true,
+          v3_fetcherPersist: true,
+          v3_relativeSplatPath: true,
+          v3_throwAbortReason: true,
+        },
         ssr: false,
         // ignore all files in routes folder to prevent
         // default remix convention from picking up routes
@@ -40,10 +53,6 @@ export default defineConfig({
         './app/routes/**/*',
       ],
     },
-  },
-  // https://github.com/remix-run/remix/discussions/8917#discussioncomment-8640023
-  optimizeDeps: {
-    include: ['./app/entry.client.tsx', './app/root.tsx', './app/routes/**/*'],
   },
   build: {
     rollupOptions: {
