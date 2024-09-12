@@ -140,6 +140,10 @@ const promptUser = async () => {
 
   shelljs.exec(`cd ${templatePath} && pnpm install`);
 
+  await new Promise((resolve) => setTimeout(resolve, 100));
+
+  shelljs.exec(`cd ${templatePath} && npm pkg set name=${answers.name}`);
+
   showMessage(options);
 };
 
