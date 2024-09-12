@@ -7,7 +7,7 @@ These templates are meant to be a starting point for new projects and are not me
 ## Scaffolding a new project
 
 ```bash
-    npm i -g @mcquaid-stacks/cli
+    npm i -g @mcquaid-stacks/cli@latest
     create-mcquaid-stack
 ```
 
