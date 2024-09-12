@@ -3,16 +3,7 @@
 import * as inquirer from "@inquirer/prompts";
 import * as fs from "fs";
 import * as path from "path";
-import * as ejs from "ejs";
 import * as shelljs from "shelljs";
-
-interface TemplateData {
-  projectName: string;
-}
-
-function render(content: string, data: TemplateData) {
-  return ejs.render(content, data);
-}
 
 const CHOICES = fs.readdirSync(path.join(__dirname, "templates"));
 
@@ -45,15 +36,13 @@ function getTemplateConfig(templatePath: string): TemplateConfig {
   return {};
 }
 
-function createProject(projectPath: string) {
+async function createProject(projectPath: string) {
   if (fs.existsSync(projectPath)) {
     console.log(`Folder ${projectPath} exists. Delete or use another name.`);
     return false;
   }
 
   fs.mkdirSync(projectPath);
-
-  shelljs.exec(`cd ${projectPath} && pnpm install`);
 
   return true;
 }
@@ -78,8 +67,6 @@ function createDirectoryContents(
     if (stats.isFile()) {
       let contents = fs.readFileSync(origFilePath, "utf8");
 
-      contents = render(contents, { projectName });
-
       if (file.includes(".template.gitignore")) {
         const writePath = path.join(CURR_DIR, projectName, ".gitignore");
         fs.writeFileSync(writePath, contents, "utf8");
@@ -101,8 +88,6 @@ function createDirectoryContents(
 }
 
 function showMessage(options: CliOptions) {
-  console.log("");
-  console.log("Done.");
   console.log(`Go into the project: cd ${options.projectName}`);
 
   const message = options.config.postMessage;
@@ -150,6 +135,10 @@ const promptUser = async () => {
   }
 
   createDirectoryContents(templatePath, answers.name, templateConfig);
+
+  await new Promise((resolve) => setTimeout(resolve, 500));
+
+  shelljs.exec(`cd ${templatePath} && pnpm install`);
 
   showMessage(options);
 };

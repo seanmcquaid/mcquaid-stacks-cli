@@ -54,7 +54,6 @@ export function Layout({ children }: PropsWithChildren) {
         />
         <meta httpEquiv="Pragma" content="no-cache" />
         <meta httpEquiv="Expires" content="0" />
-        <title>{'<%= projectName %>'}</title>
         <Meta />
         <Links />
       </head>
