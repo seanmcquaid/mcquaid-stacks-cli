@@ -1,5 +1,11 @@
 # @mcquaid-stacks/cli
 
+## 0.0.32
+
+### Patch Changes
+
+- a912e67: Update CLI and added future flags for Remix templates
+
 ## 0.0.31
 
 ### Patch Changes
