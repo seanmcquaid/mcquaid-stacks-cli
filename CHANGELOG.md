@@ -1,5 +1,11 @@
 # @mcquaid-stacks/cli
 
+## 0.0.33
+
+### Patch Changes
+
+- 8ebca11: Updated README
+
 ## 0.0.32
 
 ### Patch Changes
