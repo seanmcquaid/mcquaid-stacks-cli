@@ -36,6 +36,6 @@ jobs:
       - name: Bundle size check
         run: pnpm bundlesize
       - name: Check package types
-        run: pnpm check-types
+        run:  npm pkg set name=example && pnpm check-types
       - name: Check tree-shaking
         run: pnpm check-treeshaking
