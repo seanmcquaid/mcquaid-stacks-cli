@@ -79,4 +79,3 @@ updates:
       interval: weekly
       day: tuesday
     open-pull-requests-limit: 20
-

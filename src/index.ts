@@ -70,6 +70,14 @@ function createDirectoryContents(
       if (file.includes(".template.gitignore")) {
         const writePath = path.join(CURR_DIR, projectName, ".gitignore");
         fs.writeFileSync(writePath, contents, "utf8");
+      } else if (file === "package.json") {
+        const currentPackageJson = JSON.parse(contents);
+        const newPackageJson = {
+          name: projectName,
+          ...currentPackageJson,
+        };
+        const writePath = path.join(CURR_DIR, projectName, file);
+        fs.writeFileSync(writePath, JSON.stringify(newPackageJson, null, 2));
       } else {
         const writePath = path.join(CURR_DIR, projectName, file);
         fs.writeFileSync(writePath, contents, "utf8");
