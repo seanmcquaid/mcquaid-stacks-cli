@@ -1,5 +1,11 @@
 # @mcquaid-stacks/cli
 
+## 0.0.34
+
+### Patch Changes
+
+- 98448a1: Added in naming back to project scaffolding
+
 ## 0.0.33
 
 ### Patch Changes
