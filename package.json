@@ -16,7 +16,7 @@
     "start": "ts-node src/index.ts"
   },
   "dependencies": {
-    "@inquirer/prompts": "^5.0.0",
+    "@inquirer/prompts": "^6.0.1",
     "shelljs": "^0.8.5"
   },
   "devDependencies": {
