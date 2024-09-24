@@ -51,7 +51,7 @@
     "@axe-core/playwright": "^4.10.0",
     "@eslint/compat": "^1.1.1",
     "@eslint/eslintrc": "^3.1.0",
-    "@eslint/js": "^9.10.0",
+    "@eslint/js": "^9.11.1",
     "@faker-js/faker": "^8.4.1",
     "@playwright/test": "^1.47.1",
     "@remix-run/dev": "^2.12.0",
