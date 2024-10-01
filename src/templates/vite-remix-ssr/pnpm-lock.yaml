@@ -87,8 +87,8 @@ importers:
         specifier: ^15.0.2
         version: 15.0.2(i18next@23.15.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       remix-hook-form:
-        specifier: ^5.0.4
-        version: 5.0.4(@remix-run/react@2.12.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.6.2))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.53.0(react@18.3.1))(react@18.3.1)
+        specifier: ^5.1.0
+        version: 5.1.0(@remix-run/react@2.12.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.6.2))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.53.0(react@18.3.1))(react@18.3.1)
       remix-i18next:
         specifier: ^6.4.1
         version: 6.4.1(@remix-run/node@2.12.1(typescript@5.6.2))(@remix-run/react@2.12.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.6.2))(i18next@23.15.1)(react-i18next@15.0.2(i18next@23.15.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
@@ -5494,8 +5494,8 @@ packages:
     peerDependencies:
       '@remix-run/dev': ^1.15.0 || ^2
 
-  remix-hook-form@5.0.4:
-    resolution: {integrity: sha512-KLYJKk29SU+jDbOph9fIinevx6vg1YOeaCo1h4x9eIw/s8eBe/nTnSDu3/CLPazU/vxpyiWh/EwE4DkKjvVXyQ==}
+  remix-hook-form@5.1.0:
+    resolution: {integrity: sha512-aBrcZyl3LrUej8ezTg+Fv0QW6YEu5vvaBl4Cu1mj3Bgqs1M0gCc2csWVkTH7z3aRRJTS2mfQWPMpQ53ozfYpzw==}
     peerDependencies:
       '@remix-run/react': ^2.0.0
       react: ^18.2.0
@@ -12505,7 +12505,7 @@ snapshots:
       fs-extra: 11.2.0
       minimatch: 5.1.6
 
-  remix-hook-form@5.0.4(@remix-run/react@2.12.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.6.2))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.53.0(react@18.3.1))(react@18.3.1):
+  remix-hook-form@5.1.0(@remix-run/react@2.12.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.6.2))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.53.0(react@18.3.1))(react@18.3.1):
     dependencies:
       '@remix-run/react': 2.12.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.6.2)
       react: 18.3.1
