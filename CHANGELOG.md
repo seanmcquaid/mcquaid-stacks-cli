@@ -1,5 +1,11 @@
 # @mcquaid-stacks/cli
 
+## 0.0.35
+
+### Patch Changes
+
+- 10ca1fa: Remove pnpm install from explicit command
+
 ## 0.0.34
 
 ### Patch Changes
