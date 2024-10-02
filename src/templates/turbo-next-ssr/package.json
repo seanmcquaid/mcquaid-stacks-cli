@@ -27,7 +27,7 @@
     "i18next-browser-languagedetector": "^8.0.0",
     "i18next-http-backend": "^2.6.1",
     "ky": "^1.7.2",
-    "lucide-react": "^0.445.0",
+    "lucide-react": "^0.446.0",
     "next": "14.2.13",
     "next-plugin-svgr": "^1.1.10",
     "react": "^18",
@@ -39,8 +39,8 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
-    "@tanstack/eslint-plugin-query": "^5.57.1",
-    "@tanstack/react-query-devtools": "^5.56.2",
+    "@tanstack/eslint-plugin-query": "^5.58.1",
+    "@tanstack/react-query-devtools": "^5.58.0",
     "@testing-library/jest-dom": "^6.5.0",
     "@testing-library/react": "^16.0.1",
     "@types/node": "^22",
@@ -48,7 +48,7 @@
     "@types/react-dom": "^18",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@typescript-eslint/parser": "^7.18.0",
-    "@vitejs/plugin-react": "^4.3.1",
+    "@vitejs/plugin-react": "^4.3.2",
     "@vitest/coverage-istanbul": "^2.1.1",
     "bundlesize": "^0.18.2",
     "cross-fetch": "^4.0.0",
@@ -67,7 +67,7 @@
     "lint-staged": "^15.2.10",
     "postcss": "^8",
     "prettier": "^3.3.3",
-    "prettier-plugin-tailwindcss": "^0.6.6",
+    "prettier-plugin-tailwindcss": "^0.6.8",
     "tailwindcss": "^3.4.13",
     "typescript": "^5",
     "vitest": "^2.1.1"
