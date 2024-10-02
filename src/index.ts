@@ -96,7 +96,7 @@ function createDirectoryContents(
 }
 
 function showMessage(options: CliOptions) {
-  console.log(`Go into the project: cd ${options.projectName}`);
+  console.log(`Go into the project: cd ${options.projectName} && pnpm install`);
 
   const message = options.config.postMessage;
 
@@ -143,10 +143,6 @@ const promptUser = async () => {
   }
 
   createDirectoryContents(templatePath, answers.name, templateConfig);
-
-  await new Promise((resolve) => setTimeout(resolve, 500));
-
-  shelljs.exec(`cd ${templatePath} && pnpm install`);
 
   await new Promise((resolve) => setTimeout(resolve, 100));
 
