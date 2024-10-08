@@ -2155,8 +2155,8 @@ packages:
     resolution: {integrity: sha512-xAg7SOnEhrm5zI3puOOKyy1OMcMlIJZYNJY7xLBwSze0UjhPLnWfj2GF2EpT0jmzaJKIWKHLsaSSajf35bcYnA==}
     engines: {node: '>=v12.22.7'}
 
-  semver@5.7.1:
-    resolution: {integrity: sha512-sauaDf/PZdVgrLTNYHRtpXa1iRiKcaebiKQ1BJdpQlWH2lCvexQdX55snPFyK7QzpudqbCI0qXFfOasHdyNDGQ==}
+  semver@5.7.2:
+    resolution: {integrity: sha512-cBznnQ9KjJqU67B52RMC65CMarK2600WFnbkcaiwWq3xy/5haFJlshgnpjovMVJ+Hff49d8GEn0b87C5pDQ10g==}
     hasBin: true
 
   semver@7.5.4:
@@ -4478,7 +4478,7 @@ snapshots:
 
   node-abi@2.30.1:
     dependencies:
-      semver: 5.7.1
+      semver: 5.7.2
 
   node-emoji@2.1.3:
     dependencies:
@@ -4795,7 +4795,7 @@ snapshots:
     dependencies:
       xmlchars: 2.2.0
 
-  semver@5.7.1: {}
+  semver@5.7.2: {}
 
   semver@7.5.4:
     dependencies:
