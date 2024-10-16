@@ -1,5 +1,11 @@
 # @mcquaid-stacks/cli
 
+## 0.0.36
+
+### Patch Changes
+
+- 8d5b8e5: Upgraded Remix templates to use stabilized future flags in prep RRV7
+
 ## 0.0.35
 
 ### Patch Changes
