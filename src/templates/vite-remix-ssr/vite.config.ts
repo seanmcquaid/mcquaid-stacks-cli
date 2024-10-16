@@ -21,8 +21,8 @@ export default defineConfig({
     !process.env.VITEST &&
       remix({
         future: {
-          unstable_lazyRouteDiscovery: true,
-          unstable_singleFetch: true,
+          v3_lazyRouteDiscovery: true,
+          v3_singleFetch: true,
           unstable_optimizeDeps: true,
           v3_fetcherPersist: true,
           v3_relativeSplatPath: true,
