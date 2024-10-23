@@ -26,6 +26,9 @@ importers:
       '@react-router/node':
         specifier: 7.0.0-pre.1
         version: 7.0.0-pre.1(react-router@7.0.0-pre.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.6.3)
+      '@react-router/remix-config-routes-adapter':
+        specifier: 0.0.0-nightly-bf7ecb711-20240911
+        version: 0.0.0-nightly-bf7ecb711-20240911(@react-router/dev@7.0.0-pre.1(@react-router/serve@7.0.0-pre.1(react-router@7.0.0-pre.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.6.3))(@types/node@22.7.6)(babel-plugin-macros@3.1.0)(react-router@7.0.0-pre.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.6.3)(vite@5.4.9(@types/node@22.7.6)))(typescript@5.6.3)
       '@react-router/serve':
         specifier: 7.0.0-pre.1
         version: 7.0.0-pre.1(react-router@7.0.0-pre.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.6.3)
@@ -1579,6 +1582,16 @@ packages:
     engines: {node: '>=18.0.0'}
     peerDependencies:
       react-router: 7.0.0-pre.1
+      typescript: ^5.1.0
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+
+  '@react-router/remix-config-routes-adapter@0.0.0-nightly-bf7ecb711-20240911':
+    resolution: {integrity: sha512-F4OG29Moiq60sFaP0WZnqhwdVHfzmk2vKb860eYedFrHPSH7LftWvaOry25XUirUUEZql5L8N3PgLboZuOTehA==}
+    engines: {node: '>=18.0.0'}
+    peerDependencies:
+      '@react-router/dev': ^0.0.0-nightly-bf7ecb711-20240911
       typescript: ^5.1.0
     peerDependenciesMeta:
       typescript:
@@ -8000,6 +8013,12 @@ snapshots:
       source-map-support: 0.5.21
       stream-slice: 0.1.2
       undici: 6.20.1
+    optionalDependencies:
+      typescript: 5.6.3
+
+  '@react-router/remix-config-routes-adapter@0.0.0-nightly-bf7ecb711-20240911(@react-router/dev@7.0.0-pre.1(@react-router/serve@7.0.0-pre.1(react-router@7.0.0-pre.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.6.3))(@types/node@22.7.6)(babel-plugin-macros@3.1.0)(react-router@7.0.0-pre.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.6.3)(vite@5.4.9(@types/node@22.7.6)))(typescript@5.6.3)':
+    dependencies:
+      '@react-router/dev': 7.0.0-pre.1(@react-router/serve@7.0.0-pre.1(react-router@7.0.0-pre.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.6.3))(@types/node@22.7.6)(babel-plugin-macros@3.1.0)(react-router@7.0.0-pre.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.6.3)(vite@5.4.9(@types/node@22.7.6))
     optionalDependencies:
       typescript: 5.6.3
 

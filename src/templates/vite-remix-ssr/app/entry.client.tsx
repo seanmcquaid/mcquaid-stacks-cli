@@ -1,4 +1,3 @@
-import { RemixBrowser } from '@remix-run/react';
 import { startTransition, StrictMode } from 'react';
 import { hydrateRoot } from 'react-dom/client';
 import './i18n/i18next.client';
@@ -13,7 +12,7 @@ prepareMsw().then(() =>
       document,
       <I18nextProvider i18n={i18next}>
         <StrictMode>
-          <RemixBrowser />
+          <RemixRouter />
         </StrictMode>
       </I18nextProvider>,
     );
