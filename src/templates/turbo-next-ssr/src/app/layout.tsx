@@ -3,8 +3,8 @@ import type { PropsWithChildren } from 'react';
 import Providers from './Providers';
 import getLanguageFromReferer from '@/i18n/getLanguageFromReferer';
 
-export default function RootLayout({ children }: PropsWithChildren) {
-  const lang = getLanguageFromReferer();
+export default async function RootLayout({ children }: PropsWithChildren) {
+  const lang = await getLanguageFromReferer();
 
   return (
     <html lang={lang} className="h-screen min-h-screen w-full overflow-auto">

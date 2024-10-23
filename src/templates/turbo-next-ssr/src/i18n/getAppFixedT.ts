@@ -32,7 +32,7 @@ const initI18next = async () => {
 
 const getAppFixedT = async () => {
   const i18n = await initI18next();
-  const lang = getLanguageFromReferer();
+  const lang = await getLanguageFromReferer();
   const t = i18n.getFixedT(lang);
 
   return {
