@@ -1,7 +1,8 @@
 import { headers } from 'next/headers';
 
-const getLanguageFromReferer = () => {
-  const referer = headers().get('referer') ?? '';
+const getLanguageFromReferer = async () => {
+  const { get } = await headers();
+  const referer = get('referer') ?? '';
   let lang = 'en-US';
 
   if (referer.includes('.ca')) {
