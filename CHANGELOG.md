@@ -1,5 +1,12 @@
 # @mcquaid-stacks/cli
 
+## 0.0.37
+
+### Patch Changes
+
+- bf91602: Upgrade to Next 15
+- bb09f14: Added circular dependency test and updated exports"
+
 ## 0.0.36
 
 ### Patch Changes
