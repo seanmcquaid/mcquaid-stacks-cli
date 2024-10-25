@@ -7,7 +7,7 @@ on:
 
 defaults:
   run:
-    working-directory: ./templates/vite-remix-spa
+    working-directory: ./vite-remix-spa
 
 jobs:
   linting:
