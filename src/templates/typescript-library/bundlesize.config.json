@@ -5,7 +5,7 @@
       "maxSize": "10 kB"
     },
     {
-      "path": "./dist/*.mjs",
+      "path": "./dist/*.cjs",
       "maxSize": "10 kB"
     }
   ]
