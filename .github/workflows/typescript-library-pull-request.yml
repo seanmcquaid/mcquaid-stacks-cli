@@ -15,15 +15,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: Checkout latest
         uses: actions/checkout@v4
       - name: Setup PNPM
         uses: pnpm/action-setup@v4
+        with:
+          version: 9.1.1
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version-file: ".nvmrc"
-          cache: "pnpm"
+          node-version: 21.1.0
       - name: Install Dependencies
         run: |
           pnpm install --frozen-lockfile
