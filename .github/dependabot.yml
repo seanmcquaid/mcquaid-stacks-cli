@@ -1,12 +1,6 @@
 version: 2
 
 updates:
-  - package-ecosystem: npm
-    directory: "/"
-    schedule:
-      interval: weekly
-      day: tuesday
-    open-pull-requests-limit: 20
   - package-ecosystem: github-actions
     directory: "/"
     schedule:
@@ -14,67 +8,67 @@ updates:
       day: tuesday
     open-pull-requests-limit: 20
   - package-ecosystem: npm
-    directory: "/src/templates/typescript-library/"
+    directory: "/templates/typescript-library/"
     schedule:
       interval: weekly
       day: tuesday
     open-pull-requests-limit: 20
   - package-ecosystem: github-actions
-    directory: "/src/templates/typescript-library/.github/workflows"
+    directory: "/templates/typescript-library/.github/workflows"
     schedule:
       interval: weekly
       day: tuesday
     open-pull-requests-limit: 20
   - package-ecosystem: npm
-    directory: "/src/templates/vite-remix-spa/"
+    directory: "/templates/vite-remix-spa/"
     schedule:
       interval: weekly
       day: tuesday
     open-pull-requests-limit: 20
   - package-ecosystem: github-actions
-    directory: "/src/templates/vite-remix-spa/.github/workflows"
+    directory: "/templates/vite-remix-spa/.github/workflows"
     schedule:
       interval: weekly
       day: tuesday
     open-pull-requests-limit: 20
   - package-ecosystem: github-actions
-    directory: "/src/templates/vite-remix-spa/.github/actions/setup-pull-request-job"
+    directory: "/templates/vite-remix-spa/.github/actions/setup-pull-request-job"
     schedule:
       interval: weekly
       day: tuesday
     open-pull-requests-limit: 20
   - package-ecosystem: npm
-    directory: "/src/templates/vite-remix-ssr/"
+    directory: "/templates/vite-remix-ssr/"
     schedule:
       interval: weekly
       day: tuesday
     open-pull-requests-limit: 20
   - package-ecosystem: github-actions
-    directory: "/src/templates/vite-remix-ssr/.github/workflows"
+    directory: "/templates/vite-remix-ssr/.github/workflows"
     schedule:
       interval: weekly
       day: tuesday
     open-pull-requests-limit: 20
   - package-ecosystem: github-actions
-    directory: "/src/templates/vite-remix-ssr/.github/actions/setup-pull-request-job"
+    directory: "/templates/vite-remix-ssr/.github/actions/setup-pull-request-job"
     schedule:
       interval: weekly
       day: tuesday
     open-pull-requests-limit: 20
   - package-ecosystem: npm
-    directory: "/src/templates/turbo-next-ssr/"
+    directory: "/templates/turbo-next-ssr/"
     schedule:
       interval: weekly
       day: tuesday
     open-pull-requests-limit: 20
   - package-ecosystem: github-actions
-    directory: "/src/templates/turbo-next-ssr/.github/workflows"
+    directory: "/templates/turbo-next-ssr/.github/workflows"
     schedule:
       interval: weekly
       day: tuesday
     open-pull-requests-limit: 20
   - package-ecosystem: github-actions
-    directory: "/src/templates/turbo-next-ssr/.github/actions/setup-pull-request-job"
+    directory: "/templates/turbo-next-ssr/.github/actions/setup-pull-request-job"
     schedule:
       interval: weekly
       day: tuesday
