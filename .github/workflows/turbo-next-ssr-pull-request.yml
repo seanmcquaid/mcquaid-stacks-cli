@@ -23,7 +23,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version-file: ".nvmrc"
+          node-version: 21.1.0
           cache: "pnpm"
       - name: Set env to dev
         run: |
@@ -46,7 +46,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version-file: ".nvmrc"
+          node-version: 21.1.0
           cache: "pnpm"
       - name: Install Dependencies
         run: pnpm install --frozen-lockfile
@@ -65,7 +65,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version-file: ".nvmrc"
+          node-version: 21.1.0
           cache: "pnpm"
       - name: Install Dependencies
         run: pnpm install --frozen-lockfile
