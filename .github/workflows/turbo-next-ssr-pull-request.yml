@@ -7,7 +7,7 @@ on:
 
 defaults:
   run:
-    working-directory: ./src/templates/turbo-next-ssr
+    working-directory: ./templates/turbo-next-ssr
 
 jobs:
   linting:

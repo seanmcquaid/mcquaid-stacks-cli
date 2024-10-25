@@ -1,4 +1,4 @@
-# @mcquaid-stacks/cli
+# Scaffolding Templates
 
 Throughout my years of working in web development, I have found myself using the same tools over and over again when starting a new project. After going through the same exercise of creating a new project and setting up the same tools time and time again, I have decided to create a collection of scaffolding templates for these tools to make it easier for anyone to get started on new projects with an opinionated starter.
 
@@ -7,8 +7,7 @@ These templates are meant to be a starting point for new projects and are not me
 ## Scaffolding a new project
 
 ```bash
-    npm i -g @mcquaid-stacks/cli@latest
-    create-mcquaid-stack
+    npx degit https://github.com/seanmcquaid/scaffolding-templates/templates/<template-name> <project-name>
 ```
 
 ## Templates
