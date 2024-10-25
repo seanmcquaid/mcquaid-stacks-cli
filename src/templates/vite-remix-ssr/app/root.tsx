@@ -6,42 +6,21 @@ import {
   Scripts,
   useRouteError,
   useNavigation,
-  json,
-  useLoaderData,
   ScrollRestoration,
-} from '@remix-run/react';
+} from 'react-router';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { QueryClientProvider } from '@tanstack/react-query';
 import type { PropsWithChildren } from 'react';
 import { useEffect } from 'react';
-import type { LoaderFunctionArgs } from '@remix-run/node';
-import { useChangeLanguage } from 'remix-i18next/react';
 import { Toaster } from './components/ui/Toaster';
 import queryClient from './services/queryClient';
 import PageError from './components/app/PageError';
-import useAppTranslation from './hooks/useAppTranslation';
 import LoadingOverlay from './components/ui/LoadingOverlay';
-import i18next from './i18n/i18next.server';
-import setAcceptLanguageHeaders from './i18n/setAcceptLanguageHeaders';
+import type * as Route from './+types.root';
 
-export async function loader({ request }: LoaderFunctionArgs) {
-  setAcceptLanguageHeaders(request);
-  const locale = await i18next.getLocale(request);
-  return json({ locale });
-}
-
-export function Layout({ children }: PropsWithChildren) {
-  const { locale } = useLoaderData<typeof loader>();
-  const { i18n } = useAppTranslation();
-
-  useChangeLanguage(locale);
-
+export function Layout({ children }: PropsWithChildren & Route.ComponentProps) {
   return (
-    <html
-      lang={locale}
-      dir={i18n.dir()}
-      className="h-screen min-h-screen overflow-auto w-full"
-    >
+    <html className="h-screen min-h-screen overflow-auto w-full">
       <head>
         <meta charSet="UTF-8" />
         <meta name="description" content="Vite App" />

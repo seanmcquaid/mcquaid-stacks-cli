@@ -1,4 +1,4 @@
-import { createRemixStub } from '@remix-run/testing';
+import { createRoutesStub } from 'react-router';
 import KitchenSinkPage from '.';
 import type Post from '@/types/Post';
 import {
@@ -9,7 +9,7 @@ import {
 
 describe('Kitchen Sink Page', () => {
   it('Renders loader data', async () => {
-    const RemixStub = createRemixStub([
+    const RemixStub = createRoutesStub([
       {
         path: '/',
         loader: () => {
@@ -18,7 +18,7 @@ describe('Kitchen Sink Page', () => {
             { id: 2, title: 'Post 2', userId: 2, body: 'Body 2' },
           ] satisfies Post[];
         },
-        Component: KitchenSinkPage,
+        Component: () => <KitchenSinkPage params={{}} loaderData={[]} />,
       },
     ]);
 

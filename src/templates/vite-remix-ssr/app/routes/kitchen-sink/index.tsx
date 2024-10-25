@@ -1,21 +1,15 @@
 import { zodResolver } from '@hookform/resolvers/zod';
 import { getValidatedFormData, useRemixForm } from 'remix-hook-form';
-import type {
-  ClientActionFunctionArgs,
-  ClientLoaderFunctionArgs,
-} from '@remix-run/react';
-import { Form, useLoaderData } from '@remix-run/react';
 import { z } from 'zod';
-import type { ActionFunctionArgs } from '@remix-run/node';
-import { json } from '@remix-run/node';
+import { json, Form } from 'react-router';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
 import queryClient from '@/services/queryClient';
 import { toast } from '@/hooks/useToast';
 import postsService from '@/services/postsService';
-import type Post from '@/types/Post';
 import QueryKey from '@/constants/QueryKey';
 import LinkButton from '@/components/ui/LinkButton';
+import type * as Route from './+types.index';
 
 const formDataSchema = z.object({
   name: z.string().min(3).max(50, {
@@ -35,10 +29,10 @@ export const loader = async () => {
 
 export const clientLoader = async ({
   serverLoader,
-}: ClientLoaderFunctionArgs) => {
+}: Route.ClientLoaderArgs) => {
   const posts = await queryClient.ensureQueryData({
     queryKey: [QueryKey.GET_POSTS],
-    queryFn: () => serverLoader<Post[]>(),
+    queryFn: () => serverLoader(),
   });
 
   return posts;
@@ -46,7 +40,7 @@ export const clientLoader = async ({
 
 clientLoader.hydrate = true;
 
-export const action = async ({ request }: ActionFunctionArgs) => {
+export const action = async ({ request }: Route.ActionArgs) => {
   const {
     errors,
     data,
@@ -63,7 +57,7 @@ export const action = async ({ request }: ActionFunctionArgs) => {
 
 export const clientAction = async ({
   serverAction,
-}: ClientActionFunctionArgs) => {
+}: Route.ClientActionArgs) => {
   await serverAction();
 
   toast({
@@ -73,8 +67,7 @@ export const clientAction = async ({
   return null;
 };
 
-const KitchenSinkPage = () => {
-  const data = useLoaderData<typeof clientLoader>();
+const KitchenSinkPage = ({ loaderData }: Route.ComponentProps) => {
   const {
     register,
     formState: { errors },
@@ -95,7 +88,7 @@ const KitchenSinkPage = () => {
         <Button type="submit">{'Submit'}</Button>
       </Form>
       <ul className="grid grid-cols-2">
-        {data?.map(post => (
+        {loaderData?.map(post => (
           <li key={post.id} className="flex mt-4 items-center">
             <LinkButton to={`/react-query/${post.id}`}>
               {post.title.substring(0, 4)}
