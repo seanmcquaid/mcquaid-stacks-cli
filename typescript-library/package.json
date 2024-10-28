@@ -41,6 +41,7 @@
     "agadoo": "^3.0.0",
     "bundlesize": "^0.18.2",
     "dpdm": "^3.14.0",
+    "esbuild-plugin-file-path-extensions": "^2.1.3",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "5.2.1",
     "eslint-plugin-vitest": "^0.5.4",
