@@ -1,7 +1,7 @@
 import { zodResolver } from '@hookform/resolvers/zod';
 import { getValidatedFormData, useRemixForm } from 'remix-hook-form';
-import type { ClientActionFunctionArgs } from '@remix-run/react';
-import { Form, useLoaderData } from '@remix-run/react';
+import type { ClientActionFunctionArgs } from 'react-router';
+import { Form, useLoaderData } from 'react-router';
 import { z } from 'zod';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';

@@ -8,7 +8,7 @@ import {
   useRouteError,
   useNavigation,
   ScrollRestoration,
-} from '@remix-run/react';
+} from 'react-router';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { QueryClientProvider } from '@tanstack/react-query';
 import type { PropsWithChildren } from 'react';

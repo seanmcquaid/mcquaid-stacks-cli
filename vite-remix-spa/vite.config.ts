@@ -1,40 +1,17 @@
 import { defineConfig } from 'vite';
-import { vitePlugin as remix } from '@remix-run/dev';
 import svgr from 'vite-plugin-svgr';
 import checker from 'vite-plugin-checker';
-import { flatRoutes } from 'remix-flat-routes';
+import { reactRouter } from '@react-router/dev/vite';
 import { remixDevTools } from 'remix-development-tools';
 import tsconfigPaths from 'vite-tsconfig-paths';
 
-declare module '@remix-run/server-runtime' {
-  interface Future {
-    unstable_singleFetch: true; // 👈 enable _types_ for single-fetch
-  }
-}
-
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     tsconfigPaths(),
     remixDevTools(),
-    // disable remix plugin for vitest
-    !process.env.VITEST &&
-      remix({
-        future: {
-          v3_singleFetch: true,
-          unstable_optimizeDeps: true,
-          v3_fetcherPersist: true,
-          v3_relativeSplatPath: true,
-          v3_throwAbortReason: true,
-        },
-        ssr: false,
-        // ignore all files in routes folder to prevent
-        // default remix convention from picking up routes
-        ignoredRouteFiles: ['**/*'],
-        routes: async defineRoutes => {
-          return flatRoutes('routes', defineRoutes);
-        },
-      }),
+    reactRouter({
+      ssr: false,
+    }),
     svgr(),
     checker({ typescript: true }),
   ],
@@ -45,14 +22,6 @@ export default defineConfig({
   server: {
     port: 3000,
     open: true,
-    // https://github.com/remix-run/remix/discussions/8917#discussioncomment-8640023
-    warmup: {
-      clientFiles: [
-        './app/entry.client.tsx',
-        './app/root.tsx',
-        './app/routes/**/*',
-      ],
-    },
   },
   build: {
     rollupOptions: {

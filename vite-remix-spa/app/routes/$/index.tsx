@@ -1,4 +1,4 @@
-import { useNavigate } from '@remix-run/react';
+import { useNavigate } from 'react-router';
 import { Button } from '@/components/ui/Button';
 import PageWrapper from '@/components/app/PageWrapper';
 import useAppTranslation from '@/hooks/useAppTranslation';
