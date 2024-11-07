@@ -47,13 +47,13 @@ export const clientLoader = async ({
 clientLoader.hydrate = true;
 
 export const action = async ({ request }: ActionFunctionArgs) => {
-  const { errors, data } = getValidatedFormData({
+  const { errors, data, defaultValues } = getValidatedFormData({
     schema: formDataSchema,
     formData: await request.formData(),
   });
 
   if (errors) {
-    return { errors };
+    return { errors, defaultValues };
   }
 
   return { data };
@@ -62,12 +62,12 @@ export const action = async ({ request }: ActionFunctionArgs) => {
 export const clientAction = async ({
   serverAction,
 }: ClientActionFunctionArgs) => {
-  const { data, errors } = (await serverAction<typeof action>()) as Awaited<
-    ReturnType<typeof action>
-  >;
+  const { data, errors, defaultValues } = (await serverAction<
+    typeof action
+  >()) as Awaited<ReturnType<typeof action>>;
 
   if (errors) {
-    return { errors };
+    return { errors, defaultValues };
   }
 
   toast({
@@ -86,9 +86,6 @@ const KitchenSinkPage = () => {
   } = useForm<FormData>({
     resolver,
     mode: 'onChange',
-    defaultValues: {
-      name: actionData?.data?.name,
-    },
   });
 
   return (
@@ -98,6 +95,7 @@ const KitchenSinkPage = () => {
           className="m-4"
           label="Name"
           errorMessage={errors?.name?.message || actionData?.errors?.name}
+          defaultValue={actionData?.defaultValues?.name}
           {...register('name')}
         />
         <Button type="submit">{'Submit'}</Button>

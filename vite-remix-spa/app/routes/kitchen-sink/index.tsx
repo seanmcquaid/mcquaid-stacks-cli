@@ -30,12 +30,12 @@ export const clientLoader = async () => {
 clientLoader.hydrate = true;
 
 export const clientAction = async ({ request }: ClientActionFunctionArgs) => {
-  const { errors, data } = getValidatedFormData({
+  const { errors, data, defaultValues } = getValidatedFormData({
     formData: await request.formData(),
     schema: formDataSchema,
   });
   if (errors) {
-    return { errors };
+    return { errors, defaultValues };
   }
 
   toast({
@@ -54,9 +54,6 @@ const KitchenSinkPage = () => {
   } = useForm<FormData>({
     resolver,
     mode: 'onChange',
-    defaultValues: {
-      name: actionData?.data?.name,
-    },
   });
 
   return (
@@ -66,6 +63,7 @@ const KitchenSinkPage = () => {
           className="m-4"
           label="Name"
           errorMessage={errors?.name?.message || actionData?.errors?.name}
+          defaultValue={actionData?.defaultValues?.name}
           {...register('name')}
         />
         <Button type="submit">{'Submit'}</Button>
