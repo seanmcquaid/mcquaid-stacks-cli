@@ -2,13 +2,11 @@ import { defineConfig } from 'vite';
 import svgr from 'vite-plugin-svgr';
 import checker from 'vite-plugin-checker';
 import { reactRouter } from '@react-router/dev/vite';
-import { remixDevTools } from 'remix-development-tools';
 import tsconfigPaths from 'vite-tsconfig-paths';
 
 export default defineConfig({
   plugins: [
     tsconfigPaths(),
-    remixDevTools(),
     reactRouter({
       ssr: false,
     }),
