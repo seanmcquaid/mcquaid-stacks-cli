@@ -1,8 +1,8 @@
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-import { useRemixForm } from 'remix-hook-form';
 import { Input } from '@/components/ui/Input';
 import PageWrapper from '@/components/app/PageWrapper';
+import { useForm } from 'react-hook-form';
 
 const formDataSchema = z
   .object({
@@ -29,7 +29,7 @@ const RemixHookFormZod = () => {
   const {
     register,
     formState: { errors },
-  } = useRemixForm<FormData>({
+  } = useForm<FormData>({
     mode: 'onBlur',
     resolver,
   });

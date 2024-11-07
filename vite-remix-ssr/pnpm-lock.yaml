@@ -86,9 +86,6 @@ importers:
       react-i18next:
         specifier: ^15.1.0
         version: 15.1.0(i18next@23.16.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      remix-hook-form:
-        specifier: ^5.1.1
-        version: 5.1.1(@remix-run/react@2.13.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.6.3))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.53.1(react@18.3.1))(react@18.3.1)
       remix-i18next:
         specifier: ^6.4.1
         version: 6.4.1(@remix-run/node@2.13.1(typescript@5.6.3))(@remix-run/react@2.13.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.6.3))(i18next@23.16.4)(react-i18next@15.1.0(i18next@23.16.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
@@ -5355,14 +5352,6 @@ packages:
     hasBin: true
     peerDependencies:
       '@remix-run/dev': ^1.15.0 || ^2
-
-  remix-hook-form@5.1.1:
-    resolution: {integrity: sha512-dHOXWEB/HYMSOT/Dq40G9A0BiWGcTZlz8eIw8NPVuy1hQ9hVXq7VLDRJT2lh4PJTFnm8La0DvDDB6blgp9Lo0Q==}
-    peerDependencies:
-      '@remix-run/react': ^2.0.0
-      react: ^18.2.0
-      react-dom: ^18.2.0
-      react-hook-form: ^7.51.0
 
   remix-i18next@6.4.1:
     resolution: {integrity: sha512-Ma4ESNj8uZmm/Fjq2ZHEbsGvYYO2rV1BtqwIFPAYUeitBaED+r0pNXktUzvsHEanvbFOZPAhEcp5f17vDslmeA==}
@@ -12183,13 +12172,6 @@ snapshots:
       '@remix-run/v1-route-convention': 0.1.4(@remix-run/dev@2.13.1(@remix-run/react@2.13.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.6.3))(@remix-run/serve@2.13.1(typescript@5.6.3))(@types/node@22.9.0)(babel-plugin-macros@3.1.0)(typescript@5.6.3)(vite@5.4.10(@types/node@22.9.0)))
       fs-extra: 11.2.0
       minimatch: 5.1.6
-
-  remix-hook-form@5.1.1(@remix-run/react@2.13.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.6.3))(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.53.1(react@18.3.1))(react@18.3.1):
-    dependencies:
-      '@remix-run/react': 2.13.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.6.3)
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-      react-hook-form: 7.53.1(react@18.3.1)
 
   remix-i18next@6.4.1(@remix-run/node@2.13.1(typescript@5.6.3))(@remix-run/react@2.13.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.6.3))(i18next@23.16.4)(react-i18next@15.1.0(i18next@23.16.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1):
     dependencies:

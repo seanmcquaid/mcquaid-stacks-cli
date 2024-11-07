@@ -8,7 +8,7 @@ const enUSLocale = {
     kitchenSink: 'Kitchen Sink',
     reactQuery: 'Querying and Mutating Data with React Query',
     remix: 'Remix',
-    remixHookFormZod: 'Remix Hook Form with Zod',
+    reactHookFormZod: 'React Hook Form with Zod',
     subTitle:
       'Below you will find a list of example routes with commonly used patterns for React projects',
     title: 'Welcome to a scaffolded project with the @mcquaid-stacks/cli!',
@@ -37,8 +37,8 @@ const enUSLocale = {
   Routes: {
     home: '/',
     kitchenSink: '/kitchen-sink',
+    reactHookFormZod: '/react-hook-form-zod',
     reactQuery: '/react-query',
-    remixHookFormZod: '/remix-hook-form-zod',
   },
 } as const;
 
