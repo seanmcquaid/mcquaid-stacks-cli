@@ -25,7 +25,7 @@ type FormData = z.infer<typeof formDataSchema>;
 
 const resolver = zodResolver(formDataSchema);
 
-const RemixHookFormZod = () => {
+const ReactHookFormZod = () => {
   const {
     register,
     formState: { errors },
@@ -64,4 +64,4 @@ const RemixHookFormZod = () => {
   );
 };
 
-export default RemixHookFormZod;
+export default ReactHookFormZod;

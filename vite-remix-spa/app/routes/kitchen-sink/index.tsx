@@ -39,7 +39,7 @@ export const clientAction = async ({ request }: ClientActionFunctionArgs) => {
   }
 
   toast({
-    title: `Hello ${name}!`,
+    title: `Hello ${data.name}!`,
   });
 
   return { data };

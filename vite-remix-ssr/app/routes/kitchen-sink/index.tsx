@@ -6,6 +6,7 @@ import type {
 import { Form, useActionData, useLoaderData } from '@remix-run/react';
 import { z } from 'zod';
 import type { ActionFunctionArgs } from '@remix-run/node';
+import { useForm } from 'react-hook-form';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
 import queryClient from '@/services/queryClient';
@@ -15,7 +16,6 @@ import type Post from '@/types/Post';
 import QueryKey from '@/constants/QueryKey';
 import LinkButton from '@/components/ui/LinkButton';
 import getValidatedFormData from '@/utils/getValidatedFormData';
-import { useForm } from 'react-hook-form';
 
 const formDataSchema = z.object({
   name: z.string().min(3).max(10, {
