@@ -12,7 +12,7 @@ import { getPostsQuery } from '@/services/queries/useGetPostsQuery';
 import getValidatedFormData from '@/utils/getValidatedFormData';
 
 const formDataSchema = z.object({
-  name: z.string().min(3).max(50, {
+  name: z.string().min(3).max(10, {
     message: 'Name must be between 3 and 10 characters',
   }),
 });
@@ -46,15 +46,18 @@ export const clientAction = async ({ request }: ClientActionFunctionArgs) => {
 };
 
 const KitchenSinkPage = () => {
-  const data = useLoaderData<typeof clientLoader>();
+  const loaderData = useLoaderData<typeof clientLoader>();
+  const actionData = useActionData<typeof clientAction>();
   const {
     register,
     formState: { errors },
   } = useForm<FormData>({
     resolver,
     mode: 'onChange',
+    defaultValues: {
+      name: actionData?.data?.name,
+    },
   });
-  const actionData = useActionData<typeof clientAction>();
 
   return (
     <div>
@@ -63,13 +66,12 @@ const KitchenSinkPage = () => {
           className="m-4"
           label="Name"
           errorMessage={errors?.name?.message || actionData?.errors?.name}
-          defaultValue={actionData?.data?.name}
           {...register('name')}
         />
         <Button type="submit">{'Submit'}</Button>
       </Form>
       <ul className="grid grid-cols-2">
-        {data?.map(post => (
+        {loaderData?.map(post => (
           <li key={post.id} className="mt-4 flex items-center">
             <LinkButton to={`/react-query/${post.id}`}>
               {post.title.substring(0, 4)}
