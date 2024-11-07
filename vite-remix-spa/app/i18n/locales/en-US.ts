@@ -11,7 +11,7 @@ const enUSLocale = {
     remix: 'Remix',
     subTitle:
       'Below you will find a list of example routes with commonly used patterns for React projects',
-    title: 'Welcome to a scaffolded project with the @mcquaid-stacks/cli!',
+    title: 'Welcome to a project scaffolded out with the McQuaid Stack!',
   },
   KitchenSinkPage: {
     submit: 'Submit',
