@@ -1,13 +1,12 @@
 import { zodResolver } from '@hookform/resolvers/zod';
-import { getValidatedFormData, useRemixForm } from 'remix-hook-form';
 import type {
   ClientActionFunctionArgs,
   ClientLoaderFunctionArgs,
 } from '@remix-run/react';
-import { Form, useLoaderData } from '@remix-run/react';
+import { Form, useActionData, useLoaderData } from '@remix-run/react';
 import { z } from 'zod';
 import type { ActionFunctionArgs } from '@remix-run/node';
-import { json } from '@remix-run/node';
+import { useForm } from 'react-hook-form';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
 import queryClient from '@/services/queryClient';
@@ -16,9 +15,10 @@ import postsService from '@/services/postsService';
 import type Post from '@/types/Post';
 import QueryKey from '@/constants/QueryKey';
 import LinkButton from '@/components/ui/LinkButton';
+import getValidatedFormData from '@/utils/getValidatedFormData';
 
 const formDataSchema = z.object({
-  name: z.string().min(3).max(50, {
+  name: z.string().min(3).max(10, {
     message: 'Name must be between 3 and 10 characters',
   }),
 });
@@ -47,38 +47,43 @@ export const clientLoader = async ({
 clientLoader.hydrate = true;
 
 export const action = async ({ request }: ActionFunctionArgs) => {
-  const {
-    errors,
-    data,
-    receivedValues: defaultValues,
-  } = await getValidatedFormData<FormData>(request, resolver);
+  const { errors, data, defaultValues } = getValidatedFormData({
+    schema: formDataSchema,
+    formData: await request.formData(),
+  });
+
   if (errors) {
-    // The keys "errors" and "defaultValue" are picked up automatically by useRemixForm
-    return json({ errors, defaultValues });
+    return { errors, defaultValues };
   }
 
-  // Do something with the data
-  return json(data);
+  return { data };
 };
 
 export const clientAction = async ({
   serverAction,
 }: ClientActionFunctionArgs) => {
-  await serverAction();
+  const { data, errors, defaultValues } = (await serverAction<
+    typeof action
+  >()) as Awaited<ReturnType<typeof action>>;
+
+  if (errors) {
+    return { errors, defaultValues };
+  }
 
   toast({
-    title: `Hello ${name}!`,
+    title: `Hello ${data?.name}!`,
   });
 
-  return null;
+  return { data };
 };
 
 const KitchenSinkPage = () => {
-  const data = useLoaderData<typeof clientLoader>();
+  const loaderData = useLoaderData<typeof clientLoader>();
+  const actionData = useActionData<typeof clientAction>();
   const {
     register,
     formState: { errors },
-  } = useRemixForm<FormData>({
+  } = useForm<FormData>({
     resolver,
     mode: 'onChange',
   });
@@ -89,13 +94,14 @@ const KitchenSinkPage = () => {
         <Input
           className="m-4"
           label="Name"
-          errorMessage={errors?.name?.message}
+          errorMessage={errors?.name?.message || actionData?.errors?.name}
+          defaultValue={actionData?.defaultValues?.name}
           {...register('name')}
         />
         <Button type="submit">{'Submit'}</Button>
       </Form>
       <ul className="grid grid-cols-2">
-        {data?.map(post => (
+        {loaderData?.map(post => (
           <li key={post.id} className="flex mt-4 items-center">
             <LinkButton to={`/react-query/${post.id}`}>
               {post.title.substring(0, 4)}

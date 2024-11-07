@@ -1,17 +1,18 @@
 import { zodResolver } from '@hookform/resolvers/zod';
-import { getValidatedFormData, useRemixForm } from 'remix-hook-form';
 import type { ClientActionFunctionArgs } from '@remix-run/react';
-import { Form, useLoaderData } from '@remix-run/react';
+import { Form, useActionData, useLoaderData } from '@remix-run/react';
 import { z } from 'zod';
+import { useForm } from 'react-hook-form';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
 import queryClient from '@/services/queryClient';
 import { toast } from '@/hooks/useToast';
 import LinkButton from '@/components/ui/LinkButton';
 import { getPostsQuery } from '@/services/queries/useGetPostsQuery';
+import getValidatedFormData from '@/utils/getValidatedFormData';
 
 const formDataSchema = z.object({
-  name: z.string().min(3).max(50, {
+  name: z.string().min(3).max(10, {
     message: 'Name must be between 3 and 10 characters',
   }),
 });
@@ -29,29 +30,28 @@ export const clientLoader = async () => {
 clientLoader.hydrate = true;
 
 export const clientAction = async ({ request }: ClientActionFunctionArgs) => {
-  const {
-    errors,
-    data,
-    receivedValues: defaultValues,
-  } = await getValidatedFormData<FormData>(request, resolver);
+  const { errors, data, defaultValues } = getValidatedFormData({
+    formData: await request.formData(),
+    schema: formDataSchema,
+  });
   if (errors) {
-    // The keys "errors" and "defaultValue" are picked up automatically by useRemixForm
     return { errors, defaultValues };
   }
 
   toast({
-    title: `Hello ${name}!`,
+    title: `Hello ${data.name}!`,
   });
 
-  return data;
+  return { data };
 };
 
 const KitchenSinkPage = () => {
-  const data = useLoaderData<typeof clientLoader>();
+  const loaderData = useLoaderData<typeof clientLoader>();
+  const actionData = useActionData<typeof clientAction>();
   const {
     register,
     formState: { errors },
-  } = useRemixForm<FormData>({
+  } = useForm<FormData>({
     resolver,
     mode: 'onChange',
   });
@@ -62,13 +62,14 @@ const KitchenSinkPage = () => {
         <Input
           className="m-4"
           label="Name"
-          errorMessage={errors?.name?.message}
+          errorMessage={errors?.name?.message || actionData?.errors?.name}
+          defaultValue={actionData?.defaultValues?.name}
           {...register('name')}
         />
         <Button type="submit">{'Submit'}</Button>
       </Form>
       <ul className="grid grid-cols-2">
-        {data?.map(post => (
+        {loaderData?.map(post => (
           <li key={post.id} className="mt-4 flex items-center">
             <LinkButton to={`/react-query/${post.id}`}>
               {post.title.substring(0, 4)}

@@ -1,6 +1,6 @@
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-import { useRemixForm } from 'remix-hook-form';
+import { useForm } from 'react-hook-form';
 import { Input } from '@/components/ui/Input';
 import PageWrapper from '@/components/app/PageWrapper';
 
@@ -25,11 +25,11 @@ type FormData = z.infer<typeof formDataSchema>;
 
 const resolver = zodResolver(formDataSchema);
 
-const RemixHookFormZod = () => {
+const ReactHookFormZod = () => {
   const {
     register,
     formState: { errors },
-  } = useRemixForm<FormData>({
+  } = useForm<FormData>({
     mode: 'onBlur',
     resolver,
   });
@@ -64,4 +64,4 @@ const RemixHookFormZod = () => {
   );
 };
 
-export default RemixHookFormZod;
+export default ReactHookFormZod;
