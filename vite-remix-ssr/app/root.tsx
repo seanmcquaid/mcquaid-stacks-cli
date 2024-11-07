@@ -33,6 +33,8 @@ export async function loader({ request }: LoaderFunctionArgs) {
 export function Layout({ children }: PropsWithChildren) {
   const { locale } = useLoaderData<typeof loader>();
   const { i18n } = useAppTranslation();
+  const navigation = useNavigation();
+  const isLoadingPage = navigation.state === 'loading';
 
   useChangeLanguage(locale);
 
@@ -58,7 +60,17 @@ export function Layout({ children }: PropsWithChildren) {
         <Links />
       </head>
       <body className="h-screen min-h-screen flex flex-col overflow-auto w-full">
-        <main className="flex-1">{children}</main>
+        <main className="flex-1">
+          <QueryClientProvider client={queryClient}>
+            <LoadingOverlay isLoading={isLoadingPage} />
+            {children}
+            <ReactQueryDevtools
+              initialIsOpen={false}
+              buttonPosition="top-right"
+            />
+            <Toaster />
+          </QueryClientProvider>
+        </main>
         <Scripts />
         <ScrollRestoration />
       </body>
@@ -82,17 +94,7 @@ export function HydrateFallback() {
 }
 
 const Root = () => {
-  const navigation = useNavigation();
-  const isLoadingPage = navigation.state === 'loading';
-
-  return (
-    <QueryClientProvider client={queryClient}>
-      <LoadingOverlay isLoading={isLoadingPage} />
-      <Outlet />
-      <ReactQueryDevtools initialIsOpen={false} buttonPosition="top-right" />
-      <Toaster />
-    </QueryClientProvider>
-  );
+  return <Outlet />;
 };
 
 export default Root;

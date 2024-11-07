@@ -19,6 +19,9 @@ import PageError from './components/app/PageError';
 import LoadingOverlay from './components/ui/LoadingOverlay';
 
 export function Layout({ children }: PropsWithChildren) {
+  const navigation = useNavigation();
+  const isLoadingPage = navigation.state === 'loading';
+
   return (
     // eslint-disable-next-line jsx-a11y/html-has-lang
     <html className="h-screen min-h-screen w-full overflow-auto">
@@ -38,7 +41,17 @@ export function Layout({ children }: PropsWithChildren) {
         <Links />
       </head>
       <body className="flex h-screen min-h-screen w-full flex-col overflow-auto">
-        <main className="flex-1">{children}</main>
+        <main className="flex-1">
+          <QueryClientProvider client={queryClient}>
+            <LoadingOverlay isLoading={isLoadingPage} />
+            {children}
+            <ReactQueryDevtools
+              initialIsOpen={false}
+              buttonPosition="top-right"
+            />
+            <Toaster />
+          </QueryClientProvider>
+        </main>
         <Scripts />
         <ScrollRestoration />
         <noscript>
@@ -72,17 +85,7 @@ export function HydrateFallback() {
 }
 
 const Root = () => {
-  const navigation = useNavigation();
-  const isLoadingPage = navigation.state === 'loading';
-
-  return (
-    <QueryClientProvider client={queryClient}>
-      <LoadingOverlay isLoading={isLoadingPage} />
-      <Outlet />
-      <ReactQueryDevtools initialIsOpen={false} buttonPosition="top-right" />
-      <Toaster />
-    </QueryClientProvider>
-  );
+  return <Outlet />;
 };
 
 export default Root;
