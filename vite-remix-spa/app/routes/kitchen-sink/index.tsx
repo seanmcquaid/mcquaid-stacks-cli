@@ -5,11 +5,11 @@ import { z } from 'zod';
 import { useForm } from 'react-hook-form';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
-import queryClient from '@/services/queryClient';
+import queryClient from '@/services/queries/queryClient';
 import { toast } from '@/hooks/useToast';
 import LinkButton from '@/components/ui/LinkButton';
-import { getPostsQuery } from '@/services/queries/useGetPostsQuery';
 import getValidatedFormData from '@/utils/getValidatedFormData';
+import { getPostsQuery } from '@/services/queries/posts';
 
 const formDataSchema = z.object({
   name: z.string().min(3).max(10, {
