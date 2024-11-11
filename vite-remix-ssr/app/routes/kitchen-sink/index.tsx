@@ -9,7 +9,7 @@ import type { ActionFunctionArgs } from '@remix-run/node';
 import { useForm } from 'react-hook-form';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
-import queryClient from '@/services/queryClient';
+import queryClient from '@/services/queries/queryClient';
 import { toast } from '@/hooks/useToast';
 import postsService from '@/services/postsService';
 import type Post from '@/types/Post';

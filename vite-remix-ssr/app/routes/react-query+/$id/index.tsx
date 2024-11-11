@@ -1,6 +1,6 @@
 import { useNavigate, useParams } from '@remix-run/react';
 import PageWrapper from '@/components/app/PageWrapper';
-import useGetPostQuery from '@/services/queries/useGetPostQuery';
+import { useGetPostQuery } from '@/hooks/services/posts';
 
 const ReactQueryPostPage = () => {
   const { id } = useParams();
