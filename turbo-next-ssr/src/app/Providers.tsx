@@ -4,7 +4,7 @@ import { QueryClientProvider } from '@tanstack/react-query';
 import type { PropsWithChildren } from 'react';
 import { ReactQueryStreamedHydration } from '@tanstack/react-query-next-experimental';
 import { Toaster } from '@/components/ui/Toaster';
-import queryClient from '@/services/queryClient';
+import queryClient from '@/services/queries/queryClient';
 import '@/i18n/i18next';
 import useChangeLanguage from '@/hooks/useChangeLanguage';
 

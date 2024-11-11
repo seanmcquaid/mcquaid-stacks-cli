@@ -14,7 +14,7 @@ import { QueryClientProvider } from '@tanstack/react-query';
 import type { PropsWithChildren } from 'react';
 import { useEffect, useState } from 'react';
 import { Toaster } from './components/ui/Toaster';
-import queryClient from './services/queryClient';
+import queryClient from './services/queries/queryClient';
 import PageError from './components/app/PageError';
 import LoadingOverlay from './components/ui/LoadingOverlay';
 

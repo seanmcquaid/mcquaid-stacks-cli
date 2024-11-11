@@ -17,7 +17,7 @@ import { useEffect } from 'react';
 import type { LoaderFunctionArgs } from '@remix-run/node';
 import { useChangeLanguage } from 'remix-i18next/react';
 import { Toaster } from './components/ui/Toaster';
-import queryClient from './services/queryClient';
+import queryClient from './services/queries/queryClient';
 import PageError from './components/app/PageError';
 import useAppTranslation from './hooks/useAppTranslation';
 import LoadingOverlay from './components/ui/LoadingOverlay';

@@ -3,9 +3,11 @@
 import PageWrapper from '@/components/app/PageWrapper';
 import { Button } from '@/components/ui/Button';
 import LinkButton from '@/components/ui/LinkButton';
+import {
+  useGetPostsQuery,
+  useDeletePostMutation,
+} from '@/hooks/services/posts';
 import useAppTranslation from '@/hooks/useAppTranslation';
-import useDeletePostMutation from '@/services/mutations/useDeletePostMutation';
-import useGetPostsQuery from '@/services/queries/useGetPostsQuery';
 
 const ReactQueryPage = () => {
   const { t } = useAppTranslation();
