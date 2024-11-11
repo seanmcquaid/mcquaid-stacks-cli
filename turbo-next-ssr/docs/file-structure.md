@@ -14,7 +14,7 @@ This is where all of your constants or enums will live. I like keeping these fil
 
 ## /hooks
 
-This is where all of your custom hooks will live.
+This is where all of your custom hooks will live. I have a `services` directory for hooks that are related to API calls with TanStack Query.
 
 ## /i18n
 
@@ -24,13 +24,13 @@ This is where all of your i18n related files will live. I have a locales directo
 
 This is where all of your icons will live. I like to use svgs for my icons and I use [svgr](https://react-svgr.com/) to convert them to React components.
 
-## /app
+## /routes
 
-This is where all of your routes will live.
+This is where all of your routes will live. I am utilizing Remix Flat Routes to guide my directory structure and to allow for easy organization of related pages.
 
 ## /services
 
-This is where all of your services for API calls will live. I like to keep my service files small and focused on a specific URL. For example, I would have a `postsService.ts` file that would contain all of my API calls related to posts microservice. I also have directories for queries and mutations for endpoint specific hooks from TanStack Query to remove redundancy of manually using useQuery, useMutation and the appropriate cache invalidation logic throughout the project.
+This is where all of your services for API calls will live. I like to keep my service files small and focused on a specific URL. For example, I would have a `postsService.ts` file that would contain all of my API calls related to the posts microservice. I also have directories for queries with TanStack Query to remove redundancy of manually creating queries for each service hook. There can be instances you want to interact with the queryClient outside of a hook, so I have a `queryClient.ts` file that exports the queryClient instance for the app.
 
 ## /styles
 
