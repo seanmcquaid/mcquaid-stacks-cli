@@ -1,7 +1,7 @@
 'use client';
 import { useParams, useRouter } from 'next/navigation';
 import PageWrapper from '@/components/app/PageWrapper';
-import useGetPostQuery from '@/services/queries/useGetPostQuery';
+import { useGetPostQuery } from '@/hooks/services/posts';
 
 const ReactQueryPostPage = () => {
   const { id } = useParams<{
