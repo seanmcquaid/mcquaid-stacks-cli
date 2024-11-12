@@ -52,7 +52,7 @@
   },
   "devDependencies": {
     "@anatine/zod-mock": "^3.13.4",
-    "@axe-core/playwright": "^4.10.0",
+    "@axe-core/playwright": "^4.10.1",
     "@eslint/compat": "^1.2.2",
     "@eslint/eslintrc": "^3.1.0",
     "@eslint/js": "^9.14.0",
