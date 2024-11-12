@@ -2,7 +2,6 @@ import { defineConfig } from 'vite';
 import { vitePlugin as remix } from '@remix-run/dev';
 import svgr from 'vite-plugin-svgr';
 import checker from 'vite-plugin-checker';
-import { flatRoutes } from 'remix-flat-routes';
 import { remixDevTools } from 'remix-development-tools';
 import tsconfigPaths from 'vite-tsconfig-paths';
 
@@ -27,14 +26,9 @@ export default defineConfig({
           v3_fetcherPersist: true,
           v3_relativeSplatPath: true,
           v3_throwAbortReason: true,
+          unstable_routeConfig: true,
         },
         ssr: true,
-        // ignore all files in routes folder to prevent
-        // default remix convention from picking up routes
-        ignoredRouteFiles: ['**/*'],
-        routes: async defineRoutes => {
-          return flatRoutes('routes', defineRoutes);
-        },
       }),
     svgr(),
     checker({ typescript: true }),

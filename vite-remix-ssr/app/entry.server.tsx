@@ -1,8 +1,5 @@
 import { PassThrough } from 'stream';
-import {
-  createReadableStreamFromReadable,
-  type EntryContext,
-} from '@remix-run/node';
+import { createReadableStreamFromReadable } from '@remix-run/node';
 import { RemixServer } from '@remix-run/react';
 import { renderToPipeableStream } from 'react-dom/server';
 import { createInstance } from 'i18next';
@@ -24,7 +21,7 @@ export default async function handleRequest(
   request: Request,
   responseStatusCode: number,
   responseHeaders: Headers,
-  remixContext: EntryContext,
+  remixContext: never,
 ) {
   const instance = createInstance();
   const lng = await i18next.getLocale(request);
