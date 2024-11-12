@@ -43,7 +43,7 @@
     "lucide-react": "^0.456.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-hook-form": "^7.53.1",
+    "react-hook-form": "^7.53.2",
     "react-i18next": "^15.1.0",
     "remix-i18next": "^6.4.1",
     "tailwind-merge": "^2.5.4",
