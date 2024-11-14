@@ -6,7 +6,6 @@ import {
   Scripts,
   useRouteError,
   useNavigation,
-  json,
   useLoaderData,
   ScrollRestoration,
 } from '@remix-run/react';
@@ -27,7 +26,7 @@ import setAcceptLanguageHeaders from './i18n/setAcceptLanguageHeaders';
 export async function loader({ request }: LoaderFunctionArgs) {
   setAcceptLanguageHeaders(request);
   const locale = await i18next.getLocale(request);
-  return json({ locale });
+  return { locale };
 }
 
 export function Layout({ children }: PropsWithChildren) {
