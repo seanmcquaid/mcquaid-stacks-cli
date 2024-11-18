@@ -14,7 +14,7 @@ const getValidatedFormData = <T extends Schema<unknown, ZodObjectDef>>({
       [key]: formData.get(key),
     }),
     {} as {
-      [key: string]: unknown;
+      [Key in keyof z.infer<T>]: unknown;
     },
   );
   const validatedFormData = schema.safeParse(formDataFromSchema);
@@ -29,10 +29,11 @@ const getValidatedFormData = <T extends Schema<unknown, ZodObjectDef>>({
         [Key in keyof z.infer<T>]: string;
       },
     );
-    return { errors };
+    return { errors, defaultValues: formDataFromSchema };
   } else {
     return {
       data: validatedFormData.data as z.infer<T>,
+      defaultValues: validatedFormData.data as z.infer<T>,
     };
   }
 };
