@@ -50,7 +50,7 @@
     "@anatine/zod-mock": "^3.13.4",
     "@axe-core/playwright": "^4.10.1",
     "@eslint/compat": "^1.2.3",
-    "@eslint/eslintrc": "^3.1.0",
+    "@eslint/eslintrc": "^3.2.0",
     "@eslint/js": "^9.15.0",
     "@faker-js/faker": "^8.4.1",
     "@playwright/test": "^1.48.2",
