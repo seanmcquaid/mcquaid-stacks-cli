@@ -33,8 +33,8 @@ importers:
         specifier: ^5.61.0
         version: 5.61.0(react@18.3.1)
       '@tanstack/react-query-devtools':
-        specifier: ^5.59.20
-        version: 5.59.20(@tanstack/react-query@5.61.0(react@18.3.1))(react@18.3.1)
+        specifier: ^5.61.0
+        version: 5.61.0(@tanstack/react-query@5.61.0(react@18.3.1))(react@18.3.1)
       class-variance-authority:
         specifier: ^0.7.0
         version: 0.7.0
@@ -1912,10 +1912,10 @@ packages:
   '@tanstack/query-devtools@5.59.20':
     resolution: {integrity: sha512-vxhuQ+8VV4YWQSFxQLsuM+dnEKRY7VeRzpNabFXdhEwsBYLrjXlF1pM38A8WyKNLqZy8JjyRO8oP4Wd/oKHwuQ==}
 
-  '@tanstack/react-query-devtools@5.59.20':
-    resolution: {integrity: sha512-AL/eQS1NFZhwwzq2Bq9Gd8wTTH+XhPNOJlDFpzPMu9NC5CQVgA0J8lWrte/sXpdWNo5KA4hgHnEdImZsF4h6Lw==}
+  '@tanstack/react-query-devtools@5.61.0':
+    resolution: {integrity: sha512-hd3yXl+KV+OGQmAw946qHAFp6DygcXcYN+1ai9idYddx6uEQyCwYk3jyIBOQEUw9uzN5DOGJLBsgd/QcimDQsA==}
     peerDependencies:
-      '@tanstack/react-query': ^5.59.20
+      '@tanstack/react-query': ^5.61.0
       react: ^18 || ^19
 
   '@tanstack/react-query@5.61.0':
@@ -2005,9 +2005,6 @@ packages:
 
   '@types/ms@0.7.34':
     resolution: {integrity: sha512-nG96G3Wp6acyAgJqGasjODb+acrI7KltPiRxzHPXnP3NgI28bpQDRv53olbqGXbfcgF5aiiHmO3xpwEpS5Ld9g==}
-
-  '@types/node@22.9.0':
-    resolution: {integrity: sha512-vuyHg81vvWA1Z1ELfvLko2c8f34gyA0zaic0+Rllc5lbCnbSyuvb2Oxpm6TAUAC/2xZN3QGqxBNggD1nNR2AfQ==}
 
   '@types/node@22.9.2':
     resolution: {integrity: sha512-wwuxAVEbsRvDD9x7buvAl7DyQ7Oj+va/d/Veug7higYzp9MF0CINbfWTBgDFMpcVwcdUiYuNmX2KfnvY3N70mw==}
@@ -8399,7 +8396,7 @@ snapshots:
 
   '@tanstack/query-devtools@5.59.20': {}
 
-  '@tanstack/react-query-devtools@5.59.20(@tanstack/react-query@5.61.0(react@18.3.1))(react@18.3.1)':
+  '@tanstack/react-query-devtools@5.61.0(@tanstack/react-query@5.61.0(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@tanstack/query-devtools': 5.59.20
       '@tanstack/react-query': 5.61.0(react@18.3.1)
@@ -8503,10 +8500,6 @@ snapshots:
   '@types/mdx@2.0.13': {}
 
   '@types/ms@0.7.34': {}
-
-  '@types/node@22.9.0':
-    dependencies:
-      undici-types: 6.19.8
 
   '@types/node@22.9.2':
     dependencies:
@@ -10177,7 +10170,7 @@ snapshots:
 
   eval@0.1.8:
     dependencies:
-      '@types/node': 22.9.0
+      '@types/node': 22.9.2
       require-like: 0.1.2
 
   event-target-shim@5.0.1: {}
