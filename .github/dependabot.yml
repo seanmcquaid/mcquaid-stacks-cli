@@ -20,55 +20,55 @@ updates:
       day: tuesday
     open-pull-requests-limit: 20
   - package-ecosystem: npm
-    directory: "/vite-remix-spa"
+    directory: "/react-router-v7-spa"
     schedule:
       interval: weekly
       day: tuesday
     open-pull-requests-limit: 20
   - package-ecosystem: github-actions
-    directory: "/vite-remix-spa/.github/workflows"
+    directory: "/react-router-v7-spa/.github/workflows"
     schedule:
       interval: weekly
       day: tuesday
     open-pull-requests-limit: 20
   - package-ecosystem: github-actions
-    directory: "/vite-remix-spa/.github/actions/setup-pull-request-job"
+    directory: "/react-router-v7-spa/.github/actions/setup-pull-request-job"
     schedule:
       interval: weekly
       day: tuesday
     open-pull-requests-limit: 20
   - package-ecosystem: npm
-    directory: "/vite-remix-ssr"
+    directory: "/react-router-v7-ssr"
     schedule:
       interval: weekly
       day: tuesday
     open-pull-requests-limit: 20
   - package-ecosystem: github-actions
-    directory: "/vite-remix-ssr/.github/workflows"
+    directory: "/react-router-v7-ssr/.github/workflows"
     schedule:
       interval: weekly
       day: tuesday
     open-pull-requests-limit: 20
   - package-ecosystem: github-actions
-    directory: "/vite-remix-ssr/.github/actions/setup-pull-request-job"
+    directory: "/react-router-v7-ssr/.github/actions/setup-pull-request-job"
     schedule:
       interval: weekly
       day: tuesday
     open-pull-requests-limit: 20
   - package-ecosystem: npm
-    directory: "/turbo-next-ssr"
+    directory: "/next-ssr"
     schedule:
       interval: weekly
       day: tuesday
     open-pull-requests-limit: 20
   - package-ecosystem: github-actions
-    directory: "/turbo-next-ssr/.github/workflows"
+    directory: "/next-ssr/.github/workflows"
     schedule:
       interval: weekly
       day: tuesday
     open-pull-requests-limit: 20
   - package-ecosystem: github-actions
-    directory: "/turbo-next-ssr/.github/actions/setup-pull-request-job"
+    directory: "/next-ssr/.github/actions/setup-pull-request-job"
     schedule:
       interval: weekly
       day: tuesday
