@@ -1,4 +1,4 @@
-# Remix SSR
+# Vite React Router V7 SSR
 
 Date: 2023-12-27
 

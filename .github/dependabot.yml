@@ -38,19 +38,19 @@ updates:
       day: tuesday
     open-pull-requests-limit: 20
   - package-ecosystem: npm
-    directory: "/vite-remix-ssr"
+    directory: "/vite-react-router-v7-ssr"
     schedule:
       interval: weekly
       day: tuesday
     open-pull-requests-limit: 20
   - package-ecosystem: github-actions
-    directory: "/vite-remix-ssr/.github/workflows"
+    directory: "/vite-react-router-v7-ssr/.github/workflows"
     schedule:
       interval: weekly
       day: tuesday
     open-pull-requests-limit: 20
   - package-ecosystem: github-actions
-    directory: "/vite-remix-ssr/.github/actions/setup-pull-request-job"
+    directory: "/vite-react-router-v7-ssr/.github/actions/setup-pull-request-job"
     schedule:
       interval: weekly
       day: tuesday

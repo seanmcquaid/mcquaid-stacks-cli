@@ -7,12 +7,12 @@ on:
 
 defaults:
   run:
-    working-directory: ./vite-remix-ssr
+    working-directory: ./vite-react-router-v7-ssr
 
 jobs:
   linting:
     runs-on: ubuntu-latest
-    name: Linting - Vite + Remix SSR
+    name: Linting - Vite + React Router V7 SSR
     steps:
       - name: Checkout latest
         uses: actions/checkout@v4
@@ -34,7 +34,7 @@ jobs:
         run: pnpm lint
   playwright-integration-tests:
     runs-on: ubuntu-latest
-    name: Playwright Integration Tests - Vite + Remix SSR
+    name: Playwright Integration Tests - Vite + React Router V7 SSR
     steps:
       - name: Checkout latest
         uses: actions/checkout@v4
@@ -59,7 +59,7 @@ jobs:
         run: pnpm playwright:run-integration
   playwright-e2e-tests:
     runs-on: ubuntu-latest
-    name: Playwright E2E Tests - Vite + Remix SSR
+    name: Playwright E2E Tests - Vite + React Router V7 SSR
     steps:
       - name: Checkout latest
         uses: actions/checkout@v4
@@ -83,7 +83,7 @@ jobs:
         run: pnpm playwright:run-e2e
   unit-tests-coverage:
     runs-on: ubuntu-latest
-    name: Unit Tests - Vite + Remix SSR
+    name: Unit Tests - Vite + React Router V7 SSR
     steps:
       - name: Checkout latest
         uses: actions/checkout@v4
@@ -101,7 +101,7 @@ jobs:
         run: pnpm test:coverage
   bundle-size:
     runs-on: ubuntu-latest
-    name: Bundle Size - Vite + Remix SSR
+    name: Bundle Size - Vite + React Router V7 SSR
     steps:
       - name: Checkout latest
         uses: actions/checkout@v4
