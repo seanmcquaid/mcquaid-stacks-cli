@@ -9,7 +9,7 @@ export default defineConfig({
   plugins: [
     tsconfigPaths(),
     reactRouterDevTools(),
-    reactRouter(),
+    !process.env.VITEST && reactRouter(),
     svgr(),
     checker({ typescript: true }),
   ],
