@@ -26,7 +26,7 @@ This is where all of your icons will live. I like to use svgs for my icons and I
 
 ## /routes
 
-This is where all of your routes will live. I am utilizing Remix Flat Routes to guide my directory structure and to allow for easy organization of related pages.
+This is where all of your routes will live.
 
 ## /services
 
