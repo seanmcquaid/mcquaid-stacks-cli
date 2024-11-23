@@ -1,22 +1,40 @@
-import type { Schema, ZodObjectDef, z } from 'zod';
+import { z } from 'zod';
 
-const getValidatedFormData = <T extends Schema<unknown, ZodObjectDef>>({
+type SchemaType =
+  | z.ZodObject<z.ZodRawShape>
+  | z.ZodEffects<z.ZodObject<z.ZodRawShape>>;
+
+const getValidatedFormData = <T extends SchemaType>({
   schema,
   formData,
 }: {
   formData: FormData;
   schema: T;
 }) => {
-  const schemaKeys = Object.keys(schema._def.shape());
+  const schemaKeys: string[] = [];
+
+  if (schema instanceof z.ZodEffects) {
+    const typedSchema = schema as unknown as z.ZodEffects<
+      z.Schema<z.ZodObjectDef>
+    >;
+    const def = typedSchema._def.schema._def as {
+      shape: () => z.ZodRawShape;
+    };
+    schemaKeys.push(...Object.keys(def.shape()));
+  } else {
+    schemaKeys.push(...Object.keys(schema._def.shape()));
+  }
+
   const formDataFromSchema = schemaKeys.reduce(
     (acc, key) => ({
       ...acc,
-      [key]: formData.get(key),
+      [key]: formData.get(key) ?? '',
     }),
     {} as {
-      [Key in keyof z.infer<T>]: string | undefined;
+      [Key in keyof z.infer<T>]: string;
     },
   );
+
   const validatedFormData = schema.safeParse(formDataFromSchema);
 
   if (!validatedFormData.success) {
