@@ -155,7 +155,7 @@ importers:
         version: 4.3.3(vite@5.4.11(@types/node@22.9.2))
       '@vitest/coverage-istanbul':
         specifier: ^2.1.5
-        version: 2.1.5(vitest@2.1.5(@types/node@22.9.2)(jsdom@25.0.1)(msw@2.6.5(@types/node@22.9.2)(typescript@5.7.2)))
+        version: 2.1.5(vitest@2.1.5(@types/node@22.9.2)(jsdom@25.0.1)(msw@2.6.6(@types/node@22.9.2)(typescript@5.7.2)))
       autoprefixer:
         specifier: ^10.4.20
         version: 10.4.20(postcss@8.4.49)
@@ -200,7 +200,7 @@ importers:
         version: 5.0.0(eslint@9.15.0(jiti@2.4.0))
       eslint-plugin-vitest:
         specifier: ^0.4.1
-        version: 0.4.1(@typescript-eslint/eslint-plugin@8.15.0(@typescript-eslint/parser@8.15.0(eslint@9.15.0(jiti@2.4.0))(typescript@5.7.2))(eslint@9.15.0(jiti@2.4.0))(typescript@5.7.2))(eslint@9.15.0(jiti@2.4.0))(typescript@5.7.2)(vitest@2.1.5(@types/node@22.9.2)(jsdom@25.0.1)(msw@2.6.5(@types/node@22.9.2)(typescript@5.7.2)))
+        version: 0.4.1(@typescript-eslint/eslint-plugin@8.15.0(@typescript-eslint/parser@8.15.0(eslint@9.15.0(jiti@2.4.0))(typescript@5.7.2))(eslint@9.15.0(jiti@2.4.0))(typescript@5.7.2))(eslint@9.15.0(jiti@2.4.0))(typescript@5.7.2)(vitest@2.1.5(@types/node@22.9.2)(jsdom@25.0.1)(msw@2.6.6(@types/node@22.9.2)(typescript@5.7.2)))
       globals:
         specifier: ^15.12.0
         version: 15.12.0
@@ -220,14 +220,14 @@ importers:
         specifier: ^15.2.10
         version: 15.2.10
       msw:
-        specifier: ^2.6.5
-        version: 2.6.5(@types/node@22.9.2)(typescript@5.7.2)
+        specifier: ^2.6.6
+        version: 2.6.6(@types/node@22.9.2)(typescript@5.7.2)
       playwright-lighthouse:
         specifier: ^4.0.0
         version: 4.0.0(lighthouse@12.2.2)(playwright-core@1.49.0)
       playwright-msw:
         specifier: ^3.0.1
-        version: 3.0.1(@playwright/test@1.49.0)(msw@2.6.5(@types/node@22.9.2)(typescript@5.7.2))
+        version: 3.0.1(@playwright/test@1.49.0)(msw@2.6.6(@types/node@22.9.2)(typescript@5.7.2))
       postcss:
         specifier: ^8.4.49
         version: 8.4.49
@@ -263,7 +263,7 @@ importers:
         version: 5.1.2(typescript@5.7.2)(vite@5.4.11(@types/node@22.9.2))
       vitest:
         specifier: ^2.1.5
-        version: 2.1.5(@types/node@22.9.2)(jsdom@25.0.1)(msw@2.6.5(@types/node@22.9.2)(typescript@5.7.2))
+        version: 2.1.5(@types/node@22.9.2)(jsdom@25.0.1)(msw@2.6.6(@types/node@22.9.2)(typescript@5.7.2))
 
 packages:
 
@@ -2005,9 +2005,6 @@ packages:
 
   '@types/ms@0.7.34':
     resolution: {integrity: sha512-nG96G3Wp6acyAgJqGasjODb+acrI7KltPiRxzHPXnP3NgI28bpQDRv53olbqGXbfcgF5aiiHmO3xpwEpS5Ld9g==}
-
-  '@types/node@22.9.0':
-    resolution: {integrity: sha512-vuyHg81vvWA1Z1ELfvLko2c8f34gyA0zaic0+Rllc5lbCnbSyuvb2Oxpm6TAUAC/2xZN3QGqxBNggD1nNR2AfQ==}
 
   '@types/node@22.9.2':
     resolution: {integrity: sha512-wwuxAVEbsRvDD9x7buvAl7DyQ7Oj+va/d/Veug7higYzp9MF0CINbfWTBgDFMpcVwcdUiYuNmX2KfnvY3N70mw==}
@@ -4714,8 +4711,8 @@ packages:
   ms@2.1.3:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
 
-  msw@2.6.5:
-    resolution: {integrity: sha512-PnlnTpUlOrj441kYQzzFhzMzMCGFT6a2jKUBG7zSpLkYS5oh8Arrbc0dL8/rNAtxaoBy0EVs2mFqj2qdmWK7lQ==}
+  msw@2.6.6:
+    resolution: {integrity: sha512-npfIIVRHKQX3Lw4aLWX4wBh+lQwpqdZNyJYB5K/+ktK8NhtkdsTxGK7WDrgknozcVyRI7TOqY6yBS9j2FTR+YQ==}
     engines: {node: '>=18'}
     hasBin: true
     peerDependencies:
@@ -8504,10 +8501,6 @@ snapshots:
 
   '@types/ms@0.7.34': {}
 
-  '@types/node@22.9.0':
-    dependencies:
-      undici-types: 6.19.8
-
   '@types/node@22.9.2':
     dependencies:
       undici-types: 6.19.8
@@ -8762,7 +8755,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@vitest/coverage-istanbul@2.1.5(vitest@2.1.5(@types/node@22.9.2)(jsdom@25.0.1)(msw@2.6.5(@types/node@22.9.2)(typescript@5.7.2)))':
+  '@vitest/coverage-istanbul@2.1.5(vitest@2.1.5(@types/node@22.9.2)(jsdom@25.0.1)(msw@2.6.6(@types/node@22.9.2)(typescript@5.7.2)))':
     dependencies:
       '@istanbuljs/schema': 0.1.3
       debug: 4.3.7
@@ -8774,7 +8767,7 @@ snapshots:
       magicast: 0.3.5
       test-exclude: 7.0.1
       tinyrainbow: 1.2.0
-      vitest: 2.1.5(@types/node@22.9.2)(jsdom@25.0.1)(msw@2.6.5(@types/node@22.9.2)(typescript@5.7.2))
+      vitest: 2.1.5(@types/node@22.9.2)(jsdom@25.0.1)(msw@2.6.6(@types/node@22.9.2)(typescript@5.7.2))
     transitivePeerDependencies:
       - supports-color
 
@@ -8785,13 +8778,13 @@ snapshots:
       chai: 5.1.2
       tinyrainbow: 1.2.0
 
-  '@vitest/mocker@2.1.5(msw@2.6.5(@types/node@22.9.2)(typescript@5.7.2))(vite@5.4.11(@types/node@22.9.2))':
+  '@vitest/mocker@2.1.5(msw@2.6.6(@types/node@22.9.2)(typescript@5.7.2))(vite@5.4.11(@types/node@22.9.2))':
     dependencies:
       '@vitest/spy': 2.1.5
       estree-walker: 3.0.3
       magic-string: 0.30.12
     optionalDependencies:
-      msw: 2.6.5(@types/node@22.9.2)(typescript@5.7.2)
+      msw: 2.6.6(@types/node@22.9.2)(typescript@5.7.2)
       vite: 5.4.11(@types/node@22.9.2)
 
   '@vitest/pretty-format@2.1.5':
@@ -10057,13 +10050,13 @@ snapshots:
       string.prototype.matchall: 4.0.11
       string.prototype.repeat: 1.0.0
 
-  eslint-plugin-vitest@0.4.1(@typescript-eslint/eslint-plugin@8.15.0(@typescript-eslint/parser@8.15.0(eslint@9.15.0(jiti@2.4.0))(typescript@5.7.2))(eslint@9.15.0(jiti@2.4.0))(typescript@5.7.2))(eslint@9.15.0(jiti@2.4.0))(typescript@5.7.2)(vitest@2.1.5(@types/node@22.9.2)(jsdom@25.0.1)(msw@2.6.5(@types/node@22.9.2)(typescript@5.7.2))):
+  eslint-plugin-vitest@0.4.1(@typescript-eslint/eslint-plugin@8.15.0(@typescript-eslint/parser@8.15.0(eslint@9.15.0(jiti@2.4.0))(typescript@5.7.2))(eslint@9.15.0(jiti@2.4.0))(typescript@5.7.2))(eslint@9.15.0(jiti@2.4.0))(typescript@5.7.2)(vitest@2.1.5(@types/node@22.9.2)(jsdom@25.0.1)(msw@2.6.6(@types/node@22.9.2)(typescript@5.7.2))):
     dependencies:
       '@typescript-eslint/utils': 7.4.0(eslint@9.15.0(jiti@2.4.0))(typescript@5.7.2)
       eslint: 9.15.0(jiti@2.4.0)
     optionalDependencies:
       '@typescript-eslint/eslint-plugin': 8.15.0(@typescript-eslint/parser@8.15.0(eslint@9.15.0(jiti@2.4.0))(typescript@5.7.2))(eslint@9.15.0(jiti@2.4.0))(typescript@5.7.2)
-      vitest: 2.1.5(@types/node@22.9.2)(jsdom@25.0.1)(msw@2.6.5(@types/node@22.9.2)(typescript@5.7.2))
+      vitest: 2.1.5(@types/node@22.9.2)(jsdom@25.0.1)(msw@2.6.6(@types/node@22.9.2)(typescript@5.7.2))
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -10177,7 +10170,7 @@ snapshots:
 
   eval@0.1.8:
     dependencies:
-      '@types/node': 22.9.0
+      '@types/node': 22.9.2
       require-like: 0.1.2
 
   event-target-shim@5.0.1: {}
@@ -11740,7 +11733,7 @@ snapshots:
 
   ms@2.1.3: {}
 
-  msw@2.6.5(@types/node@22.9.2)(typescript@5.7.2):
+  msw@2.6.6(@types/node@22.9.2)(typescript@5.7.2):
     dependencies:
       '@bundled-es-modules/cookie': 2.0.1
       '@bundled-es-modules/statuses': 1.0.1
@@ -12104,11 +12097,11 @@ snapshots:
     optionalDependencies:
       playwright-core: 1.49.0
 
-  playwright-msw@3.0.1(@playwright/test@1.49.0)(msw@2.6.5(@types/node@22.9.2)(typescript@5.7.2)):
+  playwright-msw@3.0.1(@playwright/test@1.49.0)(msw@2.6.6(@types/node@22.9.2)(typescript@5.7.2)):
     dependencies:
       '@mswjs/cookies': 1.1.0
       '@playwright/test': 1.49.0
-      msw: 2.6.5(@types/node@22.9.2)(typescript@5.7.2)
+      msw: 2.6.6(@types/node@22.9.2)(typescript@5.7.2)
       strict-event-emitter: 0.5.1
 
   playwright@1.49.0:
@@ -13566,10 +13559,10 @@ snapshots:
       '@types/node': 22.9.2
       fsevents: 2.3.3
 
-  vitest@2.1.5(@types/node@22.9.2)(jsdom@25.0.1)(msw@2.6.5(@types/node@22.9.2)(typescript@5.7.2)):
+  vitest@2.1.5(@types/node@22.9.2)(jsdom@25.0.1)(msw@2.6.6(@types/node@22.9.2)(typescript@5.7.2)):
     dependencies:
       '@vitest/expect': 2.1.5
-      '@vitest/mocker': 2.1.5(msw@2.6.5(@types/node@22.9.2)(typescript@5.7.2))(vite@5.4.11(@types/node@22.9.2))
+      '@vitest/mocker': 2.1.5(msw@2.6.6(@types/node@22.9.2)(typescript@5.7.2))(vite@5.4.11(@types/node@22.9.2))
       '@vitest/pretty-format': 2.1.5
       '@vitest/runner': 2.1.5
       '@vitest/snapshot': 2.1.5
