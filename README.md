@@ -14,5 +14,5 @@ npx degit https://github.com/seanmcquaid/scaffolding-templates/<template-name> <
 
 1. TypeScript Libraries
 2. Vite + React Router V7 SPA
-3. Vite + Vite + React Router V7 SSR
+3. Vite + React Router V7 SSR
 4. Turbo + Next SSR
