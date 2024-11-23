@@ -24,7 +24,7 @@ export function Layout({ children }: PropsWithChildren) {
 
   return (
     // eslint-disable-next-line jsx-a11y/html-has-lang
-    (<html className="h-screen min-h-screen w-full overflow-auto">
+    <html className="h-screen min-h-screen w-full overflow-auto">
       <head>
         <meta charSet="UTF-8" />
         <meta name="description" content="Vite App" />
@@ -59,7 +59,7 @@ export function Layout({ children }: PropsWithChildren) {
           re-enable JavaScript in order to use this site.
         </noscript>
       </body>
-    </html>)
+    </html>
   );
 }
 
