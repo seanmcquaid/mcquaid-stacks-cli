@@ -7,12 +7,12 @@ on:
 
 defaults:
   run:
-    working-directory: ./turbo-next-ssr
+    working-directory: ./next-ssr
 
 jobs:
   linting:
     runs-on: ubuntu-latest
-    name: Linting - Turbo + Next SSR
+    name: Linting - Next SSR
     steps:
       - name: Checkout latest
         uses: actions/checkout@v4
@@ -34,7 +34,7 @@ jobs:
         run: pnpm lint
   unit-tests-coverage:
     runs-on: ubuntu-latest
-    name: Unit Tests - Turbo + Next SSR
+    name: Unit Tests - Next SSR
     steps:
       - name: Checkout latest
         uses: actions/checkout@v4
@@ -52,7 +52,7 @@ jobs:
         run: pnpm test:coverage
   bundle-size:
     runs-on: ubuntu-latest
-    name: Bundle Size - Turbo + Next SSR
+    name: Bundle Size - Next SSR
     steps:
       - name: Checkout latest
         uses: actions/checkout@v4
