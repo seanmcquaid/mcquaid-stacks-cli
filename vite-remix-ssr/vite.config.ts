@@ -1,35 +1,16 @@
 import { defineConfig } from 'vite';
-import { vitePlugin as remix } from '@remix-run/dev';
+import { reactRouter } from '@react-router/dev/vite';
 import svgr from 'vite-plugin-svgr';
 import checker from 'vite-plugin-checker';
-import { remixDevTools } from 'remix-development-tools';
 import tsconfigPaths from 'vite-tsconfig-paths';
-
-declare module '@remix-run/server-runtime' {
-  interface Future {
-    unstable_singleFetch: true; // 👈 enable _types_ for single-fetch
-  }
-}
+import { reactRouterDevTools } from 'react-router-devtools';
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     tsconfigPaths(),
-    remixDevTools(),
-    // disable remix plugin for vitest
-    !process.env.VITEST &&
-      remix({
-        future: {
-          v3_lazyRouteDiscovery: true,
-          v3_singleFetch: true,
-          unstable_optimizeDeps: true,
-          v3_fetcherPersist: true,
-          v3_relativeSplatPath: true,
-          v3_throwAbortReason: true,
-          unstable_routeConfig: true,
-        },
-        ssr: true,
-      }),
+    reactRouterDevTools(),
+    !process.env.VITEST && reactRouter(),
     svgr(),
     checker({ typescript: true }),
   ],

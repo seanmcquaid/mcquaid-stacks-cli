@@ -19,6 +19,6 @@ I generally recommend keeping state as local as you can and using Global state o
 
 For managing state for HTTP requests, I recommend the following:
 
-1. Whatever is built into your framework - Remix has loaders, actions, clientLoaders and clientActions for this but if you want to utilize a client cache, you'll need one of the tools below in addition.
+1. Whatever is built into your framework - React Router has loaders, actions, clientLoaders and clientActions for this but if you want to utilize a client cache, you'll need one of the tools below in addition.
 2. TanStack Query if not using Redux Toolkit
 3. Redux Toolkit Query if using Redux Toolkit

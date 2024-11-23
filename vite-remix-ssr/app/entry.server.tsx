@@ -1,6 +1,6 @@
 import { PassThrough } from 'stream';
-import { createReadableStreamFromReadable } from '@remix-run/node';
-import { RemixServer } from '@remix-run/react';
+import { createReadableStreamFromReadable } from '@react-router/node';
+import { ServerRouter } from 'react-router';
 import { renderToPipeableStream } from 'react-dom/server';
 import { createInstance } from 'i18next';
 import { I18nextProvider, initReactI18next } from 'react-i18next';
@@ -21,11 +21,11 @@ export default async function handleRequest(
   request: Request,
   responseStatusCode: number,
   responseHeaders: Headers,
-  remixContext: never,
+  reactRouterContext: never,
 ) {
   const instance = createInstance();
   const lng = await i18next.getLocale(request);
-  const ns = i18next.getRouteNamespaces(remixContext);
+  const ns = i18next.getRouteNamespaces(reactRouterContext);
 
   await instance
     .use(initReactI18next)
@@ -42,7 +42,7 @@ export default async function handleRequest(
 
     const { pipe, abort } = renderToPipeableStream(
       <I18nextProvider i18n={instance}>
-        <RemixServer context={remixContext} url={request.url} />
+        <ServerRouter context={reactRouterContext} url={request.url} />
       </I18nextProvider>,
       {
         onShellReady: () => {

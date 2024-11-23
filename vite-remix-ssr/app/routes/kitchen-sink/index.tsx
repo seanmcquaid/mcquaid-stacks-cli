@@ -2,10 +2,10 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import type {
   ClientActionFunctionArgs,
   ClientLoaderFunctionArgs,
-} from '@remix-run/react';
-import { Form, useActionData, useLoaderData } from '@remix-run/react';
+} from 'react-router';
+import { Form, useActionData, useLoaderData } from 'react-router';
 import { z } from 'zod';
-import type { ActionFunctionArgs } from '@remix-run/node';
+import type { ActionFunctionArgs } from 'react-router';
 import { useForm } from 'react-hook-form';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';

@@ -1,4 +1,4 @@
-import { Link, type LinkProps } from '@remix-run/react';
+import { Link, type LinkProps } from 'react-router';
 import type { VariantProps } from 'class-variance-authority';
 import { buttonVariants } from './Button';
 import { cn } from '@/utils/styles';

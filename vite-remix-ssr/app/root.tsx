@@ -8,12 +8,12 @@ import {
   useNavigation,
   useLoaderData,
   ScrollRestoration,
-} from '@remix-run/react';
+} from 'react-router';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { QueryClientProvider } from '@tanstack/react-query';
 import type { PropsWithChildren } from 'react';
 import { useEffect } from 'react';
-import type { LoaderFunctionArgs } from '@remix-run/node';
+import type { LoaderFunctionArgs } from 'react-router';
 import { useChangeLanguage } from 'remix-i18next/react';
 import { Toaster } from './components/ui/Toaster';
 import queryClient from './services/queries/queryClient';
