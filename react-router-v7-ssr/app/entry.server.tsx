@@ -1,5 +1,6 @@
 import { PassThrough } from 'stream';
 import { createReadableStreamFromReadable } from '@react-router/node';
+import type { EntryContext } from 'react-router';
 import { ServerRouter } from 'react-router';
 import { renderToPipeableStream } from 'react-dom/server';
 import { createInstance } from 'i18next';
@@ -21,7 +22,7 @@ export default async function handleRequest(
   request: Request,
   responseStatusCode: number,
   responseHeaders: Headers,
-  reactRouterContext: never,
+  reactRouterContext: EntryContext,
 ) {
   const instance = createInstance();
   const lng = await i18next.getLocale(request);
