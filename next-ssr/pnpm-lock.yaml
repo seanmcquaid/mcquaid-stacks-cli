@@ -31,8 +31,8 @@ importers:
         specifier: ^5.61.4
         version: 5.61.4(react@19.0.0-rc-69d4b800-20241021)
       '@tanstack/react-query-next-experimental':
-        specifier: ^5.61.3
-        version: 5.61.3(@tanstack/react-query@5.61.4(react@19.0.0-rc-69d4b800-20241021))(next@15.0.1(@babel/core@7.25.2)(react-dom@19.0.0-rc-69d4b800-20241021(react@19.0.0-rc-69d4b800-20241021))(react@19.0.0-rc-69d4b800-20241021))(react@19.0.0-rc-69d4b800-20241021)
+        specifier: ^5.61.4
+        version: 5.61.4(@tanstack/react-query@5.61.4(react@19.0.0-rc-69d4b800-20241021))(next@15.0.1(@babel/core@7.25.2)(react-dom@19.0.0-rc-69d4b800-20241021(react@19.0.0-rc-69d4b800-20241021))(react@19.0.0-rc-69d4b800-20241021))(react@19.0.0-rc-69d4b800-20241021)
       accept-language:
         specifier: ^3.0.20
         version: 3.0.20
@@ -1743,10 +1743,10 @@ packages:
       '@tanstack/react-query': ^5.61.3
       react: ^18 || ^19
 
-  '@tanstack/react-query-next-experimental@5.61.3':
-    resolution: {integrity: sha512-VO3Xc0oZA8r493lx5AUU9UhrcZhAkiApjsliuHC2vurNSdbJnR4Khzl8lzLe84AgyTpnmIVbSHSf1+IlurluOg==}
+  '@tanstack/react-query-next-experimental@5.61.4':
+    resolution: {integrity: sha512-H5jUqQtW5IaPlMMAgbRr8rQLjvYfY/5hdpMis19clLNBSCDysqSxFgqZMWFb3g9U1FCrmIr+GYDBTc0zow9lLg==}
     peerDependencies:
-      '@tanstack/react-query': ^5.61.3
+      '@tanstack/react-query': ^5.61.4
       next: ^13 || ^14 || ^15
       react: ^18 || ^19
 
@@ -6447,7 +6447,7 @@ snapshots:
       '@tanstack/react-query': 5.61.4(react@19.0.0-rc-69d4b800-20241021)
       react: 19.0.0-rc-69d4b800-20241021
 
-  '@tanstack/react-query-next-experimental@5.61.3(@tanstack/react-query@5.61.4(react@19.0.0-rc-69d4b800-20241021))(next@15.0.1(@babel/core@7.25.2)(react-dom@19.0.0-rc-69d4b800-20241021(react@19.0.0-rc-69d4b800-20241021))(react@19.0.0-rc-69d4b800-20241021))(react@19.0.0-rc-69d4b800-20241021)':
+  '@tanstack/react-query-next-experimental@5.61.4(@tanstack/react-query@5.61.4(react@19.0.0-rc-69d4b800-20241021))(next@15.0.1(@babel/core@7.25.2)(react-dom@19.0.0-rc-69d4b800-20241021(react@19.0.0-rc-69d4b800-20241021))(react@19.0.0-rc-69d4b800-20241021))(react@19.0.0-rc-69d4b800-20241021)':
     dependencies:
       '@tanstack/react-query': 5.61.4(react@19.0.0-rc-69d4b800-20241021)
       next: 15.0.1(@babel/core@7.25.2)(react-dom@19.0.0-rc-69d4b800-20241021(react@19.0.0-rc-69d4b800-20241021))(react@19.0.0-rc-69d4b800-20241021)
@@ -6460,7 +6460,7 @@ snapshots:
 
   '@testing-library/dom@10.1.0':
     dependencies:
-      '@babel/code-frame': 7.24.7
+      '@babel/code-frame': 7.26.2
       '@babel/runtime': 7.25.6
       '@types/aria-query': 5.0.4
       aria-query: 5.3.0
