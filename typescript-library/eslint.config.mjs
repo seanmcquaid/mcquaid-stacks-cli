@@ -3,7 +3,7 @@ import pluginJs from '@eslint/js';
 import tseslint from 'typescript-eslint';
 import { parser } from 'typescript-eslint';
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
-import vitest from 'eslint-plugin-vitest';
+import vitest from '@vitest/eslint-plugin';
 
 export default [
   {
