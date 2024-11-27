@@ -12,6 +12,7 @@ import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 import reactPlugin from 'eslint-plugin-react';
 import reactHooksPlugin from 'eslint-plugin-react-hooks';
 import vitest from '@vitest/eslint-plugin';
+import globals from 'globals';
 
 export default [
   js.configs.recommended,
@@ -41,6 +42,13 @@ export default [
     },
   },
   {
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+        ...globals.serviceworker,
+      },
+    },
     rules: {
       'no-shadow': 'off',
       '@typescript-eslint/no-var-requires': 0,
