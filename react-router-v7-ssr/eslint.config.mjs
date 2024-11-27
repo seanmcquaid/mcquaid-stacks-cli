@@ -1,63 +1,54 @@
-import { fixupConfigRules, fixupPluginRules } from '@eslint/compat';
-import _import from 'eslint-plugin-import';
-import noRelativeImportPaths from 'eslint-plugin-no-relative-import-paths';
-import prettier from 'eslint-plugin-prettier';
-import globals from 'globals';
-import tsParser from '@typescript-eslint/parser';
-import path from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { fixupPluginRules } from '@eslint/compat';
+import importPlugin from 'eslint-plugin-import';
 import js from '@eslint/js';
-import { FlatCompat } from '@eslint/eslintrc';
 import pluginQuery from '@tanstack/eslint-plugin-query';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-  recommendedConfig: js.configs.recommended,
-  allConfig: js.configs.all,
-});
+import tseslint from 'typescript-eslint';
+import eslintConfigPrettier from 'eslint-config-prettier';
+import i18next from 'eslint-plugin-i18next';
+import jsxA11y from 'eslint-plugin-jsx-a11y';
+import noRelativeImportPaths from 'eslint-plugin-no-relative-import-paths';
+import playwright from 'eslint-plugin-playwright';
+import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
+import reactPlugin from 'eslint-plugin-react';
+import reactHooksPlugin from 'eslint-plugin-react-hooks';
+import vitest from '@vitest/eslint-plugin';
+import globals from 'globals';
 
 export default [
+  js.configs.recommended,
   ...pluginQuery.configs['flat/recommended'],
+  ...tseslint.configs.recommended,
+  jsxA11y.flatConfigs.recommended,
+  eslintConfigPrettier,
+  eslintPluginPrettierRecommended,
+  i18next.configs['flat/recommended'],
+  reactPlugin.configs.flat['jsx-runtime'],
   {
-    ignores: ['**/node_modules/'],
+    ...vitest.configs.recommended,
+    files: ['app/**'],
   },
-  ...fixupConfigRules(
-    compat.extends(
-      'eslint:recommended',
-      'plugin:react/recommended',
-      'plugin:react-hooks/recommended',
-      'plugin:jsx-a11y/recommended',
-      'plugin:i18next/recommended',
-      'plugin:@typescript-eslint/recommended',
-      'plugin:playwright/playwright-test',
-      'plugin:vitest/recommended',
-      'eslint-config-prettier',
-    ),
-  ),
+  {
+    ...playwright.configs['flat/recommended'],
+    files: ['playwright/**'],
+  },
   {
     plugins: {
-      import: fixupPluginRules(_import),
+      import: fixupPluginRules(importPlugin),
       'no-relative-import-paths': noRelativeImportPaths,
-      prettier,
+      'react-hooks': reactHooksPlugin,
     },
-
+    rules: {
+      ...reactHooksPlugin.configs.recommended.rules,
+    },
+  },
+  {
     languageOptions: {
       globals: {
         ...globals.browser,
         ...globals.node,
-      },
-
-      parser: tsParser,
-    },
-
-    settings: {
-      react: {
-        version: 'detect',
+        ...globals.serviceworker,
       },
     },
-
     rules: {
       'no-shadow': 'off',
       '@typescript-eslint/no-var-requires': 0,
@@ -79,7 +70,6 @@ export default [
       'playwright/missing-playwright-await': 'off',
       '@typescript-eslint/consistent-type-definitions': ['error'],
       '@typescript-eslint/consistent-type-imports': 'error',
-
       'no-relative-import-paths/no-relative-import-paths': [
         'warn',
         {
@@ -88,13 +78,6 @@ export default [
           prefix: '@',
         },
       ],
-    },
-  },
-  {
-    files: ['app/**/**.{ts,tsx}'],
-
-    rules: {
-      'playwright/no-standalone-expect': 'off',
     },
   },
 ];
