@@ -27,14 +27,6 @@ export default [
     files: ['app/**'],
   },
   {
-    plugins: {
-      'react-hooks': reactHooksPlugin,
-    },
-    rules: {
-      ...reactHooksPlugin.configs.recommended.rules,
-    },
-  },
-  {
     ...playwright.configs['flat/recommended'],
     files: ['playwright/**'],
   },
@@ -42,6 +34,10 @@ export default [
     plugins: {
       import: fixupPluginRules(importPlugin),
       'no-relative-import-paths': noRelativeImportPaths,
+      'react-hooks': reactHooksPlugin,
+    },
+    rules: {
+      ...reactHooksPlugin.configs.recommended.rules,
     },
   },
   {
