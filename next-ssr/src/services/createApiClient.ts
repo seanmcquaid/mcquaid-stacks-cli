@@ -49,7 +49,7 @@ const createApiClient = (baseUrl: string) => {
             const response = await error.response.json();
             error.responseData = response;
             return error;
-          } catch (e) {
+          } catch {
             return error;
           }
         },
