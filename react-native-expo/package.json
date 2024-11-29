@@ -1,6 +1,6 @@
 {
   "name": "@rnr/starter-base",
-  "main": "index.js",
+  "main": "./src/index.js",
   "version": "1.0.0",
   "scripts": {
     "dev": "expo start -c --ios",
@@ -10,7 +10,7 @@
     "ios": "expo start -c --ios",
     "web": "expo start -c --web",
     "clean": "rm -rf .expo node_modules",
-    "postinstall": "npx tailwindcss -i ./global.css -o ./node_modules/.cache/nativewind/global.css"
+    "postinstall": "npx tailwindcss -i ./src/global.css -o ./node_modules/.cache/nativewind/global.css"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "1.23.1",
