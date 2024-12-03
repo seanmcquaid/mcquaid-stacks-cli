@@ -124,8 +124,8 @@ importers:
         specifier: ^7.0.0
         version: 7.0.1(@react-router/dev@7.0.1(@react-router/serve@7.0.1(react-router@7.0.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.7.2))(@types/node@22.10.0)(babel-plugin-macros@3.1.0)(react-router@7.0.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.7.2)(vite@5.4.11(@types/node@22.10.0)))(typescript@5.7.2)
       '@tanstack/eslint-plugin-query':
-        specifier: ^5.61.4
-        version: 5.61.4(eslint@9.15.0(jiti@2.4.0))(typescript@5.7.2)
+        specifier: ^5.62.1
+        version: 5.62.1(eslint@9.15.0(jiti@2.4.0))(typescript@5.7.2)
       '@testing-library/jest-dom':
         specifier: ^6.6.3
         version: 6.6.3
@@ -1823,8 +1823,8 @@ packages:
     peerDependencies:
       '@svgr/core': '*'
 
-  '@tanstack/eslint-plugin-query@5.61.4':
-    resolution: {integrity: sha512-QVVsY8hwrX9r6c8lLV48oY682SU2GeVlo0hWMSaOKkI05Yi4bXhw5jv7E2qkbjGrgA6DcVl3o/F0dT4wpT+/SQ==}
+  '@tanstack/eslint-plugin-query@5.62.1':
+    resolution: {integrity: sha512-1886D5U+re1TW0wSH4/kUGG36yIoW5Wkz4twVEzlk3ZWmjF3XkRSWgB+Sc7n+Lyzt8usNV8ZqkZE6DA7IC47fQ==}
     peerDependencies:
       eslint: ^8.57.0 || ^9.0.0
 
@@ -8106,7 +8106,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@tanstack/eslint-plugin-query@5.61.4(eslint@9.15.0(jiti@2.4.0))(typescript@5.7.2)':
+  '@tanstack/eslint-plugin-query@5.62.1(eslint@9.15.0(jiti@2.4.0))(typescript@5.7.2)':
     dependencies:
       '@typescript-eslint/utils': 8.16.0(eslint@9.15.0(jiti@2.4.0))(typescript@5.7.2)
       eslint: 9.15.0(jiti@2.4.0)
