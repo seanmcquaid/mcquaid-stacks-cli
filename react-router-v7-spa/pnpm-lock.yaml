@@ -220,8 +220,8 @@ importers:
         specifier: ^0.6.9
         version: 0.6.9(prettier@3.4.1)
       react-router-devtools:
-        specifier: ^1.0.4
-        version: 1.0.4(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react-router@7.0.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)(vite@5.4.11(@types/node@22.10.0))
+        specifier: ^1.0.5
+        version: 1.0.5(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react-router@7.0.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)(vite@5.4.11(@types/node@22.10.0))
       remix-flat-routes:
         specifier: ^0.6.5
         version: 0.6.5(@remix-run/dev@2.14.0(@remix-run/react@2.14.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.2))(@remix-run/serve@2.14.0(typescript@5.7.2))(@types/node@22.10.0)(babel-plugin-macros@3.1.0)(typescript@5.7.2)(vite@5.4.11(@types/node@22.10.0)))
@@ -5259,8 +5259,8 @@ packages:
       '@types/react':
         optional: true
 
-  react-router-devtools@1.0.4:
-    resolution: {integrity: sha512-Du+nspEtiLFerawO4zgu/SwBtL3cFSRNkFT/JwLWfYkWrd4J9PIaVt19yw/lFW/+pBA/KA/W8c1B1bx/Rsby/w==}
+  react-router-devtools@1.0.5:
+    resolution: {integrity: sha512-JPY1H2oAp2QJUVpH4b97G+2xk+YldoXGwpwQf0fQrjCJs8zupfV/NXCF3hrkFZVLo1JH+WJO/iFXxfz7lJanjQ==}
     peerDependencies:
       react: '>=17'
       react-dom: '>=17'
@@ -12021,7 +12021,7 @@ snapshots:
     optionalDependencies:
       '@types/react': 18.3.12
 
-  react-router-devtools@1.0.4(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react-router@7.0.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)(vite@5.4.11(@types/node@22.10.0)):
+  react-router-devtools@1.0.5(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react-router@7.0.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)(vite@5.4.11(@types/node@22.10.0)):
     dependencies:
       '@babel/core': 7.26.0
       '@babel/generator': 7.26.2
