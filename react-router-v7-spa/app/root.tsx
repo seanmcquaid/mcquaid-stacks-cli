@@ -1,5 +1,5 @@
 /* eslint-disable i18next/no-literal-string */
-import './styles/index.css';
+import stylesheet from './styles/index.css?url';
 import {
   Outlet,
   Links,
@@ -17,6 +17,11 @@ import { Toaster } from './components/ui/Toaster';
 import queryClient from './services/queries/queryClient';
 import PageError from './components/app/PageError';
 import LoadingOverlay from './components/ui/LoadingOverlay';
+import { Route } from './+types/root';
+
+export const links: Route.LinksFunction = () => [
+  { rel: 'stylesheet', href: stylesheet },
+];
 
 export function Layout({ children }: PropsWithChildren) {
   const navigation = useNavigation();
