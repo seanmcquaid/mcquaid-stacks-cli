@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "build": "tsc && react-router build",
+    "build": "react-router typegen && react-router build",
     "dev": "react-router dev",
     "lint": "eslint playwright app --max-warnings=0",
     "prepare": "is-ci || husky",
