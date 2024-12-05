@@ -1,5 +1,4 @@
 /* eslint-disable i18next/no-literal-string */
-import stylesheet from './styles/index.css?url';
 import {
   Outlet,
   Links,
@@ -13,6 +12,7 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { QueryClientProvider } from '@tanstack/react-query';
 import type { PropsWithChildren } from 'react';
 import { useEffect, useState } from 'react';
+import stylesheet from './styles/index.css?url';
 import { Toaster } from './components/ui/Toaster';
 import queryClient from './services/queries/queryClient';
 import PageError from './components/app/PageError';
