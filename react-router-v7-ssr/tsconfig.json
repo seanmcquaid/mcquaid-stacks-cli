@@ -14,8 +14,7 @@
       "@react-router/node",
       "vite/client",
       "vitest/globals",
-      "vite-plugin-svgr/client",
-      "vitest/config"
+      "vite-plugin-svgr/client"
     ],
     "isolatedModules": true,
     "esModuleInterop": true,
