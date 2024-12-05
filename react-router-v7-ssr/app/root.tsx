@@ -12,7 +12,6 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { QueryClientProvider } from '@tanstack/react-query';
 import type { PropsWithChildren } from 'react';
 import { useEffect } from 'react';
-import type { LoaderFunctionArgs } from 'react-router';
 import { useChangeLanguage } from 'remix-i18next/react';
 import stylesheet from './styles/index.css?url';
 import { Toaster } from './components/ui/Toaster';
@@ -28,7 +27,7 @@ export const links: Route.LinksFunction = () => [
   { rel: 'stylesheet', href: stylesheet },
 ];
 
-export async function loader({ request }: LoaderFunctionArgs) {
+export async function loader({ request }: Route.LoaderArgs) {
   setAcceptLanguageHeaders(request);
   const locale = await i18next.getLocale(request);
   return { locale };
