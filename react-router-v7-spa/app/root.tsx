@@ -1,5 +1,4 @@
 /* eslint-disable i18next/no-literal-string */
-import './styles/index.css';
 import {
   Outlet,
   Links,
@@ -13,10 +12,16 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { QueryClientProvider } from '@tanstack/react-query';
 import type { PropsWithChildren } from 'react';
 import { useEffect, useState } from 'react';
+import stylesheet from './styles/index.css?url';
 import { Toaster } from './components/ui/Toaster';
 import queryClient from './services/queries/queryClient';
 import PageError from './components/app/PageError';
 import LoadingOverlay from './components/ui/LoadingOverlay';
+import type { Route } from './+types/root';
+
+export const links: Route.LinksFunction = () => [
+  { rel: 'stylesheet', href: stylesheet },
+];
 
 export function Layout({ children }: PropsWithChildren) {
   const navigation = useNavigation();

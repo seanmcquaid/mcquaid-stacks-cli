@@ -1,11 +1,14 @@
-import { defineConfig } from 'vite';
+import { defineConfig as defineViteConfig, mergeConfig } from 'vite';
 import { reactRouter } from '@react-router/dev/vite';
 import svgr from 'vite-plugin-svgr';
 import checker from 'vite-plugin-checker';
 import tsconfigPaths from 'vite-tsconfig-paths';
 import { reactRouterDevTools } from 'react-router-devtools';
+import { defineConfig as defineVitestConfig } from 'vitest/config';
+import autoprefixer from 'autoprefixer';
+import tailwindcss from 'tailwindcss';
 
-export default defineConfig({
+const viteConfig = defineViteConfig({
   plugins: [
     tsconfigPaths(),
     reactRouterDevTools(),
@@ -13,6 +16,17 @@ export default defineConfig({
     svgr(),
     checker({ typescript: true }),
   ],
+  css: {
+    postcss: {
+      plugins: [tailwindcss, autoprefixer],
+    },
+  },
+  build: {
+    rollupOptions: {
+      // This is to remove the MSW from ever being included in the production build
+      external: id => id.includes('worker'),
+    },
+  },
   preview: {
     port: 3000,
     open: true,
@@ -21,12 +35,9 @@ export default defineConfig({
     port: 3000,
     open: true,
   },
-  build: {
-    rollupOptions: {
-      // This is to remove the MSW from ever being included in the production build
-      external: id => id.includes('worker'),
-    },
-  },
+});
+
+const vitestConfig = defineVitestConfig({
   test: {
     globals: true,
     environment: 'jsdom',
@@ -40,7 +51,7 @@ export default defineConfig({
       exclude: [
         'app/utils/testing',
         'app/i18n',
-        'app/main.tsx',
+        'app/root.tsx',
         'app/env.ts',
         'app/types',
         'app/icons',
@@ -49,3 +60,5 @@ export default defineConfig({
     },
   },
 });
+
+export default mergeConfig(viteConfig, vitestConfig);
