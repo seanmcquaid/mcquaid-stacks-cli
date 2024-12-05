@@ -1,4 +1,4 @@
-import Backend from 'i18next-fs-backend';
+import Backend from 'i18next-fs-backend/cjs';
 import { RemixI18Next } from 'remix-i18next/server';
 import config from './config';
 
