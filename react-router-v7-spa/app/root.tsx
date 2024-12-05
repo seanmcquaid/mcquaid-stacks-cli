@@ -17,7 +17,7 @@ import { Toaster } from './components/ui/Toaster';
 import queryClient from './services/queries/queryClient';
 import PageError from './components/app/PageError';
 import LoadingOverlay from './components/ui/LoadingOverlay';
-import { Route } from './+types/root';
+import type { Route } from './+types/root';
 
 export const links: Route.LinksFunction = () => [
   { rel: 'stylesheet', href: stylesheet },
