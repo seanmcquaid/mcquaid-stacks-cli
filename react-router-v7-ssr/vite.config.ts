@@ -1,22 +1,19 @@
-import { defineConfig } from 'vite';
+import { defineConfig as defineViteConfig, mergeConfig } from 'vite';
 import { reactRouter } from '@react-router/dev/vite';
 import svgr from 'vite-plugin-svgr';
 import checker from 'vite-plugin-checker';
 import tsconfigPaths from 'vite-tsconfig-paths';
 import { reactRouterDevTools } from 'react-router-devtools';
+import { defineConfig as defineVitestConfig } from 'vitest/config';
 
-// https://vitejs.dev/config/
-export default defineConfig({
+const viteConfig = defineViteConfig({
   plugins: [
     tsconfigPaths(),
     reactRouterDevTools(),
-    !process.env.VITEST && reactRouter(),
+    reactRouter(),
     svgr(),
     checker({ typescript: true }),
   ],
-  ssr: {
-    noExternal: ['remix-i18next'],
-  },
   preview: {
     port: 3000,
     open: true,
@@ -25,12 +22,9 @@ export default defineConfig({
     port: 3000,
     open: true,
   },
-  build: {
-    rollupOptions: {
-      // This is to remove the MSW from ever being included in the production build
-      external: id => id.includes('worker'),
-    },
-  },
+});
+
+const vitestConfig = defineVitestConfig({
   test: {
     globals: true,
     environment: 'jsdom',
@@ -53,3 +47,5 @@ export default defineConfig({
     },
   },
 });
+
+export default mergeConfig(viteConfig, vitestConfig);
