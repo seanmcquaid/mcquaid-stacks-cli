@@ -1,4 +1,3 @@
-import './styles/index.css';
 import {
   Outlet,
   Links,
@@ -15,6 +14,7 @@ import type { PropsWithChildren } from 'react';
 import { useEffect } from 'react';
 import type { LoaderFunctionArgs } from 'react-router';
 import { useChangeLanguage } from 'remix-i18next/react';
+import stylesheet from './styles/index.css?url';
 import { Toaster } from './components/ui/Toaster';
 import queryClient from './services/queries/queryClient';
 import PageError from './components/app/PageError';
@@ -22,6 +22,11 @@ import useAppTranslation from './hooks/useAppTranslation';
 import LoadingOverlay from './components/ui/LoadingOverlay';
 import i18next from './i18n/i18next.server';
 import setAcceptLanguageHeaders from './i18n/setAcceptLanguageHeaders';
+import type { Route } from './+types/root';
+
+export const links: Route.LinksFunction = () => [
+  { rel: 'stylesheet', href: stylesheet },
+];
 
 export async function loader({ request }: LoaderFunctionArgs) {
   setAcceptLanguageHeaders(request);

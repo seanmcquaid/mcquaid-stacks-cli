@@ -5,15 +5,22 @@ import checker from 'vite-plugin-checker';
 import tsconfigPaths from 'vite-tsconfig-paths';
 import { reactRouterDevTools } from 'react-router-devtools';
 import { defineConfig as defineVitestConfig } from 'vitest/config';
+import autoprefixer from 'autoprefixer';
+import tailwindcss from 'tailwindcss';
 
 const viteConfig = defineViteConfig({
   plugins: [
     tsconfigPaths(),
     reactRouterDevTools(),
-    reactRouter(),
+    !process.env.VITEST && reactRouter(),
     svgr(),
     checker({ typescript: true }),
   ],
+  css: {
+    postcss: {
+      plugins: [tailwindcss, autoprefixer],
+    },
+  },
   preview: {
     port: 3000,
     open: true,
