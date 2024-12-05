@@ -58,7 +58,7 @@ importers:
         version: 1.7.2
       lucide-react:
         specifier: ^0.465.0
-        version: 0.465.0(react@18.3.1)
+        version: 0.465.0(react@19.0.0)
       react:
         specifier: ^19.0.0
         version: 19.0.0
@@ -10938,7 +10938,7 @@ snapshots:
 
   lru-cache@7.18.3: {}
 
-  lucide-react@0.462.0(react@19.0.0):
+  lucide-react@0.465.0(react@19.0.0):
     dependencies:
       react: 19.0.0
 
