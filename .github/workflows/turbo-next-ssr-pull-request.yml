@@ -19,11 +19,11 @@ jobs:
       - name: Setup PNPM
         uses: pnpm/action-setup@v4
         with:
-          version: 9.1.1
+          version: 9.14.4
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 21.1.0
+          node-version: 22.12.0
       - name: Set env to dev
         run: |
           touch .env
@@ -41,11 +41,11 @@ jobs:
       - name: Setup PNPM
         uses: pnpm/action-setup@v4
         with:
-          version: 9.1.1
+          version: 9.14.4
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 21.1.0
+          node-version: 22.12.0
       - name: Install Dependencies
         run: pnpm install --frozen-lockfile
       - name: Run Unit Tests
@@ -59,11 +59,11 @@ jobs:
       - name: Setup PNPM
         uses: pnpm/action-setup@v4
         with:
-          version: 9.1.1
+          version: 9.14.4
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 21.1.0
+          node-version: 22.12.0
       - name: Install Dependencies
         run: pnpm install --frozen-lockfile
       - name: Build the app

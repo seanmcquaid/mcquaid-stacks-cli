@@ -13,6 +13,7 @@ import globals from 'globals';
 import nextPlugin from '@next/eslint-plugin-next';
 import reactPlugin from 'eslint-plugin-react';
 import reactHooksPlugin from 'eslint-plugin-react-hooks';
+import reactCompiler from 'eslint-plugin-react-compiler';
 
 export default [
   js.configs.recommended,
@@ -33,6 +34,7 @@ export default [
       '@next/next': nextPlugin,
       'no-relative-import-paths': noRelativeImportPaths,
       'react-hooks': reactHooksPlugin,
+      'react-compiler': reactCompiler,
     },
     rules: {
       ...nextPlugin.configs.recommended.rules,
@@ -76,6 +78,7 @@ export default [
           prefix: '@',
         },
       ],
+      'react-compiler/react-compiler': 'error',
     },
   },
 ];

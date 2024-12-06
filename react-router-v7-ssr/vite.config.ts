@@ -7,12 +7,20 @@ import { reactRouterDevTools } from 'react-router-devtools';
 import { defineConfig as defineVitestConfig } from 'vitest/config';
 import autoprefixer from 'autoprefixer';
 import tailwindcss from 'tailwindcss';
+import babel from 'vite-plugin-babel';
 
 const viteConfig = defineViteConfig({
   plugins: [
     tsconfigPaths(),
     reactRouterDevTools(),
     !process.env.VITEST && reactRouter(),
+    babel({
+      filter: /\.[jt]sx?$/,
+      babelConfig: {
+        presets: ['@babel/preset-typescript'],
+        plugins: ['babel-plugin-react-compiler'],
+      },
+    }),
     svgr(),
     checker({ typescript: true }),
   ],
