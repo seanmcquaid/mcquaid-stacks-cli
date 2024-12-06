@@ -6,6 +6,9 @@ const nextConfig = withSvgr({
     titleProp: true,
     icon: true,
   },
+  experimental: {
+    reactCompiler: true,
+  },
 });
 
 export default nextConfig;
