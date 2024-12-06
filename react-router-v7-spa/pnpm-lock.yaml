@@ -35,6 +35,9 @@ importers:
       '@tanstack/react-query-devtools':
         specifier: ^5.61.4
         version: 5.62.2(@tanstack/react-query@5.62.2(react@19.0.0))(react@19.0.0)
+      babel-plugin-react-compiler:
+        specifier: 19.0.0-beta-df7b47d-20241124
+        version: 19.0.0-beta-df7b47d-20241124
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
@@ -147,9 +150,6 @@ importers:
       autoprefixer:
         specifier: ^10.4.20
         version: 10.4.20(postcss@8.4.49)
-      babel-plugin-react-compiler:
-        specifier: 19.0.0-beta-df7b47d-20241124
-        version: 19.0.0-beta-df7b47d-20241124
       bundlesize:
         specifier: ^0.18.2
         version: 0.18.2
