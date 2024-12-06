@@ -12,11 +12,7 @@ export const AccordionItem = ({
 }: React.ComponentPropsWithRef<typeof AccordionPrimitive.Item> & {
   className?: string;
 }) => (
-  <AccordionPrimitive.Item
-    ref={props.ref}
-    className={cn('border-b', className)}
-    {...props}
-  />
+  <AccordionPrimitive.Item className={cn('border-b', className)} {...props} />
 );
 AccordionItem.displayName = 'AccordionItem';
 
@@ -29,7 +25,6 @@ export const AccordionTrigger = ({
 }) => (
   <AccordionPrimitive.Header className="flex">
     <AccordionPrimitive.Trigger
-      ref={props.ref}
       className={cn(
         'flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180',
         className,
@@ -51,7 +46,6 @@ export const AccordionContent = ({
   className?: string;
 }) => (
   <AccordionPrimitive.Content
-    ref={props.ref}
     className={cn(
       'overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down',
       className,
