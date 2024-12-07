@@ -13,7 +13,6 @@ import reactPlugin from 'eslint-plugin-react';
 import reactHooksPlugin from 'eslint-plugin-react-hooks';
 import vitest from '@vitest/eslint-plugin';
 import globals from 'globals';
-import reactCompiler from 'eslint-plugin-react-compiler';
 
 export default [
   js.configs.recommended,
@@ -26,7 +25,7 @@ export default [
   reactPlugin.configs.flat['jsx-runtime'],
   {
     ...vitest.configs.recommended,
-    files: ['app/**'],
+    files: ['src/**'],
   },
   {
     ...playwright.configs['flat/recommended'],
@@ -37,7 +36,6 @@ export default [
       import: fixupPluginRules(importPlugin),
       'no-relative-import-paths': noRelativeImportPaths,
       'react-hooks': reactHooksPlugin,
-      'react-compiler': reactCompiler,
     },
     rules: {
       ...reactHooksPlugin.configs.recommended.rules,
@@ -76,11 +74,10 @@ export default [
         'warn',
         {
           allowSameFolder: true,
-          rootDir: 'app',
+          rootDir: 'src',
           prefix: '@',
         },
       ],
-      'react-compiler/react-compiler': 'error',
     },
   },
 ];

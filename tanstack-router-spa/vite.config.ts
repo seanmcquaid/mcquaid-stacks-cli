@@ -7,20 +7,12 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 import { defineConfig as defineVitestConfig } from 'vitest/config';
 import autoprefixer from 'autoprefixer';
 import tailwindcss from 'tailwindcss';
-import babel from 'vite-plugin-babel';
 
 const viteConfig = defineViteConfig({
   plugins: [
     tsconfigPaths(),
     TanStackRouterVite(),
     react(),
-    // babel({
-    //   filter: /\.[jt]sx?$/,
-    //   babelConfig: {
-    //     presets: ['@babel/preset-typescript'],
-    //     plugins: ['babel-plugin-react-compiler'],
-    //   },
-    // }),
     svgr(),
     checker({ typescript: true }),
   ],
@@ -49,21 +41,20 @@ const vitestConfig = defineVitestConfig({
   test: {
     globals: true,
     environment: 'jsdom',
-    setupFiles: ['./app/utils/testing/setupTests.ts'],
+    setupFiles: ['./src/utils/testing/setupTests.ts'],
     exclude: ['playwright', 'node_modules'],
     coverage: {
       provider: 'istanbul',
       reporter: ['lcov'],
       all: true,
-      include: ['app/**/*.ts', 'app/**/*.tsx'],
+      include: ['src/**/*.ts', 'src/**/*.tsx'],
       exclude: [
-        'app/utils/testing',
-        'app/i18n',
-        'app/root.tsx',
-        'app/env.ts',
-        'app/types',
-        'app/icons',
-        'app/styles',
+        'src/utils/testing',
+        'src/i18n',
+        'src/env.ts',
+        'src/types',
+        'src/assets',
+        'src/styles',
       ],
     },
   },
