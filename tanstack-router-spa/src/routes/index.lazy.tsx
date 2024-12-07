@@ -16,6 +16,9 @@ const HomePage = () => {
       <LinkButton to="/react-hook-form-zod" className="m-4">
         {t('HomePage.reactHookFormZod')}
       </LinkButton>
+      <LinkButton to="/kitchen-sink" className="m-4">
+        {t('HomePage.kitchenSink')}
+      </LinkButton>
     </PageWrapper>
   );
 };
