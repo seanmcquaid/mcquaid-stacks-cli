@@ -234,9 +234,6 @@ importers:
       vite:
         specifier: ^6.0.3
         version: 6.0.3(@types/node@22.10.1)(jiti@1.21.6)(tsx@4.19.2)(yaml@2.6.1)
-      vite-plugin-babel:
-        specifier: ^1.3.0
-        version: 1.3.0(@babel/core@7.26.0)(vite@6.0.3(@types/node@22.10.1)(jiti@1.21.6)(tsx@4.19.2)(yaml@2.6.1))
       vite-plugin-checker:
         specifier: ^0.8.0
         version: 0.8.0(eslint@9.16.0(jiti@1.21.6))(optionator@0.9.4)(typescript@5.7.2)(vite@6.0.3(@types/node@22.10.1)(jiti@1.21.6)(tsx@4.19.2)(yaml@2.6.1))
@@ -5833,12 +5830,6 @@ packages:
     resolution: {integrity: sha512-uPAwSr57kYjAUux+8E2j0q0Fxpn8M9VoyfGiRI8Kfktz9NcYMCenwY5RnZxnF1WTu3TGiYipirIzacLL3VVGFg==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
-
-  vite-plugin-babel@1.3.0:
-    resolution: {integrity: sha512-C5WKX0UwvQKH8WD2GiyWUjI62UBfLbfUhiLexnIm4asLdENX5ymrRipFlBnGeVxoOaYgTL5dh5KW6YDGpWsR8A==}
-    peerDependencies:
-      '@babel/core': ^7.0.0
-      vite: ^2.7.0 || ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0
 
   vite-plugin-checker@0.8.0:
     resolution: {integrity: sha512-UA5uzOGm97UvZRTdZHiQVYFnd86AVn8EVaD4L3PoVzxH+IZSfaAw14WGFwX9QS23UW3lV/5bVKZn6l0w+q9P0g==}
@@ -12356,11 +12347,6 @@ snapshots:
       - sugarss
       - supports-color
       - terser
-
-  vite-plugin-babel@1.3.0(@babel/core@7.26.0)(vite@6.0.3(@types/node@22.10.1)(jiti@1.21.6)(tsx@4.19.2)(yaml@2.6.1)):
-    dependencies:
-      '@babel/core': 7.26.0
-      vite: 6.0.3(@types/node@22.10.1)(jiti@1.21.6)(tsx@4.19.2)(yaml@2.6.1)
 
   vite-plugin-checker@0.8.0(eslint@9.16.0(jiti@1.21.6))(optionator@0.9.4)(typescript@5.7.2)(vite@6.0.3(@types/node@22.10.1)(jiti@1.21.6)(tsx@4.19.2)(yaml@2.6.1)):
     dependencies:
