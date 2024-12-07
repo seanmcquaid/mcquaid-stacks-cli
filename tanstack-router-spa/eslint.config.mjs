@@ -15,6 +15,9 @@ import vitest from '@vitest/eslint-plugin';
 import globals from 'globals';
 
 export default [
+  {
+    ignores: ['./src/routeTree.gen.ts'],
+  },
   js.configs.recommended,
   ...pluginQuery.configs['flat/recommended'],
   ...tseslint.configs.recommended,
