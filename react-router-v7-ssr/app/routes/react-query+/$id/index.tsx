@@ -1,10 +1,11 @@
-import { useNavigate, useParams } from 'react-router';
+import { useNavigate } from 'react-router';
+import { useQuery } from '@tanstack/react-query';
+import type { Route } from './+types';
 import PageWrapper from '@/components/app/PageWrapper';
-import { useGetPostQuery } from '@/hooks/services/posts';
+import { getPostQueryOptions } from '@/services/queries/posts';
 
-const ReactQueryPostPage = () => {
-  const { id } = useParams();
-  const { data, isLoading, isError } = useGetPostQuery(id!);
+const ReactQueryPostPage = ({ params }: Route.ComponentProps) => {
+  const { data, isLoading, isError } = useQuery(getPostQueryOptions(params.id));
   const navigate = useNavigate();
 
   return (

@@ -189,9 +189,6 @@ importers:
       eslint-plugin-jsx-a11y:
         specifier: ^6.10.2
         version: 6.10.2(eslint@9.16.0(jiti@1.21.6))
-      eslint-plugin-no-relative-import-paths:
-        specifier: ^1.5.5
-        version: 1.5.5
       eslint-plugin-playwright:
         specifier: ^2.1.0
         version: 2.1.0(eslint@9.16.0(jiti@1.21.6))
@@ -3256,9 +3253,6 @@ packages:
     engines: {node: '>=4.0'}
     peerDependencies:
       eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8 || ^9
-
-  eslint-plugin-no-relative-import-paths@1.5.5:
-    resolution: {integrity: sha512-UjudFFdBbv93v0CsVdEKcMLbBzRIjeK2PubTctX57tgnHxZcMj1Jm8lDBWoETnPxk0S5g5QLSltEM+511yL4+w==}
 
   eslint-plugin-playwright@2.1.0:
     resolution: {integrity: sha512-wMbHOehofSB1cBdzz2CLaCYaKNLeTQ0YnOW+7AHa281TJqlpEJUBgTHbRUYOUxiXphfWwOyTPvgr6vvEmArbSA==}
@@ -9838,8 +9832,6 @@ snapshots:
       object.fromentries: 2.0.8
       safe-regex-test: 1.0.3
       string.prototype.includes: 2.0.1
-
-  eslint-plugin-no-relative-import-paths@1.5.5: {}
 
   eslint-plugin-playwright@2.1.0(eslint@9.16.0(jiti@1.21.6)):
     dependencies:

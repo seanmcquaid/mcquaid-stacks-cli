@@ -6,13 +6,13 @@ export const PostsQueryKeys = {
   GET_POSTS: 'GET_POSTS',
 } as const;
 
-export const getPostQuery = (id: string) =>
+export const getPostQueryOptions = (id: string) =>
   queryOptions({
     queryKey: [PostsQueryKeys.GET_POST, id],
     queryFn: async () => postsService.getPost(id),
   });
 
-export const getPostsQuery = () =>
+export const getPostsQueryOptions = () =>
   queryOptions({
     queryKey: [PostsQueryKeys.GET_POSTS],
     queryFn: () => postsService.getPosts(),

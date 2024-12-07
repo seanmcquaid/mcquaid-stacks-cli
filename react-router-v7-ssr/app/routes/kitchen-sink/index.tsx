@@ -1,21 +1,16 @@
 import { zodResolver } from '@hookform/resolvers/zod';
-import type {
-  ClientActionFunctionArgs,
-  ClientLoaderFunctionArgs,
-} from 'react-router';
-import { Form, useActionData, useLoaderData } from 'react-router';
+import { Form } from 'react-router';
 import { z } from 'zod';
-import type { ActionFunctionArgs } from 'react-router';
 import { useForm } from 'react-hook-form';
+import type { Route } from './+types';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
 import queryClient from '@/services/queries/queryClient';
 import { toast } from '@/hooks/useToast';
 import postsService from '@/services/postsService';
-import type Post from '@/types/Post';
-import QueryKey from '@/constants/QueryKey';
 import LinkButton from '@/components/ui/LinkButton';
 import getValidatedFormData from '@/utils/getValidatedFormData';
+import { PostsQueryKeys } from '@/services/queries/posts';
 
 const formDataSchema = z.object({
   name: z.string().min(3).max(10, {
@@ -35,10 +30,10 @@ export const loader = async () => {
 
 export const clientLoader = async ({
   serverLoader,
-}: ClientLoaderFunctionArgs) => {
+}: Route.ClientLoaderArgs) => {
   const posts = await queryClient.ensureQueryData({
-    queryKey: [QueryKey.GET_POSTS],
-    queryFn: () => serverLoader<Post[]>(),
+    queryKey: [PostsQueryKeys.GET_POSTS],
+    queryFn: () => serverLoader(),
   });
 
   return posts;
@@ -46,7 +41,7 @@ export const clientLoader = async ({
 
 clientLoader.hydrate = true;
 
-export const action = async ({ request }: ActionFunctionArgs) => {
+export const action = async ({ request }: Route.ActionArgs) => {
   const { errors, data, defaultValues } = getValidatedFormData({
     schema: formDataSchema,
     formData: await request.formData(),
@@ -61,10 +56,8 @@ export const action = async ({ request }: ActionFunctionArgs) => {
 
 export const clientAction = async ({
   serverAction,
-}: ClientActionFunctionArgs) => {
-  const { data, errors, defaultValues } = (await serverAction<
-    typeof action
-  >()) as Awaited<ReturnType<typeof action>>;
+}: Route.ClientActionArgs) => {
+  const { data, errors, defaultValues } = await serverAction();
 
   if (errors) {
     return { errors, defaultValues };
@@ -77,9 +70,7 @@ export const clientAction = async ({
   return { data };
 };
 
-const KitchenSinkPage = () => {
-  const loaderData = useLoaderData<typeof clientLoader>();
-  const actionData = useActionData<typeof clientAction>();
+const KitchenSinkPage = ({ loaderData, actionData }: Route.ComponentProps) => {
   const {
     register,
     formState: { errors },
