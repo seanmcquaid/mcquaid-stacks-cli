@@ -92,7 +92,7 @@
     "jsdom": "^25.0.1",
     "lighthouse": "^12.2.2",
     "lint-staged": "^15.2.10",
-    "msw": "^2.6.6",
+    "msw": "^2.6.8",
     "playwright-lighthouse": "^4.0.0",
     "playwright-msw": "^3.0.1",
     "postcss": "^8.4.49",
