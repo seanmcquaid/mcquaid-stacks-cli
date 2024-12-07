@@ -1,39 +1,48 @@
-import * as React from "react";
-import { Link, Outlet, createRootRouteWithContext } from "@tanstack/react-router";
-import { TanStackRouterDevtools } from "@tanstack/router-devtools";
-import { QueryClient } from "@tanstack/react-query";
+import { lazy, Suspense } from 'react';
+import { Outlet, createRootRouteWithContext } from '@tanstack/react-router';
+import type { QueryClient } from '@tanstack/react-query';
+import { Toaster } from '@/components/ui/Toaster';
+import initializeI18next from '@/i18n/initializeI18next.client';
+
+initializeI18next();
 
 export const Route = createRootRouteWithContext<{
-  queryClient: QueryClient
+  queryClient: QueryClient;
 }>()({
   component: RootComponent,
 });
 
+const TanStackRouterDevtools =
+  process.env.NODE_ENV === 'production'
+    ? () => null // Render nothing in production
+    : lazy(() =>
+        // Lazy load in development
+        import('@tanstack/router-devtools').then(res => ({
+          default: res.TanStackRouterDevtools,
+          // For Embedded Mode
+          // default: res.TanStackRouterDevtoolsPanel
+        })),
+      );
+
+const ReactQueryDevtools =
+  process.env.NODE_ENV === 'production'
+    ? () => null // Render nothing in production
+    : lazy(() =>
+        // Lazy load in development
+        import('@tanstack/react-query-devtools').then(res => ({
+          default: res.ReactQueryDevtools,
+        })),
+      );
+
 function RootComponent() {
   return (
     <>
-      <div className="p-2 flex gap-2 text-lg">
-        <Link
-          to="/"
-          activeProps={{
-            className: "font-bold",
-          }}
-          activeOptions={{ exact: true }}
-        >
-          Home
-        </Link>{" "}
-        <Link
-          to="/about"
-          activeProps={{
-            className: "font-bold",
-          }}
-        >
-          About
-        </Link>
-      </div>
-      <hr />
       <Outlet />
-      <TanStackRouterDevtools position="bottom-right" />
+      <Suspense>
+        <TanStackRouterDevtools position="bottom-right" />
+        <ReactQueryDevtools initialIsOpen={false} buttonPosition="top-right" />
+      </Suspense>
+      <Toaster />
     </>
   );
 }

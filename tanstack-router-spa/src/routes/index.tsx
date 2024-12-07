@@ -1,14 +1,28 @@
-import * as React from "react";
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute } from '@tanstack/react-router';
+import PageWrapper from '@/components/app/PageWrapper';
+import LinkButton from '@/components/ui/LinkButton';
+import useAppTranslation from '@/hooks/useAppTranslation';
 
-export const Route = createFileRoute("/")({
-  component: HomeComponent,
-});
+const HomePage = () => {
+  const { t } = useAppTranslation();
 
-function HomeComponent() {
   return (
-    <div className="p-2">
-      <h3>Welcome Home!</h3>
-    </div>
+    <PageWrapper>
+      <h1>{t('HomePage.title')}</h1>
+      <p>{t('HomePage.subTitle')}</p>
+      <LinkButton to={t('Routes.reactQuery')} className="m-4">
+        {t('HomePage.reactQuery')}
+      </LinkButton>
+      <LinkButton to={t('Routes.reactHookFormZod')} className="m-4">
+        {t('HomePage.reactHookFormZod')}
+      </LinkButton>
+      <LinkButton to={t('Routes.kitchenSink')} className="m-4">
+        {t('HomePage.kitchenSink')}
+      </LinkButton>
+    </PageWrapper>
   );
-}
+};
+
+export const Route = createFileRoute('/')({
+  component: HomePage,
+});

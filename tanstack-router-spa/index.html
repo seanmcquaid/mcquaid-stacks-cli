@@ -1,25 +1,13 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="h-screen min-h-screen w-full overflow-auto">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TanStack Router</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style type="text/tailwindcss">
-      html {
-        color-scheme: light dark;
-      }
-      * {
-        @apply border-gray-200 dark:border-gray-800;
-      }
-      body {
-        @apply bg-gray-50 text-gray-950 dark:bg-gray-900 dark:text-gray-200;
-      }
-    </style>
   </head>
 
-  <body>
-    <div id="app"></div>
+  <body class="flex h-screen min-h-screen w-full flex-col overflow-auto">
+    <div id="app" class="flex-1"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

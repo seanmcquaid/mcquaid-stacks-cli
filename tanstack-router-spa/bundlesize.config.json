@@ -1,0 +1,8 @@
+{
+  "files": [
+    {
+      "path": "./build/client/assets/*.js",
+      "maxSize": "300 kB"
+    }
+  ]
+}
