@@ -12,12 +12,33 @@
 
 import { Route as rootRoute } from './routes/__root'
 import { Route as IndexImport } from './routes/index'
+import { Route as ReactQueryIndexImport } from './routes/react-query/index'
+import { Route as ReactHookFormZodIndexImport } from './routes/react-hook-form-zod/index'
+import { Route as ReactQueryIdIndexImport } from './routes/react-query/$id/index'
 
 // Create/Update Routes
 
 const IndexRoute = IndexImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const ReactQueryIndexRoute = ReactQueryIndexImport.update({
+  id: '/react-query/',
+  path: '/react-query/',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const ReactHookFormZodIndexRoute = ReactHookFormZodIndexImport.update({
+  id: '/react-hook-form-zod/',
+  path: '/react-hook-form-zod/',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const ReactQueryIdIndexRoute = ReactQueryIdIndexImport.update({
+  id: '/react-query/$id/',
+  path: '/react-query/$id/',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -32,6 +53,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexImport
       parentRoute: typeof rootRoute
     }
+    '/react-hook-form-zod/': {
+      id: '/react-hook-form-zod/'
+      path: '/react-hook-form-zod'
+      fullPath: '/react-hook-form-zod'
+      preLoaderRoute: typeof ReactHookFormZodIndexImport
+      parentRoute: typeof rootRoute
+    }
+    '/react-query/': {
+      id: '/react-query/'
+      path: '/react-query'
+      fullPath: '/react-query'
+      preLoaderRoute: typeof ReactQueryIndexImport
+      parentRoute: typeof rootRoute
+    }
+    '/react-query/$id/': {
+      id: '/react-query/$id/'
+      path: '/react-query/$id'
+      fullPath: '/react-query/$id'
+      preLoaderRoute: typeof ReactQueryIdIndexImport
+      parentRoute: typeof rootRoute
+    }
   }
 }
 
@@ -39,32 +81,52 @@ declare module '@tanstack/react-router' {
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/react-hook-form-zod': typeof ReactHookFormZodIndexRoute
+  '/react-query': typeof ReactQueryIndexRoute
+  '/react-query/$id': typeof ReactQueryIdIndexRoute
 }
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/react-hook-form-zod': typeof ReactHookFormZodIndexRoute
+  '/react-query': typeof ReactQueryIndexRoute
+  '/react-query/$id': typeof ReactQueryIdIndexRoute
 }
 
 export interface FileRoutesById {
   __root__: typeof rootRoute
   '/': typeof IndexRoute
+  '/react-hook-form-zod/': typeof ReactHookFormZodIndexRoute
+  '/react-query/': typeof ReactQueryIndexRoute
+  '/react-query/$id/': typeof ReactQueryIdIndexRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/react-hook-form-zod' | '/react-query' | '/react-query/$id'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/react-hook-form-zod' | '/react-query' | '/react-query/$id'
+  id:
+    | '__root__'
+    | '/'
+    | '/react-hook-form-zod/'
+    | '/react-query/'
+    | '/react-query/$id/'
   fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ReactHookFormZodIndexRoute: typeof ReactHookFormZodIndexRoute
+  ReactQueryIndexRoute: typeof ReactQueryIndexRoute
+  ReactQueryIdIndexRoute: typeof ReactQueryIdIndexRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ReactHookFormZodIndexRoute: ReactHookFormZodIndexRoute,
+  ReactQueryIndexRoute: ReactQueryIndexRoute,
+  ReactQueryIdIndexRoute: ReactQueryIdIndexRoute,
 }
 
 export const routeTree = rootRoute
@@ -77,11 +139,23 @@ export const routeTree = rootRoute
     "__root__": {
       "filePath": "__root.tsx",
       "children": [
-        "/"
+        "/",
+        "/react-hook-form-zod/",
+        "/react-query/",
+        "/react-query/$id/"
       ]
     },
     "/": {
       "filePath": "index.tsx"
+    },
+    "/react-hook-form-zod/": {
+      "filePath": "react-hook-form-zod/index.tsx"
+    },
+    "/react-query/": {
+      "filePath": "react-query/index.tsx"
+    },
+    "/react-query/$id/": {
+      "filePath": "react-query/$id/index.tsx"
     }
   }
 }

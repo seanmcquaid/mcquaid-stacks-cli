@@ -1,16 +1,35 @@
 import { lazy, Suspense } from 'react';
-import { Outlet, createRootRouteWithContext } from '@tanstack/react-router';
+import {
+  Outlet,
+  createRootRouteWithContext,
+  useNavigate,
+} from '@tanstack/react-router';
 import type { QueryClient } from '@tanstack/react-query';
 import { Toaster } from '@/components/ui/Toaster';
-import initializeI18next from '@/i18n/initializeI18next.client';
+import initializeI18next from '@/i18n/initializeI18next';
+import PageWrapper from '@/components/app/PageWrapper';
+import { Button } from '@/components/ui/Button';
+import useAppTranslation from '@/hooks/useAppTranslation';
+import LoadingSpinner from '@/components/ui/LoadingSpinner';
 
 initializeI18next();
 
-export const Route = createRootRouteWithContext<{
-  queryClient: QueryClient;
-}>()({
-  component: RootComponent,
-});
+const NotFoundPage = () => {
+  const { t } = useAppTranslation();
+  const navigate = useNavigate();
+
+  const handleOnClick = () => {
+    navigate({ to: '/' });
+  };
+
+  return (
+    <PageWrapper>
+      <h1>{t('NotFoundPage.notFound')}</h1>
+      <p>{t('NotFoundPage.pleaseTryADifferentRoute')}</p>
+      <Button onClick={handleOnClick}>{t('NotFoundPage.home')}</Button>
+    </PageWrapper>
+  );
+};
 
 const TanStackRouterDevtools =
   process.env.NODE_ENV === 'production'
@@ -34,15 +53,20 @@ const ReactQueryDevtools =
         })),
       );
 
-function RootComponent() {
+const Root = () => {
   return (
-    <>
+    <Suspense fallback={<LoadingSpinner />}>
       <Outlet />
-      <Suspense>
-        <TanStackRouterDevtools position="bottom-right" />
-        <ReactQueryDevtools initialIsOpen={false} buttonPosition="top-right" />
-      </Suspense>
+      <TanStackRouterDevtools position="bottom-right" />
+      <ReactQueryDevtools initialIsOpen={false} buttonPosition="top-right" />
       <Toaster />
-    </>
+    </Suspense>
   );
-}
+};
+
+export const Route = createRootRouteWithContext<{
+  queryClient: QueryClient;
+}>()({
+  component: Root,
+  notFoundComponent: NotFoundPage,
+});
