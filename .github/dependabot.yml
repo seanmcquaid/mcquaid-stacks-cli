@@ -73,3 +73,21 @@ updates:
       interval: weekly
       day: tuesday
     open-pull-requests-limit: 20
+  - package-ecosystem: npm
+    directory: "/tanstack-router-spa"
+    schedule:
+      interval: weekly
+      day: tuesday
+    open-pull-requests-limit: 20
+  - package-ecosystem: github-actions
+    directory: "/tanstack-router-spa/.github/workflows"
+    schedule:
+      interval: weekly
+      day: tuesday
+    open-pull-requests-limit: 20
+  - package-ecosystem: github-actions
+    directory: "/tanstack-router-spa/.github/actions/setup-pull-request-job"
+    schedule:
+      interval: weekly
+      day: tuesday
+    open-pull-requests-limit: 20
