@@ -8,39 +8,52 @@
 // You should NOT make any changes in this file as it will be overwritten.
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
+import { createFileRoute } from '@tanstack/react-router'
+
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
-import { Route as IndexImport } from './routes/index'
-import { Route as ReactQueryIndexImport } from './routes/react-query/index'
-import { Route as ReactHookFormZodIndexImport } from './routes/react-hook-form-zod/index'
-import { Route as ReactQueryIdIndexImport } from './routes/react-query/$id/index'
+
+// Create Virtual Routes
+
+const IndexLazyImport = createFileRoute('/')()
+const ReactQueryIndexLazyImport = createFileRoute('/react-query/')()
+const ReactHookFormZodIndexLazyImport = createFileRoute(
+  '/react-hook-form-zod/',
+)()
+const ReactQueryIdIndexLazyImport = createFileRoute('/react-query/$id/')()
 
 // Create/Update Routes
 
-const IndexRoute = IndexImport.update({
+const IndexLazyRoute = IndexLazyImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRoute,
-} as any)
+} as any).lazy(() => import('./routes/index.lazy').then((d) => d.Route))
 
-const ReactQueryIndexRoute = ReactQueryIndexImport.update({
+const ReactQueryIndexLazyRoute = ReactQueryIndexLazyImport.update({
   id: '/react-query/',
   path: '/react-query/',
   getParentRoute: () => rootRoute,
-} as any)
+} as any).lazy(() =>
+  import('./routes/react-query/index.lazy').then((d) => d.Route),
+)
 
-const ReactHookFormZodIndexRoute = ReactHookFormZodIndexImport.update({
+const ReactHookFormZodIndexLazyRoute = ReactHookFormZodIndexLazyImport.update({
   id: '/react-hook-form-zod/',
   path: '/react-hook-form-zod/',
   getParentRoute: () => rootRoute,
-} as any)
+} as any).lazy(() =>
+  import('./routes/react-hook-form-zod/index.lazy').then((d) => d.Route),
+)
 
-const ReactQueryIdIndexRoute = ReactQueryIdIndexImport.update({
+const ReactQueryIdIndexLazyRoute = ReactQueryIdIndexLazyImport.update({
   id: '/react-query/$id/',
   path: '/react-query/$id/',
   getParentRoute: () => rootRoute,
-} as any)
+} as any).lazy(() =>
+  import('./routes/react-query/$id/index.lazy').then((d) => d.Route),
+)
 
 // Populate the FileRoutesByPath interface
 
@@ -50,28 +63,28 @@ declare module '@tanstack/react-router' {
       id: '/'
       path: '/'
       fullPath: '/'
-      preLoaderRoute: typeof IndexImport
+      preLoaderRoute: typeof IndexLazyImport
       parentRoute: typeof rootRoute
     }
     '/react-hook-form-zod/': {
       id: '/react-hook-form-zod/'
       path: '/react-hook-form-zod'
       fullPath: '/react-hook-form-zod'
-      preLoaderRoute: typeof ReactHookFormZodIndexImport
+      preLoaderRoute: typeof ReactHookFormZodIndexLazyImport
       parentRoute: typeof rootRoute
     }
     '/react-query/': {
       id: '/react-query/'
       path: '/react-query'
       fullPath: '/react-query'
-      preLoaderRoute: typeof ReactQueryIndexImport
+      preLoaderRoute: typeof ReactQueryIndexLazyImport
       parentRoute: typeof rootRoute
     }
     '/react-query/$id/': {
       id: '/react-query/$id/'
       path: '/react-query/$id'
       fullPath: '/react-query/$id'
-      preLoaderRoute: typeof ReactQueryIdIndexImport
+      preLoaderRoute: typeof ReactQueryIdIndexLazyImport
       parentRoute: typeof rootRoute
     }
   }
@@ -80,25 +93,25 @@ declare module '@tanstack/react-router' {
 // Create and export the route tree
 
 export interface FileRoutesByFullPath {
-  '/': typeof IndexRoute
-  '/react-hook-form-zod': typeof ReactHookFormZodIndexRoute
-  '/react-query': typeof ReactQueryIndexRoute
-  '/react-query/$id': typeof ReactQueryIdIndexRoute
+  '/': typeof IndexLazyRoute
+  '/react-hook-form-zod': typeof ReactHookFormZodIndexLazyRoute
+  '/react-query': typeof ReactQueryIndexLazyRoute
+  '/react-query/$id': typeof ReactQueryIdIndexLazyRoute
 }
 
 export interface FileRoutesByTo {
-  '/': typeof IndexRoute
-  '/react-hook-form-zod': typeof ReactHookFormZodIndexRoute
-  '/react-query': typeof ReactQueryIndexRoute
-  '/react-query/$id': typeof ReactQueryIdIndexRoute
+  '/': typeof IndexLazyRoute
+  '/react-hook-form-zod': typeof ReactHookFormZodIndexLazyRoute
+  '/react-query': typeof ReactQueryIndexLazyRoute
+  '/react-query/$id': typeof ReactQueryIdIndexLazyRoute
 }
 
 export interface FileRoutesById {
   __root__: typeof rootRoute
-  '/': typeof IndexRoute
-  '/react-hook-form-zod/': typeof ReactHookFormZodIndexRoute
-  '/react-query/': typeof ReactQueryIndexRoute
-  '/react-query/$id/': typeof ReactQueryIdIndexRoute
+  '/': typeof IndexLazyRoute
+  '/react-hook-form-zod/': typeof ReactHookFormZodIndexLazyRoute
+  '/react-query/': typeof ReactQueryIndexLazyRoute
+  '/react-query/$id/': typeof ReactQueryIdIndexLazyRoute
 }
 
 export interface FileRouteTypes {
@@ -116,17 +129,17 @@ export interface FileRouteTypes {
 }
 
 export interface RootRouteChildren {
-  IndexRoute: typeof IndexRoute
-  ReactHookFormZodIndexRoute: typeof ReactHookFormZodIndexRoute
-  ReactQueryIndexRoute: typeof ReactQueryIndexRoute
-  ReactQueryIdIndexRoute: typeof ReactQueryIdIndexRoute
+  IndexLazyRoute: typeof IndexLazyRoute
+  ReactHookFormZodIndexLazyRoute: typeof ReactHookFormZodIndexLazyRoute
+  ReactQueryIndexLazyRoute: typeof ReactQueryIndexLazyRoute
+  ReactQueryIdIndexLazyRoute: typeof ReactQueryIdIndexLazyRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
-  IndexRoute: IndexRoute,
-  ReactHookFormZodIndexRoute: ReactHookFormZodIndexRoute,
-  ReactQueryIndexRoute: ReactQueryIndexRoute,
-  ReactQueryIdIndexRoute: ReactQueryIdIndexRoute,
+  IndexLazyRoute: IndexLazyRoute,
+  ReactHookFormZodIndexLazyRoute: ReactHookFormZodIndexLazyRoute,
+  ReactQueryIndexLazyRoute: ReactQueryIndexLazyRoute,
+  ReactQueryIdIndexLazyRoute: ReactQueryIdIndexLazyRoute,
 }
 
 export const routeTree = rootRoute
@@ -146,16 +159,16 @@ export const routeTree = rootRoute
       ]
     },
     "/": {
-      "filePath": "index.tsx"
+      "filePath": "index.lazy.tsx"
     },
     "/react-hook-form-zod/": {
-      "filePath": "react-hook-form-zod/index.tsx"
+      "filePath": "react-hook-form-zod/index.lazy.tsx"
     },
     "/react-query/": {
-      "filePath": "react-query/index.tsx"
+      "filePath": "react-query/index.lazy.tsx"
     },
     "/react-query/$id/": {
-      "filePath": "react-query/$id/index.tsx"
+      "filePath": "react-query/$id/index.lazy.tsx"
     }
   }
 }
