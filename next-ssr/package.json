@@ -29,7 +29,7 @@
     "i18next-http-backend": "^3.0.1",
     "ky": "^1.7.2",
     "lucide-react": "^0.468.0",
-    "next": "15.0.1",
+    "next": "15.0.4",
     "next-plugin-svgr": "^1.1.10",
     "react": "19.0.0",
     "react-dom": "19.0.0",
