@@ -6,7 +6,7 @@ Status: accepted
 
 ## Context
 
-Most React applications require client-side routing to manage navigation and handle different views within the application. React Router is a mature and widely adopted solution for client-side routing in React applications, offering comprehensive routing capabilities and seamless integration with React components and hooks. Next SSR is a framework that offers server-side rendering (SSR) capabilities out of the box, enabling developers to build React applications that render on the server and deliver HTML to the client for improved performance and SEO.
+Most React applications require client-side routing to manage navigation and handle different views within the application. Next SSR is a framework that offers client-side routing, server-side rendering (SSR) capabilities out of the box, enabling developers to build React applications that render on the server and deliver HTML to the client for improved performance and SEO.
 
 ## Decision
 
