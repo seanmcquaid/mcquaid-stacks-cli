@@ -1,13 +1,16 @@
 'use client';
 import { useParams, useRouter } from 'next/navigation';
+import { useSuspenseQuery } from '@tanstack/react-query';
 import PageWrapper from '@/components/app/PageWrapper';
-import { useGetPostQuery } from '@/hooks/services/posts';
+import { getPostQueryOptions } from '@/services/queries/posts';
 
 const ReactQueryPostPage = () => {
   const { id } = useParams<{
     id: string;
   }>();
-  const { data, isLoading, isError } = useGetPostQuery(id);
+  const { data, isLoading, isError } = useSuspenseQuery(
+    getPostQueryOptions(id),
+  );
   const router = useRouter();
 
   return (

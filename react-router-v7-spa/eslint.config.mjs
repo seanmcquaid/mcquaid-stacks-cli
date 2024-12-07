@@ -6,7 +6,6 @@ import tseslint from 'typescript-eslint';
 import eslintConfigPrettier from 'eslint-config-prettier';
 import i18next from 'eslint-plugin-i18next';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
-import noRelativeImportPaths from 'eslint-plugin-no-relative-import-paths';
 import playwright from 'eslint-plugin-playwright';
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
 import reactPlugin from 'eslint-plugin-react';
@@ -35,7 +34,6 @@ export default [
   {
     plugins: {
       import: fixupPluginRules(importPlugin),
-      'no-relative-import-paths': noRelativeImportPaths,
       'react-hooks': reactHooksPlugin,
       'react-compiler': reactCompiler,
     },
@@ -72,14 +70,6 @@ export default [
       'playwright/missing-playwright-await': 'off',
       '@typescript-eslint/consistent-type-definitions': ['error'],
       '@typescript-eslint/consistent-type-imports': 'error',
-      'no-relative-import-paths/no-relative-import-paths': [
-        'warn',
-        {
-          allowSameFolder: true,
-          rootDir: 'app',
-          prefix: '@',
-        },
-      ],
       'react-compiler/react-compiler': 'error',
     },
   },

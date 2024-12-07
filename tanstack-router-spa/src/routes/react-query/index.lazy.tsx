@@ -1,4 +1,4 @@
-import { createFileRoute } from '@tanstack/react-router';
+import { createLazyFileRoute } from '@tanstack/react-router';
 import {
   useMutation,
   useQueryClient,
@@ -57,6 +57,6 @@ const ReactQueryPage = () => {
   );
 };
 
-export const Route = createFileRoute('/react-query/')({
+export const Route = createLazyFileRoute('/react-query/')({
   component: ReactQueryPage,
 });

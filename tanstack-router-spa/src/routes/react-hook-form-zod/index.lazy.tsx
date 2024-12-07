@@ -1,7 +1,7 @@
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { useForm } from 'react-hook-form';
-import { createFileRoute } from '@tanstack/react-router';
+import { createLazyFileRoute } from '@tanstack/react-router';
 import { Input } from '@/components/ui/Input';
 import PageWrapper from '@/components/app/PageWrapper';
 
@@ -65,6 +65,6 @@ const ReactHookFormZod = () => {
   );
 };
 
-export const Route = createFileRoute('/react-hook-form-zod/')({
+export const Route = createLazyFileRoute('/react-hook-form-zod/')({
   component: ReactHookFormZod,
 });
