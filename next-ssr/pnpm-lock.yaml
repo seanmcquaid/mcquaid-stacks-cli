@@ -27,8 +27,8 @@ importers:
         specifier: ^5.62.3
         version: 5.62.3(react@19.0.0)
       '@tanstack/react-query-next-experimental':
-        specifier: ^5.62.2
-        version: 5.62.2(@tanstack/react-query@5.62.3(react@19.0.0))(next@15.0.4(@babel/core@7.25.2)(babel-plugin-react-compiler@19.0.0-beta-df7b47d-20241124)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react@19.0.0)
+        specifier: ^5.62.3
+        version: 5.62.3(@tanstack/react-query@5.62.3(react@19.0.0))(next@15.0.4(@babel/core@7.25.2)(babel-plugin-react-compiler@19.0.0-beta-df7b47d-20241124)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react@19.0.0)
       accept-language:
         specifier: ^3.0.20
         version: 3.0.20
@@ -1815,10 +1815,10 @@ packages:
       '@tanstack/react-query': ^5.62.3
       react: ^18 || ^19
 
-  '@tanstack/react-query-next-experimental@5.62.2':
-    resolution: {integrity: sha512-XmMRnF+Lnhua0qzMiti1GEV08/g2v6hE44KuU1AQJHTUp1YoQEhPmzRYl09f4hm/LuVEjuMRYPmtd/Im57V3nw==}
+  '@tanstack/react-query-next-experimental@5.62.3':
+    resolution: {integrity: sha512-RgYGLIb12alB6Yd3StknzKcWOpPerPCfNtlp69TiDRLrXtHc5L8gPqC5uVqM2lPRoUbj32FrVUmfSEmLhlVl6A==}
     peerDependencies:
-      '@tanstack/react-query': ^5.62.2
+      '@tanstack/react-query': ^5.62.3
       next: ^13 || ^14 || ^15
       react: ^18 || ^19
 
@@ -6536,7 +6536,7 @@ snapshots:
       '@tanstack/react-query': 5.62.3(react@19.0.0)
       react: 19.0.0
 
-  '@tanstack/react-query-next-experimental@5.62.2(@tanstack/react-query@5.62.3(react@19.0.0))(next@15.0.4(@babel/core@7.25.2)(babel-plugin-react-compiler@19.0.0-beta-df7b47d-20241124)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react@19.0.0)':
+  '@tanstack/react-query-next-experimental@5.62.3(@tanstack/react-query@5.62.3(react@19.0.0))(next@15.0.4(@babel/core@7.25.2)(babel-plugin-react-compiler@19.0.0-beta-df7b47d-20241124)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@tanstack/react-query': 5.62.3(react@19.0.0)
       next: 15.0.4(@babel/core@7.25.2)(babel-plugin-react-compiler@19.0.0-beta-df7b47d-20241124)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
