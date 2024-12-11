@@ -65,7 +65,7 @@
     "@types/react-dom": "^19.0.2",
     "@vitejs/plugin-react": "^4.3.4",
     "@vitest/coverage-istanbul": "^2.1.8",
-    "@vitest/eslint-plugin": "^1.1.14",
+    "@vitest/eslint-plugin": "^1.1.15",
     "autoprefixer": "^10.4.20",
     "babel-plugin-react-compiler": "19.0.0-beta-37ed2a7-20241206",
     "bundlesize": "^0.18.2",
