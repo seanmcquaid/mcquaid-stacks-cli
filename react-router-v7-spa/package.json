@@ -43,7 +43,7 @@
     "react-router": "^7.0.0",
     "tailwind-merge": "^2.5.5",
     "tailwindcss-animate": "^1.0.7",
-    "zod": "^3.24.0"
+    "zod": "^3.24.1"
   },
   "devDependencies": {
     "@anatine/zod-mock": "^3.13.4",
