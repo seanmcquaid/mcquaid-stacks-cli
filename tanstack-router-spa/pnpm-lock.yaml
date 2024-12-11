@@ -75,12 +75,12 @@ importers:
         specifier: ^1.0.7
         version: 1.0.7(tailwindcss@3.4.16)
       zod:
-        specifier: ^3.24.0
-        version: 3.24.0
+        specifier: ^3.24.1
+        version: 3.24.1
     devDependencies:
       '@anatine/zod-mock':
         specifier: ^3.13.4
-        version: 3.13.4(@faker-js/faker@8.4.1)(zod@3.24.0)
+        version: 3.13.4(@faker-js/faker@8.4.1)(zod@3.24.1)
       '@axe-core/playwright':
         specifier: ^4.10.1
         version: 4.10.1(playwright-core@1.49.1)
@@ -6189,8 +6189,8 @@ packages:
   zod@3.23.8:
     resolution: {integrity: sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g==}
 
-  zod@3.24.0:
-    resolution: {integrity: sha512-Hz+wiY8yD0VLA2k/+nsg2Abez674dDGTai33SwNvMPuf9uIrBC9eFgIMQxBBbHFxVXi8W+5nX9DcAh9YNSQm/w==}
+  zod@3.24.1:
+    resolution: {integrity: sha512-muH7gBL9sI1nciMZV67X5fTKKBLtwpZ5VBp1vsOQzj1MhrBZ4wlVCm3gedKZWLp0Oyel8sIGfeiz54Su+OVT+A==}
 
   zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
@@ -6206,11 +6206,11 @@ snapshots:
       '@jridgewell/gen-mapping': 0.3.5
       '@jridgewell/trace-mapping': 0.3.25
 
-  '@anatine/zod-mock@3.13.4(@faker-js/faker@8.4.1)(zod@3.24.0)':
+  '@anatine/zod-mock@3.13.4(@faker-js/faker@8.4.1)(zod@3.24.1)':
     dependencies:
       '@faker-js/faker': 8.4.1
       randexp: 0.5.3
-      zod: 3.24.0
+      zod: 3.24.1
 
   '@axe-core/playwright@4.10.1(playwright-core@1.49.1)':
     dependencies:
@@ -7567,7 +7567,7 @@ snapshots:
       '@tanstack/virtual-file-routes': 1.81.9
       prettier: 3.4.2
       tsx: 4.19.2
-      zod: 3.24.0
+      zod: 3.24.1
 
   '@tanstack/router-plugin@1.87.4(vite@6.0.3(@types/node@22.10.1)(jiti@1.21.6)(tsx@4.19.2)(yaml@2.6.1))':
     dependencies:
@@ -7588,7 +7588,7 @@ snapshots:
       babel-dead-code-elimination: 1.0.6
       chokidar: 3.6.0
       unplugin: 1.16.0
-      zod: 3.24.0
+      zod: 3.24.1
     optionalDependencies:
       vite: 6.0.3(@types/node@22.10.1)(jiti@1.21.6)(tsx@4.19.2)(yaml@2.6.1)
     transitivePeerDependencies:
@@ -12675,6 +12675,6 @@ snapshots:
 
   zod@3.23.8: {}
 
-  zod@3.24.0: {}
+  zod@3.24.1: {}
 
   zwitch@2.0.4: {}
