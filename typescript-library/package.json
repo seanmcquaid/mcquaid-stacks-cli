@@ -38,6 +38,7 @@
     "@arethetypeswrong/cli": "^0.17.0",
     "@changesets/cli": "^2.27.9",
     "@eslint/js": "^9.13.0",
+    "@total-typescript/tsconfig": "^1.0.4",
     "@vitest/eslint-plugin": "^1.1.10",
     "agadoo": "^3.0.0",
     "bundlesize": "^0.18.2",
