@@ -1,13 +1,18 @@
 {
-  "extends": "@total-typescript/tsconfig/tsc/dom/library",
   "compilerOptions": {
     "target": "ESNext",
     "module": "ESNext",
-    "moduleResolution": "bundler",
     "jsx": "react-jsx",
-    "types": ["vite/client", "vitest/globals"],
-    "outDir": "dist"
+    "sourceMap": true,
+    "strict": true,
+    "moduleResolution": "bundler",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "types": ["vite/client", "vitest/globals"]
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "src/**.test.ts", "src/**.test.tsx"]
+  "include": "src",
+  "exclude": ["node_modules", "dist"]
 }
