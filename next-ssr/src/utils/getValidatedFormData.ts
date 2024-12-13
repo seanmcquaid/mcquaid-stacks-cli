@@ -41,7 +41,7 @@ const getValidatedFormData = <T extends SchemaType>({
     const errors = validatedFormData.error.errors.reduce(
       (acc, error) => ({
         ...acc,
-        [error.path[0]]: error.message,
+        [error.path[0] as string]: error.message,
       }),
       {} as {
         [Key in keyof z.infer<T>]: string;
