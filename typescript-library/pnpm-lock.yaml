@@ -19,7 +19,7 @@ importers:
         version: 9.17.0
       '@vitest/eslint-plugin':
         specifier: ^1.1.17
-        version: 1.1.17(@typescript-eslint/utils@8.18.1(eslint@8.57.0)(typescript@5.7.2))(eslint@8.57.0)(typescript@5.7.2)(vitest@2.1.8(@types/node@12.20.55)(jsdom@25.0.1))
+        version: 1.1.18(@typescript-eslint/utils@8.18.1(eslint@8.57.0)(typescript@5.7.2))(eslint@8.57.0)(typescript@5.7.2)(vitest@2.1.8(@types/node@12.20.55)(jsdom@25.0.1))
       agadoo:
         specifier: ^3.0.0
         version: 3.0.0
@@ -716,8 +716,8 @@ packages:
   '@ungap/structured-clone@1.2.1':
     resolution: {integrity: sha512-fEzPV3hSkSMltkw152tJKNARhOupqbH96MZWyRjNaYZOMIzbrTeQDG+MTc6Mr2pgzFQzFxAfmhGDNP5QK++2ZA==}
 
-  '@vitest/eslint-plugin@1.1.17':
-    resolution: {integrity: sha512-V3cu24F73gN1h37XNo6fMGVDws+O7vHwsH2CHWUP9eJQXw91keCI2X+lYqDaSO98nxAIBi5AhsOjGLAGXvtmhw==}
+  '@vitest/eslint-plugin@1.1.18':
+    resolution: {integrity: sha512-pcnR0hn4KRaWqdEXdZPXLs2wAxzMBD8dKkpVkOuhT+bOOGW1/4BdiUrU3I0LW2loskfVS/XldwcO/lCEoFDyZw==}
     peerDependencies:
       '@typescript-eslint/utils': '>= 8.0'
       eslint: '>= 8.57.0'
@@ -3331,7 +3331,7 @@ snapshots:
 
   '@ungap/structured-clone@1.2.1': {}
 
-  '@vitest/eslint-plugin@1.1.17(@typescript-eslint/utils@8.18.1(eslint@8.57.0)(typescript@5.7.2))(eslint@8.57.0)(typescript@5.7.2)(vitest@2.1.8(@types/node@12.20.55)(jsdom@25.0.1))':
+  '@vitest/eslint-plugin@1.1.18(@typescript-eslint/utils@8.18.1(eslint@8.57.0)(typescript@5.7.2))(eslint@8.57.0)(typescript@5.7.2)(vitest@2.1.8(@types/node@12.20.55)(jsdom@25.0.1))':
     dependencies:
       '@typescript-eslint/utils': 8.18.1(eslint@8.57.0)(typescript@5.7.2)
       eslint: 8.57.0
