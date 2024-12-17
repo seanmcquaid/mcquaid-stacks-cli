@@ -160,8 +160,8 @@ importers:
         specifier: ^10.4.20
         version: 10.4.20(postcss@8.4.49)
       babel-plugin-react-compiler:
-        specifier: 19.0.0-beta-37ed2a7-20241206
-        version: 19.0.0-beta-37ed2a7-20241206
+        specifier: 19.0.0-beta-201e55d-20241215
+        version: 19.0.0-beta-201e55d-20241215
       bundlesize:
         specifier: ^0.18.2
         version: 0.18.2
@@ -2427,8 +2427,8 @@ packages:
     resolution: {integrity: sha512-Cg7TFGpIr01vOQNODXOOaGz2NpCU5gl8x1qJFbb6hbZxR7XrcE2vtbAsTAbJ7/xwJtUuJEw8K8Zr/AE0LHlesg==}
     engines: {node: '>=10', npm: '>=6'}
 
-  babel-plugin-react-compiler@19.0.0-beta-37ed2a7-20241206:
-    resolution: {integrity: sha512-nnkrHpeDKM8A5laq9tmFvvGbbDQ7laGfQLp50cvCkCXmWrPcZdCtaQpNh8UJS/yLREJnv2R4JDL5ADfxyAn+yQ==}
+  babel-plugin-react-compiler@19.0.0-beta-201e55d-20241215:
+    resolution: {integrity: sha512-c7YAJNlA8kSoIFx2Buq/CeGmC3MbZYznD3H7Q3cdaRyKtwDSSxbM3VJxEhv7lEo64g48aWSBSiCI3XcRw0y/Jw==}
 
   bail@2.0.2:
     resolution: {integrity: sha512-0xO6mYd7JB2YesxDKplafRpsiOzPt9V02ddPCLbY1xYGPOX24NTyN50qnUxgCPcSoYMhKpAuBTjQoRZCAkUDRw==}
@@ -8917,7 +8917,7 @@ snapshots:
       cosmiconfig: 7.1.0
       resolve: 1.22.8
 
-  babel-plugin-react-compiler@19.0.0-beta-37ed2a7-20241206:
+  babel-plugin-react-compiler@19.0.0-beta-201e55d-20241215:
     dependencies:
       '@babel/types': 7.26.3
 
@@ -11447,7 +11447,7 @@ snapshots:
   micromark@3.2.0:
     dependencies:
       '@types/debug': 4.1.12
-      debug: 4.3.7
+      debug: 4.4.0
       decode-named-character-reference: 1.0.2
       micromark-core-commonmark: 1.1.0
       micromark-factory-space: 1.1.0
