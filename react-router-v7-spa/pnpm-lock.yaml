@@ -187,8 +187,8 @@ importers:
         specifier: ^7.37.2
         version: 7.37.2(eslint@9.16.0(jiti@1.21.6))
       eslint-plugin-react-compiler:
-        specifier: 19.0.0-beta-37ed2a7-20241206
-        version: 19.0.0-beta-37ed2a7-20241206(eslint@9.16.0(jiti@1.21.6))
+        specifier: 19.0.0-beta-201e55d-20241215
+        version: 19.0.0-beta-201e55d-20241215(eslint@9.16.0(jiti@1.21.6))
       eslint-plugin-react-hooks:
         specifier: ^5.1.0
         version: 5.1.0(eslint@9.16.0(jiti@1.21.6))
@@ -3284,8 +3284,8 @@ packages:
       eslint-config-prettier:
         optional: true
 
-  eslint-plugin-react-compiler@19.0.0-beta-37ed2a7-20241206:
-    resolution: {integrity: sha512-5Pex1fUCJwLwwqEJe6NkgTn45kUjjj9TZP6IrW4IcpWM/YaEe+QvcOeF60huDjBq0kz1svGeW2nw8WdY+qszAw==}
+  eslint-plugin-react-compiler@19.0.0-beta-201e55d-20241215:
+    resolution: {integrity: sha512-KTOMW6Z4Eg2r5BPT/BncbwPswfuVH9KPPDVszOTQFXGNlxhExL8IZoSE3blYxk4e0wFDbCcAwe4UlTauQ8lIww==}
     engines: {node: ^14.17.0 || ^16.0.0 || >= 18.0.0}
     peerDependencies:
       eslint: '>=7'
@@ -6659,7 +6659,7 @@ snapshots:
       '@babel/traverse': 7.26.3
       '@babel/types': 7.26.3
       convert-source-map: 2.0.0
-      debug: 4.3.7
+      debug: 4.4.0
       gensync: 1.0.0-beta.2
       json5: 2.2.3
       semver: 6.3.1
@@ -7400,7 +7400,7 @@ snapshots:
 
   '@puppeteer/browsers@2.5.0':
     dependencies:
-      debug: 4.3.7
+      debug: 4.4.0
       extract-zip: 2.0.1
       progress: 2.0.3
       proxy-agent: 6.4.0
@@ -8455,7 +8455,7 @@ snapshots:
     dependencies:
       '@typescript-eslint/typescript-estree': 8.18.0(typescript@5.7.2)
       '@typescript-eslint/utils': 8.18.0(eslint@9.16.0(jiti@1.21.6))(typescript@5.7.2)
-      debug: 4.3.7
+      debug: 4.4.0
       eslint: 9.16.0(jiti@1.21.6)
       ts-api-utils: 1.4.3(typescript@5.7.2)
       typescript: 5.7.2
@@ -8470,7 +8470,7 @@ snapshots:
     dependencies:
       '@typescript-eslint/types': 8.17.0
       '@typescript-eslint/visitor-keys': 8.17.0
-      debug: 4.3.7
+      debug: 4.4.0
       fast-glob: 3.3.2
       is-glob: 4.0.3
       minimatch: 9.0.5
@@ -8485,7 +8485,7 @@ snapshots:
     dependencies:
       '@typescript-eslint/types': 8.18.0
       '@typescript-eslint/visitor-keys': 8.18.0
-      debug: 4.3.7
+      debug: 4.4.0
       fast-glob: 3.3.2
       is-glob: 4.0.3
       minimatch: 9.0.5
@@ -8680,7 +8680,7 @@ snapshots:
 
   agent-base@7.1.1:
     dependencies:
-      debug: 4.3.7
+      debug: 4.4.0
     transitivePeerDependencies:
       - supports-color
 
@@ -9868,7 +9868,7 @@ snapshots:
     optionalDependencies:
       eslint-config-prettier: 9.1.0(eslint@9.16.0(jiti@1.21.6))
 
-  eslint-plugin-react-compiler@19.0.0-beta-37ed2a7-20241206(eslint@9.16.0(jiti@1.21.6)):
+  eslint-plugin-react-compiler@19.0.0-beta-201e55d-20241215(eslint@9.16.0(jiti@1.21.6)):
     dependencies:
       '@babel/core': 7.26.0
       '@babel/parser': 7.26.3
@@ -10094,7 +10094,7 @@ snapshots:
 
   extract-zip@2.0.1:
     dependencies:
-      debug: 4.3.7
+      debug: 4.4.0
       get-stream: 5.2.0
       yauzl: 2.10.0
     optionalDependencies:
@@ -10292,7 +10292,7 @@ snapshots:
     dependencies:
       basic-ftp: 5.0.5
       data-uri-to-buffer: 6.0.2
-      debug: 4.3.7
+      debug: 4.4.0
     transitivePeerDependencies:
       - supports-color
 
@@ -11412,7 +11412,7 @@ snapshots:
   micromark@3.2.0:
     dependencies:
       '@types/debug': 4.1.12
-      debug: 4.3.7
+      debug: 4.4.0
       decode-named-character-reference: 1.0.2
       micromark-core-commonmark: 1.1.0
       micromark-factory-space: 1.1.0
@@ -11777,7 +11777,7 @@ snapshots:
     dependencies:
       '@tootallnate/quickjs-emscripten': 0.23.0
       agent-base: 7.1.1
-      debug: 4.3.7
+      debug: 4.4.0
       get-uri: 6.0.4
       http-proxy-agent: 7.0.2
       https-proxy-agent: 7.0.5
@@ -12080,7 +12080,7 @@ snapshots:
   proxy-agent@6.4.0:
     dependencies:
       agent-base: 7.1.1
-      debug: 4.3.7
+      debug: 4.4.0
       http-proxy-agent: 7.0.2
       https-proxy-agent: 7.0.5
       lru-cache: 7.18.3
@@ -12621,7 +12621,7 @@ snapshots:
   socks-proxy-agent@8.0.4:
     dependencies:
       agent-base: 7.1.1
-      debug: 4.3.7
+      debug: 4.4.0
       socks: 2.8.3
     transitivePeerDependencies:
       - supports-color
