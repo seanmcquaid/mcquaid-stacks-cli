@@ -196,8 +196,8 @@ importers:
         specifier: ^25.0.1
         version: 25.0.1
       lighthouse:
-        specifier: ^12.2.2
-        version: 12.2.2
+        specifier: ^12.3.0
+        version: 12.3.0
       lint-staged:
         specifier: ^15.2.11
         version: 15.2.11
@@ -206,7 +206,7 @@ importers:
         version: 2.6.8(@types/node@22.10.1)(typescript@5.7.2)
       playwright-lighthouse:
         specifier: ^4.0.0
-        version: 4.0.0(lighthouse@12.2.2)(playwright-core@1.49.1)
+        version: 4.0.0(lighthouse@12.3.0)(playwright-core@1.49.1)
       playwright-msw:
         specifier: ^3.0.1
         version: 3.0.1(@playwright/test@1.49.1)(msw@2.6.8(@types/node@22.10.1)(typescript@5.7.2))
@@ -1172,8 +1172,8 @@ packages:
   '@open-draft/until@2.1.0':
     resolution: {integrity: sha512-U69T3ItWHvLwGg5eJ0n3I62nWuE6ilHlmz7zM0npLBRvPRd7e6NYmg54vvRtP5mZG7kZqZCFVdsTWo7BPtBujg==}
 
-  '@paulirish/trace_engine@0.0.32':
-    resolution: {integrity: sha512-KxWFdRNbv13U8bhYaQvH6gLG9CVEt2jKeosyOOYILVntWEVWhovbgDrbOiZ12pJO3vjZs0Zgbd3/Zgde98woEA==}
+  '@paulirish/trace_engine@0.0.39':
+    resolution: {integrity: sha512-2Y/ejHX5DDi5bjfWY/0c/BLVSfQ61Jw1Hy60Hnh0hfEO632D3FVctkzT4Q/lVAdvIPR0bUaok9JDTr1pu/OziA==}
 
   '@pkgjs/parseargs@0.11.0':
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
@@ -1188,8 +1188,8 @@ packages:
     engines: {node: '>=18'}
     hasBin: true
 
-  '@puppeteer/browsers@2.5.0':
-    resolution: {integrity: sha512-6TQAc/5uRILE6deixJ1CR8rXyTbzXIXNgO1D0Woi9Bqicz2FV5iKP3BHYEg6o4UATCMcbQQ0jbmeaOkn/HQk2w==}
+  '@puppeteer/browsers@2.6.1':
+    resolution: {integrity: sha512-aBSREisdsGH890S2rQqK82qmQYU3uFpSH8wcZWHgHzl3LfzsxAKbLNiAG9mO8v1Y0UICBeClICxPJvyr0rcuxg==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -3940,8 +3940,8 @@ packages:
   lighthouse-stack-packs@1.12.2:
     resolution: {integrity: sha512-Ug8feS/A+92TMTCK6yHYLwaFMuelK/hAKRMdldYkMNwv+d9PtWxjXEg6rwKtsUXTADajhdrhXyuNCJ5/sfmPFw==}
 
-  lighthouse@12.2.2:
-    resolution: {integrity: sha512-avoiiFeGN1gkWhp/W1schJoXOsTPxRKWV3+uW/rGHuov2g/HGB+4SN9J/av1GNSh13sEYgkHL3iJOp1+mBVKYQ==}
+  lighthouse@12.3.0:
+    resolution: {integrity: sha512-OaLE8DasnwQkn2CBo2lKtD+IQv42mNP3T+Vaw29I++rAh0Zpgc6SM15usdIYyzhRMR5EWFxze5Fyb+HENJSh2A==}
     engines: {node: '>=18.16'}
     hasBin: true
 
@@ -4896,8 +4896,8 @@ packages:
     resolution: {integrity: sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==}
     engines: {node: '>=6'}
 
-  puppeteer-core@23.10.1:
-    resolution: {integrity: sha512-ey6NwixHYEUnhCA/uYi7uQQ4a0CZw4k+MatbHXGl5GEzaiRQziYUxc2HGpdQZ/gnh4KQWAKkocyIg1/dIm5d0g==}
+  puppeteer-core@23.10.4:
+    resolution: {integrity: sha512-pQAY7+IFAndWDkDodsQGguW1/ifV5OMlGXJDspwtK49Asb7poJZ/V5rXJxVSpq57bWrJasjQBZ1X27z1oWVq4Q==}
     engines: {node: '>=18'}
 
   qs@6.13.0:
@@ -6946,7 +6946,9 @@ snapshots:
 
   '@open-draft/until@2.1.0': {}
 
-  '@paulirish/trace_engine@0.0.32': {}
+  '@paulirish/trace_engine@0.0.39':
+    dependencies:
+      third-party-web: 0.26.2
 
   '@pkgjs/parseargs@0.11.0':
     optional: true
@@ -6957,7 +6959,7 @@ snapshots:
     dependencies:
       playwright: 1.49.1
 
-  '@puppeteer/browsers@2.5.0':
+  '@puppeteer/browsers@2.6.1':
     dependencies:
       debug: 4.4.0
       extract-zip: 2.0.1
@@ -10134,9 +10136,9 @@ snapshots:
 
   lighthouse-stack-packs@1.12.2: {}
 
-  lighthouse@12.2.2:
+  lighthouse@12.3.0:
     dependencies:
-      '@paulirish/trace_engine': 0.0.32
+      '@paulirish/trace_engine': 0.0.39
       '@sentry/node': 7.120.1
       axe-core: 4.10.2
       chrome-launcher: 1.1.2
@@ -10155,7 +10157,7 @@ snapshots:
       metaviewport-parser: 0.3.0
       open: 8.4.2
       parse-cache-control: 1.0.1
-      puppeteer-core: 23.10.1
+      puppeteer-core: 23.10.4
       robots-parser: 3.0.1
       semver: 5.7.2
       speedline-core: 1.4.3
@@ -11051,10 +11053,10 @@ snapshots:
 
   playwright-core@1.49.1: {}
 
-  playwright-lighthouse@4.0.0(lighthouse@12.2.2)(playwright-core@1.49.1):
+  playwright-lighthouse@4.0.0(lighthouse@12.3.0)(playwright-core@1.49.1):
     dependencies:
       chalk: 4.1.2
-      lighthouse: 12.2.2
+      lighthouse: 12.3.0
       ua-parser-js: 1.0.39
     optionalDependencies:
       playwright-core: 1.49.1
@@ -11270,9 +11272,9 @@ snapshots:
 
   punycode@2.3.1: {}
 
-  puppeteer-core@23.10.1:
+  puppeteer-core@23.10.4:
     dependencies:
-      '@puppeteer/browsers': 2.5.0
+      '@puppeteer/browsers': 2.6.1
       chromium-bidi: 0.8.0(devtools-protocol@0.0.1367902)
       debug: 4.4.0
       devtools-protocol: 0.0.1367902
