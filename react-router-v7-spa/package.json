@@ -51,7 +51,7 @@
     "@babel/preset-typescript": "^7.26.0",
     "@eslint/compat": "^1.2.3",
     "@eslint/eslintrc": "^3.2.0",
-    "@eslint/js": "^9.16.0",
+    "@eslint/js": "^9.17.0",
     "@faker-js/faker": "^8.4.1",
     "@playwright/test": "^1.49.1",
     "@react-router/dev": "^7.0.0",
